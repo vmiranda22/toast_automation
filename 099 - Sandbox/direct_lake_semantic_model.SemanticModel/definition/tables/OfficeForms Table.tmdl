@@ -1,0 +1,332 @@
+table 'OfficeForms Table'
+	lineageTag: d89313bd-dc99-41bf-a19b-c3c3e6a72117
+	sourceLineageTag: [dbo].[OfficeForms Table]
+
+	column Id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2162ec02-7d7e-4d0f-9047-7df9c881f5f7
+		sourceLineageTag: Id
+		summarizeBy: count
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Start_time
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 7366f9b0-6cc9-41ed-b12c-60e14a05839b
+		sourceLineageTag: Start_time
+		summarizeBy: none
+		sourceColumn: Start_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column Completion_time
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 2c1438c1-1fed-4500-ba12-27b3136d5ad4
+		sourceLineageTag: Completion_time
+		summarizeBy: none
+		sourceColumn: Completion_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5ec93545-b699-4f0d-8ff3-95652982e3aa
+		sourceLineageTag: Email
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9a24ca45-b945-456b-8ede-c2be22fa10cf
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Case_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e13a8238-51f3-4e30-9687-6c65fab04209
+		sourceLineageTag: Case_ID
+		summarizeBy: count
+		sourceColumn: Case_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tech_Analyst/Owner
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d503faf4-6aff-4a4e-81a7-2a90592e71f0
+		sourceLineageTag: Tech_Analyst/Owner
+		summarizeBy: none
+		sourceColumn: Tech_Analyst/Owner
+
+		annotation SummarizationSetBy = Automatic
+
+	column Have_you_found_errors_in_the_configuration?
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 280a1162-304c-41cb-8a27-72ef4ff9f5bf
+		sourceLineageTag: Have_you_found_errors_in_the_configuration?
+		summarizeBy: none
+		sourceColumn: Have_you_found_errors_in_the_configuration?
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_groups_with_errors__please_add_NASF_count_to_Salesforce_if_not_available_
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5d45d74e-2798-425d-8bf3-e18fb3f0ec87
+		sourceLineageTag: Number_of_groups_with_errors__please_add_NASF_count_to_Salesforce_if_not_available_
+		summarizeBy: sum
+		sourceColumn: Number_of_groups_with_errors__please_add_NASF_count_to_Salesforce_if_not_available_
+
+		annotation SummarizationSetBy = Automatic
+
+	column Errors_Detected_
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a3e35fc9-e1a9-4ed9-84d0-3465c4b2f0e2
+		sourceLineageTag: Errors_Detected_
+		summarizeBy: none
+		sourceColumn: Errors_Detected_
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin_Error
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 81206b0d-dfd9-4b25-a5ed-141a4d1ce804
+		sourceLineageTag: Admin_Error
+		summarizeBy: none
+		sourceColumn: Admin_Error
+
+		annotation SummarizationSetBy = Automatic
+
+	column Error_Detail
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 09e8efdf-f8e4-4bc4-9389-cb840d51b05a
+		sourceLineageTag: Error_Detail
+		summarizeBy: none
+		sourceColumn: Error_Detail
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin_Error2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4d13ddc0-4922-4dea-bff3-5a913e7cfd9c
+		sourceLineageTag: Admin_Error2
+		summarizeBy: none
+		sourceColumn: Admin_Error2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Error_Detail2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cb5817ee-1c93-4a8d-95d4-ad15694521b2
+		sourceLineageTag: Error_Detail2
+		summarizeBy: none
+		sourceColumn: Error_Detail2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin_Error3
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2659de2a-0c6d-4821-b75f-b3f34964355f
+		sourceLineageTag: Admin_Error3
+		summarizeBy: none
+		sourceColumn: Admin_Error3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Error_Detail3
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 22b65ad5-0d5e-4191-828f-24b72d3a1dd5
+		sourceLineageTag: Error_Detail3
+		summarizeBy: none
+		sourceColumn: Error_Detail3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin_Error4
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0d6716dc-d1a5-4b87-81f2-ff372336a395
+		sourceLineageTag: Admin_Error4
+		summarizeBy: none
+		sourceColumn: Admin_Error4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Error_Detail4
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d88e20b6-2024-47d4-8877-fec734adffc4
+		sourceLineageTag: Error_Detail4
+		summarizeBy: none
+		sourceColumn: Error_Detail4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin_Error5
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cbf71b3b-70d5-4cc0-a296-5df317a4582f
+		sourceLineageTag: Admin_Error5
+		summarizeBy: none
+		sourceColumn: Admin_Error5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Error_Detail5
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 69402a6e-4a20-43b2-ad3f-6c7f995b4b3f
+		sourceLineageTag: Error_Detail5
+		summarizeBy: none
+		sourceColumn: Error_Detail5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin_Error6
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 340a7426-cfd2-4ad7-9325-320199fb4366
+		sourceLineageTag: Admin_Error6
+		summarizeBy: none
+		sourceColumn: Admin_Error6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Error_Detail6
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3caed774-bfd4-4f86-8655-a4861d36c33d
+		sourceLineageTag: Error_Detail6
+		summarizeBy: none
+		sourceColumn: Error_Detail6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin_Error7
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0a161028-bd00-494c-89ab-79a477b6e97b
+		sourceLineageTag: Admin_Error7
+		summarizeBy: none
+		sourceColumn: Admin_Error7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Error_Detail7
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 103c62b0-7991-43e3-89a9-2bcfc62a94bf
+		sourceLineageTag: Error_Detail7
+		summarizeBy: none
+		sourceColumn: Error_Detail7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin_Error9
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 67aafdbf-014b-4eb0-a292-dcd7fdf2904c
+		sourceLineageTag: Admin_Error9
+		summarizeBy: none
+		sourceColumn: Admin_Error9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Error_Detail9
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: db062ad0-a121-45a3-a826-c2e7db086d6d
+		sourceLineageTag: Error_Detail9
+		summarizeBy: none
+		sourceColumn: Error_Detail9
+
+		annotation SummarizationSetBy = Automatic
+
+	column For_incorrect_pricing__please_indicate_Product__copy/paste_from_Admin_
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 23c2674f-9b01-4d24-b467-a3ddc1b1781c
+		sourceLineageTag: For_incorrect_pricing__please_indicate_Product__copy/paste_from_Admin_
+		summarizeBy: none
+		sourceColumn: For_incorrect_pricing__please_indicate_Product__copy/paste_from_Admin_
+
+		annotation SummarizationSetBy = Automatic
+
+	column For_incorrect_pricing__please_indicate_Product_incorrect_fee
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2895cc23-402d-4ba5-ae81-56e5bfe3713d
+		sourceLineageTag: For_incorrect_pricing__please_indicate_Product_incorrect_fee
+		summarizeBy: sum
+		sourceColumn: For_incorrect_pricing__please_indicate_Product_incorrect_fee
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'For_incorrect_pricing__please_select_the_product''s_effective_date_in_Admin_at_the_time_of_the_review'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 8941dd85-673e-42f4-913b-f54b0c7dfc3f
+		sourceLineageTag: For_incorrect_pricing__please_select_the_product's_effective_date_in_Admin_at_the_time_of_the_review
+		summarizeBy: none
+		sourceColumn: For_incorrect_pricing__please_select_the_product's_effective_date_in_Admin_at_the_time_of_the_review
+
+		annotation SummarizationSetBy = Automatic
+
+	column For_incorrect_pricing__please_select_the_correct_pricing_in_accordance_with_the_NASF
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c0aaa73e-5d39-4536-a574-1baf894e5122
+		sourceLineageTag: For_incorrect_pricing__please_select_the_correct_pricing_in_accordance_with_the_NASF
+		summarizeBy: sum
+		sourceColumn: For_incorrect_pricing__please_select_the_correct_pricing_in_accordance_with_the_NASF
+
+		annotation SummarizationSetBy = Automatic
+
+	column For_incorrect_pricing__please_select_the_effective_date_since_price_correction
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 07c78dc5-f8d9-4ce9-b5f5-9a4883bab9da
+		sourceLineageTag: For_incorrect_pricing__please_select_the_effective_date_since_price_correction
+		summarizeBy: none
+		sourceColumn: For_incorrect_pricing__please_select_the_effective_date_since_price_correction
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'OfficeForms Table' = entity
+		mode: directLake
+		source
+			entityName: OfficeForms Table
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

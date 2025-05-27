@@ -1,0 +1,100 @@
+table teladoc_eds_dev_100_bronze_group_payer_relations
+	lineageTag: b6798bb3-9e99-4201-a21c-6e1b5ba4ff6b
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_group_payer_relations]
+
+	column group_payer_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e8f894fc-02ee-4aa9-8cdc-b37c1d19c8c6
+		sourceLineageTag: group_payer_relation_id
+		summarizeBy: sum
+		sourceColumn: group_payer_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f98fbd54-0298-4a92-b2c5-8d636561feca
+		sourceLineageTag: group_id
+		summarizeBy: sum
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payer_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fecd1d1e-0bf4-4d5d-a56f-fe9e42e321cd
+		sourceLineageTag: payer_id
+		summarizeBy: sum
+		sourceColumn: payer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 049f9e15-6769-40ba-ade4-16b7a454fd8e
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 8dd6b395-b056-4d89-be4d-b96f6ee8129f
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8e5af97c-763a-4ae2-a5d9-ad51ce7bbbc8
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: fbe01eaf-35f1-4fd0-9e7e-ae544fefec2f
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3e7b9e3d-21bd-4aa6-815d-a981ce58179b
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_group_payer_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_group_payer_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

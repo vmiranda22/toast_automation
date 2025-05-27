@@ -1,0 +1,223 @@
+table teladoc_eds_dev_200_silver_party_addresses
+	lineageTag: beac9dea-5469-462a-ac35-48714a0f4e1b
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_party_addresses]
+
+	column party_address_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b05507ca-829e-4c9f-ba4b-f415981dc1ae
+		sourceLineageTag: party_address_id
+		summarizeBy: sum
+		sourceColumn: party_address_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dce41e4e-088e-45c3-b847-809761d957e0
+		sourceLineageTag: party_id
+		summarizeBy: sum
+		sourceColumn: party_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column address_line_1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f06cd0ed-ad29-4783-9312-8636de0dbe57
+		sourceLineageTag: address_line_1
+		summarizeBy: none
+		sourceColumn: address_line_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column address_line_2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 731ea8e0-f7d9-4a3e-a512-896169e7bb95
+		sourceLineageTag: address_line_2
+		summarizeBy: none
+		sourceColumn: address_line_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column address_line_3
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e6ea0f72-48f6-4e53-b407-e83fbf70bebe
+		sourceLineageTag: address_line_3
+		summarizeBy: none
+		sourceColumn: address_line_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column county
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7911cc1a-6a1f-446e-a81d-979bb37ab73b
+		sourceLineageTag: county
+		summarizeBy: none
+		sourceColumn: county
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9f18857c-4c19-4877-bd86-4f4f5d2a533f
+		sourceLineageTag: city
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_province
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bd17ad67-91df-48be-8ddb-4af03084a59a
+		sourceLineageTag: state_province
+		summarizeBy: none
+		sourceColumn: state_province
+
+		annotation SummarizationSetBy = Automatic
+
+	column postal
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 37b6a8b4-794f-4b28-8135-5a1fda0e3d3c
+		sourceLineageTag: postal
+		summarizeBy: none
+		sourceColumn: postal
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6179e613-9c41-4e16-96ac-bedbcb8c94e2
+		sourceLineageTag: country_cd
+		summarizeBy: none
+		sourceColumn: country_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column address_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9ea513dc-1976-4747-a973-daed9a78f8e6
+		sourceLineageTag: address_type_cd
+		summarizeBy: none
+		sourceColumn: address_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferred
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 274ffa6c-8cf6-4fdd-8a76-125e17187eb5
+		sourceLineageTag: preferred
+		summarizeBy: none
+		sourceColumn: preferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column alert
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: dd27981d-dc24-425b-a446-ffc666036dfa
+		sourceLineageTag: alert
+		summarizeBy: none
+		sourceColumn: alert
+
+		annotation SummarizationSetBy = Automatic
+
+	column batch_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: eaf5d2ab-87fd-4080-9ae8-0b2492dbb592
+		sourceLineageTag: batch_id
+		summarizeBy: sum
+		sourceColumn: batch_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column temporary
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: ee7b8516-81fd-4fa0-aa79-bc3744d89d66
+		sourceLineageTag: temporary
+		summarizeBy: none
+		sourceColumn: temporary
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a54a521d-0ec4-4272-a4db-26f749a09149
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 3c061d8d-dd26-472c-8265-b5d92f70b5dc
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8c57421d-fb98-4a8c-bfa4-1318368beb66
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 7e22517e-ac8e-4d76-b092-81852ab9cbe0
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4104de3b-ffef-4384-bf0e-4af220be8981
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_party_addresses = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_party_addresses
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

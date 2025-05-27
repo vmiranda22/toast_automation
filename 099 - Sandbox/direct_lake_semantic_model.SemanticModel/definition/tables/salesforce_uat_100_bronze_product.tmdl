@@ -1,0 +1,157 @@
+table salesforce_uat_100_bronze_product
+	lineageTag: 32385c3b-bf98-49ca-991c-1d405744edef
+	sourceLineageTag: [dbo].[salesforce_uat_100_bronze_product]
+
+	column Id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b23c5cd4-0ddd-470a-92ea-b1a4d767b159
+		sourceLineageTag: Id
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ca1dd6b7-7897-4857-bc95-dc741ebafccb
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9ae76922-f447-4630-8adc-26d5ef6943bc
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bd69671d-aadb-42ae-a310-9e2bb295910a
+		sourceLineageTag: ProductCode
+		summarizeBy: none
+		sourceColumn: ProductCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Family
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 55596a68-f92e-471b-b668-c4694cf94140
+		sourceLineageTag: Family
+		summarizeBy: none
+		sourceColumn: Family
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Portfolio__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5d62e09d-0234-4787-ba1a-43645ef8cabe
+		sourceLineageTag: Product_Portfolio__c
+		summarizeBy: none
+		sourceColumn: Product_Portfolio__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: d9fbfb9b-d8e1-4642-bf97-70e3d59066b4
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: bf96bfd1-dd53-46f0-b2a1-3e5bef92a0be
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6d2c2539-03f4-4894-841f-8a286453e72d
+		sourceLineageTag: CreatedById
+		summarizeBy: none
+		sourceColumn: CreatedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 9d09e892-030d-484f-a042-740822e968e4
+		sourceLineageTag: LastModifiedDate
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 10e152ff-4187-415f-9380-73d4f10ffd2c
+		sourceLineageTag: LastModifiedById
+		summarizeBy: none
+		sourceColumn: LastModifiedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column SystemModstamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 73448b85-22c9-47ef-9db0-78f40fa93e80
+		sourceLineageTag: SystemModstamp
+		summarizeBy: none
+		sourceColumn: SystemModstamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column RecordTypeId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 82a20dfd-24b2-4a37-8852-b1dd4cf2a193
+		sourceLineageTag: RecordTypeId
+		summarizeBy: none
+		sourceColumn: RecordTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Source_Id__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d400bffb-4774-4fd9-8f42-a34f935b11e9
+		sourceLineageTag: Source_Id__c
+		summarizeBy: none
+		sourceColumn: Source_Id__c
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_100_bronze_product = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_100_bronze_product
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

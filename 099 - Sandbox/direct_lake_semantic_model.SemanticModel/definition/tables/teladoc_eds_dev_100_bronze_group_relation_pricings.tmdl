@@ -1,0 +1,143 @@
+table teladoc_eds_dev_100_bronze_group_relation_pricings
+	lineageTag: a92dc48c-8a82-452d-82cc-030fd0985107
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_group_relation_pricings]
+
+	column group_relation_pricing_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 69616fe6-90b8-43b6-8c1f-369f7adc1809
+		sourceLineageTag: group_relation_pricing_id
+		summarizeBy: sum
+		sourceColumn: group_relation_pricing_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pricing_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d9ff1f50-f381-41f5-8e68-7145d683f2ee
+		sourceLineageTag: pricing_type_cd
+		summarizeBy: none
+		sourceColumn: pricing_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 78470aba-73ec-4bf8-9044-05b24db591ff
+		sourceLineageTag: relation_id
+		summarizeBy: sum
+		sourceColumn: relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column relation_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cbd6ef31-fe2e-42da-b4e7-54a6b9dff5f4
+		sourceLineageTag: relation_type
+		summarizeBy: none
+		sourceColumn: relation_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column invoice_method_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 102f6107-af7a-4873-aee1-b19d629d6194
+		sourceLineageTag: invoice_method_cd
+		summarizeBy: none
+		sourceColumn: invoice_method_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column invoice_submethod_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4c9da19c-ad64-4a0d-b86e-4d9e893e8845
+		sourceLineageTag: invoice_submethod_cd
+		summarizeBy: none
+		sourceColumn: invoice_submethod_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column amount
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: edf4cb26-87cc-401c-a786-16e0fabc2099
+		sourceLineageTag: amount
+		summarizeBy: sum
+		sourceColumn: amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8f6691b0-6c3b-44f5-adc5-095e5e34dedc
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 7288fa29-41c3-4898-a899-dab4de2ed9f2
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 8b70cb74-c9ae-41e9-b667-3621bb0d3ffc
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 4e658521-a4cc-479a-8467-fc318094b1d6
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: ee4b7c56-fc56-4d14-9586-72e7c8f23eb2
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition teladoc_eds_dev_100_bronze_group_relation_pricings = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_group_relation_pricings
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,262 @@
+table teladoc_eds_dev_100_bronze_persons
+	lineageTag: b87d6b17-98f4-4041-af25-60f841e17bde
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_persons]
+
+	column person_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 279c8d63-8508-4447-9236-150f540e513f
+		sourceLineageTag: person_id
+		summarizeBy: sum
+		sourceColumn: person_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 52b05e10-d497-4fbd-946c-62c043d67115
+		sourceLineageTag: party_id
+		summarizeBy: sum
+		sourceColumn: party_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column person_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 908630aa-b3b0-4382-a678-741e22452eb2
+		sourceLineageTag: person_type
+		summarizeBy: none
+		sourceColumn: person_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column salutation
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f91caa5d-ce60-4cbd-9483-cea0ed146758
+		sourceLineageTag: salutation
+		summarizeBy: none
+		sourceColumn: salutation
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0d1c54de-7205-479f-81cf-1c90033a6140
+		sourceLineageTag: first_nm
+		summarizeBy: none
+		sourceColumn: first_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column middle_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fc773c38-79a4-47f4-91c5-3fef785452ba
+		sourceLineageTag: middle_nm
+		summarizeBy: none
+		sourceColumn: middle_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cdbdda1e-7b97-479b-94bc-b0ed71f90382
+		sourceLineageTag: last_nm
+		summarizeBy: none
+		sourceColumn: last_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column suffix
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 40aacca1-2fce-4c9b-85d1-9634c7648e22
+		sourceLineageTag: suffix
+		summarizeBy: none
+		sourceColumn: suffix
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_title
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 82fe0d38-2393-429b-a58d-d0430ea858b0
+		sourceLineageTag: job_title
+		summarizeBy: none
+		sourceColumn: job_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2e2cd726-b28c-4c57-94db-90498f50fe1d
+		sourceLineageTag: gender_cd
+		summarizeBy: none
+		sourceColumn: gender_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender_identification_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6b217e1d-0ccf-46ab-8094-916067e07a3c
+		sourceLineageTag: gender_identification_cd
+		summarizeBy: none
+		sourceColumn: gender_identification_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column identity_pronoun_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9e7a23c7-d3ed-4394-8076-6f842f45cdf4
+		sourceLineageTag: identity_pronoun_cd
+		summarizeBy: none
+		sourceColumn: identity_pronoun_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column ssn
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7fcf8a93-fda0-433b-93b7-bd662337059c
+		sourceLineageTag: ssn
+		summarizeBy: none
+		sourceColumn: ssn
+
+		annotation SummarizationSetBy = Automatic
+
+	column dob
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: ce765694-07f3-450d-a414-6b61ee004478
+		sourceLineageTag: dob
+		summarizeBy: none
+		sourceColumn: dob
+
+		annotation SummarizationSetBy = Automatic
+
+	column ethnic_race
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6abf3b5d-4225-4ed7-91ff-c4d7068da5ed
+		sourceLineageTag: ethnic_race
+		summarizeBy: none
+		sourceColumn: ethnic_race
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2d473a9a-cce6-4499-83f8-a6bd82b64bec
+		sourceLineageTag: user_nm
+		summarizeBy: none
+		sourceColumn: user_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_session_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: c3fd50cb-661d-4c17-8d75-9bc01808b249
+		sourceLineageTag: last_session_dt
+		summarizeBy: none
+		sourceColumn: last_session_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column prior_session_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 1219df47-ef9d-4c49-923f-930ee6b84364
+		sourceLineageTag: prior_session_dt
+		summarizeBy: none
+		sourceColumn: prior_session_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_language
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 73ed3044-376d-4327-b7f5-ed6110fe32da
+		sourceLineageTag: other_language
+		summarizeBy: none
+		sourceColumn: other_language
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c3986c86-35f4-43d5-9b0a-f41fbc9f60b5
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 0ea2cf67-aaac-4a2f-8dfc-1a5187c9afc1
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 16aa060a-ad1a-4bfe-abfc-2ec8a29236b0
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 2762d8a8-aa27-4184-8478-94f682ded356
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c5a79ac3-cebb-488c-9a17-c9f09146d2e2
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_persons = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_persons
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,164 @@
+table teladoc_eds_dev_100_bronze_organizations
+	lineageTag: 3532006e-fac1-4d4e-ad55-41028105369b
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_organizations]
+
+	column organization_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 50617e7a-0316-425e-aecf-4bc04efcbef5
+		sourceLineageTag: organization_id
+		summarizeBy: sum
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1717bb86-ec89-46b8-b515-7ebba2cf15a8
+		sourceLineageTag: organization_nm
+		summarizeBy: none
+		sourceColumn: organization_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column parent_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8f2997ed-1658-460b-ac52-875cc935526d
+		sourceLineageTag: parent_id
+		summarizeBy: sum
+		sourceColumn: parent_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ancestry
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f762c2a6-73fa-4f4b-9cc4-04454b096b4c
+		sourceLineageTag: ancestry
+		summarizeBy: none
+		sourceColumn: ancestry
+
+		annotation SummarizationSetBy = Automatic
+
+	column ancestry_depth
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c054a5d7-8eaf-451e-bce6-4042e4e17866
+		sourceLineageTag: ancestry_depth
+		summarizeBy: sum
+		sourceColumn: ancestry_depth
+
+		annotation SummarizationSetBy = Automatic
+
+	column sql_path
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f62d8df9-52dc-4ccd-848b-c1c2f3ebc78d
+		sourceLineageTag: sql_path
+		summarizeBy: none
+		sourceColumn: sql_path
+
+		annotation SummarizationSetBy = Automatic
+
+	column lft
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 22a3b381-dc2d-4bc1-ad6f-f67c04e01409
+		sourceLineageTag: lft
+		summarizeBy: sum
+		sourceColumn: lft
+
+		annotation SummarizationSetBy = Automatic
+
+	column rgt
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 55652fb4-ab5f-4620-bc21-557adedeba23
+		sourceLineageTag: rgt
+		summarizeBy: sum
+		sourceColumn: rgt
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: acefedf0-2c6d-4504-93d0-c8e7dae78cdc
+		sourceLineageTag: group_id
+		summarizeBy: sum
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c3ce38c5-997a-47c4-85a2-2f24a55b24f6
+		sourceLineageTag: party_id
+		summarizeBy: sum
+		sourceColumn: party_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: fd678e70-e251-48df-bd25-6782ecc3017a
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1afc964c-814f-42c5-9fcc-4a662bebfef4
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b8b72766-3640-4f12-98df-acfc363f0ead
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fc8b36d7-64b3-4642-b598-233dc5237749
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_organizations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_organizations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

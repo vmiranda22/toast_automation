@@ -1,0 +1,122 @@
+table teladoc_eds_dev_200_silver_group_payer_service_specialty_relations
+	lineageTag: 4643fd53-92bf-406f-8f9c-ec2187b5c77f
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_group_payer_service_specialty_relations]
+
+	column group_payer_service_specialty_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e5037d46-6b3c-4461-9d1f-f78e41cbc2c6
+		sourceLineageTag: group_payer_service_specialty_relation_id
+		summarizeBy: sum
+		sourceColumn: group_payer_service_specialty_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_service_specialty_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 471b3954-d3df-4e18-a8d1-4641bbc59cbb
+		sourceLineageTag: group_service_specialty_relation_id
+		summarizeBy: sum
+		sourceColumn: group_service_specialty_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payer_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: edf02393-b98f-49fb-af9f-47dec7dc7e23
+		sourceLineageTag: payer_id
+		summarizeBy: sum
+		sourceColumn: payer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column claim_payer_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1db4f91c-5e53-4fbc-8488-16c913c8e157
+		sourceLineageTag: claim_payer_id
+		summarizeBy: sum
+		sourceColumn: claim_payer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column default_payer
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: c8ff1e78-29cd-4930-a48d-4f8d65c1b43b
+		sourceLineageTag: default_payer
+		summarizeBy: none
+		sourceColumn: default_payer
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 75288bc8-75f8-4bf2-84b4-75c75aa088e6
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f4e642b7-284c-480a-be54-c0d7b018ec52
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 82edf231-6501-43b7-bb31-27ab9fc6c462
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 7b00eac9-d176-4e91-b035-f6cf1e44a91a
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 642153d3-1822-4eae-95b2-364ac9975f99
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_group_payer_service_specialty_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_group_payer_service_specialty_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

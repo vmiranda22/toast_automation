@@ -1,0 +1,55 @@
+table teladoc_eds_dev_100_bronze_member_group_settings
+	lineageTag: a99c5319-bef7-46b1-874c-c82542bc3f97
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_member_group_settings]
+
+	column g_group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9f8b6644-933f-4ae7-898a-43a532216c0d
+		sourceLineageTag: g_group_id
+		summarizeBy: sum
+		sourceColumn: g_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column g_legacy_group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7c123ba8-dc6e-4975-9348-be0e626dbbc4
+		sourceLineageTag: g_legacy_group_id
+		summarizeBy: sum
+		sourceColumn: g_legacy_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1ef2b45d-080c-4c1d-af9e-353942354332
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column value
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dd35be80-ba6f-4f99-8fd1-949ad3ba4cbf
+		sourceLineageTag: value
+		summarizeBy: none
+		sourceColumn: value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_member_group_settings = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_member_group_settings
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

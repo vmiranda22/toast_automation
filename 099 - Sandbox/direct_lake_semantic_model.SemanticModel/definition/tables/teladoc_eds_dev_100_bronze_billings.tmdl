@@ -1,0 +1,230 @@
+table teladoc_eds_dev_100_bronze_billings
+	lineageTag: cca69539-ccb8-4f70-bd7a-77d4712aa0e3
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_billings]
+
+	column billing_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 64ceae92-3d46-40c9-a632-c24bc9eaf96a
+		sourceLineageTag: billing_id
+		summarizeBy: sum
+		sourceColumn: billing_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column finance_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8714e1c3-edbf-4f45-a52e-502a92f168ce
+		sourceLineageTag: finance_name
+		summarizeBy: none
+		sourceColumn: finance_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column invoice_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 649bb20a-24f9-4928-a538-ed1d7c7657ae
+		sourceLineageTag: invoice_name
+		summarizeBy: none
+		sourceColumn: invoice_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column regards_to
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f48c2839-5289-48fd-820e-b984754f4266
+		sourceLineageTag: regards_to
+		summarizeBy: none
+		sourceColumn: regards_to
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4ef1c7f5-ffde-48b0-b44f-a2e54c312bfa
+		sourceLineageTag: organization_id
+		summarizeBy: sum
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_subsegment_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2ae6ca0b-ba54-4ec8-a0a5-0af331438834
+		sourceLineageTag: client_subsegment_cd
+		summarizeBy: none
+		sourceColumn: client_subsegment_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_term_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ef8c0db2-5998-43a7-93db-e6062b0c2579
+		sourceLineageTag: payment_term_cd
+		summarizeBy: none
+		sourceColumn: payment_term_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column invoice_delivery_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b2fa35b5-d083-431d-9d5f-469888e2937c
+		sourceLineageTag: invoice_delivery_cd
+		summarizeBy: none
+		sourceColumn: invoice_delivery_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column split_billing_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 127d6107-a581-4d8f-9de0-dba77473c63d
+		sourceLineageTag: split_billing_flg
+		summarizeBy: none
+		sourceColumn: split_billing_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_contract_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1e310cf7-4e83-40ac-8416-fb1d69cdd7c6
+		sourceLineageTag: risk_contract_flg
+		summarizeBy: none
+		sourceColumn: risk_contract_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column self_remit_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5616bc43-c9e1-488f-9d47-9b14edfd2563
+		sourceLineageTag: self_remit_flg
+		summarizeBy: none
+		sourceColumn: self_remit_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column send_expert_membership_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2d8c73d4-8163-4cbc-9e34-8880b4a76f9b
+		sourceLineageTag: send_expert_membership_flg
+		summarizeBy: none
+		sourceColumn: send_expert_membership_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column member_pay_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f0e6558b-98cb-4b48-95b8-fc1cdc7520dd
+		sourceLineageTag: member_pay_cd
+		summarizeBy: none
+		sourceColumn: member_pay_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column eligible_day_of_month
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b657f03d-67eb-499c-a8a5-2c922bdddbe8
+		sourceLineageTag: eligible_day_of_month
+		summarizeBy: sum
+		sourceColumn: eligible_day_of_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column billing_accnt_uuid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9feea3f8-a09d-4496-8fb1-f4d7120d18a5
+		sourceLineageTag: billing_accnt_uuid
+		summarizeBy: none
+		sourceColumn: billing_accnt_uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9ad3be48-9114-4a20-a1ee-947fb8acf4e7
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: db9cd0b0-e3d6-4ad2-b22b-baae8fb93808
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: d9a6f060-8bd7-49c7-81e8-d86381e373a9
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 42ff1c13-f85e-422f-9fde-2a49937994b0
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 2d905c14-1ba7-4d80-a9d4-23d64c942783
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0e089a75-8c37-4d4b-a6ec-58f101810f0a
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_billings = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_billings
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

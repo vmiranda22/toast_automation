@@ -1,0 +1,960 @@
+table workfront_issues
+	lineageTag: 475c34fb-97ea-4c0e-ab53-2456fa0e957a
+	sourceLineageTag: [dbo].[workfront_issues]
+
+	column 'data.ID'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 240d96ca-e122-4d0c-bf24-0c4e105690a1
+		sourceLineageTag: data.ID
+		summarizeBy: none
+		sourceColumn: data.ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.name'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7e46564c-04d1-43e9-b7fb-bd59fba77a2b
+		sourceLineageTag: data.name
+		summarizeBy: none
+		sourceColumn: data.name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.objCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e5b70285-3087-4e67-b48e-59a9c442ea69
+		sourceLineageTag: data.objCode
+		summarizeBy: none
+		sourceColumn: data.objCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.actualCompletionDate'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3e7bef83-026b-4c29-a840-ea05e8f035e7
+		sourceLineageTag: data.actualCompletionDate
+		summarizeBy: none
+		sourceColumn: data.actualCompletionDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.actualCost'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 85f0ac3e-7278-4db3-8f79-ad20ce904a5d
+		sourceLineageTag: data.actualCost
+		summarizeBy: sum
+		sourceColumn: data.actualCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.actualStartDate'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2c299e1c-a46c-4d6e-ac8f-5cca7cfee6ee
+		sourceLineageTag: data.actualStartDate
+		summarizeBy: none
+		sourceColumn: data.actualStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.actualWorkRequired'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7fa57fb3-e17a-4112-a6e7-e1bd62d0a7ad
+		sourceLineageTag: data.actualWorkRequired
+		summarizeBy: sum
+		sourceColumn: data.actualWorkRequired
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.assignedToID'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aa000e8b-7642-48a3-a704-8e88da7f1cb5
+		sourceLineageTag: data.assignedToID
+		summarizeBy: none
+		sourceColumn: data.assignedToID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.autoClosureDate'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9ebc5a59-0b9e-490b-aa88-80e5ef0706a3
+		sourceLineageTag: data.autoClosureDate
+		summarizeBy: none
+		sourceColumn: data.autoClosureDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.backlogOrder'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 51def653-01c0-4df4-bd81-a3e9f8e1c5e0
+		sourceLineageTag: data.backlogOrder
+		summarizeBy: sum
+		sourceColumn: data.backlogOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.categoryID'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b33283c6-3646-4599-8b1b-d2f2db5286a1
+		sourceLineageTag: data.categoryID
+		summarizeBy: none
+		sourceColumn: data.categoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.commitDate'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 03ca577c-f672-4c42-9866-59a05cd18f55
+		sourceLineageTag: data.commitDate
+		summarizeBy: none
+		sourceColumn: data.commitDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.condition'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 4146ecc0-4ecd-43f8-ad2a-45d9a75eaf32
+		sourceLineageTag: data.condition
+		summarizeBy: sum
+		sourceColumn: data.condition
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.customerID'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d06f3005-7eea-4e19-a715-92d87c307b56
+		sourceLineageTag: data.customerID
+		summarizeBy: none
+		sourceColumn: data.customerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.description'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3dbe8268-f66b-43ab-9002-5c370154dc5b
+		sourceLineageTag: data.description
+		summarizeBy: none
+		sourceColumn: data.description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.enteredByID'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1ad9672c-7a68-4a15-9ec2-40a6fb57b5a5
+		sourceLineageTag: data.enteredByID
+		summarizeBy: none
+		sourceColumn: data.enteredByID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.entryDate'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 206f52f2-6b20-4f08-accb-e36f62e28365
+		sourceLineageTag: data.entryDate
+		summarizeBy: none
+		sourceColumn: data.entryDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.hasDocuments'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 3d9dd688-9741-41f5-a811-3034db30a9db
+		sourceLineageTag: data.hasDocuments
+		summarizeBy: none
+		sourceColumn: data.hasDocuments
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.hasMessages'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: fe1b0afb-2317-437e-8654-7061ea4996c9
+		sourceLineageTag: data.hasMessages
+		summarizeBy: none
+		sourceColumn: data.hasMessages
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.hasNotes'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 015983f7-d318-4f3e-b113-9733e692a492
+		sourceLineageTag: data.hasNotes
+		summarizeBy: none
+		sourceColumn: data.hasNotes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.hasResolvables'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 95e99238-fa68-408f-a2bc-1e63e8d15c02
+		sourceLineageTag: data.hasResolvables
+		summarizeBy: none
+		sourceColumn: data.hasResolvables
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.hasTimedNotifications'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 8b2c50b8-5cfd-4e9c-b23b-6fbd1b872034
+		sourceLineageTag: data.hasTimedNotifications
+		summarizeBy: none
+		sourceColumn: data.hasTimedNotifications
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.isComplete'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 20a5d575-59c1-4b1f-a883-11efd7d69a46
+		sourceLineageTag: data.isComplete
+		summarizeBy: none
+		sourceColumn: data.isComplete
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.isHelpDesk'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 8e326037-4bc0-4159-adc1-881fb58e0e7d
+		sourceLineageTag: data.isHelpDesk
+		summarizeBy: none
+		sourceColumn: data.isHelpDesk
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.isReady'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: b7ee73d6-9ef3-46c7-a066-efc992df532f
+		sourceLineageTag: data.isReady
+		summarizeBy: none
+		sourceColumn: data.isReady
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.lastUpdateDate'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cb1fe685-2bff-4506-8be9-4dddf2e77005
+		sourceLineageTag: data.lastUpdateDate
+		summarizeBy: none
+		sourceColumn: data.lastUpdateDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.lastUpdatedByID'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8fb88e9d-5268-42f9-851c-f97a0bff7866
+		sourceLineageTag: data.lastUpdatedByID
+		summarizeBy: none
+		sourceColumn: data.lastUpdatedByID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.opTaskType'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 254dc307-2759-42f1-9671-306c49bba104
+		sourceLineageTag: data.opTaskType
+		summarizeBy: none
+		sourceColumn: data.opTaskType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.ownerID'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4cccc4eb-dcb2-46a4-8212-cf292d4600fb
+		sourceLineageTag: data.ownerID
+		summarizeBy: none
+		sourceColumn: data.ownerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.percentComplete'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 489db209-a53e-46d4-8adc-185ec17cb52b
+		sourceLineageTag: data.percentComplete
+		summarizeBy: sum
+		sourceColumn: data.percentComplete
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.plannedCompletionDate'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e5840fad-f177-4cab-b368-b222a43dd90a
+		sourceLineageTag: data.plannedCompletionDate
+		summarizeBy: none
+		sourceColumn: data.plannedCompletionDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.plannedDurationMinutes'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 978fbcc7-8594-4d19-bfbf-3ce1a25f36e9
+		sourceLineageTag: data.plannedDurationMinutes
+		summarizeBy: sum
+		sourceColumn: data.plannedDurationMinutes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.plannedStartDate'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c1a84ca4-6e32-426e-a563-4dad906cdaba
+		sourceLineageTag: data.plannedStartDate
+		summarizeBy: none
+		sourceColumn: data.plannedStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.previousStatus'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0be4036c-26d3-4991-9c3c-f694b475b00d
+		sourceLineageTag: data.previousStatus
+		summarizeBy: none
+		sourceColumn: data.previousStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.priority'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 1feb3767-dd89-406f-8ada-97368912fa3a
+		sourceLineageTag: data.priority
+		summarizeBy: sum
+		sourceColumn: data.priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.projectID'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d1f47213-dedb-4868-93fb-bb9330d8e69e
+		sourceLineageTag: data.projectID
+		summarizeBy: none
+		sourceColumn: data.projectID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.projectedDurationMinutes'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3ba857d1-718a-4198-b87c-f51ae035f2f2
+		sourceLineageTag: data.projectedDurationMinutes
+		summarizeBy: sum
+		sourceColumn: data.projectedDurationMinutes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.referenceNumber'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b1b2dee9-4a35-4a43-9158-84aa5ec71ed9
+		sourceLineageTag: data.referenceNumber
+		summarizeBy: sum
+		sourceColumn: data.referenceNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.remainingDurationMinutes'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 667081bd-2052-4192-bd5a-011afcb6f19c
+		sourceLineageTag: data.remainingDurationMinutes
+		summarizeBy: sum
+		sourceColumn: data.remainingDurationMinutes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.roleID'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 407014b3-1258-40b2-9c21-a898fbfd9e3c
+		sourceLineageTag: data.roleID
+		summarizeBy: none
+		sourceColumn: data.roleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.securityRootID'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3fc79548-0f2b-496d-9583-90d3a23d8353
+		sourceLineageTag: data.securityRootID
+		summarizeBy: none
+		sourceColumn: data.securityRootID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.securityRootObjCode'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7b1a5c6f-4f74-4333-b584-33dfd30f3d9c
+		sourceLineageTag: data.securityRootObjCode
+		summarizeBy: none
+		sourceColumn: data.securityRootObjCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.severity'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: df34755a-583e-4ee8-8d0d-0acd23d2e33b
+		sourceLineageTag: data.severity
+		summarizeBy: sum
+		sourceColumn: data.severity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.status'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c7e0fb30-b7e0-4dd0-8c53-1e854285e680
+		sourceLineageTag: data.status
+		summarizeBy: none
+		sourceColumn: data.status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.storyBoardOrder'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 24f6da1c-f8c8-4a42-9eeb-87c02d0ce80d
+		sourceLineageTag: data.storyBoardOrder
+		summarizeBy: sum
+		sourceColumn: data.storyBoardOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.storyPoints'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d6918e24-7eb5-47c5-b595-738bf3380d54
+		sourceLineageTag: data.storyPoints
+		summarizeBy: sum
+		sourceColumn: data.storyPoints
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.url'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d0be8894-5cec-4aba-86a1-72a3da2de628
+		sourceLineageTag: data.url
+		summarizeBy: none
+		sourceColumn: data.url
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.version'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2f7fde11-7d60-4f05-a326-274bf360b2b4
+		sourceLineageTag: data.version
+		summarizeBy: sum
+		sourceColumn: data.version
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.work'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c0584d27-c713-4301-9fc6-82d052ce4ba3
+		sourceLineageTag: data.work
+		summarizeBy: sum
+		sourceColumn: data.work
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.workRequired'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 8b6268c6-5c83-4bb2-8ce9-6d276a1c52ce
+		sourceLineageTag: data.workRequired
+		summarizeBy: sum
+		sourceColumn: data.workRequired
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Root_Cause_Analysis_Status'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2c901f53-4d73-4264-a062-38e4533a468f
+		sourceLineageTag: data.parameterValues.DE:OG-Root_Cause_Analysis_Status
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Root_Cause_Analysis_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Contributors2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4819ef9e-4bf1-4faf-8a2a-1fbe573c8d46
+		sourceLineageTag: data.parameterValues.DE:OG-Contributors2
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Contributors2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Solution_Hypothesis'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d6cbbecb-a2ce-4b1b-9209-f61b14f21cc8
+		sourceLineageTag: data.parameterValues.DE:OG-Solution_Hypothesis
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Solution_Hypothesis
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:Bussiness_Strategy_Priorities'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bfa73e44-47d1-4891-bb32-4a4133310da4
+		sourceLineageTag: data.parameterValues.DE:Bussiness_Strategy_Priorities
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:Bussiness_Strategy_Priorities
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:Og-Comments'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 99ad7ba5-cf38-4724-b78e-5bb8036cefea
+		sourceLineageTag: data.parameterValues.DE:Og-Comments
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:Og-Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Additional_Information'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: acb86a74-1cd2-4bb2-b49e-1c2874fe0458
+		sourceLineageTag: data.parameterValues.DE:OG-Additional_Information
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Additional_Information
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Bussiness_Requirements_Document_Status'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8b0926dc-a74b-4c54-be3e-f89caa917c66
+		sourceLineageTag: data.parameterValues.DE:OG-Bussiness_Requirements_Document_Status
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Bussiness_Requirements_Document_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:Budget_Status'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d7053220-0ead-46e6-947f-6b213883a408
+		sourceLineageTag: data.parameterValues.DE:Budget_Status
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:Budget_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:Project_Status'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 74cf0db4-e08e-40cf-997b-2a5d0638c2ac
+		sourceLineageTag: data.parameterValues.DE:Project_Status
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:Project_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Training'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 96a64271-9908-4206-88e8-f71ec237ba76
+		sourceLineageTag: data.parameterValues.DE:OG-Training
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Training
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:Risk/Impact_if_something_brokes'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0da1f53f-9071-4845-a858-cf9e1b75b911
+		sourceLineageTag: data.parameterValues.DE:Risk/Impact_if_something_brokes
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:Risk/Impact_if_something_brokes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Project_Owner'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 46cf7f9b-1908-496d-b56f-3936643355fe
+		sourceLineageTag: data.parameterValues.DE:OG-Project_Owner
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Project_Owner
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:Og-Expected_Timeline'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: ec32ae79-c089-4c90-8488-a2ca09f3c52d
+		sourceLineageTag: data.parameterValues.DE:Og-Expected_Timeline
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:Og-Expected_Timeline
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Approval_Person/Team'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f624b26a-2837-4bb4-a967-c0c0d93952a1
+		sourceLineageTag: data.parameterValues.DE:OG-Approval_Person/Team
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Approval_Person/Team
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Documentation_&_Communication'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 38f3055f-79a3-4c8d-82b7-0261625f0974
+		sourceLineageTag: data.parameterValues.DE:OG-Documentation_&_Communication
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Documentation_&_Communication
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Measure__Stage_Status'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 68ee2367-2a7b-4d2e-851a-2a58378d1979
+		sourceLineageTag: data.parameterValues.DE:OG-Measure__Stage_Status
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Measure__Stage_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Project_ID'
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6f0cefc6-4265-4de5-a7ce-51dac97485a5
+		sourceLineageTag: data.parameterValues.DE:OG-Project_ID
+		summarizeBy: count
+		sourceColumn: data.parameterValues.DE:OG-Project_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Solution_Architect'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 04d7fc57-d676-4ab0-99ef-97217fd655ab
+		sourceLineageTag: data.parameterValues.DE:OG-Solution_Architect
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Solution_Architect
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Impacted_if_no_solution_is_implemented'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ee8f097a-8268-437b-9910-8a816afc40c2
+		sourceLineageTag: data.parameterValues.DE:OG-Impacted_if_no_solution_is_implemented
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Impacted_if_no_solution_is_implemented
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-KPI_ID'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ce983981-88b2-458d-820b-68609ed3827e
+		sourceLineageTag: data.parameterValues.DE:OG-KPI_ID
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-KPI_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Adittional_Information/Attachements'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 34365ec1-7222-4adf-abf6-37f6498c2cf8
+		sourceLineageTag: data.parameterValues.DE:OG-Adittional_Information/Attachements
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Adittional_Information/Attachements
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Project_Name'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dbf4b4e2-8eb1-4a14-b8b4-26f04c22284d
+		sourceLineageTag: data.parameterValues.DE:OG-Project_Name
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Project_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Client_Specific_Impact'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 756702b0-fd7a-4c18-9c37-dc3e65645603
+		sourceLineageTag: data.parameterValues.DE:OG-Client_Specific_Impact
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Client_Specific_Impact
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Conclusions'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9082d2a8-3660-41f0-91f8-f17ecb244ab0
+		sourceLineageTag: data.parameterValues.DE:OG-Conclusions
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Conclusions
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Define_Status'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f83690e1-272a-4ee5-89ea-6ec2437bad3b
+		sourceLineageTag: data.parameterValues.DE:OG-Define_Status
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Define_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Progress_Update'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bd28ddcc-9302-4404-acd9-87d2b91d8b14
+		sourceLineageTag: data.parameterValues.DE:OG-Progress_Update
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Progress_Update
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Funding_Selection'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bd9f5395-e175-422c-9463-8be1a7463750
+		sourceLineageTag: data.parameterValues.DE:OG-Funding_Selection
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Funding_Selection
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Estimated_Project_Complexity'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 48016de6-8a47-4e6a-a47c-3380c0120dfd
+		sourceLineageTag: data.parameterValues.DE:OG-Estimated_Project_Complexity
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Estimated_Project_Complexity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Estimated_Project_Duration'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4b9fb455-b7d7-4912-bbbc-b39fa79425d6
+		sourceLineageTag: data.parameterValues.DE:OG-Estimated_Project_Duration
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Estimated_Project_Duration
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:Project_Owner'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 16080e4d-fbd5-40cc-bcc5-8cefd53d3c5a
+		sourceLineageTag: data.parameterValues.DE:Project_Owner
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:Project_Owner
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Root_Cause_Analysis_RCA'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fb7514ca-500d-4d49-80b0-2fd7175f26dc
+		sourceLineageTag: data.parameterValues.DE:OG-Root_Cause_Analysis_RCA
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Root_Cause_Analysis_RCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Executive_Sponsor'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 23c6de0c-f80c-4834-983f-d385cf08503f
+		sourceLineageTag: data.parameterValues.DE:OG-Executive_Sponsor
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Executive_Sponsor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Bussiness_Continuity_Plan'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3333c783-bd0b-40c6-9cb4-c3dfe611ec41
+		sourceLineageTag: data.parameterValues.DE:OG-Bussiness_Continuity_Plan
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Bussiness_Continuity_Plan
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-LOE_Monthly/Weekly'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a74da657-89bf-403f-a1fb-0a68e015f052
+		sourceLineageTag: data.parameterValues.DE:OG-LOE_Monthly/Weekly
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-LOE_Monthly/Weekly
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Project_Effective_End/Close_Date'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 610a6f28-e7b1-4abe-9754-e0c9723fb8d7
+		sourceLineageTag: data.parameterValues.DE:OG-Project_Effective_End/Close_Date
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Project_Effective_End/Close_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Reporting_Dashboards_&_Metrics'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 565440a2-44ff-4e1d-a36f-79c3477de8ac
+		sourceLineageTag: data.parameterValues.DE:OG-Reporting_Dashboards_&_Metrics
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Reporting_Dashboards_&_Metrics
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Related_KPI2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9a9ef569-8a97-4c6b-b679-86074cc453a8
+		sourceLineageTag: data.parameterValues.DE:OG-Related_KPI2
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Related_KPI2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:What_Does_Success_like?'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7f0c4358-b836-4b7d-b2aa-8ebff9a33c4f
+		sourceLineageTag: data.parameterValues.DE:What_Does_Success_like?
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:What_Does_Success_like?
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Root_Cause_Hypothesis2'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2953f354-3233-420c-a31d-66a13e603c10
+		sourceLineageTag: data.parameterValues.DE:OG-Root_Cause_Hypothesis2
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Root_Cause_Hypothesis2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Bussiness_Objective/s'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 722d3ef4-c701-4cd4-a0e1-9d9dba209645
+		sourceLineageTag: data.parameterValues.DE:OG-Bussiness_Objective/s
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Bussiness_Objective/s
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-ROI_-_Return_Of_Investment'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3a3fb8dc-22d9-42bc-8094-f9802e79e736
+		sourceLineageTag: data.parameterValues.DE:OG-ROI_-_Return_Of_Investment
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-ROI_-_Return_Of_Investment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data.parameterValues.DE:OG-Actual_Outcomes'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f0a652f6-59cc-4a34-be9c-2169579369a5
+		sourceLineageTag: data.parameterValues.DE:OG-Actual_Outcomes
+		summarizeBy: none
+		sourceColumn: data.parameterValues.DE:OG-Actual_Outcomes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition workfront_issues = entity
+		mode: directLake
+		source
+			entityName: workfront_issues
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

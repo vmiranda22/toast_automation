@@ -1,0 +1,131 @@
+table teladoc_eds_dev_100_bronze_group_empi_namespace_relations
+	lineageTag: 57ab392a-c7a3-4403-9161-b46cdaa4e4e9
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_group_empi_namespace_relations]
+
+	column group_empi_namespace_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1d4cfc4f-789e-4e58-b33e-e9feb14dd5ce
+		sourceLineageTag: group_empi_namespace_relation_id
+		summarizeBy: sum
+		sourceColumn: group_empi_namespace_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a59e4146-d326-42e3-8c27-738198349fe4
+		sourceLineageTag: group_id
+		summarizeBy: sum
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column empi_namespace_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3ee3d6a1-5f57-441c-b4be-cddfd2c7b9e9
+		sourceLineageTag: empi_namespace_cd
+		summarizeBy: none
+		sourceColumn: empi_namespace_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column benefit_restriction_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 06f447ba-da3a-4b9c-a45b-e5eaf16e51ce
+		sourceLineageTag: benefit_restriction_cd
+		summarizeBy: none
+		sourceColumn: benefit_restriction_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 03fdf611-c202-4e8d-9758-5a73f8d47e08
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e13c1137-c5e0-490f-8a17-3f207b525fe8
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 639444b0-2bc7-4d78-b907-36c663eb9784
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e13faaaf-d67b-4128-9dce-08ba714ec130
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4aa993ec-2aa5-4767-af01-c662f58834b1
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: bdbc8745-4421-421d-80ee-75341d25271a
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 029e93cc-2a56-4c39-88e0-a94fda00e994
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_group_empi_namespace_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_group_empi_namespace_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

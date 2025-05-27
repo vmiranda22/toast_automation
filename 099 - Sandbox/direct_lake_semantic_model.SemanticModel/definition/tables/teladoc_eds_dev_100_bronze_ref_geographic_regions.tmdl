@@ -1,0 +1,88 @@
+table teladoc_eds_dev_100_bronze_ref_geographic_regions
+	lineageTag: 20c99cf0-15d4-40d8-a8ec-296a30443073
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_ref_geographic_regions]
+
+	column geographic_region_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 83b854c0-1837-486c-b142-78f4e3f391db
+		sourceLineageTag: geographic_region_cd
+		summarizeBy: none
+		sourceColumn: geographic_region_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column geographic_region_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0ea3a4af-ff99-4a12-a061-6c8194e6c118
+		sourceLineageTag: geographic_region_nm
+		summarizeBy: none
+		sourceColumn: geographic_region_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref_geographic_region_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f92e2a19-c4ed-4b61-ab0b-5dc73a7c179f
+		sourceLineageTag: ref_geographic_region_id
+		summarizeBy: sum
+		sourceColumn: ref_geographic_region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 93fcc151-4a93-431c-8207-fd9d7346a114
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2a4f5e85-b876-4f3b-8a4d-f9e850de7b0c
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: aa9b4eae-738e-4b6d-a5b4-46ba7910d343
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: df74e5d1-e34c-4638-8910-df1e8a96c784
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_ref_geographic_regions = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_ref_geographic_regions
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

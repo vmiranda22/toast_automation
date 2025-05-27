@@ -1,0 +1,131 @@
+table teladoc_eds_dev_100_bronze_organization_marketing_communications
+	lineageTag: 0e79d8ed-b8d1-456a-9678-425f2e403b29
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_organization_marketing_communications]
+
+	column organization_marketing_communication_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ce928afc-5a4e-47bb-881d-e6ff2345a3aa
+		sourceLineageTag: organization_marketing_communication_id
+		summarizeBy: sum
+		sourceColumn: organization_marketing_communication_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: de347b3b-e817-4493-97ab-12a04bf50892
+		sourceLineageTag: organization_id
+		summarizeBy: sum
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column marketing_comm_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5ae8868e-f816-4405-8fb3-a0778c541b0c
+		sourceLineageTag: marketing_comm_type_cd
+		summarizeBy: none
+		sourceColumn: marketing_comm_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column optout_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 936dfd80-2594-47bb-98fe-f19560d9b13a
+		sourceLineageTag: optout_cd
+		summarizeBy: none
+		sourceColumn: optout_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column approval_start_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 402d3655-b7a5-42ad-aa06-38ac16ba1215
+		sourceLineageTag: approval_start_date
+		summarizeBy: none
+		sourceColumn: approval_start_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column approval_end_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 6264df63-0da6-44c7-b264-038930f599ea
+		sourceLineageTag: approval_end_date
+		summarizeBy: none
+		sourceColumn: approval_end_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cc922018-5d02-40c7-98d3-2d7fafaeb165
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 54136755-a2ad-44b8-a53b-9e56a9edc909
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a48fa301-6096-4590-8b1c-3fca550313fb
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: ce6be80d-b4a1-46a9-b81d-049a718e1841
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a788aab2-856e-47de-b876-ae3e6da2731f
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_organization_marketing_communications = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_organization_marketing_communications
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,110 @@
+table teladoc_eds_dev_200_silver_ref_empi_namespaces
+	lineageTag: 18fe2c24-cfad-46da-b4d1-e5c29927902a
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_ref_empi_namespaces]
+
+	column ref_empi_namespace_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2e1fad4a-79ec-401d-a9a9-73bf0e4acd02
+		sourceLineageTag: ref_empi_namespace_id
+		summarizeBy: sum
+		sourceColumn: ref_empi_namespace_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column empi_namespace_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 91d9bb1b-f4a1-4053-aa99-39728d45cfcc
+		sourceLineageTag: empi_namespace_cd
+		summarizeBy: none
+		sourceColumn: empi_namespace_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column namespace_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 93793555-319a-4613-b295-fe76a688cab9
+		sourceLineageTag: namespace_nm
+		summarizeBy: none
+		sourceColumn: namespace_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column use
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 5f866e47-fa95-4255-8169-34655e3dff1a
+		sourceLineageTag: use
+		summarizeBy: none
+		sourceColumn: use
+
+		annotation SummarizationSetBy = Automatic
+
+	column active
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: cd85f0f4-ca75-436e-854e-cfe2559ee1c1
+		sourceLineageTag: active
+		summarizeBy: none
+		sourceColumn: active
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 754d655a-279a-446d-83d3-76b2ed316a6e
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 47c5e3c1-c70d-4c72-ae47-f7321144c009
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 9fa945da-bad6-4b89-be2c-5c6098196fd6
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 955aa1a1-4993-4dba-bb53-c3394d1212d9
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_ref_empi_namespaces = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_ref_empi_namespaces
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

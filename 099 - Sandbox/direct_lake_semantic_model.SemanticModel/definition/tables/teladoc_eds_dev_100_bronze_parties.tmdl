@@ -1,0 +1,110 @@
+table teladoc_eds_dev_100_bronze_parties
+	lineageTag: 5c40a602-5217-4d46-8c14-57d7bd398095
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_parties]
+
+	column party_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4a872d4e-6a02-4411-871a-41ab9569684b
+		sourceLineageTag: party_id
+		summarizeBy: sum
+		sourceColumn: party_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b68286f6-eac8-41dc-b869-b6152b5e25b9
+		sourceLineageTag: party_name
+		summarizeBy: none
+		sourceColumn: party_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4cee4ec7-1562-4ace-a4e2-eb70bc8d8376
+		sourceLineageTag: party_type_cd
+		summarizeBy: none
+		sourceColumn: party_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_batch_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: eb8e8e9a-836e-418d-ae60-d380dc32de57
+		sourceLineageTag: party_batch_id
+		summarizeBy: sum
+		sourceColumn: party_batch_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column row_number
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d10e3a40-95fe-483d-a566-16ed1744e143
+		sourceLineageTag: row_number
+		summarizeBy: sum
+		sourceColumn: row_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 97a15173-9566-4eea-8f6d-b6f99fd9c164
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 125db967-850f-4c38-b807-a47c512302e7
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 08504987-69e2-4e06-9f6a-c168184cc18b
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c1051150-9cb7-466f-ba11-45f39a1fb29f
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_parties = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_parties
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,56 @@
+table top_25_clients
+	lineageTag: f9feb86b-1db4-4517-957d-381b9131c96d
+	sourceLineageTag: [dbo].[top_25_clients]
+
+	column Client_Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0717d5f0-4d59-47f0-b565-1a19e8746662
+		sourceLineageTag: Client_Name
+		summarizeBy: none
+		sourceColumn: Client_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Org_Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d6352e68-1e4c-4f1b-92e1-a14d5dcf4c85
+		sourceLineageTag: Org_Name
+		summarizeBy: none
+		sourceColumn: Org_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Org_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 851f1916-5a81-4968-85ff-421860abf0c5
+		sourceLineageTag: Org_ID
+		summarizeBy: count
+		sourceColumn: Org_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column QA_Score
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 093502d6-7363-4a75-b82b-57ce6d98fbb7
+		sourceLineageTag: QA_Score
+		summarizeBy: sum
+		sourceColumn: QA_Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition top_25_clients = entity
+		mode: directLake
+		source
+			entityName: top_25_clients
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

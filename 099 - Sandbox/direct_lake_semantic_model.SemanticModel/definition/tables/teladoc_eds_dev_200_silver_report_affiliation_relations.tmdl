@@ -1,0 +1,151 @@
+table teladoc_eds_dev_200_silver_report_affiliation_relations
+	lineageTag: 577cea14-31af-47cd-84fe-57856f8b74d4
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_report_affiliation_relations]
+
+	column report_affiliation_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b0d6c9a2-8bba-4084-beeb-79fb266540c1
+		sourceLineageTag: report_affiliation_relation_id
+		summarizeBy: sum
+		sourceColumn: report_affiliation_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column affiliation_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5ff151ff-7b4a-4ffb-92ef-1a165ffc2771
+		sourceLineageTag: affiliation_type
+		summarizeBy: none
+		sourceColumn: affiliation_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column affiliation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a2d4d2fa-0c7c-436d-a2f5-af5ba972b046
+		sourceLineageTag: affiliation_id
+		summarizeBy: sum
+		sourceColumn: affiliation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d28e11f2-b779-4ba9-8fc3-c1d2160aa9aa
+		sourceLineageTag: report_cd
+		summarizeBy: none
+		sourceColumn: report_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column email_flavor_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b0166e75-9dcb-4834-b558-8abfb9be09bb
+		sourceLineageTag: email_flavor_cd
+		summarizeBy: none
+		sourceColumn: email_flavor_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column frequency_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 123a22d1-5ac2-461f-8952-b4e7747aeb2b
+		sourceLineageTag: frequency_cd
+		summarizeBy: none
+		sourceColumn: frequency_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 9229d65c-875f-45e3-af77-732336537bad
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 70fd7ec4-915d-4ae8-b010-0776e5115c78
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8eb2c570-c744-47a5-b0b7-f2a1dfa1b116
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: cf61873f-f34b-4422-8a51-fec232163e0f
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d527e2ce-2852-42c3-9547-0c061879c047
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: d3465aa6-bfb6-4b20-9792-6ef69d4d7dfd
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a8088c90-739b-4d14-8e71-29e6d8cba5aa
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_report_affiliation_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_report_affiliation_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

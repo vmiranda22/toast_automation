@@ -1,0 +1,249 @@
+table salesforce_uat_200_silver_contract
+	lineageTag: f394a5de-6865-4cdf-9efe-ce436583d4c9
+	sourceLineageTag: [dbo].[salesforce_uat_200_silver_contract]
+
+	column id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f8955851-713a-411b-87ab-aaf2f13dde58
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column contract_number
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5dc1de8b-5d1f-48bd-a9aa-f2b19522c84e
+		sourceLineageTag: contract_number
+		summarizeBy: none
+		sourceColumn: contract_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 80fdcf33-3813-4f83-93fc-68c265a42e02
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 20223e42-aa65-44c8-9f01-7676913d946a
+		sourceLineageTag: description
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column contract_term
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 29ae656a-3f21-418b-845a-a6a80b4638c6
+		sourceLineageTag: contract_term
+		summarizeBy: sum
+		sourceColumn: contract_term
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 393c0452-0119-49b1-b2f4-b84b628bc173
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column status_code
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7649ab08-9e6b-41ba-88f2-6d76ecf7dc74
+		sourceLineageTag: status_code
+		summarizeBy: none
+		sourceColumn: status_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 7ae0d13e-07b9-4ef8-a9e0-c8ccaba08244
+		sourceLineageTag: start_date
+		summarizeBy: none
+		sourceColumn: start_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 3a6eea9e-6a18-4fc9-8a40-7107ec666174
+		sourceLineageTag: end_date
+		summarizeBy: none
+		sourceColumn: end_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d6fce395-a809-4693-bc00-2f285898d432
+		sourceLineageTag: account_id
+		summarizeBy: none
+		sourceColumn: account_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_region
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: afe0c672-995d-41cf-bd18-28d38fa58374
+		sourceLineageTag: business_region
+		summarizeBy: none
+		sourceColumn: business_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column opportunity_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 37530e63-2239-4dcc-840b-41e5f9df7b96
+		sourceLineageTag: opportunity_id
+		summarizeBy: none
+		sourceColumn: opportunity_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cpq_pricebook
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a0134600-5b24-4ecf-8dc8-c9a039ac3714
+		sourceLineageTag: cpq_pricebook
+		summarizeBy: none
+		sourceColumn: cpq_pricebook
+
+		annotation SummarizationSetBy = Automatic
+
+	column carrier
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ab53705f-850c-4205-ad8f-8357bc4dd999
+		sourceLineageTag: carrier
+		summarizeBy: none
+		sourceColumn: carrier
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_channel
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 55e7bf44-edd2-4d9a-a4cc-61f5c0597898
+		sourceLineageTag: sales_channel
+		summarizeBy: none
+		sourceColumn: sales_channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column channel_rate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3f87046b-bcfb-4c6d-b9d2-11403235e700
+		sourceLineageTag: channel_rate
+		summarizeBy: none
+		sourceColumn: channel_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column gcrm_contract_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f82de8d5-3d19-4f3b-8c31-d411827c9e41
+		sourceLineageTag: gcrm_contract_id
+		summarizeBy: none
+		sourceColumn: gcrm_contract_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column owner_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7eefd65c-74bd-4677-97aa-f449001e54d9
+		sourceLineageTag: owner_id
+		summarizeBy: none
+		sourceColumn: owner_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: ad9a90e7-6a93-47b7-aa3d-6a4ec9e82c28
+		sourceLineageTag: created_date
+		summarizeBy: none
+		sourceColumn: created_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4dcd848f-e3fe-4a24-b2ca-d4994724688a
+		sourceLineageTag: created_by_id
+		summarizeBy: none
+		sourceColumn: created_by_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_modified_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 65ec3ea1-24d6-4450-a1b1-bb26eb4015be
+		sourceLineageTag: last_modified_date
+		summarizeBy: none
+		sourceColumn: last_modified_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_modified_by_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d68fcff4-599a-4c0e-bfb6-be0ecee9f2b5
+		sourceLineageTag: last_modified_by_id
+		summarizeBy: none
+		sourceColumn: last_modified_by_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column system_modstamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 99ed667c-2242-4881-ac1f-fbd6c9391231
+		sourceLineageTag: system_modstamp
+		summarizeBy: none
+		sourceColumn: system_modstamp
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_200_silver_contract = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_200_silver_contract
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

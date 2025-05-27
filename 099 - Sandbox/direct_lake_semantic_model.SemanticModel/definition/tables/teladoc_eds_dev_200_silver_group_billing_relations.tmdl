@@ -1,0 +1,110 @@
+table teladoc_eds_dev_200_silver_group_billing_relations
+	lineageTag: 54ec134e-cfe0-4d63-ac99-8d3f6048f21c
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_group_billing_relations]
+
+	column group_billing_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 08cc9ad6-2f4b-4c7d-a9e5-4ef24bf45ec8
+		sourceLineageTag: group_billing_relation_id
+		summarizeBy: sum
+		sourceColumn: group_billing_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 17c9e9e9-3bc7-44ef-bf0b-1fbee066f658
+		sourceLineageTag: group_id
+		summarizeBy: sum
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column billing_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8c87be78-01cd-4b36-aad4-d19d5c9b7144
+		sourceLineageTag: billing_id
+		summarizeBy: sum
+		sourceColumn: billing_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column billing_fee_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 87d117f4-2f9f-407a-9590-735acabde6f0
+		sourceLineageTag: billing_fee_type_cd
+		summarizeBy: none
+		sourceColumn: billing_fee_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b13c1a9f-d4b6-4d63-acc9-85ef21bfcf10
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 113d7ec6-18dc-4e21-aa27-e8c255462673
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 62591ea7-b7e5-4bb2-a313-7fef9ba9ed3a
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 846ba2e7-6edf-4505-8951-6a76640f052d
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f07b832d-ab2b-4d7b-984f-2a43f0c1b313
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_group_billing_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_group_billing_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

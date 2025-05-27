@@ -1,0 +1,141 @@
+table teladoc_eds_dev_200_silver_organization_extensions
+	lineageTag: d12fd3e1-bd94-473d-b05d-0132dff62c89
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_organization_extensions]
+
+	column organization_extension_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 955bb8fd-3122-4b37-ad1e-24ecf73df660
+		sourceLineageTag: organization_extension_id
+		summarizeBy: sum
+		sourceColumn: organization_extension_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f5da23ad-4926-4392-915f-b1e02e01b03d
+		sourceLineageTag: organization_id
+		summarizeBy: sum
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column employer
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 87efe1c3-561d-4845-9c02-04c596242ec6
+		sourceLineageTag: employer
+		summarizeBy: none
+		sourceColumn: employer
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_url
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5e51b615-b95b-4af9-a368-bb4b6fdbf075
+		sourceLineageTag: print_url
+		summarizeBy: none
+		sourceColumn: print_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_phone
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bdc81821-1aa9-486b-80c5-9b67c35f3b20
+		sourceLineageTag: print_phone
+		summarizeBy: none
+		sourceColumn: print_phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column additional_url
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 87555d92-05c1-417f-b5a0-09e1c167ffbc
+		sourceLineageTag: additional_url
+		summarizeBy: none
+		sourceColumn: additional_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column snippet_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e34a261e-8a67-4a78-8f7a-e7e9b90949d6
+		sourceLineageTag: snippet_id
+		summarizeBy: sum
+		sourceColumn: snippet_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 30037a0a-a376-4dac-a7ae-48ccdb393062
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f33a7f68-625a-4ff8-8fae-313c1ed4d624
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e9a8892b-1f7f-4b18-8dad-57d82267f1d4
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 621c869f-5865-4104-8f89-1bfc9ac972d5
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fe1c36c2-5ab0-4fde-8f18-caaa73fc8d41
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_organization_extensions = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_organization_extensions
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,178 @@
+table salesforce_uat_100_bronze_opportunity_product
+	lineageTag: b17c1358-234e-4956-8d58-43320e7e2798
+	sourceLineageTag: [dbo].[salesforce_uat_100_bronze_opportunity_product]
+
+	column Id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1f54c344-9c57-41fb-82cc-a05dcd4891ed
+		sourceLineageTag: Id
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7d475822-feaf-421e-84a8-f31da7741197
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Adolescent_Population__c
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: f8ee9da3-d44d-4609-8201-dabde845d1f9
+		sourceLineageTag: Adolescent_Population__c
+		summarizeBy: none
+		sourceColumn: Adolescent_Population__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Effective_Start_Date__c
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 94105457-e0bf-4f18-826f-4fed2ba8b941
+		sourceLineageTag: Effective_Start_Date__c
+		summarizeBy: none
+		sourceColumn: Effective_Start_Date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column OpportunityId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dbdf34f1-8b9d-4813-a083-f2a02649e5f8
+		sourceLineageTag: OpportunityId
+		summarizeBy: none
+		sourceColumn: OpportunityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product2Id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 532c7eaa-d115-461c-9d5d-0e26c8d6fca8
+		sourceLineageTag: Product2Id
+		summarizeBy: none
+		sourceColumn: Product2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0c88c7b0-6540-41aa-a11d-8f9bc1e3af91
+		sourceLineageTag: Product__c
+		summarizeBy: none
+		sourceColumn: Product__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 00e69571-4b14-4f32-adec-ade7f6742922
+		sourceLineageTag: ProductCode
+		summarizeBy: none
+		sourceColumn: ProductCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Family__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 378ee880-82b3-4a1e-aabc-e58f0ee863c0
+		sourceLineageTag: Product_Family__c
+		summarizeBy: none
+		sourceColumn: Product_Family__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Portfolio__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 39d3baef-b909-42d3-bb93-92f4c94013a6
+		sourceLineageTag: Product_Portfolio__c
+		summarizeBy: none
+		sourceColumn: Product_Portfolio__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Rollup__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6356c977-4a84-43d4-b1d0-c22f6fdd0134
+		sourceLineageTag: Product_Rollup__c
+		summarizeBy: none
+		sourceColumn: Product_Rollup__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 9dd4af03-cb6f-4b3d-9ca6-1592a3f9acd0
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f869c4f6-0236-43e7-a495-9094b2e77d46
+		sourceLineageTag: CreatedById
+		summarizeBy: none
+		sourceColumn: CreatedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 66b322a0-a77d-4d3d-b21d-9ed70f753df4
+		sourceLineageTag: LastModifiedDate
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6ac22c48-ae81-4fce-bdfe-5f8b405be434
+		sourceLineageTag: LastModifiedById
+		summarizeBy: none
+		sourceColumn: LastModifiedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column SystemModstamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 6a3c952c-4ad3-4b51-8aaa-82facbe9a652
+		sourceLineageTag: SystemModstamp
+		summarizeBy: none
+		sourceColumn: SystemModstamp
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_100_bronze_opportunity_product = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_100_bronze_opportunity_product
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

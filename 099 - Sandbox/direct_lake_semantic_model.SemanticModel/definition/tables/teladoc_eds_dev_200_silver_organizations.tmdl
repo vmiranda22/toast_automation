@@ -1,0 +1,173 @@
+table teladoc_eds_dev_200_silver_organizations
+	lineageTag: 1950cbc4-f270-4989-8778-a12668f82b15
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_organizations]
+
+	column organization_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2e9cc822-693a-4ffe-ae38-93a1b7722df1
+		sourceLineageTag: organization_id
+		summarizeBy: sum
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8a39e446-a7ea-4eca-b193-216e97d3d46b
+		sourceLineageTag: organization_nm
+		summarizeBy: none
+		sourceColumn: organization_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column sql_path
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9f5e7f26-9ca3-4c6b-9390-35fd7a869a0f
+		sourceLineageTag: sql_path
+		summarizeBy: none
+		sourceColumn: sql_path
+
+		annotation SummarizationSetBy = Automatic
+
+	column ancestry
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a6adfcd8-bb9f-4b64-b45f-a56779448c91
+		sourceLineageTag: ancestry
+		summarizeBy: none
+		sourceColumn: ancestry
+
+		annotation SummarizationSetBy = Automatic
+
+	column ancestry_depth
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1627aca2-a350-45a5-acc0-dc40179f2f4b
+		sourceLineageTag: ancestry_depth
+		summarizeBy: sum
+		sourceColumn: ancestry_depth
+
+		annotation SummarizationSetBy = Automatic
+
+	column parent_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3f717f5e-2809-450a-97a0-01dcc72faa3a
+		sourceLineageTag: parent_id
+		summarizeBy: sum
+		sourceColumn: parent_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: abc97484-3d73-40be-b453-d952c1edeaaa
+		sourceLineageTag: group_id
+		summarizeBy: sum
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 34c428f1-0333-4f4c-b7be-81bae2797885
+		sourceLineageTag: party_id
+		summarizeBy: sum
+		sourceColumn: party_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: ec9c6b7c-9e2b-4043-abeb-594b11cc0259
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 087ac619-49c6-4f3d-af1a-0894ab175253
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b5741270-8bc7-4f12-9e2b-3e7def7a4767
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 808f6756-e867-4275-8e69-e6f1649fc545
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column index
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c5fae8ca-b9dd-4cae-b255-ca50aefa70c0
+		sourceLineageTag: index
+		summarizeBy: sum
+		sourceColumn: index
+
+		annotation SummarizationSetBy = Automatic
+
+	column cc_group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5e5abaad-2477-4212-88b9-f512540f0505
+		sourceLineageTag: cc_group_id
+		summarizeBy: none
+		sourceColumn: cc_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cc_master_organization
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c0410718-1c8c-45cf-be8c-7e6b7b0a8a83
+		sourceLineageTag: cc_master_organization
+		summarizeBy: none
+		sourceColumn: cc_master_organization
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_organizations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_organizations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

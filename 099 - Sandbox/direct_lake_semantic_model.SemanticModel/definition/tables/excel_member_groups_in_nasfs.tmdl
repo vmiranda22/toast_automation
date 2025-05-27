@@ -1,0 +1,167 @@
+table excel_member_groups_in_nasfs
+	lineageTag: c589f01d-ae05-4b9c-a55b-4678dc6abdc9
+	sourceLineageTag: [dbo].[excel_member_groups_in_nasfs]
+
+	column Case_Link
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bd47cf47-47dc-4ea5-9b8d-ecb460508684
+		sourceLineageTag: Case_Link
+		summarizeBy: none
+		sourceColumn: Case_Link
+
+		annotation SummarizationSetBy = Automatic
+
+	column Case_ID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 610c960e-dde1-42ea-b8a0-65676ac4bfc8
+		sourceLineageTag: Case_ID
+		summarizeBy: none
+		sourceColumn: Case_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Case_Number
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: afb84ff6-1ea5-4b00-ba1e-5c9642ce9908
+		sourceLineageTag: Case_Number
+		summarizeBy: sum
+		sourceColumn: Case_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 95970507-ca4b-42d9-8198-d9c4331abe51
+		sourceLineageTag: Status
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Primary_Request_Type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 340a0e3d-f8bc-46a5-b994-4486092a46b5
+		sourceLineageTag: Primary_Request_Type
+		summarizeBy: none
+		sourceColumn: Primary_Request_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column NASF_Title
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6f7fc165-7111-43b5-b67c-c3e9a7307aca
+		sourceLineageTag: NASF_Title
+		summarizeBy: none
+		sourceColumn: NASF_Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column NASF_Group_Count
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 4a4c34c4-f7eb-471c-bd91-f788d2ac95f9
+		sourceLineageTag: NASF_Group_Count
+		summarizeBy: sum
+		sourceColumn: NASF_Group_Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column Member_Group_Link
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3aa7c94b-816a-4f59-b45c-9341f9000d01
+		sourceLineageTag: Member_Group_Link
+		summarizeBy: none
+		sourceColumn: Member_Group_Link
+
+		annotation SummarizationSetBy = Automatic
+
+	column Member_Group_ID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 412c1338-3829-4770-ba78-9549b6e2920e
+		sourceLineageTag: Member_Group_ID
+		summarizeBy: none
+		sourceColumn: Member_Group_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Member_Group_Number
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7ca490de-92e1-410a-b053-c9c327b2f872
+		sourceLineageTag: Member_Group_Number
+		summarizeBy: none
+		sourceColumn: Member_Group_Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Member_Group_Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 63da4e11-ae58-4c17-a53d-3e20311f406e
+		sourceLineageTag: Member_Group_Name
+		summarizeBy: none
+		sourceColumn: Member_Group_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Legacy_Group_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 23e20d1c-631f-424b-b51c-cdd1668d6fcd
+		sourceLineageTag: Legacy_Group_ID
+		summarizeBy: count
+		sourceColumn: Legacy_Group_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Flow_Run_Date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 58bbd7f9-1df4-47b8-a7c9-685723499b6d
+		sourceLineageTag: Flow_Run_Date
+		summarizeBy: none
+		sourceColumn: Flow_Run_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Flow_Run_Link
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bbfa14d0-777e-43bf-a897-5e213d966758
+		sourceLineageTag: Flow_Run_Link
+		summarizeBy: none
+		sourceColumn: Flow_Run_Link
+
+		annotation SummarizationSetBy = Automatic
+
+	column Processed
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6951f842-a9f4-4754-89eb-1ab9c39ed24d
+		sourceLineageTag: Processed
+		summarizeBy: none
+		sourceColumn: Processed
+
+		annotation SummarizationSetBy = Automatic
+
+	partition excel_member_groups_in_nasfs = entity
+		mode: directLake
+		source
+			entityName: excel_member_groups_in_nasfs
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

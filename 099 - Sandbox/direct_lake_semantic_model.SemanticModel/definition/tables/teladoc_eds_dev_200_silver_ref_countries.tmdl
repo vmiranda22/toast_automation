@@ -1,0 +1,98 @@
+table teladoc_eds_dev_200_silver_ref_countries
+	lineageTag: 3c6fd901-4f53-4322-ab57-481f5fdec34b
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_ref_countries]
+
+	column ref_country_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e39b90b0-bd9e-4bc3-b242-a7172dd78b69
+		sourceLineageTag: ref_country_id
+		summarizeBy: sum
+		sourceColumn: ref_country_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e8757f33-23f4-44d7-86a6-bc9124065f49
+		sourceLineageTag: country_cd
+		summarizeBy: none
+		sourceColumn: country_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 37d61b7f-30df-4790-8659-f772da850422
+		sourceLineageTag: country_nm
+		summarizeBy: none
+		sourceColumn: country_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fe605e43-d63e-46c4-8368-cdff314cb0d8
+		sourceLineageTag: currency_cd
+		summarizeBy: none
+		sourceColumn: currency_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 7c779766-6190-49af-b3a1-70eb03da3cbd
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 15a8e589-4ce2-4f82-bd94-e6c0233dcf7d
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 4c477bad-40ec-432e-b90d-42782595f833
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 25c2f956-0ae0-45e3-96d7-0e5169a9cf51
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_ref_countries = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_ref_countries
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
