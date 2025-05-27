@@ -1,0 +1,132 @@
+table teladoc_eds_dev_100_bronze_ref_service_levels_
+	lineageTag: 3c1603f8-da42-417d-ad7e-c6752c2e07d0
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_ref_service_levels_]
+
+	column ref_service_level_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ee1a8784-2239-40fe-8a68-92b4412233d2
+		sourceLineageTag: ref_service_level_id
+		summarizeBy: none
+		sourceColumn: ref_service_level_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_level_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 24c663db-0c31-4bce-a4b5-418f99f57ff7
+		sourceLineageTag: service_level_nm
+		summarizeBy: none
+		sourceColumn: service_level_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column level1
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bea6fa4b-c295-4685-aab9-cdcd662ccfdb
+		sourceLineageTag: level1
+		summarizeBy: none
+		sourceColumn: level1
+
+		annotation SummarizationSetBy = Automatic
+
+	column level2
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 65303bed-2884-4ff8-b116-c21e6e086f37
+		sourceLineageTag: level2
+		summarizeBy: none
+		sourceColumn: level2
+
+		annotation SummarizationSetBy = Automatic
+
+	column level3
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d01769e8-e271-4310-be8a-d7df499d8a87
+		sourceLineageTag: level3
+		summarizeBy: none
+		sourceColumn: level3
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_level_interval
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6cf6289d-ae5c-4c3d-a9ec-79c304cee63a
+		sourceLineageTag: service_level_interval
+		summarizeBy: none
+		sourceColumn: service_level_interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cfbb74f2-a701-46c4-8ecd-578a51aa75a6
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 2be919b1-5d42-43ef-84a5-b8a8078b810a
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 302951a1-4c78-4c03-9126-ac9ac85825e5
+		sourceLineageTag: created_by
+		summarizeBy: none
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: aa643548-9c34-46df-a9c5-a083aebf8ac9
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 806a66d2-a177-40fc-92da-7abe20c3f669
+		sourceLineageTag: updated_by
+		summarizeBy: none
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_ref_service_levels_ = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_ref_service_levels_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

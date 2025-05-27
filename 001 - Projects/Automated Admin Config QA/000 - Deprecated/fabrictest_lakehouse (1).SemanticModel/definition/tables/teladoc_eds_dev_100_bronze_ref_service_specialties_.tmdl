@@ -1,0 +1,182 @@
+table teladoc_eds_dev_100_bronze_ref_service_specialties_
+	lineageTag: 43023450-e741-4c62-ad6b-1c7b106a9061
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_ref_service_specialties_]
+
+	column service_specialty_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2ebb1a3b-040d-4081-886c-560c31fc89bb
+		sourceLineageTag: service_specialty_cd
+		summarizeBy: none
+		sourceColumn: service_specialty_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f2a965f6-4c07-4420-8a52-e5b1bcc3c1d6
+		sourceLineageTag: service_specialty_nm
+		summarizeBy: none
+		sourceColumn: service_specialty_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_uft
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4b4c4f8e-2ad2-44ac-85cc-c3d3730f2568
+		sourceLineageTag: service_specialty_uft
+		summarizeBy: none
+		sourceColumn: service_specialty_uft
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_offering_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 575dacb8-a978-411e-8236-29a7a4ac3d7c
+		sourceLineageTag: service_offering_cd
+		summarizeBy: none
+		sourceColumn: service_offering_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column servicing_platform_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 569c7d6c-f9e0-425e-b22a-003fd730e0fc
+		sourceLineageTag: servicing_platform_cd
+		summarizeBy: none
+		sourceColumn: servicing_platform_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column default_min_age
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: eb5ae8a7-8ffa-44d1-abcd-4e2812b25f7b
+		sourceLineageTag: default_min_age
+		summarizeBy: sum
+		sourceColumn: default_min_age
+
+		annotation SummarizationSetBy = Automatic
+
+	column default_max_age
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3b08e254-6ab0-48f3-87ef-6644b0600a85
+		sourceLineageTag: default_max_age
+		summarizeBy: sum
+		sourceColumn: default_max_age
+
+		annotation SummarizationSetBy = Automatic
+
+	column config_visible_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 178e8867-df69-4863-bae1-232bcea704fd
+		sourceLineageTag: config_visible_flg
+		summarizeBy: none
+		sourceColumn: config_visible_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column payer_visible_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6aa0cb81-ec97-486b-a6b9-250fd2ee5b23
+		sourceLineageTag: payer_visible_flg
+		summarizeBy: none
+		sourceColumn: payer_visible_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column support_visible_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ffa5354b-af7a-4fd3-aaea-4dc69e6ff8b3
+		sourceLineageTag: support_visible_flg
+		summarizeBy: none
+		sourceColumn: support_visible_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_visible_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: eb43329c-3576-4fbb-bfd3-9d02847aa686
+		sourceLineageTag: user_visible_flg
+		summarizeBy: none
+		sourceColumn: user_visible_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref_service_specialty_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 053994bf-c3c8-4547-9b71-0dd5e4217935
+		sourceLineageTag: ref_service_specialty_id
+		summarizeBy: sum
+		sourceColumn: ref_service_specialty_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 5be9e6a2-45a4-4dca-bb57-2d4b92e979c1
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: a891cf49-edb1-40bc-a2af-8cb4548a2747
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 5d3f51a9-2c30-464d-a4af-a4a08f006176
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 0b1f8b9c-cd15-4afe-bada-c2552857d486
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition teladoc_eds_dev_100_bronze_ref_service_specialties_ = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_ref_service_specialties_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

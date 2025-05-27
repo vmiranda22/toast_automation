@@ -1,0 +1,186 @@
+table teladoc_eds_dev_100_bronze_group_service_specialty_feature_settings_
+	lineageTag: 01d6521e-6152-4030-ad94-c2799dd6b592
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_group_service_specialty_feature_settings_]
+
+	column group_service_specialty_feature_setting_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7bf16e73-b3c2-4e14-b5fe-642c4e78ba3a
+		sourceLineageTag: group_service_specialty_feature_setting_id
+		summarizeBy: sum
+		sourceColumn: group_service_specialty_feature_setting_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_service_specialty_feature_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 19de0d88-0830-4cab-a8aa-17dd951fad97
+		sourceLineageTag: group_service_specialty_feature_relation_id
+		summarizeBy: sum
+		sourceColumn: group_service_specialty_feature_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column provider_selection_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 76b15878-4b2b-4dce-aca4-a0472bfd7f84
+		sourceLineageTag: provider_selection_cd
+		summarizeBy: none
+		sourceColumn: provider_selection_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column on_demand_consult
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 4ede3c9b-fcef-47c6-91f4-602c2528114d
+		sourceLineageTag: on_demand_consult
+		summarizeBy: none
+		sourceColumn: on_demand_consult
+
+		annotation SummarizationSetBy = Automatic
+
+	column scheduled_consult
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 4e764806-075b-4244-bc9a-50a0c754cf48
+		sourceLineageTag: scheduled_consult
+		summarizeBy: none
+		sourceColumn: scheduled_consult
+
+		annotation SummarizationSetBy = Automatic
+
+	column allow_preselected_provider
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 2aeabac8-53a9-4f16-ad5d-e0941645581b
+		sourceLineageTag: allow_preselected_provider
+		summarizeBy: none
+		sourceColumn: allow_preselected_provider
+
+		annotation SummarizationSetBy = Automatic
+
+	column allow_first_available_provider
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 3ea7a19d-4b01-42a3-928e-610c3f8597f3
+		sourceLineageTag: allow_first_available_provider
+		summarizeBy: none
+		sourceColumn: allow_first_available_provider
+
+		annotation SummarizationSetBy = Automatic
+
+	column allow_searchable_provider
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 64026e9e-0738-45fa-8e7f-3bfe31982dd6
+		sourceLineageTag: allow_searchable_provider
+		summarizeBy: none
+		sourceColumn: allow_searchable_provider
+
+		annotation SummarizationSetBy = Automatic
+
+	column allow_consult_guest
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: c8328b08-c579-4acb-976f-895ad8c14858
+		sourceLineageTag: allow_consult_guest
+		summarizeBy: none
+		sourceColumn: allow_consult_guest
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_or_less
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 9129af75-643c-4066-bb70-70e67bb2abbf
+		sourceLineageTag: print_or_less
+		summarizeBy: none
+		sourceColumn: print_or_less
+
+		annotation SummarizationSetBy = Automatic
+
+	column extended_family_benefit_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e4833e2d-12f4-42a0-b5e7-2232d814bf37
+		sourceLineageTag: extended_family_benefit_cd
+		summarizeBy: none
+		sourceColumn: extended_family_benefit_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 768cebf3-c487-46d7-96df-6096512f1ac3
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 234f6556-32f1-4dde-b045-beda29428d62
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 19cf8016-13eb-4ab8-88ea-d646349690ce
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 04f6b773-6e21-4735-8496-902b0ca1046d
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 54aae06d-7309-48cd-b638-0293604eab19
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_group_service_specialty_feature_settings_ = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_group_service_specialty_feature_settings_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

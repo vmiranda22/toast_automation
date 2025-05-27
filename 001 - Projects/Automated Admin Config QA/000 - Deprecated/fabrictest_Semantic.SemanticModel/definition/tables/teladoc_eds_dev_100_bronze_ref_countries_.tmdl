@@ -1,0 +1,158 @@
+table teladoc_eds_dev_100_bronze_ref_countries_
+	lineageTag: c8d6aeed-bc53-46bb-b740-823dcd6b9aa1
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_ref_countries_]
+
+	column country_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1b607c30-8da7-4f53-9898-b185c3553340
+		sourceLineageTag: country_cd
+		summarizeBy: none
+		sourceColumn: country_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 75d407c5-8bc2-46f6-9fdf-effd07247f9d
+		sourceLineageTag: country_nm
+		summarizeBy: none
+		sourceColumn: country_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column iso_2_cntry_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7bcd43d9-0ba6-4aa3-8086-d92b0a65fc51
+		sourceLineageTag: iso_2_cntry_cd
+		summarizeBy: none
+		sourceColumn: iso_2_cntry_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column capital
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3978edb7-fdf2-47bb-9d60-ba0448f03f61
+		sourceLineageTag: capital
+		summarizeBy: none
+		sourceColumn: capital
+
+		annotation SummarizationSetBy = Automatic
+
+	column continent
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b6893344-1a86-4287-8ef6-349770b1b541
+		sourceLineageTag: continent
+		summarizeBy: none
+		sourceColumn: continent
+
+		annotation SummarizationSetBy = Automatic
+
+	column telephone_cntry_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ffb10b9c-33ec-4223-89bd-9721e0b341b5
+		sourceLineageTag: telephone_cntry_cd
+		summarizeBy: none
+		sourceColumn: telephone_cntry_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 625cc094-ba75-44b5-b2be-d54b0b9f8d5d
+		sourceLineageTag: currency_cd
+		summarizeBy: none
+		sourceColumn: currency_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column domestic_presence_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: eb4486ff-62c7-42d4-9828-7d70792327e0
+		sourceLineageTag: domestic_presence_flg
+		summarizeBy: none
+		sourceColumn: domestic_presence_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column local_jurisdiction_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a07bdbfc-4491-46bc-b4f1-9ee2007b9c30
+		sourceLineageTag: local_jurisdiction_flg
+		summarizeBy: none
+		sourceColumn: local_jurisdiction_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref_country_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c3589710-be1e-4ec2-a2ee-d279162a4aa1
+		sourceLineageTag: ref_country_id
+		summarizeBy: none
+		sourceColumn: ref_country_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 29d42abf-f333-484e-8584-f7c8cdce5136
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6d30eab7-b1d3-4c71-83b4-89c88dd51068
+		sourceLineageTag: created_by
+		summarizeBy: none
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 1557df3c-cc9c-46b2-a5a5-3627403a1dc1
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 93962ef4-0352-4ca6-a0fd-e2253929f20e
+		sourceLineageTag: updated_by
+		summarizeBy: none
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_ref_countries_ = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_ref_countries_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

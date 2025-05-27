@@ -1,0 +1,178 @@
+relationship 93ecddbc-e3d4-0600-ea3c-7bbad17cce67
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_alt_group_ids_.group_id
+	toColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+
+relationship d7531578-0088-74ec-dfe5-438299696684
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_billing_relations_.billing_id
+	toColumn: teladoc_eds_dev_100_bronze_billings_.billing_id
+
+relationship 14c07dc8-ebdb-b3ab-6168-06b55ca6e4d4
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_payer_relations_.group_id
+	toColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+
+relationship 52cef027-5588-f402-ea95-8adc51934606
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_settings_.domestic_country_cd
+	toColumn: teladoc_eds_dev_100_bronze_ref_countries_.country_cd
+
+relationship 0756a35b-1426-c72d-8850-57b368229862
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_payer_relations_.payer_id
+	toColumn: teladoc_eds_dev_100_bronze_payers_.payer_id
+
+relationship 3fa7b7c5-49a5-dfdd-b879-5a972c60a04b
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_billing_relations_.group_id
+	toColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+
+relationship 35509103-9708-e7a2-0913-31bc7b0ec85c
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_valid_group_sources_.group_id
+	toColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+
+relationship 0f46e267-7ddd-ff02-82ed-3cc6d3c69d3b
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_service_specialty_relations_.group_id
+	toColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+
+relationship 6d0da97c-9b3a-40be-05b4-b630900a8d35
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_service_specialty_relations_.service_specialty_cd
+	toColumn: teladoc_eds_dev_100_bronze_ref_service_specialties_.service_specialty_cd
+
+relationship 173aa8f4-e5a9-332f-ade5-defb0f55fa3c
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_service_specialty_relations_.group_service_specialty_relation_id
+	toColumn: teladoc_eds_dev_100_bronze_group_service_specialty_feature_relations_.group_service_specialty_feature_relation_id
+
+relationship 630ac7e0-a9f6-9cfc-3393-420a2d30d06c
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_ref_service_specialty_features_.service_specialty_feature_cd
+	toColumn: teladoc_eds_dev_100_bronze_group_service_specialty_feature_relations_.service_specialty_feature_cd
+
+relationship bef51ab5-828d-4891-58d7-5511f6fb348c
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_ref_service_specialty_features_.feature_cd
+	toColumn: teladoc_eds_dev_100_bronze_ref_features_.feature_cd
+
+relationship adb53903-d4e3-3a58-347d-4127f6ba26be
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_service_specialty_feature_settings_.group_service_specialty_feature_relation_id
+	toColumn: teladoc_eds_dev_100_bronze_group_service_specialty_feature_relations_.group_service_specialty_feature_relation_id
+
+relationship 8efe334f-9911-8227-4887-f7de6ca6ee7e
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_service_level_relations_.group_id
+	toColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+
+relationship 9a06eccd-c974-bfb3-0dce-a1135737e52c
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_service_specialty_feature_relations_.group_service_specialty_feature_relation_id
+	toColumn: teladoc_eds_dev_100_bronze_group_relation_pricings_.relation_id
+
+relationship 80753e48-2266-526b-4faa-8d712e4d6c68
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_relations_.group_id
+	toColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+
+relationship 815ff5ef-3447-44d1-28d5-b69741f7e5fe
+	relyOnReferentialIntegrity
+	fromColumn: teladoc_eds_dev_100_bronze_group_settings_.group_id
+	toColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+
+relationship d90b076d-a75c-565b-c433-9200902338cd
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_service_level_relations_.standard_service_level_id
+	toColumn: teladoc_eds_dev_100_bronze_ref_service_levels_.ref_service_level_id
+
+relationship fd86e9d9-105c-40d1-91d9-cdb173777c53
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_sales_rep.person_id
+	toColumn: teladoc_eds_dev_100_bronze_persons.person_id
+
+relationship 6a549693-2857-b694-4309-285daf3026ec
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_persons.party_id
+	toColumn: teladoc_eds_dev_100_bronze_parties.party_id
+
+relationship ab30d900-2814-7069-3de5-11cce7850252
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_payers_.party_id
+	toColumn: teladoc_eds_dev_100_bronze_parties.party_id
+
+relationship 4b5057ca-3d36-f016-5d40-48259a3e604a
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_organizations_.group_id
+	toColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+
+relationship b0e97df6-9647-1337-1191-3db92052ce0a
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_marketing_communications.organization_id
+	toColumn: teladoc_eds_dev_100_bronze_organizations_.organization_id
+
+relationship 45c887f3-a22d-16d5-fd2e-e487f604ace4
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_organization_extensions.organization_id
+	toColumn: teladoc_eds_dev_100_bronze_organizations_.organization_id
+
+relationship bf940391-af7e-6ab1-40f6-eea0eb0eb95b
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_organization_user_relations_.organization_id
+	toColumn: teladoc_eds_dev_100_bronze_organizations_.organization_id
+
+relationship 11b267bd-a635-243e-59a6-9cdbae53556e
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_parties.party_id
+	toColumn: teladoc_eds_dev_100_bronze_party_email_addresses.party_id
+
+relationship 60e12793-26f2-37a8-06ce-98c852195ea7
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_service_specialty_relation_details_.group_service_specialty_relation_id
+	toColumn: teladoc_eds_dev_100_bronze_group_service_specialty_relations_.group_service_specialty_relation_id
+
+relationship 7ba6f52d-eb42-bfb1-f99e-d6529f227c8f
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_group_empi_namespace_relations.empi_namespace_cd
+	toColumn: teladoc_eds_dev_100_bronze_ref_empi_namespaces_.empi_namespace_cd
+
+relationship 15f05893-9943-4540-41b6-ee3f185c8ede
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+	toColumn: teladoc_eds_dev_100_bronze_group_empi_namespace_relations.group_id
+
+relationship 065b22db-b0ab-fe31-9779-e0b5212283b3
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_empi_namespace_org_relations.empi_namespace_cd
+	toColumn: teladoc_eds_dev_100_bronze_ref_empi_namespaces_.empi_namespace_cd
+
+relationship 0e6bf3c9-ad0a-0e03-0e3b-03e5b3979f40
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_ref_reports.service_specialty_cd
+	toColumn: teladoc_eds_dev_100_bronze_ref_service_specialties_.service_specialty_cd
+
+relationship 50ada12b-1856-921b-8f09-9944a8403971
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_ref_reports.report_cd
+	toColumn: teladoc_eds_dev_100_bronze_report_affiliation_relations.report_cd
+
+relationship 16e4d2cd-939e-2f2a-bac2-bf2636d232b9
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_ref_geographic_regions.geographic_region_cd
+	toColumn: teladoc_eds_dev_100_bronze_group_service_specialty_relations_.geographic_region_coverage_cd
+
+relationship 3277f942-72ac-1f46-29f3-288fb8ddf6d8
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_100_bronze_report_email_relations.party_email_address_id
+	toColumn: teladoc_eds_dev_100_bronze_party_email_addresses.party_email_address_id
+
+relationship ae250f3a-8bb1-3d90-c44e-e54d9429cbc1
+	fromColumn: teladoc_eds_dev_300_gold_group_product_fees.g_group_id
+	toColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+
+relationship fb6b40b8-360a-8639-ad43-3a60b4074034
+	fromColumn: teladoc_eds_dev_300_gold_group_product_settings.group_id
+	toColumn: teladoc_eds_dev_100_bronze_groups_.group_id
+

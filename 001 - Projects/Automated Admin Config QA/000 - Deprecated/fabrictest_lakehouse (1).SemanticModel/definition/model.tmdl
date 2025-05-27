@@ -1,0 +1,41 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.140.7567.2 (Main)+00b9d5349606b9b9f9c025534bd2c34eaa001a13
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+ref table teladoc_eds_dev_100_bronze_group_service_level_relations_
+ref table teladoc_eds_dev_100_bronze_alt_group_ids_
+ref table teladoc_eds_dev_100_bronze_billings_
+ref table teladoc_eds_dev_100_bronze_group_service_specialty_relation_details_
+ref table teladoc_eds_dev_100_bronze_organization_user_relations_
+ref table teladoc_eds_dev_100_bronze_payers_
+ref table teladoc_eds_dev_100_bronze_group_billing_relations_
+ref table teladoc_eds_dev_100_bronze_groups_
+ref table teladoc_eds_dev_100_bronze_group_relation_pricings_
+ref table teladoc_eds_dev_100_bronze_group_service_specialty_feature_settings_
+ref table teladoc_eds_dev_100_bronze_ref_features_
+ref table teladoc_eds_dev_100_bronze_ref_service_levels_
+ref table teladoc_eds_dev_100_bronze_group_service_specialty_feature_relations_
+ref table teladoc_eds_dev_100_bronze_group_relations_
+ref table teladoc_eds_dev_100_bronze_group_service_specialty_relations_
+ref table teladoc_eds_dev_100_bronze_ref_empi_namespaces_
+ref table teladoc_eds_dev_100_bronze_group_payer_relations_
+ref table teladoc_eds_dev_100_bronze_ref_countries_
+ref table teladoc_eds_dev_100_bronze_group_settings_
+ref table teladoc_eds_dev_100_bronze_organizations_
+ref table teladoc_eds_dev_100_bronze_ref_service_specialty_features_
+ref table teladoc_eds_dev_100_bronze_ref_service_specialties_
+ref table teladoc_eds_dev_100_bronze_valid_group_sources_
+
+ref cultureInfo en-US
+

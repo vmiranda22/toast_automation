@@ -1,0 +1,161 @@
+table teladoc_eds_dev_100_bronze_valid_group_sources_
+	lineageTag: 8a68657c-f419-49bd-a344-fb3a897233ee
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_valid_group_sources_]
+
+	column valid_group_source_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7f06d1f7-c621-422f-b826-58b328a4b545
+		sourceLineageTag: valid_group_source_id
+		summarizeBy: sum
+		sourceColumn: valid_group_source_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9c839ede-12ee-42dc-b54c-08756a685849
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4d53ce39-4f08-4528-924e-1366fc74b71f
+		sourceLineageTag: primary_source_cd
+		summarizeBy: none
+		sourceColumn: primary_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column dependent_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5b54455f-d9fe-4173-83f1-ce0803d8c898
+		sourceLineageTag: dependent_source_cd
+		summarizeBy: none
+		sourceColumn: dependent_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column internal_gateway_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: afdad601-58e1-4e3a-9d55-ed89d27cc1cc
+		sourceLineageTag: internal_gateway_id
+		summarizeBy: sum
+		sourceColumn: internal_gateway_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column vendor_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 50f725ba-6325-4e8a-928f-a8cc3c67496b
+		sourceLineageTag: vendor_id
+		summarizeBy: sum
+		sourceColumn: vendor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column permission_cancel_primary_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2821814a-1570-41b8-a773-f7ccd6e800e5
+		sourceLineageTag: permission_cancel_primary_flg
+		summarizeBy: none
+		sourceColumn: permission_cancel_primary_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column permission_cancel_dependents_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ba26ab0f-8f61-40cc-996a-ebe3cb5dc7ef
+		sourceLineageTag: permission_cancel_dependents_flg
+		summarizeBy: none
+		sourceColumn: permission_cancel_dependents_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 10f6fd4e-7a04-4c0b-9ebb-452cfa0ceec1
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4129da3e-4afb-49fa-bf13-934961dba353
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: bec74537-53a3-40b1-9672-b1669895f80c
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1092c68e-3532-464f-b7c0-86411861da44
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 13a44eb6-3583-4bec-9ce0-e72120397c72
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f2d2ea10-1e87-47bd-b0cd-7c5f0bb845ff
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_valid_group_sources_ = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_valid_group_sources_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

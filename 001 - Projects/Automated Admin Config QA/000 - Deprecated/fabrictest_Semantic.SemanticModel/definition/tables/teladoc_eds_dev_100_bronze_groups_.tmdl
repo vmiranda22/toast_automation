@@ -1,0 +1,287 @@
+table teladoc_eds_dev_100_bronze_groups_
+	lineageTag: 2e46138d-4006-418d-a7fc-70e29a99b3bd
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_groups_]
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: eb10ea2d-57db-4dd5-b282-6eb0c2ffde70
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: af99582e-5141-4f9f-9649-06f2722e0872
+		sourceLineageTag: group_nm
+		summarizeBy: none
+		sourceColumn: group_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 75dd18da-ad45-4b3c-880d-1381b4846fa9
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 09ab5406-7a89-4f01-ab51-c26b4b866a79
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_pay_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 05bcf3d5-7c57-4b56-bcc5-9981d6323293
+		sourceLineageTag: effective_pay_dt
+		summarizeBy: none
+		sourceColumn: effective_pay_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column registration_group_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 511ba9b0-bb2c-4fd6-be4a-629c4bcbd1d4
+		sourceLineageTag: registration_group_cd
+		summarizeBy: none
+		sourceColumn: registration_group_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column card_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f006fd5d-8ef2-41bb-b9f9-6f70c136b2d3
+		sourceLineageTag: card_nm
+		summarizeBy: none
+		sourceColumn: card_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_group_root
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9972ad50-fc28-44b9-b7ac-3cff2d755a4c
+		sourceLineageTag: source_group_root
+		summarizeBy: none
+		sourceColumn: source_group_root
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_group_identifer
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 201d7ef9-b79d-4fcc-8f83-52e3315e705f
+		sourceLineageTag: source_group_identifer
+		summarizeBy: none
+		sourceColumn: source_group_identifer
+
+		annotation SummarizationSetBy = Automatic
+
+	column notes_internal
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 577a70b9-dcdb-4f53-90ab-19d7ba642537
+		sourceLineageTag: notes_internal
+		summarizeBy: none
+		sourceColumn: notes_internal
+
+		annotation SummarizationSetBy = Automatic
+
+	column notes_external
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 47fecba8-61a8-4276-9ebc-ec289e4be8b5
+		sourceLineageTag: notes_external
+		summarizeBy: none
+		sourceColumn: notes_external
+
+		annotation SummarizationSetBy = Automatic
+
+	column enroll_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: bc7b69bc-8c44-4679-b669-e732a6ced1d3
+		sourceLineageTag: enroll_start_dt
+		summarizeBy: none
+		sourceColumn: enroll_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column enroll_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: c99c50b2-acce-41ac-9630-8c02241b1078
+		sourceLineageTag: enroll_end_dt
+		summarizeBy: none
+		sourceColumn: enroll_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column enroll_pay_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 3368daab-d260-4c5e-b509-dd636bea801e
+		sourceLineageTag: enroll_pay_dt
+		summarizeBy: none
+		sourceColumn: enroll_pay_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column deactivation_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: ad109080-d32f-4d24-88d8-670f504dbe83
+		sourceLineageTag: deactivation_dt
+		summarizeBy: none
+		sourceColumn: deactivation_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 482c55d3-1077-41a5-9b58-488c01a7773e
+		sourceLineageTag: group_type_cd
+		summarizeBy: none
+		sourceColumn: group_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column reseller_name_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f59a9ccd-5db3-476b-ae9a-79fe3af99c52
+		sourceLineageTag: reseller_name_cd
+		summarizeBy: none
+		sourceColumn: reseller_name_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_group_type_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fe025c7d-f75a-449d-9ab3-17b1a0410c54
+		sourceLineageTag: source_group_type_flg
+		summarizeBy: none
+		sourceColumn: source_group_type_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e85084c4-ec6e-42b6-bbe1-ae5bc20f23fe
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 517fca45-2d72-404c-971f-7f0b5f46b79b
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 8e8670a6-3a5a-4063-a2a5-ff483351fb4d
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6f9a46ec-3e64-416e-98b0-504d91c8e82a
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 38c2c55c-5f75-4002-8592-48e6fa4e1bba
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8c2cd848-2390-4702-a4bb-28b3f2046006
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column template
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 41831d5e-4f45-4639-91d5-8385d5f372c3
+		sourceLineageTag: template
+		summarizeBy: none
+		sourceColumn: template
+
+		annotation SummarizationSetBy = Automatic
+
+	column legacy_group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9816af4c-597e-4fd8-85f3-ec5d0de8b957
+		sourceLineageTag: legacy_group_id
+		summarizeBy: sum
+		sourceColumn: legacy_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_groups_ = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_groups_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

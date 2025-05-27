@@ -1,0 +1,929 @@
+table teladoc_eds_dev_100_bronze_group_settings_
+	lineageTag: df48cfc7-94b0-493b-ba3a-1fbfad47ffb6
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_group_settings_]
+
+	column group_setting_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d4fb6f0c-f764-4513-8d9d-9e0186c8ae65
+		sourceLineageTag: group_setting_id
+		summarizeBy: sum
+		sourceColumn: group_setting_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0a0b82d7-a66f-4306-99be-561d70cd2616
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_deny_cms_1500_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b04f709a-60ab-4922-bf32-ffd1adf74930
+		sourceLineageTag: zdel_deny_cms_1500_flg
+		summarizeBy: none
+		sourceColumn: zdel_deny_cms_1500_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column send_ccr_to_pcp_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d6ae254f-cbde-427d-af1d-0ae367fca46e
+		sourceLineageTag: send_ccr_to_pcp_flg
+		summarizeBy: none
+		sourceColumn: send_ccr_to_pcp_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column send_card_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f79b8e00-1d71-415e-a47d-b2780c6e9700
+		sourceLineageTag: send_card_flg
+		summarizeBy: none
+		sourceColumn: send_card_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column welcome_kit_retro_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 12703e50-ee06-4533-b26e-b76881d51559
+		sourceLineageTag: welcome_kit_retro_flg
+		summarizeBy: none
+		sourceColumn: welcome_kit_retro_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column welcome_kit_send_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: c99334b7-87db-43da-84d8-f851cf85b557
+		sourceLineageTag: welcome_kit_send_dt
+		summarizeBy: none
+		sourceColumn: welcome_kit_send_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column welcome_kit_retro_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 65efdb8c-c46a-453f-a71d-6a1a9fc59a41
+		sourceLineageTag: welcome_kit_retro_dt
+		summarizeBy: none
+		sourceColumn: welcome_kit_retro_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_cancel_to_retail_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 48cec91c-8aef-4751-beef-5dbd19607111
+		sourceLineageTag: zdel_cancel_to_retail_flg
+		summarizeBy: none
+		sourceColumn: zdel_cancel_to_retail_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column web_access_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 76a7adcc-7fec-4a24-a7b5-618ae812fa00
+		sourceLineageTag: web_access_flg
+		summarizeBy: none
+		sourceColumn: web_access_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column sso_only_access_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4f08097b-a43e-4224-b6bc-449ab627dc1a
+		sourceLineageTag: sso_only_access_flg
+		summarizeBy: none
+		sourceColumn: sso_only_access_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column dual_access_allowed_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3328ac6e-feba-4f4b-ad3c-fd6ece453297
+		sourceLineageTag: dual_access_allowed_flg
+		summarizeBy: none
+		sourceColumn: dual_access_allowed_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column allow_conversion_to_retail_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fba82619-3c98-452c-a2f7-7243c83cdaa8
+		sourceLineageTag: allow_conversion_to_retail_flg
+		summarizeBy: none
+		sourceColumn: allow_conversion_to_retail_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_auto_invoice_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8c9fb2e3-c8e7-403c-94c9-995f935fd045
+		sourceLineageTag: zdel_auto_invoice_flg
+		summarizeBy: none
+		sourceColumn: zdel_auto_invoice_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_billing_period_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e3befe62-0946-40ea-b190-0c7c1e03cc69
+		sourceLineageTag: zdel_billing_period_cd
+		summarizeBy: none
+		sourceColumn: zdel_billing_period_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_smoking_cessation
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 3fa8c946-930c-4f5c-bfaa-5fe0878abb54
+		sourceLineageTag: zdel_smoking_cessation
+		summarizeBy: none
+		sourceColumn: zdel_smoking_cessation
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_overactive_bladder
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 85bd7757-721b-42d0-b07d-536eae718c85
+		sourceLineageTag: zdel_overactive_bladder
+		summarizeBy: none
+		sourceColumn: zdel_overactive_bladder
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_retail
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: fd255136-a110-4d28-8f47-6c8c3f5d6974
+		sourceLineageTag: zdel_retail
+		summarizeBy: none
+		sourceColumn: zdel_retail
+
+		annotation SummarizationSetBy = Automatic
+
+	column ediroot_xslt_filename
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 97c6f6bb-b535-494e-9802-8bece0b31a20
+		sourceLineageTag: ediroot_xslt_filename
+		summarizeBy: none
+		sourceColumn: ediroot_xslt_filename
+
+		annotation SummarizationSetBy = Automatic
+
+	column mobile_access_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1f3b211d-4bdf-4a52-b88f-19768af2bdff
+		sourceLineageTag: mobile_access_flg
+		summarizeBy: none
+		sourceColumn: mobile_access_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_print_url
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1f170268-d6dd-42e2-8438-aac40378b445
+		sourceLineageTag: zdel_print_url
+		summarizeBy: none
+		sourceColumn: zdel_print_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_print_phone
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d9727aeb-daa7-45b1-a7e4-15a2349ebc89
+		sourceLineageTag: zdel_print_phone
+		summarizeBy: none
+		sourceColumn: zdel_print_phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_logo_filename
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 34e6fda0-c9f7-4656-9d06-25baef279a7b
+		sourceLineageTag: print_logo_filename
+		summarizeBy: none
+		sourceColumn: print_logo_filename
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_template_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bd6fdef7-4f9a-4c5b-936a-5018c7238519
+		sourceLineageTag: print_template_id
+		summarizeBy: none
+		sourceColumn: print_template_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_mail_class_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fc2fc89b-47d1-4d9b-bbe7-895614209712
+		sourceLineageTag: print_mail_class_cd
+		summarizeBy: none
+		sourceColumn: print_mail_class_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_print_or_less
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 163d2610-4116-43c5-89d2-e4af0d6f8ce2
+		sourceLineageTag: zdel_print_or_less
+		summarizeBy: none
+		sourceColumn: zdel_print_or_less
+
+		annotation SummarizationSetBy = Automatic
+
+	column refund_member_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e28d3fc6-9891-4f4a-a89a-ffb05bb1ee7e
+		sourceLineageTag: refund_member_flg
+		summarizeBy: none
+		sourceColumn: refund_member_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column payer_claims_submission_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f654044b-8852-4317-a737-8aa587183b4b
+		sourceLineageTag: payer_claims_submission_flg
+		summarizeBy: none
+		sourceColumn: payer_claims_submission_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column consult_reimbursement_method_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8ff6e451-5f92-4b3f-9402-8ca07758b9a6
+		sourceLineageTag: consult_reimbursement_method_cd
+		summarizeBy: none
+		sourceColumn: consult_reimbursement_method_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column lob_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ef65f317-36cd-47df-ac7a-9ec308745fe9
+		sourceLineageTag: lob_cd
+		summarizeBy: none
+		sourceColumn: lob_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column eligibility_source_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3804577c-0296-4bbe-bc52-e416f71860ef
+		sourceLineageTag: eligibility_source_flg
+		summarizeBy: none
+		sourceColumn: eligibility_source_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_allow_dependents
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 94974809-1c67-406b-8fa0-04eaaaa47a9c
+		sourceLineageTag: zdel_allow_dependents
+		summarizeBy: none
+		sourceColumn: zdel_allow_dependents
+
+		annotation SummarizationSetBy = Automatic
+
+	column min_age_for_dependent_registration
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 60f5b3b5-4f29-4e31-8901-2c11f1c7d0ed
+		sourceLineageTag: min_age_for_dependent_registration
+		summarizeBy: sum
+		sourceColumn: min_age_for_dependent_registration
+
+		annotation SummarizationSetBy = Automatic
+
+	column max_age_for_dependent_registration
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d5c0db6f-87f1-452d-83ae-1f29e1287cf1
+		sourceLineageTag: max_age_for_dependent_registration
+		summarizeBy: sum
+		sourceColumn: max_age_for_dependent_registration
+
+		annotation SummarizationSetBy = Automatic
+
+	column min_age_for_primary_registration
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b39c934b-9bae-46e3-aba3-c7f3fb372bbd
+		sourceLineageTag: min_age_for_primary_registration
+		summarizeBy: sum
+		sourceColumn: min_age_for_primary_registration
+
+		annotation SummarizationSetBy = Automatic
+
+	column disable_excuse_note_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f9f11bbd-5912-4c1c-a39c-935bac17f097
+		sourceLineageTag: disable_excuse_note_flg
+		summarizeBy: none
+		sourceColumn: disable_excuse_note_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column dob_can_be_null
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: dd39a0d7-1179-499f-bc35-6fe499c16d19
+		sourceLineageTag: dob_can_be_null
+		summarizeBy: none
+		sourceColumn: dob_can_be_null
+
+		annotation SummarizationSetBy = Automatic
+
+	column enable_mobile_expiry
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 0933f6a4-0dcf-474e-93a0-e0b24cb45761
+		sourceLineageTag: enable_mobile_expiry
+		summarizeBy: none
+		sourceColumn: enable_mobile_expiry
+
+		annotation SummarizationSetBy = Automatic
+
+	column enable_geo_fencing
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: d25e07d3-d1a6-4f9b-aa03-ed9b6ac31c61
+		sourceLineageTag: enable_geo_fencing
+		summarizeBy: none
+		sourceColumn: enable_geo_fencing
+
+		annotation SummarizationSetBy = Automatic
+
+	column enable_two_factor_auth
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 6018ae90-2b72-44cc-819e-2d52953eb70b
+		sourceLineageTag: enable_two_factor_auth
+		summarizeBy: none
+		sourceColumn: enable_two_factor_auth
+
+		annotation SummarizationSetBy = Automatic
+
+	column required_security_question_cnt
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3558ed9b-fd14-4bff-bc7e-5cb4cbba54de
+		sourceLineageTag: required_security_question_cnt
+		summarizeBy: sum
+		sourceColumn: required_security_question_cnt
+
+		annotation SummarizationSetBy = Automatic
+
+	column vip_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2abde732-2006-40d8-a73f-0eb78f443cc1
+		sourceLineageTag: vip_flg
+		summarizeBy: none
+		sourceColumn: vip_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column single_invoice_ccm_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a63d0665-7e63-4424-99f8-1fb15403f23c
+		sourceLineageTag: single_invoice_ccm_flg
+		summarizeBy: none
+		sourceColumn: single_invoice_ccm_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column suppress_member_notification_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 58ab422b-960f-4a14-bb7d-d33166771eb4
+		sourceLineageTag: suppress_member_notification_flg
+		summarizeBy: none
+		sourceColumn: suppress_member_notification_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column authorized_consenter_allowed_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b0035da0-3b3d-4a85-be95-9efaa8143b2f
+		sourceLineageTag: authorized_consenter_allowed_flg
+		summarizeBy: none
+		sourceColumn: authorized_consenter_allowed_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column allow_call_center_registration_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6ad91ad2-e31e-484a-a3eb-0ea34884422e
+		sourceLineageTag: allow_call_center_registration_flg
+		summarizeBy: none
+		sourceColumn: allow_call_center_registration_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column allow_call_center_consult_request_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ceb41741-0a01-4702-82fc-ab71fdf661ce
+		sourceLineageTag: allow_call_center_consult_request_flg
+		summarizeBy: none
+		sourceColumn: allow_call_center_consult_request_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column allow_health_assistant_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 34526135-cd59-4e72-b131-309a8283be76
+		sourceLineageTag: allow_health_assistant_flg
+		summarizeBy: none
+		sourceColumn: allow_health_assistant_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column chronic_care_joint_eligibility_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f7945ca1-f139-4322-aec4-2a12f3f77c25
+		sourceLineageTag: chronic_care_joint_eligibility_flg
+		summarizeBy: none
+		sourceColumn: chronic_care_joint_eligibility_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column chronic_care_referral_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 014d0e7c-861d-4a7b-bc87-53061219b11a
+		sourceLineageTag: chronic_care_referral_flg
+		summarizeBy: none
+		sourceColumn: chronic_care_referral_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column allow_manage_subscription_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fd91f39e-bcd7-4b67-a2d4-17862880fcc2
+		sourceLineageTag: allow_manage_subscription_flg
+		summarizeBy: none
+		sourceColumn: allow_manage_subscription_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column allow_sla_reimbursement_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a1a8871a-aa54-4897-b12b-7dca11a6e02a
+		sourceLineageTag: allow_sla_reimbursement_flg
+		summarizeBy: none
+		sourceColumn: allow_sla_reimbursement_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column send_member_resolution_letter_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9a2dcfb8-962a-4f33-859c-493d66588c7e
+		sourceLineageTag: send_member_resolution_letter_flg
+		summarizeBy: none
+		sourceColumn: send_member_resolution_letter_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column send_util_letter_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b3384f3c-cd66-47b2-b732-683bb145cdaf
+		sourceLineageTag: send_util_letter_flg
+		summarizeBy: none
+		sourceColumn: send_util_letter_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column send_problem_member_letter_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6e1a1f37-ad8a-43f9-900c-ef4d595e0b0f
+		sourceLineageTag: send_problem_member_letter_flg
+		summarizeBy: none
+		sourceColumn: send_problem_member_letter_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column send_promo_cd_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 49a3dd07-f99b-49ef-acab-c86cfef71e16
+		sourceLineageTag: send_promo_cd_flg
+		summarizeBy: none
+		sourceColumn: send_promo_cd_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column send_fraud_waste_abuse_letter_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a6bdecd8-8c76-4d16-a989-3e90c2d2a637
+		sourceLineageTag: send_fraud_waste_abuse_letter_flg
+		summarizeBy: none
+		sourceColumn: send_fraud_waste_abuse_letter_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column ccr_cannot_access_member_phi_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cf8715df-e9e0-4b30-b497-08c07957ad6f
+		sourceLineageTag: ccr_cannot_access_member_phi_flg
+		summarizeBy: none
+		sourceColumn: ccr_cannot_access_member_phi_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column pg_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bdbc4bd6-197e-417b-9adb-e37e9b5e1123
+		sourceLineageTag: pg_flg
+		summarizeBy: none
+		sourceColumn: pg_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column in_home_rx_delivery_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 049c38fd-8802-4efb-8445-bcf51f21fe62
+		sourceLineageTag: in_home_rx_delivery_flg
+		summarizeBy: none
+		sourceColumn: in_home_rx_delivery_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column health_card_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 314f302d-d483-42eb-8477-5727081bdc9b
+		sourceLineageTag: health_card_flg
+		summarizeBy: none
+		sourceColumn: health_card_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column inbox_available_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ebb9cdf2-dccb-467e-b1d4-7e858d15c1a9
+		sourceLineageTag: inbox_available_flg
+		summarizeBy: none
+		sourceColumn: inbox_available_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column domestic_country_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7559683a-ce4b-41d4-8e0f-4b5b0e391ec8
+		sourceLineageTag: domestic_country_cd
+		summarizeBy: none
+		sourceColumn: domestic_country_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column required_conference_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 745fd857-1ff2-4815-8cc5-b7cce38cf582
+		sourceLineageTag: required_conference_cd
+		summarizeBy: none
+		sourceColumn: required_conference_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column conference_brand_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c8b34b46-cb21-42f6-be44-b8748263cd65
+		sourceLineageTag: conference_brand_cd
+		summarizeBy: none
+		sourceColumn: conference_brand_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column claim_gateway_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: adb1eb3b-6d65-4433-b9cd-5960b8611f47
+		sourceLineageTag: claim_gateway_id
+		summarizeBy: sum
+		sourceColumn: claim_gateway_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column merchant_account_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f62d1048-0699-490d-bbc3-f0286e98ac49
+		sourceLineageTag: merchant_account_cd
+		summarizeBy: none
+		sourceColumn: merchant_account_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column tpn_rule_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e591332f-568c-4007-9cdd-fde9f24d6397
+		sourceLineageTag: tpn_rule_id
+		summarizeBy: sum
+		sourceColumn: tpn_rule_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column quick_registration_link_expiration_min
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bfef72c8-dbe9-431d-8bb2-2dbb74525f0c
+		sourceLineageTag: quick_registration_link_expiration_min
+		summarizeBy: sum
+		sourceColumn: quick_registration_link_expiration_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column default_billing_fee_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5a082160-94d3-4cf3-8d45-40bc65a367c4
+		sourceLineageTag: default_billing_fee_type_cd
+		summarizeBy: none
+		sourceColumn: default_billing_fee_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column prohibit_member_attachment_download_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aded8175-691f-4ed0-9643-99bcda864517
+		sourceLineageTag: prohibit_member_attachment_download_flg
+		summarizeBy: none
+		sourceColumn: prohibit_member_attachment_download_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_effective_date_change_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 91392e20-c5f4-4460-a20d-16ed1e6e5e41
+		sourceLineageTag: group_effective_date_change_flg
+		summarizeBy: none
+		sourceColumn: group_effective_date_change_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column enable_wellness_content_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 745f517e-79b1-4a25-9329-72f0ec13d879
+		sourceLineageTag: enable_wellness_content_flg
+		summarizeBy: none
+		sourceColumn: enable_wellness_content_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column sold_to_accnt_uuid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3471d15c-1546-465e-9917-9779c2c924da
+		sourceLineageTag: sold_to_accnt_uuid
+		summarizeBy: none
+		sourceColumn: sold_to_accnt_uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column annual_checkup_trigger_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e13ad83f-8e83-4d4f-8dad-bf074c4c3721
+		sourceLineageTag: annual_checkup_trigger_cd
+		summarizeBy: none
+		sourceColumn: annual_checkup_trigger_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column annual_checkup_start_month
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2ce2f615-82fa-48e4-8e44-61d3819076ef
+		sourceLineageTag: annual_checkup_start_month
+		summarizeBy: sum
+		sourceColumn: annual_checkup_start_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column sold_to_accnt_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 161b6d09-fed4-483a-a7d3-eff0ae19e218
+		sourceLineageTag: sold_to_accnt_nm
+		summarizeBy: none
+		sourceColumn: sold_to_accnt_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column minor_registration_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7d3bbeda-a2e9-4a65-ae23-5d57e804aebd
+		sourceLineageTag: minor_registration_flg
+		summarizeBy: none
+		sourceColumn: minor_registration_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column external_clinical_referral_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 12b0f414-1092-49ab-86a6-c391f4c31ed3
+		sourceLineageTag: external_clinical_referral_flg
+		summarizeBy: none
+		sourceColumn: external_clinical_referral_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column external_clinical_referral_live_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 0d786c80-4904-4087-bdfd-3f8aa2d7e663
+		sourceLineageTag: external_clinical_referral_live_dt
+		summarizeBy: none
+		sourceColumn: external_clinical_referral_live_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column one_app_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4da6de2f-dc8d-4244-941a-9fbf03c4eb38
+		sourceLineageTag: one_app_flg
+		summarizeBy: none
+		sourceColumn: one_app_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_new_eligibility_convertible_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f9676d3c-e8a1-4218-b38a-3e73695ce88b
+		sourceLineageTag: zdel_new_eligibility_convertible_flg
+		summarizeBy: none
+		sourceColumn: zdel_new_eligibility_convertible_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column health_card_required_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6d584f62-079f-4cd7-9b8f-d803f4d8bc55
+		sourceLineageTag: health_card_required_flg
+		summarizeBy: none
+		sourceColumn: health_card_required_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column hhs_access_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ba46c599-c48f-410b-9716-7acbd47a7dd6
+		sourceLineageTag: hhs_access_flg
+		summarizeBy: none
+		sourceColumn: hhs_access_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0d2e56cb-f561-449f-9e04-20e2189196c3
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 712918b6-fab0-430f-9b39-23c5c515640c
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 144d9d49-b876-4943-ac0c-c0461c6f5024
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: dfcc52ae-566b-4006-aa18-d270349801c8
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d7c4a442-895d-4556-8a4f-6b70dc4e5a7f
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_group_settings_ = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_group_settings_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

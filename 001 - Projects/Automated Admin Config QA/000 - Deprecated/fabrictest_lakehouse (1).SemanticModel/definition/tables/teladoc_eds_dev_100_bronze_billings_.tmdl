@@ -1,0 +1,241 @@
+table teladoc_eds_dev_100_bronze_billings_
+	lineageTag: 717e3633-bb0b-4d11-8769-3c0113897a37
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_billings_]
+
+	column billing_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: db38d167-2e74-4a39-8811-54c6448ed0e2
+		sourceLineageTag: billing_id
+		summarizeBy: sum
+		sourceColumn: billing_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column finance_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8a200a8b-236b-4365-92ab-ada7032d64d5
+		sourceLineageTag: finance_name
+		summarizeBy: none
+		sourceColumn: finance_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column invoice_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 720208f9-36e2-48db-95d7-955cb55434cd
+		sourceLineageTag: invoice_name
+		summarizeBy: none
+		sourceColumn: invoice_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column regards_to
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a5941838-98f1-4def-8a19-a9f7193b731d
+		sourceLineageTag: regards_to
+		summarizeBy: none
+		sourceColumn: regards_to
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 909d5cf8-f885-485f-af42-a4eff7be8d20
+		sourceLineageTag: organization_id
+		summarizeBy: sum
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_subsegment_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 169ab2ab-46aa-4f21-9370-e6903345dc80
+		sourceLineageTag: client_subsegment_cd
+		summarizeBy: none
+		sourceColumn: client_subsegment_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_term_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c03a64a5-0e43-4fb6-8dc9-ef305815f951
+		sourceLineageTag: payment_term_cd
+		summarizeBy: none
+		sourceColumn: payment_term_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column invoice_delivery_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 21dfdfe9-6a1b-46c6-8441-341af28567d3
+		sourceLineageTag: invoice_delivery_cd
+		summarizeBy: none
+		sourceColumn: invoice_delivery_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column zdel_broker_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4fbf95b4-5977-44d2-bd5c-19b8099e57c4
+		sourceLineageTag: zdel_broker_id
+		summarizeBy: sum
+		sourceColumn: zdel_broker_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column split_billing_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6bbbd220-3452-4df0-bc47-a3dd851d20a1
+		sourceLineageTag: split_billing_flg
+		summarizeBy: none
+		sourceColumn: split_billing_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_contract_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8f03cb36-eb2d-4e4b-843d-184661b86e96
+		sourceLineageTag: risk_contract_flg
+		summarizeBy: none
+		sourceColumn: risk_contract_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column self_remit_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 81366038-c771-4621-8a83-b43ce27a09d7
+		sourceLineageTag: self_remit_flg
+		summarizeBy: none
+		sourceColumn: self_remit_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column send_expert_membership_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 513e7302-c313-47cc-984a-dcbc4e497bff
+		sourceLineageTag: send_expert_membership_flg
+		summarizeBy: none
+		sourceColumn: send_expert_membership_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column member_pay_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1db8a47e-d1e6-4ddc-bc77-3b9a66956869
+		sourceLineageTag: member_pay_cd
+		summarizeBy: none
+		sourceColumn: member_pay_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column eligible_day_of_month
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3df753c3-32c6-446f-8e64-83e83abc783c
+		sourceLineageTag: eligible_day_of_month
+		summarizeBy: sum
+		sourceColumn: eligible_day_of_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column billing_accnt_uuid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d27f0dd9-85ee-46e5-abe8-10ccdd33df6e
+		sourceLineageTag: billing_accnt_uuid
+		summarizeBy: none
+		sourceColumn: billing_accnt_uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 60a9fe8e-a76d-4753-839a-b25d61e183b8
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 398ee56e-8912-4020-8ef6-76d2dad07050
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b346ef12-a7bc-4926-88b7-78dc5a292d91
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f8057e70-db04-4c8e-98a1-886c10cc9bbe
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e0f0f9aa-a02f-412f-b3bd-8d41220b4959
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3c7e5dc3-5d95-4381-baea-d7baaaa0a952
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_billings_ = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_billings_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

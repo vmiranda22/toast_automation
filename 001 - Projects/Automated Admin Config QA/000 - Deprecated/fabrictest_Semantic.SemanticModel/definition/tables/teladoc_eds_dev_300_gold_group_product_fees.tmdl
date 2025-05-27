@@ -1,0 +1,77 @@
+table teladoc_eds_dev_300_gold_group_product_fees
+	lineageTag: e6294d74-094c-429d-9e62-4a77b1d69e28
+	sourceLineageTag: [dbo].[teladoc_eds_dev_300_gold_group_product_fees]
+
+	column g_group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f1348d01-619e-43d0-a645-fa70616d2bbf
+		sourceLineageTag: g_group_id
+		summarizeBy: none
+		sourceColumn: g_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column g_legacy_group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 87b7bf43-1a81-4369-afda-cf19dceea686
+		sourceLineageTag: g_legacy_group_id
+		summarizeBy: sum
+		sourceColumn: g_legacy_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column rss_service_specialty_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f0ba5276-33bf-49f1-adac-e185a03287de
+		sourceLineageTag: rss_service_specialty_nm
+		summarizeBy: none
+		sourceColumn: rss_service_specialty_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column rssf_service_specialty_feature_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1cce16f6-9eec-4596-82ef-ce7163394e4a
+		sourceLineageTag: rssf_service_specialty_feature_nm
+		summarizeBy: none
+		sourceColumn: rssf_service_specialty_feature_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column fee_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7b6a3bd9-f7b3-440c-9120-d551ab10aa7d
+		sourceLineageTag: fee_name
+		summarizeBy: none
+		sourceColumn: fee_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column grp_amount
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 2873f388-ae2d-4881-b413-2d3020ef345e
+		sourceLineageTag: grp_amount
+		summarizeBy: sum
+		sourceColumn: grp_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition teladoc_eds_dev_300_gold_group_product_fees = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_300_gold_group_product_fees
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
