@@ -1,0 +1,130 @@
+table _group_relation_pricings_
+	lineageTag: 5f6bbf96-09f5-40ba-a562-f4875f0384fa
+	sourceLineageTag: [dbo].[_group_relation_pricings_]
+
+	column organization_user_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1247264f-7063-478e-aa26-7130892671f0
+		sourceLineageTag: organization_user_relation_id
+		summarizeBy: sum
+		sourceColumn: organization_user_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 48a05fe8-aab2-44b2-8dad-20b79c54570c
+		sourceLineageTag: organization_id
+		summarizeBy: sum
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 98859222-b635-4302-a53a-6e3362f75e14
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 81105064-1b73-41dd-b5dd-c121b7945cfd
+		sourceLineageTag: user_type
+		summarizeBy: none
+		sourceColumn: user_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column purpose_relation_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3b38805a-9b15-4a94-bc9d-9d2a0d847a13
+		sourceLineageTag: purpose_relation_type_cd
+		summarizeBy: none
+		sourceColumn: purpose_relation_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e44c7f5a-8634-4d8f-9dad-6408f2e27da4
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ffe47387-8500-47fb-8d2d-0c6eb4b4d27b
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: da6ece8d-72b3-4982-b1ef-3877a7ea77ac
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1259d7fc-0053-4a99-89e8-47248407b936
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 89f73341-6c6f-41b7-b332-5dfb4291f910
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a19266e0-e1d5-44bc-b407-9c040197a2f2
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _group_relation_pricings_ = entity
+		mode: directLake
+		source
+			entityName: _group_relation_pricings_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

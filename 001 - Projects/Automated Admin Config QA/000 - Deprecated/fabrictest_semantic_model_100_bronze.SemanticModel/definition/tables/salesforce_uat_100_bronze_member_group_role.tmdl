@@ -1,0 +1,136 @@
+table salesforce_uat_100_bronze_member_group_role
+	lineageTag: c906769c-8763-4f20-a50f-bd5a75f7f91a
+	sourceLineageTag: [dbo].[salesforce_uat_100_bronze_member_group_role]
+
+	column Id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bacdfc12-10f3-4eac-bd3a-ce038c169267
+		sourceLineageTag: Id
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 13b3d1f9-82d5-4992-8a4a-84ac9fcebc27
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 338e101b-c440-4331-9518-efecfc0e64c9
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f41764c5-6a3a-47fc-b526-53b87fcec96b
+		sourceLineageTag: CreatedById
+		summarizeBy: none
+		sourceColumn: CreatedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: eb9812cb-e7e6-4455-b626-107fb22db223
+		sourceLineageTag: LastModifiedDate
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 80678c0f-73ad-48f7-bc7c-e8afc6dfdb9c
+		sourceLineageTag: LastModifiedById
+		summarizeBy: none
+		sourceColumn: LastModifiedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column SystemModstamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: fa844b49-57a1-4550-b818-5ad096e99027
+		sourceLineageTag: SystemModstamp
+		summarizeBy: none
+		sourceColumn: SystemModstamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mbr_Group__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f43ec3c7-33e1-440c-8c95-e10861d1957e
+		sourceLineageTag: Mbr_Group__c
+		summarizeBy: none
+		sourceColumn: Mbr_Group__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Duplicate_Key__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 443e8f94-e901-4f1e-8e31-996d6d5f4aaa
+		sourceLineageTag: Duplicate_Key__c
+		summarizeBy: none
+		sourceColumn: Duplicate_Key__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Role_Type__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: edfa8695-47f4-4ada-8d68-7383e5fb8b4d
+		sourceLineageTag: Role_Type__c
+		summarizeBy: none
+		sourceColumn: Role_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Source_Account__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b8566ea2-0e24-4a95-90db-e1360279d249
+		sourceLineageTag: Source_Account__c
+		summarizeBy: none
+		sourceColumn: Source_Account__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mbr_Group_Status__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dce95142-2252-43b1-8f2b-13ee3a5f4611
+		sourceLineageTag: Mbr_Group_Status__c
+		summarizeBy: none
+		sourceColumn: Mbr_Group_Status__c
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_100_bronze_member_group_role = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_100_bronze_member_group_role
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

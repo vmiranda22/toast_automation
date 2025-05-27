@@ -1,0 +1,130 @@
+table _ref_service_specialty_features_
+	lineageTag: f44e1739-399b-43af-ad2a-ad5cf1ec16c5
+	sourceLineageTag: [dbo].[_ref_service_specialty_features_]
+
+	column service_specialty_feature_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: edb91be6-8096-42db-83e9-b71b02b082c6
+		sourceLineageTag: service_specialty_feature_cd
+		summarizeBy: none
+		sourceColumn: service_specialty_feature_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_feature_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: acd65fbd-cc85-4c9f-b99e-08cab4392e12
+		sourceLineageTag: service_specialty_feature_nm
+		summarizeBy: none
+		sourceColumn: service_specialty_feature_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b41f4c18-4ad5-4f50-a575-b79a4f0432a0
+		sourceLineageTag: service_specialty_cd
+		summarizeBy: none
+		sourceColumn: service_specialty_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column feature_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: be566604-9cf9-4d87-aba1-33d946c48ea1
+		sourceLineageTag: feature_cd
+		summarizeBy: none
+		sourceColumn: feature_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column rte_eligible_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0c03259e-9a3e-4fea-b49a-34f444351aee
+		sourceLineageTag: rte_eligible_flg
+		summarizeBy: none
+		sourceColumn: rte_eligible_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column visible_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f9ed4a24-5908-43fd-a31e-c5f9b3f800b9
+		sourceLineageTag: visible_flg
+		summarizeBy: none
+		sourceColumn: visible_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref_service_specialty_feature_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ef04b05e-5370-429c-bd29-63a555bd966d
+		sourceLineageTag: ref_service_specialty_feature_id
+		summarizeBy: sum
+		sourceColumn: ref_service_specialty_feature_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 883763b7-3187-43a8-be61-26a08e2a687d
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 70b3dca7-36fa-4613-bc2f-a7dda1a3cda7
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e53cd4dc-6c76-4f41-b962-db740abc0dd0
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: ca5160d8-7b8d-491b-8dc1-b627b905ad9f
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition _ref_service_specialty_features_ = entity
+		mode: directLake
+		source
+			entityName: _ref_service_specialty_features_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,111 @@
+table _group_service_level_relations_
+	lineageTag: 460a23e2-605a-4a8c-9e9b-090ad86170ea
+	sourceLineageTag: [dbo].[_group_service_level_relations_]
+
+	column group_service_level_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 524b1771-f004-4bc3-bc6f-f300b62c0592
+		sourceLineageTag: group_service_level_relation_id
+		summarizeBy: none
+		sourceColumn: group_service_level_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2c7119f3-7b1d-42e1-a67c-04370af131b8
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column standard_service_level_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a524143f-2598-4a20-8bed-e0d958517d97
+		sourceLineageTag: standard_service_level_id
+		summarizeBy: none
+		sourceColumn: standard_service_level_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column vip_service_level_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 423b9bb3-d5af-4297-b351-c18280ae8e69
+		sourceLineageTag: vip_service_level_id
+		summarizeBy: none
+		sourceColumn: vip_service_level_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 68158edd-dcb8-4ede-a694-80a238965099
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e2453e42-c5a7-412e-851d-2fafb435774f
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9a96b090-d1e3-4a3a-8843-54f7c7ac137c
+		sourceLineageTag: created_by
+		summarizeBy: none
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f7c377f4-d964-42fc-b938-fc3405f34630
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9e53398d-89f5-43f7-ac51-52aa728b89fa
+		sourceLineageTag: updated_by
+		summarizeBy: none
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _group_service_level_relations_ = entity
+		mode: directLake
+		source
+			entityName: _group_service_level_relations_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

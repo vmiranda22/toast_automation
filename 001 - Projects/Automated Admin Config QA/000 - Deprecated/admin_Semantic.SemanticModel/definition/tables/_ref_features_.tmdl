@@ -1,0 +1,130 @@
+table _ref_features_
+	lineageTag: 29822fbf-48eb-4c99-a8e0-bec901529392
+	sourceLineageTag: [dbo].[_ref_features_]
+
+	column feature_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ee7e33ec-d269-4cc4-a4c8-92672fdf9e05
+		sourceLineageTag: feature_cd
+		summarizeBy: none
+		sourceColumn: feature_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column feature_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8111ba38-54c1-4825-98d0-7ee77e761303
+		sourceLineageTag: feature_nm
+		summarizeBy: none
+		sourceColumn: feature_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column feature_family_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 65b3c7ca-1e48-4e75-9252-3839279ea95b
+		sourceLineageTag: feature_family_cd
+		summarizeBy: none
+		sourceColumn: feature_family_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column config_visible_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c5073801-5fa1-42ae-84b2-43d3226819a8
+		sourceLineageTag: config_visible_flg
+		summarizeBy: none
+		sourceColumn: config_visible_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column support_visible_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d212a937-6f1f-4bd2-87ab-4713a045c974
+		sourceLineageTag: support_visible_flg
+		summarizeBy: none
+		sourceColumn: support_visible_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_visible_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ace6b13c-afeb-41e0-9594-47ee15b8bd2f
+		sourceLineageTag: user_visible_flg
+		summarizeBy: none
+		sourceColumn: user_visible_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref_feature_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8f7c4357-0e94-4add-8ab6-a5665a75229f
+		sourceLineageTag: ref_feature_id
+		summarizeBy: sum
+		sourceColumn: ref_feature_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 5d35e98a-5d1e-458e-a567-ace48a315bac
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: c32a2a2b-8178-4ee7-808f-18198376ca7b
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 8b2054da-154b-4049-9221-c295c54b9748
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 9376bc98-0b57-422a-86d6-89e26e167ac9
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition _ref_features_ = entity
+		mode: directLake
+		source
+			entityName: _ref_features_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

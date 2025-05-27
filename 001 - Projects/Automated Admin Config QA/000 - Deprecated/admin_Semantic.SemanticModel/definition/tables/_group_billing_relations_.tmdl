@@ -1,0 +1,120 @@
+table _group_billing_relations_
+	lineageTag: 6fc62dd6-f403-430a-9688-52b38a672419
+	sourceLineageTag: [dbo].[_group_billing_relations_]
+
+	column group_billing_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 45d974b4-a713-4b76-aaa6-2a4f4c95bd87
+		sourceLineageTag: group_billing_relation_id
+		summarizeBy: sum
+		sourceColumn: group_billing_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f561ba87-33bf-481c-bf26-247c3a59e664
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column billing_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 942859f9-2b5b-410b-92be-2da060619582
+		sourceLineageTag: billing_id
+		summarizeBy: none
+		sourceColumn: billing_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column billing_fee_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6e23db46-4fd4-4619-9e15-1ccf3e64d92e
+		sourceLineageTag: billing_fee_type_cd
+		summarizeBy: none
+		sourceColumn: billing_fee_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 205fac4d-302d-45e9-8b61-9625c1fda406
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e31671fb-b469-43ba-be29-153375b6eafb
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: ab095ebe-89aa-44c2-bdb6-1594d3ac0deb
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cf7863ab-1574-4952-a6a4-adb85e4fb516
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 935350f0-e4eb-4194-948d-35539dd5a2d4
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bd005d95-37b9-4171-b130-512f2af78a3a
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _group_billing_relations_ = entity
+		mode: directLake
+		source
+			entityName: _group_billing_relations_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

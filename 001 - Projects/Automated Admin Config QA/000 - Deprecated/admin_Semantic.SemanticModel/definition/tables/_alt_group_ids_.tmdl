@@ -1,0 +1,139 @@
+table _alt_group_ids_
+	lineageTag: 7c8130d0-ca30-4c4d-b6a9-bacb841cdb27
+	sourceLineageTag: [dbo].[_alt_group_ids_]
+
+	column alt_group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 751aab19-0c37-4bc9-9edc-9bcc326d0ceb
+		sourceLineageTag: alt_group_id
+		summarizeBy: sum
+		sourceColumn: alt_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dc4fa2a0-5003-42a2-893d-3c94d32f1d9c
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column alt_group_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 34d58b25-ac7e-438d-8e7c-e798f7ecb464
+		sourceLineageTag: alt_group_cd
+		summarizeBy: none
+		sourceColumn: alt_group_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_group_root
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f30e4661-5cf0-4048-bb38-c12bab8fe81e
+		sourceLineageTag: source_group_root
+		summarizeBy: none
+		sourceColumn: source_group_root
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_group_identifier
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2c217e3c-9e96-4f56-b96b-6bae7c460969
+		sourceLineageTag: source_group_identifier
+		summarizeBy: none
+		sourceColumn: source_group_identifier
+
+		annotation SummarizationSetBy = Automatic
+
+	column alt_group_value
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0645d138-3d74-4fa2-962e-02b759be33ca
+		sourceLineageTag: alt_group_value
+		summarizeBy: none
+		sourceColumn: alt_group_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b64344af-cb4e-4ce7-94c3-d6b8c914d339
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aa6135c8-5cfb-4543-916b-f983a0a0c842
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b09fb776-cd90-449c-be77-e16b7709e401
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f0b96a37-77e7-49de-90b2-952a68759b90
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 1a9dc37e-2dd8-4cfb-a1b1-8d4e4ec1c37f
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 333b1c18-c7a4-4220-8bff-b945e47d67a0
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _alt_group_ids_ = entity
+		mode: directLake
+		source
+			entityName: _alt_group_ids_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

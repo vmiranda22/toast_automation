@@ -1,0 +1,88 @@
+relationship 95b5659f-a024-21f1-5e87-612e43657474
+	fromColumn: _organizations_.group_id
+	toColumn: _groups_.group_id
+
+relationship 5fb676a0-ca06-7a03-a027-77996879e16b
+	fromColumn: _organizations_.group_id
+	toColumn: _group_settings_.group_id
+
+relationship e0b2b13f-9669-7e77-1129-5451956669e1
+	fromColumn: _ref_countries_.country_cd
+	toColumn: _group_settings_.domestic_country_cd
+
+relationship e160e6a9-4300-d784-fc03-199152457c31
+	fromColumn: _group_empi_namespace_relations_.group_id
+	toColumn: _groups_.group_id
+
+relationship 69823b72-efbd-c94f-b798-7bedabd77680
+	fromColumn: _valid_group_sources_.group_id
+	toColumn: _groups_.group_id
+
+relationship f0d4cef7-ffbf-befc-1fcc-a085b7a5c705
+	fromColumn: _alt_group_ids_.group_id
+	toColumn: _groups_.group_id
+
+relationship 8b193086-3038-ee9b-7280-863315e4704b
+	fromColumn: _organization_user_relations_.organization_id
+	toColumn: _organizations_.parent_id
+
+relationship e582bedc-66a1-4098-6444-7cafc53cfc43
+	fromColumn: _sales_reps_.sales_rep_id
+	toColumn: _organization_user_relations_.user_id
+
+relationship aa8228aa-b127-4151-90fd-a7ea6dfeb60f
+	fromColumn: _sales_reps_.person_id
+	toColumn: _persons_.person_id
+
+relationship 17b751a5-4452-e704-5a15-fe9c27bd96a5
+	fromColumn: _groups_.group_id
+	toColumn: _group_service_level_relations_.group_id
+
+relationship c6bb7488-a3a2-b885-d9c5-5217d87d2aac
+	fromColumn: _groups_.group_id
+	toColumn: _group_billing_relations_.group_id
+
+relationship ea7ee81f-2731-a505-b64e-11882c53abdd
+	fromColumn: _group_billing_relations_.billing_id
+	toColumn: _billings_.billing_id
+
+relationship a3accf00-4876-41a4-c88c-6bcc929217fa
+	fromColumn: _group_payer_relations_.group_id
+	toColumn: _groups_.group_id
+
+relationship 9d5ab2f9-74a4-f6bc-3c6c-225e41df9459
+	fromColumn: _payers_.payer_id
+	toColumn: _group_payer_relations_.payer_id
+
+relationship 216f9e0e-4c5a-0173-491c-cdea30b449b5
+	fromColumn: Case.CaseNumber
+	toColumn: Contract_Validation_Sharepoint_List.CASE_ID
+
+relationship cde96280-c162-2e81-c45f-5c2a765c42e0
+	fromColumn: Case.CaseNumberTrimmed
+	toColumn: Manual_Configuration_QA_USGH.Case_ID
+
+relationship 98099b4d-55ef-6b80-bbda-2a88e787a181
+	fromColumn: USGH_QA_Feed.CASE_ID
+	toColumn: Case.CaseNumberTrimmed
+
+relationship d066a34e-7e22-ca0a-cc26-7f1c3009f2f3
+	fromColumn: _ref_features_.feature_cd
+	toColumn: _ref_service_specialty_features_.feature_cd
+
+relationship d0be5bfb-3548-eedb-eb08-a37a4bee5e7b
+	fromColumn: _group_service_specialty_feature_relations_.group_service_specialty_relation_id
+	toColumn: _group_service_specialty_relations_.group_service_specialty_relation_id
+
+relationship 832a453f-e5be-0552-c112-be9f691e23bf
+	fromColumn: _ref_service_specialties_.service_specialty_cd
+	toColumn: _group_service_specialty_relations_.service_specialty_cd
+
+relationship a8d2edbf-d870-e4f1-ca2a-347c8e421eb8
+	fromColumn: _groups_.group_id
+	toColumn: _group_service_specialty_relations_.group_id
+
+relationship bb67a96f-cb79-1546-a27e-d9ac3ee02afc
+	fromColumn: _group_service_specialty_feature_relations_.service_specialty_feature_cd
+	toColumn: _ref_service_specialty_features_.service_specialty_feature_cd
+

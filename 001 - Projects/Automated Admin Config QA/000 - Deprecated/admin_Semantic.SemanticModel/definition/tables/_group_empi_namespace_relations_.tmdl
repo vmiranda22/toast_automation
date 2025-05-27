@@ -1,0 +1,131 @@
+table _group_empi_namespace_relations_
+	lineageTag: 0a005381-18d2-4a8b-a1bc-3a4165bd9f3c
+	sourceLineageTag: [dbo].[_group_empi_namespace_relations_]
+
+	column group_empi_namespace_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2e1344e4-6869-467d-8239-5b68d26e0864
+		sourceLineageTag: group_empi_namespace_relation_id
+		summarizeBy: sum
+		sourceColumn: group_empi_namespace_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 39c7729c-177b-44db-89e7-942699db3510
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column empi_namespace_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8b636db8-229e-47af-b89b-2b2fa43a496d
+		sourceLineageTag: empi_namespace_cd
+		summarizeBy: none
+		sourceColumn: empi_namespace_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column benefit_restriction_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b0f181f3-d7cd-409d-8aba-eca24fe797fa
+		sourceLineageTag: benefit_restriction_cd
+		summarizeBy: none
+		sourceColumn: benefit_restriction_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 1eb23dfd-69e9-4fea-8a1b-175c01c403ca
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: d2482bd8-3beb-4241-9193-86259a4221a2
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 81dd3e37-3bd2-45ac-9879-cfc20398e118
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 084be7db-0b89-493d-a5bc-e62eec4e7b81
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 00071c64-4c55-40a6-a0f6-817ad0218a4a
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b1f5e7ce-d386-464e-9ca3-0e6811d73ff0
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 875d7874-0061-4069-918d-d0504a07ea0d
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _group_empi_namespace_relations_ = entity
+		mode: directLake
+		source
+			entityName: _group_empi_namespace_relations_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,34 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.140.7553.1 (Main)+9c07402ba6e34beacea11f7800c0088075b1cb37
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
+ref table salesforce_uat_100_bronze_member_group_role
+ref table salesforce_uat_100_bronze_opportunity
+ref table salesforce_uat_100_bronze_plan_specific_fees
+ref table salesforce_uat_100_bronze_opportunity_product
+ref table salesforce_uat_100_bronze_product
+ref table salesforce_uat_100_bronze_subscription
+ref table salesforce_uat_100_bronze_user
+ref table salesforce_uat_100_bronze_account
+ref table salesforce_uat_100_bronze_account_relationship
+ref table salesforce_uat_100_bronze_asset
+ref table salesforce_uat_100_bronze_case
+ref table salesforce_uat_100_bronze_contact
+ref table salesforce_uat_100_bronze_contract
+ref table salesforce_uat_100_bronze_member_group
+
+ref cultureInfo en-US
+

@@ -1,0 +1,164 @@
+table _organizations_
+	lineageTag: 450e0e0c-bc29-47b8-bb66-3629659ba350
+	sourceLineageTag: [dbo].[_organizations_]
+
+	column organization_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bf14356f-2a28-4801-a707-df5b7b40eaf6
+		sourceLineageTag: organization_id
+		summarizeBy: sum
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9fb019c8-4a22-4c87-a0ac-c19090d6d9f1
+		sourceLineageTag: organization_nm
+		summarizeBy: none
+		sourceColumn: organization_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column parent_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0bb21b35-13b0-470c-9e98-3b8631a2d559
+		sourceLineageTag: parent_id
+		summarizeBy: none
+		sourceColumn: parent_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ancestry
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a0eb78a1-509f-4466-8e31-25e6d5e68bf8
+		sourceLineageTag: ancestry
+		summarizeBy: none
+		sourceColumn: ancestry
+
+		annotation SummarizationSetBy = Automatic
+
+	column ancestry_depth
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 05f737eb-2e29-4f0c-9cc6-21977fa379b7
+		sourceLineageTag: ancestry_depth
+		summarizeBy: sum
+		sourceColumn: ancestry_depth
+
+		annotation SummarizationSetBy = Automatic
+
+	column sql_path
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 322fde0e-e434-4649-b2eb-8a46e863d764
+		sourceLineageTag: sql_path
+		summarizeBy: none
+		sourceColumn: sql_path
+
+		annotation SummarizationSetBy = Automatic
+
+	column lft
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b9d87dee-2d49-4748-8b54-527cdbb60ae4
+		sourceLineageTag: lft
+		summarizeBy: sum
+		sourceColumn: lft
+
+		annotation SummarizationSetBy = Automatic
+
+	column rgt
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 32e41877-745a-4a9d-995e-cbc7cc7effe0
+		sourceLineageTag: rgt
+		summarizeBy: sum
+		sourceColumn: rgt
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4e5f2170-1998-42c5-8403-79877fa5c977
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4122edec-c209-4f3b-8b22-b72cd9b0d90a
+		sourceLineageTag: party_id
+		summarizeBy: sum
+		sourceColumn: party_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 98835b60-c079-4ab2-a625-f6f4c11c0951
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d2c50996-9ad0-4138-815e-db4b00d9182c
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: ec29e8e6-e8f2-48ed-af62-95b4cca5c148
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 181260c3-c46e-432c-86a5-c1a0e0baf7ef
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _organizations_ = entity
+		mode: directLake
+		source
+			entityName: _organizations_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

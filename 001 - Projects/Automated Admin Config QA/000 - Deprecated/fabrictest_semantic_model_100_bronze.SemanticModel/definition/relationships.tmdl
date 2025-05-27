@@ -1,0 +1,73 @@
+relationship 33e1507e-7288-732b-00f9-183a9e93795c
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_case.AccountId
+	toColumn: salesforce_uat_100_bronze_account.Id
+
+relationship 33125195-3714-6b27-a9fb-1af9c5ef4cbe
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_member_group_role.Mbr_Group__c
+	toColumn: salesforce_uat_100_bronze_member_group.Id
+
+relationship c7b33be0-3862-18f4-91c4-673cd2fd2b68
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_member_group.Client_Account__c
+	toColumn: salesforce_uat_100_bronze_account.Id
+
+relationship 76bc9291-b67e-8627-aeb0-0030ce3585b3
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_account_relationship.Svc_Acct__c
+	toColumn: salesforce_uat_100_bronze_account.Id
+
+relationship 21693c80-099a-6fbf-a11d-b76e47425bcb
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_account_relationship.Benefit_Sponsor__c
+	toColumn: salesforce_uat_100_bronze_account.Id
+
+relationship 79c1a055-2333-c3a8-9d0e-8b54298b02bf
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_asset.AccountId
+	toColumn: salesforce_uat_100_bronze_account.Id
+
+relationship 34f58ff9-a60a-da2d-5020-6800e19ee251
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_contract.SBQQ__Opportunity__c
+	toColumn: salesforce_uat_100_bronze_opportunity.Id
+
+relationship 3c22299c-83d5-ff04-bb89-2d1a4ea8f7f4
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_opportunity.AccountId
+	toColumn: salesforce_uat_100_bronze_account.Id
+
+relationship d6353248-24fd-e9f6-93d3-6e6d34c9f758
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_opportunity_product.OpportunityId
+	toColumn: salesforce_uat_100_bronze_opportunity.Id
+
+relationship 09615bbd-eacf-88c8-8c34-6584d5f837c4
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_opportunity_product.Product2Id
+	toColumn: salesforce_uat_100_bronze_product.Id
+
+relationship 4f762cb0-ee5f-c196-f941-1c133965f3a7
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_subscription.SBQQ__Product__c
+	toColumn: salesforce_uat_100_bronze_product.Id
+
+relationship ae5fad08-3062-0c2f-0613-d4f5085951b9
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_plan_specific_fees.Subscription__c
+	toColumn: salesforce_uat_100_bronze_subscription.Id
+
+relationship 58ac249b-2e66-5627-44fc-106eb65dd282
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_plan_specific_fees.Member_Group__c
+	toColumn: salesforce_uat_100_bronze_member_group.Id
+
+relationship d45aa796-1d32-fd99-1ad0-29288076fdd0
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_100_bronze_asset.SBQQ__RequiredBySubscription__c
+	toColumn: salesforce_uat_100_bronze_subscription.Id
+

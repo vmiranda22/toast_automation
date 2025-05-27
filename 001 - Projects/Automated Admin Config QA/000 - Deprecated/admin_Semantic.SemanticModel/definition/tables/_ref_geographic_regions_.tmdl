@@ -1,0 +1,88 @@
+table _ref_geographic_regions_
+	lineageTag: 7eaaa933-7eb2-4dc4-aba4-17b6e338a2e7
+	sourceLineageTag: [dbo].[_ref_geographic_regions_]
+
+	column geographic_region_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3a3dfad9-cd03-4c84-abd7-f71d1b106fa5
+		sourceLineageTag: geographic_region_cd
+		summarizeBy: none
+		sourceColumn: geographic_region_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column geographic_region_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6ee0f1cd-96a8-4679-b280-34a8f9373a3b
+		sourceLineageTag: geographic_region_nm
+		summarizeBy: none
+		sourceColumn: geographic_region_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref_geographic_region_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 17c0deaf-eb61-4834-9980-d9c67e729144
+		sourceLineageTag: ref_geographic_region_id
+		summarizeBy: sum
+		sourceColumn: ref_geographic_region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 735ce7e3-750b-4905-a810-4b75c4ab722a
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1565b5dc-eb8b-45b1-91d1-392f1e614a65
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: c5745986-b6de-4966-bf8c-a36c0df29647
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b40ee71c-8ecc-46f5-a29c-66a38d1b4812
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _ref_geographic_regions_ = entity
+		mode: directLake
+		source
+			entityName: _ref_geographic_regions_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

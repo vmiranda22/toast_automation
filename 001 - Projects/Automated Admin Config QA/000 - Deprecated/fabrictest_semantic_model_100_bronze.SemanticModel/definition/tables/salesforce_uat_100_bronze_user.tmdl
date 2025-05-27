@@ -1,0 +1,258 @@
+table salesforce_uat_100_bronze_user
+	lineageTag: a725d0e1-7a0c-4afa-ba91-b7725e2bb5ba
+	sourceLineageTag: [dbo].[salesforce_uat_100_bronze_user]
+
+	column Id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2755b586-120c-4b3b-ae74-088e7c33cb25
+		sourceLineageTag: Id
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Username
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 40510ea5-28b4-4b18-9c0c-d66982660764
+		sourceLineageTag: Username
+		summarizeBy: none
+		sourceColumn: Username
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: abdeab16-e34e-4156-9910-087c7e286c29
+		sourceLineageTag: LastName
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0b8eb2dd-28a1-4736-87d4-4a43eb62b266
+		sourceLineageTag: FirstName
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MiddleName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6e1535d4-2f5c-4fb7-a7f1-39faf240ad42
+		sourceLineageTag: MiddleName
+		summarizeBy: none
+		sourceColumn: MiddleName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Suffix
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b7745244-6387-42bb-8c8c-f98129c8069a
+		sourceLineageTag: Suffix
+		summarizeBy: none
+		sourceColumn: Suffix
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d3790335-3449-462f-ba23-56b36d1de7fa
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2cf2ba7d-8a1a-4565-a070-a3e09393d6da
+		sourceLineageTag: Title
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f4580fe7-e525-4469-9927-c17bfb581d93
+		sourceLineageTag: Email
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 465c8b07-9a41-406e-b051-cada8bbd58c7
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserRoleId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ff9d3cd2-d065-4119-8ef0-a99c90c7ebed
+		sourceLineageTag: UserRoleId
+		summarizeBy: none
+		sourceColumn: UserRoleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProfileId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 56a8de40-0975-4e8d-a220-1cede7709529
+		sourceLineageTag: ProfileId
+		summarizeBy: none
+		sourceColumn: ProfileId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ManagerId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 23afe4f9-ad35-4c6e-beeb-30499e73bd13
+		sourceLineageTag: ManagerId
+		summarizeBy: none
+		sourceColumn: ManagerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastLoginDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 0f76762c-8805-4a57-9b4d-5d3272867592
+		sourceLineageTag: LastLoginDate
+		summarizeBy: none
+		sourceColumn: LastLoginDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: dbebdca0-b6c1-4ccd-a261-919cb88b1eeb
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f91d1627-44a2-4d20-bd85-894c7c70a300
+		sourceLineageTag: CreatedById
+		summarizeBy: none
+		sourceColumn: CreatedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 80144ffe-af56-4be5-be7d-ec548b758399
+		sourceLineageTag: LastModifiedDate
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0f27541b-c0f0-4c90-b436-dc615a0b6c42
+		sourceLineageTag: LastModifiedById
+		summarizeBy: none
+		sourceColumn: LastModifiedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column SystemModstamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 578d6a34-27c6-461f-bb81-73d1a6d36479
+		sourceLineageTag: SystemModstamp
+		summarizeBy: none
+		sourceColumn: SystemModstamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContactId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 39d9bc25-97b5-4b2d-bcf6-0bf53f72d4f3
+		sourceLineageTag: ContactId
+		summarizeBy: none
+		sourceColumn: ContactId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5f0dd6ad-4fbe-4263-86b5-5eccfac095da
+		sourceLineageTag: AccountId
+		summarizeBy: none
+		sourceColumn: AccountId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IndividualId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e1ec9f46-d2e7-4204-b0b2-a934a973af3e
+		sourceLineageTag: IndividualId
+		summarizeBy: none
+		sourceColumn: IndividualId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Source_Id__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d9055912-0639-416d-86d1-f7708551713e
+		sourceLineageTag: Source_Id__c
+		summarizeBy: none
+		sourceColumn: Source_Id__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Source__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cd22acd2-16f0-4974-ad71-0007e1dd25f3
+		sourceLineageTag: Source__c
+		summarizeBy: none
+		sourceColumn: Source__c
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_100_bronze_user = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_100_bronze_user
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

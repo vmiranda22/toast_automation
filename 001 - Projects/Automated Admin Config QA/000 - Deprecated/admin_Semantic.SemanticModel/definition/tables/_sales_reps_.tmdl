@@ -1,0 +1,131 @@
+table _sales_reps_
+	lineageTag: 07e90ed9-38c4-436c-a588-f8f2e8f91514
+	sourceLineageTag: [dbo].[_sales_reps_]
+
+	column sales_rep_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 01da9517-ebe5-465f-a1f6-a541fdff6c9d
+		sourceLineageTag: sales_rep_id
+		summarizeBy: none
+		sourceColumn: sales_rep_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column person_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7d6b56a4-d037-4100-8418-d71ed716354a
+		sourceLineageTag: person_id
+		summarizeBy: none
+		sourceColumn: person_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_rep_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b3dfe457-ba2c-415c-830b-76204d977ab7
+		sourceLineageTag: sales_rep_type_cd
+		summarizeBy: none
+		sourceColumn: sales_rep_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 209c0f4b-c459-4e5f-8f75-d06ff0859a25
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: d9c633af-3f25-44ab-8678-2725452100df
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fa3ff506-3023-426c-9e95-adca44b2947e
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c4433f6e-709e-48cf-b62e-38b2fc7790a7
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: de41662c-f9f1-4e97-a931-1a48e0a951ea
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6118bde8-dfc4-479c-8bb7-3b7b66cb0033
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 05ad947e-7337-48b8-b803-ea54c8b7e9d8
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: ad347519-b957-4fa7-a392-94222e2451cb
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _sales_reps_ = entity
+		mode: directLake
+		source
+			entityName: _sales_reps_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

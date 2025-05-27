@@ -1,0 +1,387 @@
+table salesforce_uat_100_bronze_opportunity_product
+	lineageTag: 8eeed2e3-0368-4ce7-9921-0253291c3cc9
+	sourceLineageTag: [dbo].[salesforce_uat_100_bronze_opportunity_product]
+
+	column Id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3543b49d-8491-4f9b-998c-525cebeb96a3
+		sourceLineageTag: Id
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column OpportunityId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 725d4de3-acc8-4fbf-ae7c-ed12bdf2d133
+		sourceLineageTag: OpportunityId
+		summarizeBy: none
+		sourceColumn: OpportunityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PricebookEntryId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d84facfb-296f-4333-ad7e-13ccdd40284a
+		sourceLineageTag: PricebookEntryId
+		summarizeBy: none
+		sourceColumn: PricebookEntryId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product2Id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5c4925b9-03d2-4933-8f49-81a4cce02d9e
+		sourceLineageTag: Product2Id
+		summarizeBy: none
+		sourceColumn: Product2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d2bbcc9f-150b-482b-9a22-6561371fad03
+		sourceLineageTag: ProductCode
+		summarizeBy: none
+		sourceColumn: ProductCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f59eea3b-94e7-4750-aed2-628166557be0
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyIsoCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 474237c8-cd66-41e8-9c84-afdebfc73b25
+		sourceLineageTag: CurrencyIsoCode
+		summarizeBy: none
+		sourceColumn: CurrencyIsoCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: a85978f8-695d-48ae-aeec-59eaff56ae0a
+		sourceLineageTag: Quantity
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Discount
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: f241038f-2204-4f5c-af09-65a5bbf9318e
+		sourceLineageTag: Discount
+		summarizeBy: sum
+		sourceColumn: Discount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Subtotal
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 39cd1288-5b3f-4edb-9c98-59a27dd2ff58
+		sourceLineageTag: Subtotal
+		summarizeBy: sum
+		sourceColumn: Subtotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalPrice
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: a8e08198-3110-4bc6-9c37-9deaf839c2ab
+		sourceLineageTag: TotalPrice
+		summarizeBy: sum
+		sourceColumn: TotalPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitPrice
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 9fa11bcd-50ac-4926-944e-d27c35f92440
+		sourceLineageTag: UnitPrice
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ListPrice
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 05453176-71d3-4db5-8c61-d8e979a5ae85
+		sourceLineageTag: ListPrice
+		summarizeBy: sum
+		sourceColumn: ListPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: cef13590-32dd-4277-8c15-b3b5b717cb1f
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9b1601c1-1522-4521-be95-28a01005601c
+		sourceLineageTag: CreatedById
+		summarizeBy: none
+		sourceColumn: CreatedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: c321e28d-6c0d-4f71-9bf0-30dcd7067bf7
+		sourceLineageTag: LastModifiedDate
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f3c99c09-ad73-49dd-b29e-8026614bea51
+		sourceLineageTag: LastModifiedById
+		summarizeBy: none
+		sourceColumn: LastModifiedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column SystemModstamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b6e1a4eb-8477-4bc5-a04c-615cc294b564
+		sourceLineageTag: SystemModstamp
+		summarizeBy: none
+		sourceColumn: SystemModstamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column SBQQ__ParentID__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4c780832-40eb-4794-97d0-d416a3f55f42
+		sourceLineageTag: SBQQ__ParentID__c
+		summarizeBy: none
+		sourceColumn: SBQQ__ParentID__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SBQQ__QuoteLine__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bce83149-ace7-4e85-9784-77215bf3e693
+		sourceLineageTag: SBQQ__QuoteLine__c
+		summarizeBy: none
+		sourceColumn: SBQQ__QuoteLine__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Case_Rate__c
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 0e61dfeb-d1a9-4e7e-93d6-a12a36895e30
+		sourceLineageTag: Case_Rate__c
+		summarizeBy: sum
+		sourceColumn: Case_Rate__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Consult_Fees__c
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 765488a1-a2af-4d67-9dea-da0e2d20db46
+		sourceLineageTag: Consult_Fees__c
+		summarizeBy: sum
+		sourceColumn: Consult_Fees__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Consult_Type__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7f14be5e-a27f-4941-a906-c99d84f5c239
+		sourceLineageTag: Consult_Type__c
+		summarizeBy: none
+		sourceColumn: Consult_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Effective_Start_Date__c
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 76eb7dc1-815a-4b2b-9dcb-fe4bd16e7607
+		sourceLineageTag: Effective_Start_Date__c
+		summarizeBy: none
+		sourceColumn: Effective_Start_Date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Membership_Fee__c
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 7d1b2fdb-e84b-4f54-805f-e69d48f1480e
+		sourceLineageTag: Membership_Fee__c
+		summarizeBy: sum
+		sourceColumn: Membership_Fee__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Product_Family__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e9caa3cd-5d9a-4d15-b49e-bb88ff5c217a
+		sourceLineageTag: Product_Family__c
+		summarizeBy: none
+		sourceColumn: Product_Family__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b9fb0d74-ed3c-44f6-84f6-e0ded6f03463
+		sourceLineageTag: Product__c
+		summarizeBy: none
+		sourceColumn: Product__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SBQQ__SubscriptionType__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dbac632b-d9fd-4e2e-a7e1-34f4d0e242e5
+		sourceLineageTag: SBQQ__SubscriptionType__c
+		summarizeBy: none
+		sourceColumn: SBQQ__SubscriptionType__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column GUID__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: eb3a9539-4b8b-467d-bb18-05618165f8ff
+		sourceLineageTag: GUID__c
+		summarizeBy: none
+		sourceColumn: GUID__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anchor__c
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 10e1cc24-c597-47a0-bc04-319883aeeafa
+		sourceLineageTag: Anchor__c
+		summarizeBy: none
+		sourceColumn: Anchor__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bundle_Type__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 36934bbf-ec84-4cf1-8df2-09f75a4a7509
+		sourceLineageTag: Bundle_Type__c
+		summarizeBy: none
+		sourceColumn: Bundle_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Portfolio__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a3a98cb9-1670-4dfb-80d5-b0426c2b07fa
+		sourceLineageTag: Product_Portfolio__c
+		summarizeBy: none
+		sourceColumn: Product_Portfolio__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Adolescent_Population__c
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 6946b667-3f37-4398-b67b-f0db1213b4b1
+		sourceLineageTag: Adolescent_Population__c
+		summarizeBy: none
+		sourceColumn: Adolescent_Population__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column GCRM_Quote_Line_ID__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3fc9a94d-fade-4bdc-9a7f-90f1dc8a6755
+		sourceLineageTag: GCRM_Quote_Line_ID__c
+		summarizeBy: none
+		sourceColumn: GCRM_Quote_Line_ID__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Rollup__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 42800191-c603-492b-9492-dcf577558b40
+		sourceLineageTag: Product_Rollup__c
+		summarizeBy: none
+		sourceColumn: Product_Rollup__c
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_100_bronze_opportunity_product = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_100_bronze_opportunity_product
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

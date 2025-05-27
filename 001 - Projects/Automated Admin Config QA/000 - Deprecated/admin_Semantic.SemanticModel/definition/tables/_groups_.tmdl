@@ -1,0 +1,287 @@
+table _groups_
+	lineageTag: ea9ec031-e468-44a0-baa4-032b8cf3bb7c
+	sourceLineageTag: [dbo].[_groups_]
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cedd5604-f086-43e7-976e-7ea451fa9c3c
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9954543f-f982-4b3a-a168-4b8f95bdb9c0
+		sourceLineageTag: group_nm
+		summarizeBy: none
+		sourceColumn: group_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b91e6b7d-831f-4291-8e89-95032532ceaa
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: d26ebc77-93b1-4abc-b5eb-32eee3a57869
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_pay_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 260ff633-3305-4c75-a415-f4e9384d10d0
+		sourceLineageTag: effective_pay_dt
+		summarizeBy: none
+		sourceColumn: effective_pay_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column registration_group_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3fc77a39-fe57-495e-a206-3e368805bee5
+		sourceLineageTag: registration_group_cd
+		summarizeBy: none
+		sourceColumn: registration_group_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column card_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 26a4ba3e-0bc1-4324-b40b-78fea6dea9ea
+		sourceLineageTag: card_nm
+		summarizeBy: none
+		sourceColumn: card_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_group_root
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 97666e79-dda3-4121-bf29-402ec3f311ce
+		sourceLineageTag: source_group_root
+		summarizeBy: none
+		sourceColumn: source_group_root
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_group_identifer
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e899c53e-c474-44f1-a1c4-e22a6e14d3d0
+		sourceLineageTag: source_group_identifer
+		summarizeBy: none
+		sourceColumn: source_group_identifer
+
+		annotation SummarizationSetBy = Automatic
+
+	column notes_internal
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a37d087b-7caf-407d-8e18-3913fc67f2d4
+		sourceLineageTag: notes_internal
+		summarizeBy: none
+		sourceColumn: notes_internal
+
+		annotation SummarizationSetBy = Automatic
+
+	column notes_external
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 23b51985-25b4-4ab1-aa73-b8a79949a8c3
+		sourceLineageTag: notes_external
+		summarizeBy: none
+		sourceColumn: notes_external
+
+		annotation SummarizationSetBy = Automatic
+
+	column enroll_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: a7e42e71-b71a-4f99-918a-99d9e79730c5
+		sourceLineageTag: enroll_start_dt
+		summarizeBy: none
+		sourceColumn: enroll_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column enroll_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: d235dc7a-c2e4-47fb-b67f-c7638f91dfca
+		sourceLineageTag: enroll_end_dt
+		summarizeBy: none
+		sourceColumn: enroll_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column enroll_pay_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 5c67fcd8-3ea8-432e-b623-3baa687fdf97
+		sourceLineageTag: enroll_pay_dt
+		summarizeBy: none
+		sourceColumn: enroll_pay_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column deactivation_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 0e832f2d-931a-4b4d-a52a-3177882ece9f
+		sourceLineageTag: deactivation_dt
+		summarizeBy: none
+		sourceColumn: deactivation_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 376cbdf5-3208-4e85-bba2-d0d702779838
+		sourceLineageTag: group_type_cd
+		summarizeBy: none
+		sourceColumn: group_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column reseller_name_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 797a1062-1b4d-4e9c-9539-710dba7909cb
+		sourceLineageTag: reseller_name_cd
+		summarizeBy: none
+		sourceColumn: reseller_name_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_group_type_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bfa4b174-b53f-4412-b93f-1056e558bfc5
+		sourceLineageTag: source_group_type_flg
+		summarizeBy: none
+		sourceColumn: source_group_type_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6d56a9d9-c0f2-43af-8b06-c31812bec3df
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6fa4f564-b712-4fe7-a5c7-0b842bb2c82e
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 9bda4239-d401-4842-91d2-8dcf4372033c
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c785ad07-f643-4625-a42d-a6c88c41a379
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 74361ea0-0649-4c84-84d6-3f6fbea42936
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 24010052-e508-4f69-a660-5236f07c6108
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column template
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 866c5297-0cde-49aa-bef7-37898ed65f72
+		sourceLineageTag: template
+		summarizeBy: none
+		sourceColumn: template
+
+		annotation SummarizationSetBy = Automatic
+
+	column legacy_group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e59c61bd-7f2c-4e2f-a1c6-9e681cf3c7e5
+		sourceLineageTag: legacy_group_id
+		summarizeBy: sum
+		sourceColumn: legacy_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _groups_ = entity
+		mode: directLake
+		source
+			entityName: _groups_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

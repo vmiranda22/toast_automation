@@ -1,0 +1,161 @@
+table _valid_group_sources_
+	lineageTag: 227e73a2-767b-4697-bc0d-e785faec902f
+	sourceLineageTag: [dbo].[_valid_group_sources_]
+
+	column valid_group_source_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d1fe7090-633f-45ea-b059-f8c9f52469b8
+		sourceLineageTag: valid_group_source_id
+		summarizeBy: sum
+		sourceColumn: valid_group_source_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4c64d607-b70e-4b8e-8109-e92650315f32
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5dda1481-62e1-4eff-9669-6ed4292b0ca8
+		sourceLineageTag: primary_source_cd
+		summarizeBy: none
+		sourceColumn: primary_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column dependent_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4d21d5f0-50b7-4f1c-bd79-eac4e6a99f1f
+		sourceLineageTag: dependent_source_cd
+		summarizeBy: none
+		sourceColumn: dependent_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column internal_gateway_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5d71c194-9b3c-40dc-8805-c5c1fb221009
+		sourceLineageTag: internal_gateway_id
+		summarizeBy: sum
+		sourceColumn: internal_gateway_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column vendor_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4e8c012a-dfe6-4885-b147-173efc5a6aa0
+		sourceLineageTag: vendor_id
+		summarizeBy: sum
+		sourceColumn: vendor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column permission_cancel_primary_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1e983a90-aebe-4bab-8723-d77486563e39
+		sourceLineageTag: permission_cancel_primary_flg
+		summarizeBy: none
+		sourceColumn: permission_cancel_primary_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column permission_cancel_dependents_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6a88ea8c-470b-4231-a47e-9a650209fdce
+		sourceLineageTag: permission_cancel_dependents_flg
+		summarizeBy: none
+		sourceColumn: permission_cancel_dependents_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3b42d00c-7a1c-4cca-b417-1f1c38b97a2a
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a37f0300-722a-4f07-ab96-e07218fab5ef
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 0de004bc-7ed8-493f-a8f3-9279c8a57304
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d5cedd1d-ae6a-48b4-9f00-bdccd7f950cb
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f4fa45fc-75f3-4fa4-b74d-a394b976b90b
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9a2b8c1c-9736-4679-a427-b4e6d7a6fefc
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _valid_group_sources_ = entity
+		mode: directLake
+		source
+			entityName: _valid_group_sources_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

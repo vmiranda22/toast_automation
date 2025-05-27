@@ -1,0 +1,126 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.62\",\"type\":2}},\"activeSectionIndex\":4,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "SF: ACCT + MG + MG_ROLE",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "528f04dc8c3980d19344",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"d8038e091a469addff11\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.14977973568282,\"y\":0,\"z\":0,\"width\":1269.8502202643172,\"height\":719.5066079295154,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"salesforce_uat_200_silver_account.id\"},{\"queryRef\":\"salesforce_uat_200_silver_account.name\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group.id\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group.name\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group.legacy_group_id\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_group_information.legacy_group_id\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group_role.name\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group_role.role_type\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group_role.source_account_id\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group_role.member_group_status\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group_role.source_account_nm\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"salesforce_uat_200_silver_account\",\"Type\":0},{\"Name\":\"s1\",\"Entity\":\"salesforce_uat_200_silver_member_group\",\"Type\":0},{\"Name\":\"s2\",\"Entity\":\"salesforce_uat_200_silver_member_group_role\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"teladoc_eds_dev_300_gold_admin_group_information\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"id\"},\"Name\":\"salesforce_uat_200_silver_account.id\",\"NativeReferenceName\":\"id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"name\"},\"Name\":\"salesforce_uat_200_silver_account.name\",\"NativeReferenceName\":\"name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s1\"}},\"Property\":\"id\"},\"Name\":\"salesforce_uat_200_silver_member_group.id\",\"NativeReferenceName\":\"id1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s1\"}},\"Property\":\"name\"},\"Name\":\"salesforce_uat_200_silver_member_group.name\",\"NativeReferenceName\":\"name1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s2\"}},\"Property\":\"name\"},\"Name\":\"salesforce_uat_200_silver_member_group_role.name\",\"NativeReferenceName\":\"name2\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s2\"}},\"Property\":\"role_type\"},\"Name\":\"salesforce_uat_200_silver_member_group_role.role_type\",\"NativeReferenceName\":\"role_type\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s2\"}},\"Property\":\"source_account_id\"},\"Name\":\"salesforce_uat_200_silver_member_group_role.source_account_id\",\"NativeReferenceName\":\"source_account_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s2\"}},\"Property\":\"member_group_status\"},\"Name\":\"salesforce_uat_200_silver_member_group_role.member_group_status\",\"NativeReferenceName\":\"member_group_status\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s2\"}},\"Property\":\"source_account_nm\"},\"Name\":\"salesforce_uat_200_silver_member_group_role.source_account_nm\",\"NativeReferenceName\":\"source_account_nm\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"legacy_group_id\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_group_information.legacy_group_id\",\"NativeReferenceName\":\"legacy_group_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s1\"}},\"Property\":\"legacy_group_id\"},\"Name\":\"salesforce_uat_200_silver_member_group.legacy_group_id\",\"NativeReferenceName\":\"legacy_group_id1\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 719.51,
+          "width": 1269.85,
+          "x": 10.15,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Admin Products (Fees + Settings)",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "763d7b6e02f32cb4aaf1",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"a56f6e1d740ecf89986c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.516728624535316,\"y\":0,\"z\":0,\"width\":1270.4832713754647,\"height\":719.7026022304833,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PF_group_id\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_group_information.group_id\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_group_information.legacy_group_id\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_group_information.group_nm\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PF_service_specialty_nm\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PF_service_specialty_feature_nm\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PF_fee_name\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PF_amount\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PS_product_effective_start_dt\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PS_product_effective_end_dt\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PS_tpn_rule_id\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PS_bundle_type_cd\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"teladoc_eds_dev_300_gold_admin_group_information\",\"Type\":0},{\"Name\":\"t1\",\"Entity\":\"teladoc_eds_dev_300_gold_admin_products_all_information\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"legacy_group_id\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_group_information.legacy_group_id\",\"NativeReferenceName\":\"legacy_group_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"PF_fee_name\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PF_fee_name\",\"NativeReferenceName\":\"PF_fee_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"PF_group_id\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PF_group_id\",\"NativeReferenceName\":\"PF_group_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"PF_service_specialty_nm\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PF_service_specialty_nm\",\"NativeReferenceName\":\"PF_service_specialty_nm\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"PF_service_specialty_feature_nm\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PF_service_specialty_feature_nm\",\"NativeReferenceName\":\"PF_service_specialty_feature_nm\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"PS_product_effective_start_dt\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PS_product_effective_start_dt\",\"NativeReferenceName\":\"PS_product_effective_start_dt\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"PS_product_effective_end_dt\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PS_product_effective_end_dt\",\"NativeReferenceName\":\"PS_product_effective_end_dt\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"PS_tpn_rule_id\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PS_tpn_rule_id\",\"NativeReferenceName\":\"PS_tpn_rule_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"PF_amount\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PF_amount\",\"NativeReferenceName\":\"PF_amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"PS_bundle_type_cd\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_products_all_information.PS_bundle_type_cd\",\"NativeReferenceName\":\"PS_bundle_type_cd\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"group_id\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_group_information.group_id\",\"NativeReferenceName\":\"group_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"group_nm\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_group_information.group_nm\",\"NativeReferenceName\":\"group_nm\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"legacy_group_id\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{}}}",
+          "filters": "[]",
+          "height": 719.70,
+          "width": 1270.48,
+          "x": 9.52,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Admin & SF",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "7d79d40dc40dd4853d79",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"8ad9987c5bab9eabff06\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.82725527831094,\"y\":0,\"z\":0,\"width\":1261.573896353167,\"height\":719.8464491362764,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"salesforce_uat_200_silver_member_group.legacy_group_id\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group.name\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_group_information.legacy_group_id\"},{\"queryRef\":\"teladoc_eds_dev_300_gold_admin_group_information.group_nm\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"salesforce_uat_200_silver_member_group\",\"Type\":0},{\"Name\":\"t\",\"Entity\":\"teladoc_eds_dev_300_gold_admin_group_information\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"legacy_group_id\"},\"Name\":\"salesforce_uat_200_silver_member_group.legacy_group_id\",\"NativeReferenceName\":\"legacy_group_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"group_nm\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_group_information.group_nm\",\"NativeReferenceName\":\"group_nm\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"name\"},\"Name\":\"salesforce_uat_200_silver_member_group.name\",\"NativeReferenceName\":\"name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"legacy_group_id\"},\"Name\":\"teladoc_eds_dev_300_gold_admin_group_information.legacy_group_id\",\"NativeReferenceName\":\"legacy_group_id1\"}]},\"queryOptions\":{\"keepProjectionOrder\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"401.9599544929925D\"}}}},\"selector\":{\"metadata\":\"salesforce_uat_200_silver_member_group.legacy_group_id\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"290.6325805358553D\"}}}},\"selector\":{\"metadata\":\"salesforce_uat_200_silver_member_group.name\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"163.7443689021117D\"}}}},\"selector\":{\"metadata\":\"teladoc_eds_dev_300_gold_admin_group_information.legacy_group_id\"}}]}}}",
+          "filters": "[{\"name\":\"decb59d52a76494a868b\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"salesforce_uat_200_silver_member_group\"}},\"Property\":\"legacy_group_id\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"salesforce_uat_200_silver_member_group\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"legacy_group_id\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false},{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"teladoc_eds_dev_300_gold_admin_group_information\"}},\"Property\":\"legacy_group_id\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"teladoc_eds_dev_300_gold_admin_group_information\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"legacy_group_id\"}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 719.85,
+          "width": 1261.57,
+          "x": 9.83,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "SF: ACCT + ACCT_REL",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "cb9282eb7a21f5f662f7",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"04cd15f53569282e2ef5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.14977973568282,\"y\":0,\"z\":0,\"width\":1269.8502202643172,\"height\":719.5066079295154,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"salesforce_uat_200_silver_account.id\"},{\"queryRef\":\"salesforce_uat_200_silver_account.name\"},{\"queryRef\":\"salesforce_uat_200_silver_account_relationship.contract_type\"},{\"queryRef\":\"salesforce_uat_200_silver_account_relationship.servicing_account_id\"},{\"queryRef\":\"salesforce_uat_200_silver_account_relationship.servicing_account_name\"},{\"queryRef\":\"salesforce_uat_200_silver_account_relationship.name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"salesforce_uat_200_silver_account\",\"Type\":0},{\"Name\":\"s1\",\"Entity\":\"salesforce_uat_200_silver_account_relationship\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"id\"},\"Name\":\"salesforce_uat_200_silver_account.id\",\"NativeReferenceName\":\"id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s1\"}},\"Property\":\"contract_type\"},\"Name\":\"salesforce_uat_200_silver_account_relationship.contract_type\",\"NativeReferenceName\":\"contract_type\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s1\"}},\"Property\":\"servicing_account_id\"},\"Name\":\"salesforce_uat_200_silver_account_relationship.servicing_account_id\",\"NativeReferenceName\":\"servicing_account_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s1\"}},\"Property\":\"servicing_account_name\"},\"Name\":\"salesforce_uat_200_silver_account_relationship.servicing_account_name\",\"NativeReferenceName\":\"servicing_account_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s1\"}},\"Property\":\"name\"},\"Name\":\"salesforce_uat_200_silver_account_relationship.name\",\"NativeReferenceName\":\"name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"name\"},\"Name\":\"salesforce_uat_200_silver_account.name\",\"NativeReferenceName\":\"name1\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 719.51,
+          "width": 1269.85,
+          "x": 10.15,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "SF: ACCT + MG + OPP + PSF + SUB",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ea6f04b96f432ea9dd98",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0e63edb21547851406e6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.14977973568282,\"y\":0,\"z\":0,\"width\":1269.8502202643172,\"height\":719.5066079295154,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"salesforce_uat_200_silver_member_group.id\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group.number\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group.name\"},{\"queryRef\":\"salesforce_uat_200_silver_member_group.legacy_group_id\"},{\"queryRef\":\"salesforce_uat_200_silver_account.id\"},{\"queryRef\":\"salesforce_uat_200_silver_account.name\"},{\"queryRef\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.name\"},{\"queryRef\":\"salesforce_uat_200_silver_subscription.product_name\"},{\"queryRef\":\"salesforce_uat_200_silver_product.product_code\"},{\"queryRef\":\"salesforce_uat_200_silver_product.product_portfolio\"},{\"queryRef\":\"salesforce_uat_200_silver_product.family\"},{\"queryRef\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.asset_name\"},{\"queryRef\":\"salesforce_uat_200_silver_subscription.membership_fee\"},{\"queryRef\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.visit_fee_member\"},{\"queryRef\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.visit_fee_client\"},{\"queryRef\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.product_start_date\"},{\"queryRef\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.product_end_date\"},{\"queryRef\":\"salesforce_uat_200_silver_opportunity.name\"},{\"queryRef\":\"salesforce_uat_200_silver_opportunity.opportunity_guid\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"salesforce_uat_200_silver_member_group\",\"Type\":0},{\"Name\":\"s1\",\"Entity\":\"salesforce_uat_200_silver_account\",\"Type\":0},{\"Name\":\"s2\",\"Entity\":\"salesforce_uat_200_silver_opportunity\",\"Type\":0},{\"Name\":\"s3\",\"Entity\":\"salesforce_uat_200_silver_plan_specific_fees_by_product\",\"Type\":0},{\"Name\":\"s4\",\"Entity\":\"salesforce_uat_200_silver_subscription\",\"Type\":0},{\"Name\":\"s5\",\"Entity\":\"salesforce_uat_200_silver_product\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"number\"},\"Name\":\"salesforce_uat_200_silver_member_group.number\",\"NativeReferenceName\":\"number\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"id\"},\"Name\":\"salesforce_uat_200_silver_member_group.id\",\"NativeReferenceName\":\"id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s1\"}},\"Property\":\"id\"},\"Name\":\"salesforce_uat_200_silver_account.id\",\"NativeReferenceName\":\"id1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s1\"}},\"Property\":\"name\"},\"Name\":\"salesforce_uat_200_silver_account.name\",\"NativeReferenceName\":\"name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s2\"}},\"Property\":\"name\"},\"Name\":\"salesforce_uat_200_silver_opportunity.name\",\"NativeReferenceName\":\"name1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s2\"}},\"Property\":\"opportunity_guid\"},\"Name\":\"salesforce_uat_200_silver_opportunity.opportunity_guid\",\"NativeReferenceName\":\"opportunity_guid\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s3\"}},\"Property\":\"name\"},\"Name\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.name\",\"NativeReferenceName\":\"name2\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s3\"}},\"Property\":\"product_start_date\"},\"Name\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.product_start_date\",\"NativeReferenceName\":\"product_start_date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s3\"}},\"Property\":\"product_end_date\"},\"Name\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.product_end_date\",\"NativeReferenceName\":\"product_end_date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s3\"}},\"Property\":\"visit_fee_member\"},\"Name\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.visit_fee_member\",\"NativeReferenceName\":\"visit_fee_member\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s3\"}},\"Property\":\"visit_fee_client\"},\"Name\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.visit_fee_client\",\"NativeReferenceName\":\"visit_fee_client\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s3\"}},\"Property\":\"asset_name\"},\"Name\":\"salesforce_uat_200_silver_plan_specific_fees_by_product.asset_name\",\"NativeReferenceName\":\"asset_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s4\"}},\"Property\":\"membership_fee\"},\"Name\":\"salesforce_uat_200_silver_subscription.membership_fee\",\"NativeReferenceName\":\"membership_fee\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s4\"}},\"Property\":\"product_name\"},\"Name\":\"salesforce_uat_200_silver_subscription.product_name\",\"NativeReferenceName\":\"product_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s5\"}},\"Property\":\"product_code\"},\"Name\":\"salesforce_uat_200_silver_product.product_code\",\"NativeReferenceName\":\"product_code\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s5\"}},\"Property\":\"product_portfolio\"},\"Name\":\"salesforce_uat_200_silver_product.product_portfolio\",\"NativeReferenceName\":\"product_portfolio\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s5\"}},\"Property\":\"family\"},\"Name\":\"salesforce_uat_200_silver_product.family\",\"NativeReferenceName\":\"family\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"name\"},\"Name\":\"salesforce_uat_200_silver_member_group.name\",\"NativeReferenceName\":\"name3\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"legacy_group_id\"},\"Name\":\"salesforce_uat_200_silver_member_group.legacy_group_id\",\"NativeReferenceName\":\"legacy_group_id\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 719.51,
+          "width": 1269.85,
+          "x": 10.15,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

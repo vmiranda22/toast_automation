@@ -1,0 +1,47 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.140.7553.1 (Main)+9c07402ba6e34beacea11f7800c0088075b1cb37
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
+ref table _group_billing_relations_
+ref table _persons_
+ref table _ref_service_levels_
+ref table _groups_
+ref table _group_settings_
+ref table _alt_group_ids_
+ref table _valid_group_sources_
+ref table _billings_
+ref table _sales_reps_
+ref table _organization_user_relations_
+ref table _organizations_
+ref table _group_service_level_relations_
+ref table _group_payer_relations_
+ref table _payers_
+ref table _ref_countries_
+ref table _group_empi_namespace_relations_
+ref table Contract_Validation_Sharepoint_List
+ref table USGH_QA_Feed
+ref table Manual_Configuration_QA_USGH
+ref table Case
+ref table _ref_features_
+ref table _group_service_specialty_feature_relations_
+ref table _ref_service_specialties_
+ref table _ref_service_specialty_features_
+ref table _group_service_specialty_relations_
+ref table _ref_geographic_regions_
+ref table _group_relation_pricings_
+
+ref cultureInfo en-US
+

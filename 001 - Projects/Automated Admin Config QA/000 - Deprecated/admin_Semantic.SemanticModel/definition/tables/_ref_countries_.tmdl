@@ -1,0 +1,158 @@
+table _ref_countries_
+	lineageTag: 57bb719f-9d50-43f1-b1e9-9ef0ad6185da
+	sourceLineageTag: [dbo].[_ref_countries_]
+
+	column country_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1cb153e9-a95c-43f3-8ef3-2c07e69febdd
+		sourceLineageTag: country_cd
+		summarizeBy: none
+		sourceColumn: country_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2331659d-983d-43b4-b0cd-01ca09cbc8bd
+		sourceLineageTag: country_nm
+		summarizeBy: none
+		sourceColumn: country_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column iso_2_cntry_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 98167eb5-edbb-4092-b272-9a4c209e00f7
+		sourceLineageTag: iso_2_cntry_cd
+		summarizeBy: none
+		sourceColumn: iso_2_cntry_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column capital
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3b719341-4b1d-4ac4-86c5-c2898746c971
+		sourceLineageTag: capital
+		summarizeBy: none
+		sourceColumn: capital
+
+		annotation SummarizationSetBy = Automatic
+
+	column continent
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4f6ad117-abd7-4fe7-a2ef-afcb3ee22873
+		sourceLineageTag: continent
+		summarizeBy: none
+		sourceColumn: continent
+
+		annotation SummarizationSetBy = Automatic
+
+	column telephone_cntry_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7962f84d-e040-49ef-b3a3-866baee7522b
+		sourceLineageTag: telephone_cntry_cd
+		summarizeBy: none
+		sourceColumn: telephone_cntry_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 91e488c3-ba4d-41f4-a726-dacb44b1ce41
+		sourceLineageTag: currency_cd
+		summarizeBy: none
+		sourceColumn: currency_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column domestic_presence_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7d946b82-dff5-4112-96ef-b7be367b6d3c
+		sourceLineageTag: domestic_presence_flg
+		summarizeBy: none
+		sourceColumn: domestic_presence_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column local_jurisdiction_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 34b525ab-3b8c-4f78-ac8c-ac14dd374df3
+		sourceLineageTag: local_jurisdiction_flg
+		summarizeBy: none
+		sourceColumn: local_jurisdiction_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref_country_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 66885dfc-fb95-4018-8ff1-eaaf6574b68e
+		sourceLineageTag: ref_country_id
+		summarizeBy: sum
+		sourceColumn: ref_country_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e065687f-5050-4785-9d90-cc28112bc12f
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 689596cf-6bd4-4dcf-8866-bc77b4f2b572
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 51f12ec0-1465-45fa-b85d-c1e229f55882
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9671d456-fd4b-4523-ab48-488b66aa1e05
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _ref_countries_ = entity
+		mode: directLake
+		source
+			entityName: _ref_countries_
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
