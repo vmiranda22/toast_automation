@@ -1,0 +1,808 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SalesforceSource",
+            "includeDeletedObjects": false,
+            "datasetSettings": {
+              "type": "SalesforceObject",
+              "typeProperties": {
+                "objectApiName": "Mbr_Group__c"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "dbfd3974-1226-4dd9-b11d-add20bd33d94"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "salesforce_uat_100_bronze_member_group"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "fabrictest_lakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "22ac13b1-053f-b218-464e-64db4b9a8e2d",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "Id",
+                  "type": "String",
+                  "physicalType": "id"
+                },
+                "sink": {
+                  "name": "Id",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Name",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Name",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "CreatedDate",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "CreatedDate",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "CreatedById",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "CreatedById",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "LastModifiedDate",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "LastModifiedDate",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "LastModifiedById",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "LastModifiedById",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "SystemModstamp",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "SystemModstamp",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "Client_Account__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "Client_Account__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Active_Date__c",
+                  "type": "DateTime",
+                  "physicalType": "date"
+                },
+                "sink": {
+                  "name": "Active_Date__c",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "name": "Actual_Copay_May_Be_Less__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Actual_Copay_May_Be_Less__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Allow_Caregiver_Program__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Allow_Caregiver_Program__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Allow_Conversion_to_Retail__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Allow_Conversion_to_Retail__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Allow_Geo_Fencing__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Allow_Geo_Fencing__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "AltLogo1_ID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "AltLogo1_ID__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "AltLogo2_ID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "AltLogo2_ID__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Any_Special_Instructions__c",
+                  "type": "String",
+                  "physicalType": "textarea"
+                },
+                "sink": {
+                  "name": "Any_Special_Instructions__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Card_Name__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Card_Name__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Card_Template__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Card_Template__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Client_Account_Manager__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Client_Account_Manager__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Co_Brand_with_Logo__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Co_Brand_with_Logo__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Consult_Billing_Method__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Consult_Billing_Method__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Elig_Dep_Inc_In_File__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Elig_Dep_Inc_In_File__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Eligibility_Option__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Eligibility_Option__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Group_Number__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Group_Number__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Logo1_ID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Logo1_ID__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Logo2_ID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Logo2_ID__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Logo3_ID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Logo3_ID__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Logo_Tag_ID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Logo_Tag_ID__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Migration_Group_Number__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Migration_Group_Number__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Name__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Name__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Purchase_Order_Number__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Purchase_Order_Number__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Purchase_Order_Required__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Purchase_Order_Required__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Sexual_Health_Opt_Out__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Sexual_Health_Opt_Out__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Source_Id__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Source_Id__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Status__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Status__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Teladoc_Select__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Teladoc_Select__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Tri_Brand_with_Logo__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Tri_Brand_with_Logo__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "PSF_Count__c",
+                  "type": "Decimal",
+                  "physicalType": "double"
+                },
+                "sink": {
+                  "name": "PSF_Count__c",
+                  "physicalType": "decimal"
+                }
+              },
+              {
+                "source": {
+                  "name": "Client_Account_Relationship__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "Client_Account_Relationship__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Line_Of_Business__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Line_Of_Business__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Plan_Category__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Plan_Category__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Plan_Type__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Plan_Type__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Source__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Source__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Domestic_Country__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Domestic_Country__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Health_Assistant__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Health_Assistant__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "hlp_Benefit_Sponsors__c",
+                  "type": "Decimal",
+                  "physicalType": "double"
+                },
+                "sink": {
+                  "name": "hlp_Benefit_Sponsors__c",
+                  "physicalType": "decimal"
+                }
+              },
+              {
+                "source": {
+                  "name": "hlp_Payers__c",
+                  "type": "Decimal",
+                  "physicalType": "double"
+                },
+                "sink": {
+                  "name": "hlp_Payers__c",
+                  "physicalType": "decimal"
+                }
+              },
+              {
+                "source": {
+                  "name": "Logo4_ID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Logo4_ID__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Termination_Date__c",
+                  "type": "DateTime",
+                  "physicalType": "date"
+                },
+                "sink": {
+                  "name": "Termination_Date__c",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "name": "Disable_Flow__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Disable_Flow__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Enable_Livongo_Combined_Eligibility__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Enable_Livongo_Combined_Eligibility__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Enable_Livongo_Referrals__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Enable_Livongo_Referrals__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Livongo_Registration_code__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Livongo_Registration_code__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Enable_Chronic_Care_Referrals__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Enable_Chronic_Care_Referrals__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "MyStrength_Global_Access_Code__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "MyStrength_Global_Access_Code__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Admin_Line_of_Business__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Admin_Line_of_Business__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Direct_mail__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Direct_mail__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Email__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Email__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Text_SMS__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Text_SMS__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Cross_Billing__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Cross_Billing__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Allow_Minor_Registration__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Allow_Minor_Registration__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Approved_Marketing_Start_Date__c",
+                  "type": "DateTime",
+                  "physicalType": "date"
+                },
+                "sink": {
+                  "name": "Approved_Marketing_Start_Date__c",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "name": "Incentives_Opt_In__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Incentives_Opt_In__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Marketing_Approved__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Marketing_Approved__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "OneAppAccess__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "OneAppAccess__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "LV_Client_Member_Code__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "LV_Client_Member_Code__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "LV_Client_Code__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "LV_Client_Code__c",
+                  "physicalType": "string"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "salesforce_uat_object_member_group",
+        "dependsOn": []
+      }
+    ]
+  }
+}

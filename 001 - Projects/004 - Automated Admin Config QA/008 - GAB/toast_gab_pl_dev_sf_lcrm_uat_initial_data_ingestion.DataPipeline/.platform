@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "toast_gab_pl_dev_sf_lcrm_uat_initial_data_ingestion"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "56c17f4a-a1a9-be93-47d5-c11ebd2b7d7c"
+  }
+}

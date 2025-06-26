@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "toast_dw_workfront_trusted"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bbc73fda-6c82-814a-4f8f-959376859add"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "2025 TECH BAEI - Time Tracking Project Tasks v2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a62c3b5d-d53e-b643-4eb1-ae788d74ab59"
+  }
+}

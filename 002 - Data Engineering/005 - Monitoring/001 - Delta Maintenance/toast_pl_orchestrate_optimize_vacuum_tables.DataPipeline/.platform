@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "toast_pl_orchestrate_optimize_vacuum_tables"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cafbd355-f094-8523-467f-45bbdfb7bfec"
+  }
+}

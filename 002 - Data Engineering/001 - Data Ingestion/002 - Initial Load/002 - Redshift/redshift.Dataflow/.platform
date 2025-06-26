@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "redshift"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ef3337a6-a222-8195-437d-46e20cccd37f"
+  }
+}

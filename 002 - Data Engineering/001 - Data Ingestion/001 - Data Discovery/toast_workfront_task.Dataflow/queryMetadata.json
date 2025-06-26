@@ -1,0 +1,20 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "toast_workfront_task_2",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Query": {
+      "queryId": "6d031065-71ae-4139-a7d0-a28bb4d8af7b",
+      "queryName": "Query"
+    }
+  },
+  "connections": [
+    {
+      "path": "https://teladochealth.my.workfront.com/attask/api/v19.0/task/search?apiKey=al7s4u94ggluu08vnh7atni3p5sagebm&fields=*,parameterValues",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"26c3774d-ab64-4fef-944e-50382f2e0bb6\"}"
+    }
+  ]
+}

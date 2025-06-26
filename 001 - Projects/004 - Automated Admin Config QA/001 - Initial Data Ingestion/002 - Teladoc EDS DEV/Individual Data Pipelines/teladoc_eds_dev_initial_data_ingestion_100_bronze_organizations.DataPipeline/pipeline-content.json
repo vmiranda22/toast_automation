@@ -1,0 +1,230 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "MySqlSource",
+            "datasetSettings": {
+              "type": "MySqlTable",
+              "typeProperties": {
+                "tableName": "`organizations`"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "8cfaf835-d76d-4547-a584-d491a33b3359"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "teladoc_eds_dev_100_bronze_organizations"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "fabrictest_lakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "22ac13b1-053f-b218-464e-64db4b9a8e2d",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "organization_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "organization_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "organization_nm",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "organization_nm",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "parent_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "parent_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "ancestry",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "ancestry",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "ancestry_depth",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "ancestry_depth",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "sql_path",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "sql_path",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "lft",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "lft",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "rgt",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "rgt",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "group_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "group_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "party_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "party_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "created_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_by",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "created_by",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "updated_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_by",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "updated_by",
+                  "physicalType": "integer"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "organizations",
+        "dependsOn": []
+      }
+    ],
+    "variables": {
+      "Check": {
+        "type": "Integer",
+        "defaultValue": 0
+      }
+    }
+  }
+}

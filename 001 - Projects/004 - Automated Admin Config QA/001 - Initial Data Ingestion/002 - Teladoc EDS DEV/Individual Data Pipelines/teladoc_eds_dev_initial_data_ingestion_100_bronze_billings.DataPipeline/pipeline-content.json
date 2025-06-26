@@ -1,0 +1,307 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "MySqlSource",
+            "datasetSettings": {
+              "type": "MySqlTable",
+              "typeProperties": {
+                "tableName": "`billings`"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "8cfaf835-d76d-4547-a584-d491a33b3359"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "teladoc_eds_dev_100_bronze_billings"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "fabrictest_lakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "22ac13b1-053f-b218-464e-64db4b9a8e2d",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "billing_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "billing_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "finance_name",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "finance_name",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "invoice_name",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "invoice_name",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "regards_to",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "regards_to",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "organization_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "organization_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "client_subsegment_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "client_subsegment_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "payment_term_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "payment_term_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "invoice_delivery_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "invoice_delivery_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "split_billing_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "split_billing_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "risk_contract_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "risk_contract_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "self_remit_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "self_remit_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "send_expert_membership_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "send_expert_membership_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "member_pay_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "member_pay_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "eligible_day_of_month",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "eligible_day_of_month",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "billing_accnt_uuid",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "billing_accnt_uuid",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "data_source_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "data_source_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "exclusion_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "exclusion_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "created_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_by",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "created_by",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "updated_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_by",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "updated_by",
+                  "physicalType": "integer"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 5,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "billings",
+        "dependsOn": []
+      }
+    ],
+    "variables": {
+      "Check": {
+        "type": "Integer",
+        "defaultValue": 0
+      }
+    }
+  }
+}

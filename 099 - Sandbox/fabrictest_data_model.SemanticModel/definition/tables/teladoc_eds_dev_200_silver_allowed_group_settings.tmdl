@@ -1,0 +1,63 @@
+table teladoc_eds_dev_200_silver_allowed_group_settings
+	lineageTag: 3ede9fc5-e15a-4e22-9054-f9fca4db2b98
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_allowed_group_settings]
+
+	column allowed_group_setting_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f6272e5b-1775-4ead-a51a-df9ff40c9a27
+		sourceLineageTag: allowed_group_setting_id
+		summarizeBy: none
+		sourceColumn: allowed_group_setting_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column map_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7519c4be-c345-47e4-82cb-f1e290698bc3
+		sourceLineageTag: map_name
+		summarizeBy: none
+		sourceColumn: map_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column success_email_distribution_list
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d36b910e-817a-42fb-8c2d-56b5a7a74d61
+		sourceLineageTag: success_email_distribution_list
+		summarizeBy: none
+		sourceColumn: success_email_distribution_list
+
+		annotation SummarizationSetBy = Automatic
+
+	column failure_email_distribution_list
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 86cd78be-2f54-43dc-8361-d5c7246d63af
+		sourceLineageTag: failure_email_distribution_list
+		summarizeBy: none
+		sourceColumn: failure_email_distribution_list
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 962f924d-f9ea-48a6-ae2c-705b40e19da9
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_allowed_group_settings = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_allowed_group_settings
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,29 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowFastCopy": false
+  },
+  "name": "get_workfront_issues_for_project",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "gatewayObjectId": "15c85ca7-8a2c-4f02-beb3-bd948e518ac6",
+  "queriesMetadata": {
+    "Issue": {
+      "queryId": "4be1808f-9504-4892-972e-4abd52cbfaed",
+      "queryName": "Issue",
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://teladochealth.my.workfront.com/attask/api/v19.0/issue/search?apiKey=al7s4u94ggluu08vnh7atni3p5sagebm&method=GET&fields=*,parameterValues&projectID=679bb93a000642db193be2e527d05822",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"8a98bddf-118a-43a0-97cc-340b525b67c9\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"15c85ca7-8a2c-4f02-beb3-bd948e518ac6\",\"DatasourceId\":\"b4a66f74-63df-4e98-be3b-84fc84c47992\"}"
+    }
+  ]
+}

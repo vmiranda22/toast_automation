@@ -1,0 +1,44 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowFastCopy": false
+  },
+  "name": "fabric_mgs_in_nasfs",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "_table_mgs_in_nasfs": {
+      "queryId": "0645638e-d5ae-4ad6-8ce9-a4d952fd1e2f",
+      "queryName": "_table_mgs_in_nasfs",
+      "loadEnabled": false
+    },
+    "_table_mgs_in_nasfs_DataDestination": {
+      "queryId": "20bcbe3e-d954-4857-9b5a-41c24cfaae04",
+      "queryName": "_table_mgs_in_nasfs_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://teladocpa-my.sharepoint.com/personal/facundo_vitta_teladochealth_com/",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"c018c080-57e9-40a7-8959-f407fae585e9\"}"
+    },
+    {
+      "path": "https://teladocpa.sharepoint.com/sites/ToolsAndAutomation/_layouts/15/Doc.aspx?sourcedoc=%7B15245742-61ED-4AFA-9D30-C2FB686C9028%7D&file=Fabric_MGs_in_NASFs.xlsx",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"cc9fb034-3f66-4231-a632-4d0b26d87fa4\"}"
+    },
+    {
+      "path": "https://teladocpa.sharepoint.com/sites/ToolsAndAutomation/Documentation/Automated%20QA%20on%20Fabric/Fabric_MGs_in_NASFs.xlsx",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"b429e44b-27bd-4543-a474-faf70743209f\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"36d65f61-9878-4fed-850c-82ca11b0c92f\"}"
+    }
+  ]
+}

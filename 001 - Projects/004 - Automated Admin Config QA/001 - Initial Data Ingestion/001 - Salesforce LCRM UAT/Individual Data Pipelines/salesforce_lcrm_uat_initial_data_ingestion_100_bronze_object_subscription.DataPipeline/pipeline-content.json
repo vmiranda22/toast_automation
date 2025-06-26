@@ -1,0 +1,324 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SalesforceSource",
+            "includeDeletedObjects": false,
+            "datasetSettings": {
+              "type": "SalesforceObject",
+              "typeProperties": {
+                "objectApiName": "SBQQ__Subscription__c"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "dbfd3974-1226-4dd9-b11d-add20bd33d94"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "salesforce_uat_100_bronze_subscription"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "fabrictest_lakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "22ac13b1-053f-b218-464e-64db4b9a8e2d",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "Id",
+                  "type": "String",
+                  "physicalType": "id"
+                },
+                "sink": {
+                  "name": "Id",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "OwnerId",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "OwnerId",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Name",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Name",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "CurrencyIsoCode",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "CurrencyIsoCode",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "CreatedDate",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "CreatedDate",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "CreatedById",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "CreatedById",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "LastModifiedDate",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "LastModifiedDate",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "LastModifiedById",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "LastModifiedById",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "SystemModstamp",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "SystemModstamp",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "SBQQ__Account__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "SBQQ__Account__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "SBQQ__ContractNumber__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "SBQQ__ContractNumber__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "SBQQ__Contract__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "SBQQ__Contract__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "SBQQ__ProductName__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "SBQQ__ProductName__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "SBQQ__Product__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "SBQQ__Product__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "SBQQ__SubscriptionEndDate__c",
+                  "type": "DateTime",
+                  "physicalType": "date"
+                },
+                "sink": {
+                  "name": "SBQQ__SubscriptionEndDate__c",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "name": "SBQQ__SubscriptionStartDate__c",
+                  "type": "DateTime",
+                  "physicalType": "date"
+                },
+                "sink": {
+                  "name": "SBQQ__SubscriptionStartDate__c",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "name": "Current_Membership_Fee__c",
+                  "type": "Decimal",
+                  "physicalType": "currency"
+                },
+                "sink": {
+                  "name": "Current_Membership_Fee__c",
+                  "physicalType": "decimal"
+                }
+              },
+              {
+                "source": {
+                  "name": "Fee_Type__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Fee_Type__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Oportunity_Id__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Oportunity_Id__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Source_Id__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Source_Id__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Status__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Status__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Bundle_Type__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Bundle_Type__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "GCRM_Subscription_ID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "GCRM_Subscription_ID__c",
+                  "physicalType": "string"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "salesforce_uat_object_subscription",
+        "dependsOn": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SalesforceSource",
+            "includeDeletedObjects": false,
+            "datasetSettings": {
+              "type": "SalesforceObject",
+              "typeProperties": {
+                "objectApiName": "Contact"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "dbfd3974-1226-4dd9-b11d-add20bd33d94"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "salesforce_uat_100_bronze_contact"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "fabrictest_lakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "22ac13b1-053f-b218-464e-64db4b9a8e2d",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "Id",
+                  "type": "String",
+                  "physicalType": "id"
+                },
+                "sink": {
+                  "name": "Id",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "AccountId",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "AccountId",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Name",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Name",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Email",
+                  "type": "String",
+                  "physicalType": "email"
+                },
+                "sink": {
+                  "name": "Email",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Title",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Title",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "OwnerId",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "OwnerId",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "CreatedDate",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "CreatedDate",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "CreatedById",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "CreatedById",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "LastModifiedDate",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "LastModifiedDate",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "LastModifiedById",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "LastModifiedById",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "SystemModstamp",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "SystemModstamp",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "Contact_Status__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Contact_Status__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Source_Id__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Source_Id__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Source__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "Source__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Account_Business_Type__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Account_Business_Type__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Account_Status__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Account_Status__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "GUID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "GUID__c",
+                  "physicalType": "string"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "salesforce_uat_object_contact",
+        "dependsOn": []
+      }
+    ]
+  }
+}

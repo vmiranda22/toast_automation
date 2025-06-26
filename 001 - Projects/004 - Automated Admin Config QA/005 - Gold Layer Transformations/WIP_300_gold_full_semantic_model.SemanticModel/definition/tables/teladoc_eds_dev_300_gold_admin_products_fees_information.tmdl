@@ -1,0 +1,114 @@
+table teladoc_eds_dev_300_gold_admin_products_fees_information
+	isHidden
+	lineageTag: 0bc0de49-3681-416b-b28b-6bd5da94c778
+	sourceLineageTag: [dbo].[teladoc_eds_dev_300_gold_admin_products_fees_information]
+
+	column group_id
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 1e8a3453-9b41-4cef-8456-f24034833dd9
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_cd
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: d2ec2a4a-cc7c-4d92-ba33-32fefc9534fe
+		sourceLineageTag: service_specialty_cd
+		summarizeBy: none
+		sourceColumn: service_specialty_cd
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_nm
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 596dda3f-55a6-40e9-99b4-753f636c3c25
+		sourceLineageTag: service_specialty_nm
+		summarizeBy: none
+		sourceColumn: service_specialty_nm
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_feature_cd
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 04214de6-6c0f-4158-a9b1-1b7a415cd850
+		sourceLineageTag: service_specialty_feature_cd
+		summarizeBy: none
+		sourceColumn: service_specialty_feature_cd
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_feature_nm
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 0e8eec61-369a-42b7-aa9c-0daa4578ccf7
+		sourceLineageTag: service_specialty_feature_nm
+		summarizeBy: none
+		sourceColumn: service_specialty_feature_nm
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column fee_name
+		dataType: string
+		isHidden
+		sourceProviderType: varchar(8000)
+		lineageTag: 319b1fa9-ce3e-4192-a5d5-d365ec4b3eb2
+		sourceLineageTag: fee_name
+		summarizeBy: none
+		sourceColumn: fee_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column amount
+		dataType: double
+		isHidden
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		sourceProviderType: float
+		lineageTag: 10348c0e-ea68-4e6f-99b2-4d3a7f793a18
+		sourceLineageTag: amount
+		summarizeBy: none
+		sourceColumn: amount
+
+		changedProperty = FormatString
+
+		changedProperty = SummarizeBy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	partition teladoc_eds_dev_300_gold_admin_products_fees_information = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_300_gold_admin_products_fees_information
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

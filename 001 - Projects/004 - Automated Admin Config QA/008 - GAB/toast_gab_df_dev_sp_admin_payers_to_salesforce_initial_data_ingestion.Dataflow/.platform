@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "toast_gab_df_dev_sp_admin_payers_to_salesforce_initial_data_ingestion"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "61b00497-c2bc-8bcb-4286-bb7216c01941"
+  }
+}

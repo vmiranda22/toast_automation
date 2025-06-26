@@ -1,0 +1,161 @@
+table teladoc_eds_dev_100_bronze_report_affiliation_relations
+	lineageTag: 7e5bed46-180c-4ba2-9f68-03e7dad80d8d
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_report_affiliation_relations]
+
+	column report_affiliation_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e3149bef-e671-4d22-b7d5-7b2375548596
+		sourceLineageTag: report_affiliation_relation_id
+		summarizeBy: sum
+		sourceColumn: report_affiliation_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column affiliation_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8d2055b7-f8c8-476c-856f-ebc8d287f651
+		sourceLineageTag: affiliation_type
+		summarizeBy: none
+		sourceColumn: affiliation_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column affiliation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dabc8d02-af16-4755-aa0a-2244b13317d7
+		sourceLineageTag: affiliation_id
+		summarizeBy: sum
+		sourceColumn: affiliation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d485ea31-8610-4f98-b06a-08309b00008a
+		sourceLineageTag: report_cd
+		summarizeBy: none
+		sourceColumn: report_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column email_flavor_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b09c407a-7795-4bde-a317-e9a67da8bafe
+		sourceLineageTag: email_flavor_cd
+		summarizeBy: none
+		sourceColumn: email_flavor_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 0c31b82d-6e43-4102-a3df-fb16e2bcb8aa
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: bbf1db50-f3d5-405c-8562-dc295fbf30c6
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column frequency_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cceef6aa-568b-44f9-bf2b-7d12568aaaaf
+		sourceLineageTag: frequency_cd
+		summarizeBy: none
+		sourceColumn: frequency_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 34bfe109-77e7-40df-9a0e-ab1ba0f46250
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d7d88570-5100-46ae-9354-a6b3fd1e6b4f
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 90cdacd2-df76-438b-b110-87d7061f1357
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b2640517-85cf-4a71-a22c-2aaaf44c2619
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 2dabf7ed-7c09-4fb3-8262-ce6b51d55057
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 51aec990-7e1d-46ac-84d9-eb0a37b9b0c1
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_report_affiliation_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_report_affiliation_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

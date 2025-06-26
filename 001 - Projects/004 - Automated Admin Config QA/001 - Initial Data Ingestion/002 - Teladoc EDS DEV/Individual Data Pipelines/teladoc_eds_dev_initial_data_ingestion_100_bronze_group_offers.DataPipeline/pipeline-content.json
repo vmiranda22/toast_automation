@@ -1,0 +1,318 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "MySqlSource",
+            "datasetSettings": {
+              "type": "MySqlTable",
+              "typeProperties": {
+                "tableName": "`group_offers`"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "8cfaf835-d76d-4547-a584-d491a33b3359"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "teladoc_eds_dev_100_bronze_group_offers"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "fabrictest_lakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "22ac13b1-053f-b218-464e-64db4b9a8e2d",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "group_offer_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "group_offer_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "promotion_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "promotion_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "group_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "group_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "dependent_promotion_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "dependent_promotion_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "promotion_type_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "promotion_type_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "promotion_start_dt",
+                  "type": "DateTime",
+                  "physicalType": "Date"
+                },
+                "sink": {
+                  "name": "promotion_start_dt",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "promotion_end_dt",
+                  "type": "DateTime",
+                  "physicalType": "Date"
+                },
+                "sink": {
+                  "name": "promotion_end_dt",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "clock_start_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "clock_start_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "clock_end_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "clock_end_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "discount_amount",
+                  "type": "Double",
+                  "physicalType": "Double"
+                },
+                "sink": {
+                  "name": "discount_amount",
+                  "physicalType": "double"
+                }
+              },
+              {
+                "source": {
+                  "name": "discount_percent",
+                  "type": "Decimal",
+                  "physicalType": "NewDecimal"
+                },
+                "sink": {
+                  "name": "discount_percent",
+                  "physicalType": "decimal"
+                }
+              },
+              {
+                "source": {
+                  "name": "interval_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "interval_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "num_of_intervals",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "num_of_intervals",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "num_per_interval",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "num_per_interval",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "family",
+                  "type": "Boolean",
+                  "physicalType": "Bool"
+                },
+                "sink": {
+                  "name": "family",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "additional",
+                  "type": "Boolean",
+                  "physicalType": "Bool"
+                },
+                "sink": {
+                  "name": "additional",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "premium_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "premium_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "exclusion_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "exclusion_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "created_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_by",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "created_by",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "updated_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_by",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "updated_by",
+                  "physicalType": "integer"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 5,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "group_offers",
+        "dependsOn": []
+      }
+    ],
+    "variables": {
+      "Check": {
+        "type": "Integer",
+        "defaultValue": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "PL_workfront_hours"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1d80ae2c-4f34-9953-4dcc-616bc03dcf08"
+  }
+}

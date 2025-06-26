@@ -1,0 +1,249 @@
+table teladoc_eds_dev_100_bronze_group_offers
+	lineageTag: 8b564669-56fb-42a1-b847-bdcb8de5b33c
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_group_offers]
+
+	column group_offer_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e25c2ab7-a5e0-494e-a4a3-5f88bd651644
+		sourceLineageTag: group_offer_id
+		summarizeBy: sum
+		sourceColumn: group_offer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column promotion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ec5763e3-20fd-4a0b-a7ba-ecb098ee6a69
+		sourceLineageTag: promotion_cd
+		summarizeBy: none
+		sourceColumn: promotion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0bf59c2f-b0d4-4a18-bafe-aee3514c5af5
+		sourceLineageTag: group_id
+		summarizeBy: sum
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column dependent_promotion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a3aac419-b4fc-4d84-95f8-734050f851d9
+		sourceLineageTag: dependent_promotion_cd
+		summarizeBy: none
+		sourceColumn: dependent_promotion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column promotion_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bcd9bb30-3ab7-4875-9b51-c26085f81fa9
+		sourceLineageTag: promotion_type_cd
+		summarizeBy: none
+		sourceColumn: promotion_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column promotion_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 4c2ef883-86c8-4e11-92e2-857ea92279a0
+		sourceLineageTag: promotion_start_dt
+		summarizeBy: none
+		sourceColumn: promotion_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column promotion_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: d64600ef-954e-42a4-93d0-7656291f4a9d
+		sourceLineageTag: promotion_end_dt
+		summarizeBy: none
+		sourceColumn: promotion_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column clock_start_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a999deed-854a-46ea-83d2-eef38bba66ab
+		sourceLineageTag: clock_start_cd
+		summarizeBy: none
+		sourceColumn: clock_start_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column clock_end_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1eb1872d-c3d8-4764-99a0-688722374f45
+		sourceLineageTag: clock_end_cd
+		summarizeBy: none
+		sourceColumn: clock_end_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column discount_amount
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 2fc8d617-3601-4894-9c22-1d3c8ba0db1c
+		sourceLineageTag: discount_amount
+		summarizeBy: sum
+		sourceColumn: discount_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discount_percent
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 86b0a32f-496d-40fa-9faf-dcb6453cb46f
+		sourceLineageTag: discount_percent
+		summarizeBy: sum
+		sourceColumn: discount_percent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column interval_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8de1fedb-ffc6-445a-bfda-95fa38ee4a28
+		sourceLineageTag: interval_cd
+		summarizeBy: none
+		sourceColumn: interval_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_of_intervals
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 45cb1b87-e46d-42a1-87f7-f838b9758c69
+		sourceLineageTag: num_of_intervals
+		summarizeBy: sum
+		sourceColumn: num_of_intervals
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_per_interval
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 18b4c365-b3f6-4239-8c3b-aa0e2f438505
+		sourceLineageTag: num_per_interval
+		summarizeBy: sum
+		sourceColumn: num_per_interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column family
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 7bb17d71-0f8a-448b-bb42-50db881309dd
+		sourceLineageTag: family
+		summarizeBy: none
+		sourceColumn: family
+
+		annotation SummarizationSetBy = Automatic
+
+	column additional
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 6a7b23c2-fbe2-4f67-8c77-ba5c177ae255
+		sourceLineageTag: additional
+		summarizeBy: none
+		sourceColumn: additional
+
+		annotation SummarizationSetBy = Automatic
+
+	column premium_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 89bd2d7e-2d14-44f6-87fb-41a4cd6e8d2d
+		sourceLineageTag: premium_flg
+		summarizeBy: none
+		sourceColumn: premium_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 16a2d9df-4036-4aa2-a897-5c8c72a0303d
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 63b2ff6e-8440-4364-9ae3-baa06f402bd8
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1e1ad21e-a84b-4ee7-82e8-71330cdfa17f
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 71875f89-860c-49d3-85b2-2f70b0620e08
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b6192f23-88e9-4ad7-ad17-62e8e77820e2
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_group_offers = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_group_offers
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

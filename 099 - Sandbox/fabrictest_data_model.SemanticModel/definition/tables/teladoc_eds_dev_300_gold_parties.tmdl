@@ -1,0 +1,376 @@
+table teladoc_eds_dev_300_gold_parties
+	lineageTag: 07a3c2e8-6e58-45f2-8d51-4adf14897065
+	sourceLineageTag: [dbo].[teladoc_eds_dev_300_gold_parties]
+
+	column party_email_address_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5369ed6c-28d7-4875-94b1-ce1ba4fe468c
+		sourceLineageTag: party_email_address_id
+		summarizeBy: sum
+		sourceColumn: party_email_address_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 94d61d95-acf8-4a6a-92bb-f57625f8fee0
+		sourceLineageTag: party_id
+		summarizeBy: sum
+		sourceColumn: party_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column person_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: a3e908f1-6978-400d-b77d-a2d991ead76b
+		sourceLineageTag: person_id
+		summarizeBy: sum
+		sourceColumn: person_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 429b9020-5485-4575-9120-4a45a06c6327
+		sourceLineageTag: party_name
+		summarizeBy: none
+		sourceColumn: party_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1977c100-86f4-4bf1-b008-bc976294ee15
+		sourceLineageTag: party_type_cd
+		summarizeBy: none
+		sourceColumn: party_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_batch_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 39bc23b4-5e0b-4da5-965b-218130161081
+		sourceLineageTag: party_batch_id
+		summarizeBy: sum
+		sourceColumn: party_batch_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column row_number
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e43a7aae-acf4-4d0c-aac8-551213db46d9
+		sourceLineageTag: row_number
+		summarizeBy: sum
+		sourceColumn: row_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column person_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fb315988-4e3a-4bcd-b51d-f35351622a91
+		sourceLineageTag: person_type
+		summarizeBy: none
+		sourceColumn: person_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column salutation
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 31c1a99f-f811-4018-b5bd-2f2bcc6c5d45
+		sourceLineageTag: salutation
+		summarizeBy: none
+		sourceColumn: salutation
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 481871c0-99bd-477d-893a-ad211699d1b9
+		sourceLineageTag: first_nm
+		summarizeBy: none
+		sourceColumn: first_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column middle_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5f1c9cf3-2dff-4f61-a0b0-0cdef7c13f83
+		sourceLineageTag: middle_nm
+		summarizeBy: none
+		sourceColumn: middle_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: eb1c5a19-e048-4d6f-96d7-8d9561ade086
+		sourceLineageTag: last_nm
+		summarizeBy: none
+		sourceColumn: last_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column suffix
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 72aa002c-4c6d-46e9-8587-6138c5dcbb37
+		sourceLineageTag: suffix
+		summarizeBy: none
+		sourceColumn: suffix
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_title
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c09f39e5-7db2-49f2-878b-e3004a15d66c
+		sourceLineageTag: job_title
+		summarizeBy: none
+		sourceColumn: job_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cb33c363-2fc9-46f8-a5ff-02c5a5859fd0
+		sourceLineageTag: gender_cd
+		summarizeBy: none
+		sourceColumn: gender_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender_identification_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fdcbde44-1220-43c0-9b4e-cf2fb94f729d
+		sourceLineageTag: gender_identification_cd
+		summarizeBy: none
+		sourceColumn: gender_identification_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column identity_pronoun_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0c468cf3-6cbf-47a0-8790-ec9f0d2d1935
+		sourceLineageTag: identity_pronoun_cd
+		summarizeBy: none
+		sourceColumn: identity_pronoun_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column ssn
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c324c2a6-3fee-4c05-8256-183038d463d3
+		sourceLineageTag: ssn
+		summarizeBy: none
+		sourceColumn: ssn
+
+		annotation SummarizationSetBy = Automatic
+
+	column dob
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 8b4a8f16-abd4-4b75-a9b5-1f57d0fbbd3c
+		sourceLineageTag: dob
+		summarizeBy: none
+		sourceColumn: dob
+
+		annotation SummarizationSetBy = Automatic
+
+	column ethnic_race
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0344d11f-69a5-42b7-a706-c587333b766d
+		sourceLineageTag: ethnic_race
+		summarizeBy: none
+		sourceColumn: ethnic_race
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 81dca981-590f-4e42-9d61-2c1b9908fa2c
+		sourceLineageTag: user_nm
+		summarizeBy: none
+		sourceColumn: user_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_session_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e74ccb6a-e2d7-4af6-bae8-f03395255a7c
+		sourceLineageTag: last_session_dt
+		summarizeBy: none
+		sourceColumn: last_session_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column prior_session_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 9716603c-e1b9-4f2c-8c99-5aa0f4dbaaa2
+		sourceLineageTag: prior_session_dt
+		summarizeBy: none
+		sourceColumn: prior_session_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column other_language
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 702782c1-93c8-4f29-a01a-84bd221370a5
+		sourceLineageTag: other_language
+		summarizeBy: none
+		sourceColumn: other_language
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_rep_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 033ee89b-3dd4-451f-9e64-b45344477933
+		sourceLineageTag: sales_rep_id
+		summarizeBy: sum
+		sourceColumn: sales_rep_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_rep_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dba235e3-224e-4791-ac0a-fd2449f19424
+		sourceLineageTag: sales_rep_type_cd
+		summarizeBy: none
+		sourceColumn: sales_rep_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 0694a291-ea5f-4001-aeb9-2270663a12f4
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 0389bac6-5035-419d-9592-87969cb008bc
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column email_address
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9df35cd8-bb56-4873-a9d4-1df43cf4a35d
+		sourceLineageTag: email_address
+		summarizeBy: none
+		sourceColumn: email_address
+
+		annotation SummarizationSetBy = Automatic
+
+	column email_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dfbf9f8c-fc7d-4e1b-ae46-d57fa92ba722
+		sourceLineageTag: email_type_cd
+		summarizeBy: none
+		sourceColumn: email_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferred_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 464e3d25-0b41-4153-b465-a23db64e12d8
+		sourceLineageTag: preferred_flg
+		summarizeBy: none
+		sourceColumn: preferred_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column alert_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 51ad3d6a-13c1-4f51-af7e-d5cc734dc933
+		sourceLineageTag: alert_flg
+		summarizeBy: none
+		sourceColumn: alert_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column batch_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 55f19eb9-209d-4e93-9537-044f5f8498aa
+		sourceLineageTag: batch_id
+		summarizeBy: sum
+		sourceColumn: batch_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_affiliation_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e86489e1-ca6f-4133-9d64-9a39be565696
+		sourceLineageTag: report_affiliation_relation_id
+		summarizeBy: sum
+		sourceColumn: report_affiliation_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column email_send_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 857534a0-ed2d-425c-8838-8085a9ddf073
+		sourceLineageTag: email_send_cd
+		summarizeBy: none
+		sourceColumn: email_send_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_300_gold_parties = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_300_gold_parties
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

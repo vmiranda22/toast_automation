@@ -1,0 +1,43 @@
+relationship d4841002-33b1-bfc4-188e-4b2122432294
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_200_silver_account_relationship.benefit_sponsor_id
+	toColumn: salesforce_uat_200_silver_account.id
+
+relationship 58fff0d4-d78b-ed20-78ce-1eaf618c57b8
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_200_silver_member_group.account_id
+	toColumn: salesforce_uat_200_silver_account.id
+
+relationship ef9df582-57a9-0fad-ea53-56b32a9fb3cb
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_200_silver_member_group_role.member_group_id
+	toColumn: salesforce_uat_200_silver_member_group.id
+
+relationship 1e6dec87-28f0-dd49-47f4-3e7fb7d2320e
+	fromColumn: salesforce_uat_200_silver_plan_specific_fees_by_product.member_group_id
+	toColumn: salesforce_uat_200_silver_member_group.id
+
+relationship a600f320-357e-fe22-6676-85d944494acf
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_200_silver_plan_specific_fees_by_product.subscription_id
+	toColumn: salesforce_uat_200_silver_subscription.id
+
+relationship 5e81dab2-f856-06d4-0ab6-285bd0562e68
+	crossFilteringBehavior: bothDirections
+	fromColumn: salesforce_uat_200_silver_subscription.opportunity_id
+	toColumn: salesforce_uat_200_silver_opportunity.id
+
+relationship 8715f7a4-1504-095f-646a-0d00a8f43d82
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: teladoc_eds_dev_300_gold_admin_group_information.legacy_group_id
+	toColumn: salesforce_uat_200_silver_member_group.legacy_group_id
+
+relationship ad716485-69c3-9cdd-eb36-0f131cb60150
+	fromColumn: teladoc_eds_dev_300_gold_admin_products_all_information.PF_group_id
+	toColumn: teladoc_eds_dev_300_gold_admin_group_information.group_id
+
+relationship 5880c63d-6281-07eb-37f7-e5f9e1494202
+	fromColumn: salesforce_uat_200_silver_subscription.product_id
+	toColumn: salesforce_uat_200_silver_product.id
+

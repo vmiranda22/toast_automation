@@ -1,0 +1,31 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.142.7627.5 (Main)+9a3144321c8b5462ab194cda892c20b7d6327609
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
+ref table teladoc_eds_dev_300_gold_parties
+ref table test_Tables
+ref table teladoc_eds_dev_200_silver_organizations
+ref table teladoc_eds_dev_200_silver_groups
+ref table teladoc_eds_dev_300_gold_ref_reports
+ref table teladoc_eds_dev_300_gold_specialty_relations
+ref table teladoc_eds_dev_200_silver_group_relation_pricings
+ref table teladoc_eds_dev_200_silver_group_service_specialty_feature_settings
+ref table teladoc_eds_dev_200_silver_group_service_specialty_relation_details
+ref table teladoc_eds_dev_300_gold_organization_dependencies
+ref table teladoc_eds_dev_200_silver_payers
+
+ref cultureInfo en-US
+

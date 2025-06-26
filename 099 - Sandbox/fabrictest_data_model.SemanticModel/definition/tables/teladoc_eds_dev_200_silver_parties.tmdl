@@ -1,0 +1,53 @@
+table teladoc_eds_dev_200_silver_parties
+	lineageTag: 83b55b59-3581-431c-bf72-9a6365b4863c
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_parties]
+
+	column party_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dff73c2c-fe6c-4461-9cd0-fe06f62c22b2
+		sourceLineageTag: party_id
+		summarizeBy: none
+		sourceColumn: party_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ab67236f-e3db-481a-93de-6fcc2ff04762
+		sourceLineageTag: party_nm
+		summarizeBy: none
+		sourceColumn: party_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9a33cf4f-fdb6-488f-b74f-2cc81c61d8f2
+		sourceLineageTag: party_type_cd
+		summarizeBy: none
+		sourceColumn: party_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_batch_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e59abe1a-2eb7-419a-bb66-92074d7cde6c
+		sourceLineageTag: party_batch_id
+		summarizeBy: none
+		sourceColumn: party_batch_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_parties = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_parties
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

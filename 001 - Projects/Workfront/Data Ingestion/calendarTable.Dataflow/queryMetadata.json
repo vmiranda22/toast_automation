@@ -1,0 +1,27 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "calendarTable",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "flattened_hours": {
+      "queryId": "b3c2856e-37ab-424b-bf77-56bbf12f0830",
+      "queryName": "flattened_hours",
+      "loadEnabled": false
+    },
+    "flattened_hours_DataDestination": {
+      "queryId": "e5ab6bb6-7310-440e-929d-b6f22e687e43",
+      "queryName": "flattened_hours_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"95ce55a6-69d3-4055-9bd8-63e435575e4d\"}"
+    }
+  ]
+}

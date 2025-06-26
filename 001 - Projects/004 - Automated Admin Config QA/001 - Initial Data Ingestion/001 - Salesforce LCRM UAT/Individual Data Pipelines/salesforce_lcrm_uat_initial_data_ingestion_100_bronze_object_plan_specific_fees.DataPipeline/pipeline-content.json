@@ -1,0 +1,390 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SalesforceSource",
+            "includeDeletedObjects": false,
+            "datasetSettings": {
+              "type": "SalesforceObject",
+              "typeProperties": {
+                "objectApiName": "Plan_Specific_Fees__c"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "dbfd3974-1226-4dd9-b11d-add20bd33d94"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "salesforce_uat_100_bronze_plan_specific_fees_by_product"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "fabrictest_lakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "22ac13b1-053f-b218-464e-64db4b9a8e2d",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "Id",
+                  "type": "String",
+                  "physicalType": "id"
+                },
+                "sink": {
+                  "name": "Id",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Name",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Name",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "CreatedDate",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "CreatedDate",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "CreatedById",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "CreatedById",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "LastModifiedDate",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "LastModifiedDate",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "LastModifiedById",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "LastModifiedById",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "SystemModstamp",
+                  "type": "DateTime",
+                  "physicalType": "datetime"
+                },
+                "sink": {
+                  "name": "SystemModstamp",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "Member_Group__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "Member_Group__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Actual_Copay_May_Be_Less__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "Actual_Copay_May_Be_Less__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "Consult_Fee_Mbr_Pd__c",
+                  "type": "Decimal",
+                  "physicalType": "currency"
+                },
+                "sink": {
+                  "name": "Consult_Fee_Mbr_Pd__c",
+                  "physicalType": "decimal"
+                }
+              },
+              {
+                "source": {
+                  "name": "Consult_Fee_Plan_Pd__c",
+                  "type": "Decimal",
+                  "physicalType": "currency"
+                },
+                "sink": {
+                  "name": "Consult_Fee_Plan_Pd__c",
+                  "physicalType": "decimal"
+                }
+              },
+              {
+                "source": {
+                  "name": "Group_Number__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Group_Number__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Member_Group_Name__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Member_Group_Name__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Product_End_Date__c",
+                  "type": "DateTime",
+                  "physicalType": "date"
+                },
+                "sink": {
+                  "name": "Product_End_Date__c",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "name": "Product_Start_Date__c",
+                  "type": "DateTime",
+                  "physicalType": "date"
+                },
+                "sink": {
+                  "name": "Product_Start_Date__c",
+                  "physicalType": "date"
+                }
+              },
+              {
+                "source": {
+                  "name": "Product__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Product__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Source_Id__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Source_Id__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Subscription__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "Subscription__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Asset_Name__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Asset_Name__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Asset__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "Asset__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "PSF_ProductCode__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "PSF_ProductCode__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Bill_to_Account__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "Bill_to_Account__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Payer_Account__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "Payer_Account__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Sold_to_Account__c",
+                  "type": "String",
+                  "physicalType": "reference"
+                },
+                "sink": {
+                  "name": "Sold_to_Account__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Bill_To_Account_GUID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Bill_To_Account_GUID__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Payer_Account_GUID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Payer_Account_GUID__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "Sold_To_Account_GUID__c",
+                  "type": "String",
+                  "physicalType": "string"
+                },
+                "sink": {
+                  "name": "Sold_To_Account_GUID__c",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "USGH_APP_Opt_Out__c",
+                  "type": "Boolean",
+                  "physicalType": "boolean"
+                },
+                "sink": {
+                  "name": "USGH_APP_Opt_Out__c",
+                  "physicalType": "boolean"
+                }
+              },
+              {
+                "source": {
+                  "name": "GLP_1_Model__c",
+                  "type": "String",
+                  "physicalType": "picklist"
+                },
+                "sink": {
+                  "name": "GLP_1_Model__c",
+                  "physicalType": "string"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "salesforce_uat_object_plan_specific_fees_by_product",
+        "dependsOn": []
+      }
+    ]
+  }
+}

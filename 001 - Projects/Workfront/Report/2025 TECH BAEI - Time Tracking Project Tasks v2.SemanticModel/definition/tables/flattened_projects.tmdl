@@ -1,0 +1,111 @@
+table flattened_projects
+	lineageTag: eb5cd340-f7c1-46c4-86ba-8e168c32382e
+	sourceLineageTag: 39e06c86-ca7c-4ee1-972b-0e68bcfffeaa
+
+	column ID
+		dataType: string
+		lineageTag: 4aa2ff3e-bf0a-49da-a173-2397c7adcfa2
+		sourceLineageTag: 3b1becf2-88d3-4bf6-9965-67ac2c7ca5ee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = User
+
+	column lastUpdateDate
+		dataType: string
+		lineageTag: 80a84280-d511-4571-9e36-34b309874afd
+		sourceLineageTag: 8e4b26b0-9cb3-4a11-bc28-15f69e5c942e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: lastUpdateDate
+
+		annotation SummarizationSetBy = User
+
+	column name
+		dataType: string
+		lineageTag: 16cf667d-20b0-4ae6-b120-c91a4f5cc010
+		sourceLineageTag: 76785120-d66b-4224-9d5e-f48ca22bc81e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = User
+
+	column objCode
+		dataType: string
+		lineageTag: 2a8fec4c-e075-4a80-9daf-0ff0b3ca4a8b
+		sourceLineageTag: 094cacce-7bae-4b97-baee-e742229cf5a3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: objCode
+
+		annotation SummarizationSetBy = User
+
+	column percentComplete
+		dataType: double
+		lineageTag: b71799ed-3254-4a9c-b81a-884650c5fd1a
+		sourceLineageTag: 34c8200b-3efa-4847-9a02-0bfb3c416a52
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: percentComplete
+
+		annotation SummarizationSetBy = User
+
+	column plannedCompletionDate
+		dataType: string
+		lineageTag: 592d8ff4-b87f-4111-b286-2e991a281b9e
+		sourceLineageTag: 86a75bbb-f0a0-49b1-8ea8-243a63ace817
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: plannedCompletionDate
+
+		annotation SummarizationSetBy = User
+
+	column plannedStartDate
+		dataType: string
+		lineageTag: 59dd5cf1-619c-40a1-895b-137ca6e23a3d
+		sourceLineageTag: 09d27249-6f9c-4483-8a0b-897b80d8d274
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: plannedStartDate
+
+		annotation SummarizationSetBy = User
+
+	column priority
+		dataType: int64
+		formatString: 0
+		lineageTag: 31506d07-f5d0-49d7-ae99-59d89a5a8ace
+		sourceLineageTag: c9ad27d0-98af-4c10-a758-f674fdcdcbe3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: priority
+
+		annotation SummarizationSetBy = User
+
+	column projectedCompletionDate
+		dataType: string
+		lineageTag: 373a0ea5-6a6b-49a9-9805-89f9a1a2bad8
+		sourceLineageTag: a42422e3-383c-4c83-8808-8e7963831466
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: projectedCompletionDate
+
+		annotation SummarizationSetBy = User
+
+	column status
+		dataType: string
+		lineageTag: ef3e598a-eeaa-4e98-b6de-bc399145ee05
+		sourceLineageTag: c6bf3c28-bba3-4339-b30c-894a202eb866
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = User
+
+	partition flattened_projects = entity
+		mode: directQuery
+		source
+			entityName: flattened_projects
+			expressionSource: 'DirectQuery to AS - SM_Hours'
+

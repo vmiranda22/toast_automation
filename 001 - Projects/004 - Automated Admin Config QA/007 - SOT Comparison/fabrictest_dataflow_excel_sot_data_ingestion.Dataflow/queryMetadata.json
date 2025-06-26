@@ -1,0 +1,116 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowFastCopy": false
+  },
+  "name": "fabrictest_dataflow_excel_sot_data_ingestion",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Allied": {
+      "queryId": "c4b5ff3c-25c7-4076-a415-293e89c40400",
+      "queryName": "Allied"
+    },
+    "Empire Life of Canada": {
+      "queryId": "976d617d-eeef-48df-ae51-00f51562618b",
+      "queryName": "Empire Life of Canada",
+      "loadEnabled": false
+    },
+    "Meritain": {
+      "queryId": "6582d013-656a-4086-897b-9efb1142c8eb",
+      "queryName": "Meritain"
+    },
+    "BCBSNC ASO": {
+      "queryId": "1ddb73cf-63cd-49b7-a71d-4969f7dd5577",
+      "queryName": "BCBSNC ASO"
+    },
+    "BCBSNC FI": {
+      "queryId": "f1712fbe-a4fd-4aae-a186-aac660c4e6da",
+      "queryName": "BCBSNC FI"
+    },
+    "BRMS": {
+      "queryId": "fac19a0f-0b82-47ac-83b7-de1e9569850a",
+      "queryName": "BRMS"
+    },
+    "IBC ASO": {
+      "queryId": "b8bae65b-adf6-4e2c-95ee-2d605f4c5ae6",
+      "queryName": "IBC ASO"
+    },
+    "IBC Medicare": {
+      "queryId": "0c376f46-6fe2-48a9-bb75-d71e1c5263e0",
+      "queryName": "IBC Medicare"
+    },
+    "HealthJoy": {
+      "queryId": "400097cc-1edc-4543-a205-066509082197",
+      "queryName": "HealthJoy"
+    },
+    "G&A": {
+      "queryId": "e5c07fe2-bfe0-4bb3-8080-8ecbd005ec2d",
+      "queryName": "G&A"
+    },
+    "HealthEZ": {
+      "queryId": "6682336d-063b-4d6f-93d2-c8524dfa20ea",
+      "queryName": "HealthEZ"
+    },
+    "Nippon": {
+      "queryId": "bc3fbb50-88e8-467d-8a24-142e55465f01",
+      "queryName": "Nippon"
+    },
+    "Nextep": {
+      "queryId": "0f892a18-a530-4c98-8747-aaebfd0a6d90",
+      "queryName": "Nextep"
+    },
+    "Ben Intel": {
+      "queryId": "00a48aca-3bd3-45d7-8e1b-84a431b8c1b7",
+      "queryName": "Ben Intel"
+    },
+    "GMS": {
+      "queryId": "d8381deb-ec87-45b7-87ac-79b483872730",
+      "queryName": "GMS"
+    },
+    "Lucent NAA": {
+      "queryId": "99576865-86b9-4c17-9002-49b07151b2ad",
+      "queryName": "Lucent NAA"
+    },
+    "Elan": {
+      "queryId": "a48a1926-8f6d-4498-877b-7a38ea8ff9c1",
+      "queryName": "Elan"
+    },
+    "Humania": {
+      "queryId": "ae1df291-a2fd-4936-b356-86fee1e6ef16",
+      "queryName": "Humania"
+    },
+    "IBC original": {
+      "queryId": "471589fb-f1f0-404c-90e2-1c2367ab3351",
+      "queryName": "IBC original"
+    },
+    "Empire Life of Canada_DataDestination": {
+      "queryId": "b4040e67-15b1-4387-af44-2a416d885254",
+      "queryName": "Empire Life of Canada_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://teladocpa.sharepoint.com/:x:/r/sites/TechnicalBenefitsAdministrationEligibilityImplementation/_layouts/15/Doc.aspx?sourcedoc=%7B6F8DF1A8-0079-4487-AE02-720E15FAC3DD%7D&file=SOT%20-%20Reports.xlsx",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"550fe033-31ca-41a9-ad65-ba2153322ebe\"}"
+    },
+    {
+      "path": "https://teladocpa.sharepoint.com/sites/TechnicalBenefitsAdministrationEligibilityImplementation/_layouts/15/Doc.aspx?sourcedoc=%7B6F8DF1A8-0079-4487-AE02-720E15FAC3DD%7D&file=SOT%20-%20Reports.xlsx",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"f445cb7e-5578-4e8f-8ca3-e8f52bff3185\"}"
+    },
+    {
+      "path": "https://teladocpa.sharepoint.com/sites/TechnicalBenefitsAdministrationEligibilityImplementation/Shared%20Documents/Flow%201B/SOT%20-%20Reports.xlsx",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"b80c07ba-f167-4bea-976e-fc537246864a\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"36d65f61-9878-4fed-850c-82ca11b0c92f\"}"
+    }
+  ]
+}

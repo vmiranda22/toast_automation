@@ -1,0 +1,53 @@
+relationship 5d09edc1-5069-66bd-3404-6d1b17161ad2
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: teladoc_eds_dev_200_silver_groups.group_id
+	toColumn: test_Tables.group_id
+
+relationship 90128bb1-605d-ab1c-ff6d-48df2bb6f04a
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: teladoc_eds_dev_200_silver_groups.group_id
+	toColumn: teladoc_eds_dev_200_silver_organizations.cc_group_id
+
+relationship c3bda6c1-fabb-3d9c-c1cf-1b392b66d4de
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: teladoc_eds_dev_300_gold_ref_reports.service_specialty_cd
+	toColumn: teladoc_eds_dev_300_gold_specialty_relations.service_specialty_cd
+
+relationship f4c119c7-ce5c-073d-c6e5-b47ae9b3ed70
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_300_gold_specialty_relations.group_id
+	toColumn: teladoc_eds_dev_200_silver_groups.group_id
+
+relationship ec4dad4e-12a1-a658-7789-b6a3095113f2
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: teladoc_eds_dev_200_silver_group_relation_pricings.relation_id
+	toColumn: teladoc_eds_dev_300_gold_specialty_relations.group_service_specialty_feature_relation_id
+
+relationship 6305d5cb-a7d4-6181-b267-ec4458dae33f
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: teladoc_eds_dev_200_silver_group_service_specialty_feature_settings.group_service_specialty_feature_relation_id
+	toColumn: teladoc_eds_dev_300_gold_specialty_relations.group_service_specialty_feature_relation_id
+
+relationship 63e46488-e3d4-2959-ffab-e3fd5329f3ee
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_200_silver_group_service_specialty_relation_details.group_service_specialty_relation_id
+	toColumn: teladoc_eds_dev_300_gold_specialty_relations.group_service_specialty_relation_id
+
+relationship f47ac817-c9c9-34f7-82e2-cf25af4590e4
+	crossFilteringBehavior: bothDirections
+	fromColumn: teladoc_eds_dev_300_gold_organization_dependencies.organization_id
+	toColumn: teladoc_eds_dev_200_silver_organizations.organization_id
+
+relationship e6496148-ac4b-9f7e-33a3-bea621409f73
+	fromColumn: teladoc_eds_dev_200_silver_payers.party_id
+	toColumn: teladoc_eds_dev_300_gold_parties.party_id
+
+relationship f0f9acc1-7130-b506-01a1-61ece07faee3
+	fromColumn: test_Tables.payer_id
+	toColumn: teladoc_eds_dev_200_silver_payers.payer_id
+

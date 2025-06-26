@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "fabric_mgs_in_nasfs"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f8c30b55-66e0-a289-4c52-0efb979698c6"
+  }
+}

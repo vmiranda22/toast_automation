@@ -1,0 +1,125 @@
+table salesforce_uat_200_silver_opportunity_product
+	lineageTag: 68b062f0-d272-4194-b6c2-e0a3c3cac994
+	sourceLineageTag: [dbo].[salesforce_uat_200_silver_opportunity_product]
+
+	column id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f05fb141-d2a1-412d-bb3d-5c910279181a
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f785f67c-5539-41f5-82ab-b085055145c4
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column adolescent_population
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: eed4015a-d41b-4ad7-b91b-292cf2daffe0
+		sourceLineageTag: adolescent_population
+		summarizeBy: none
+		sourceColumn: adolescent_population
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 25afca49-8182-4d35-a78e-35091da34bdc
+		sourceLineageTag: effective_start_date
+		summarizeBy: none
+		sourceColumn: effective_start_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column opportunity_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 59554459-b580-42a9-992b-0010c5b4cb8d
+		sourceLineageTag: opportunity_id
+		summarizeBy: none
+		sourceColumn: opportunity_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ed775c9b-e27b-4f60-b2b8-b370c5ec4834
+		sourceLineageTag: product_id
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 54397e45-b35f-471a-88ae-62f90538609b
+		sourceLineageTag: product
+		summarizeBy: none
+		sourceColumn: product
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_code
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c711056d-8911-4a43-87ed-a97b73801bba
+		sourceLineageTag: product_code
+		summarizeBy: none
+		sourceColumn: product_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_family
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 56543f7e-225f-44dc-8a8c-fb05fb6a9040
+		sourceLineageTag: product_family
+		summarizeBy: none
+		sourceColumn: product_family
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_portfolio
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d955f16f-f7ec-4cc6-ae02-86b47b94a6d2
+		sourceLineageTag: product_portfolio
+		summarizeBy: none
+		sourceColumn: product_portfolio
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_rollup
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 67589cda-0d46-41a9-8223-68996762d891
+		sourceLineageTag: product_rollup
+		summarizeBy: none
+		sourceColumn: product_rollup
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_200_silver_opportunity_product = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_200_silver_opportunity_product
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

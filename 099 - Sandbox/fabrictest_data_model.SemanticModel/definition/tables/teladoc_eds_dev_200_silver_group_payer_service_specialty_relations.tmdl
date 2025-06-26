@@ -1,0 +1,74 @@
+table teladoc_eds_dev_200_silver_group_payer_service_specialty_relations
+	lineageTag: 2ccee206-21a1-4d39-af4d-2c7ec02eca91
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_group_payer_service_specialty_relations]
+
+	column group_payer_service_specialty_relation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: db6a7420-ac97-4e16-9e02-cb34794076ca
+		sourceLineageTag: group_payer_service_specialty_relation_id
+		summarizeBy: none
+		sourceColumn: group_payer_service_specialty_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_service_specialty_relation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 379fa074-702c-4a0f-8ebd-ebf949b435cc
+		sourceLineageTag: group_service_specialty_relation_id
+		summarizeBy: none
+		sourceColumn: group_service_specialty_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payer_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c7fd2993-324c-4e14-8b61-16f926f06250
+		sourceLineageTag: payer_id
+		summarizeBy: none
+		sourceColumn: payer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column claim_payer_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c1c03176-d271-4254-ab71-d7e9b430fb4b
+		sourceLineageTag: claim_payer_id
+		summarizeBy: none
+		sourceColumn: claim_payer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column default_payer
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 77db426c-e471-4c4a-ba80-b54dedfad46c
+		sourceLineageTag: default_payer
+		summarizeBy: none
+		sourceColumn: default_payer
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: deed4834-2b42-47b1-a656-010e331cbcdb
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_group_payer_service_specialty_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_group_payer_service_specialty_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

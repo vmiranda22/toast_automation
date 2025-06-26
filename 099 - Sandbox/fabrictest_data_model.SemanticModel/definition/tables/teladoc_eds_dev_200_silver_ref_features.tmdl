@@ -1,0 +1,86 @@
+table teladoc_eds_dev_200_silver_ref_features
+	lineageTag: f475327c-f359-46be-881f-609e134d4dba
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_ref_features]
+
+	column ref_feature_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3acb5db1-740c-4a72-8240-1ab61c84bad7
+		sourceLineageTag: ref_feature_id
+		summarizeBy: none
+		sourceColumn: ref_feature_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column feature_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: af6a9526-dfe3-46b1-9c62-7d32ccc5f237
+		sourceLineageTag: feature_cd
+		summarizeBy: none
+		sourceColumn: feature_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column feature_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3ac5ff5c-62ff-4ed0-bfc2-50047b1a6d4e
+		sourceLineageTag: feature_nm
+		summarizeBy: none
+		sourceColumn: feature_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column feature_family_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1928b63a-967f-48eb-9a15-573410556f33
+		sourceLineageTag: feature_family_cd
+		summarizeBy: none
+		sourceColumn: feature_family_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column config_visible
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 231c9472-6d62-4f54-8760-169f47257f05
+		sourceLineageTag: config_visible
+		summarizeBy: none
+		sourceColumn: config_visible
+
+		annotation SummarizationSetBy = Automatic
+
+	column support_visible
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: a0e1f105-c085-40ed-9f4b-49b6e91892ef
+		sourceLineageTag: support_visible
+		summarizeBy: none
+		sourceColumn: support_visible
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_visible
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 3cef6684-0d84-4a04-ae34-0e4362ba543e
+		sourceLineageTag: user_visible
+		summarizeBy: none
+		sourceColumn: user_visible
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_ref_features = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_ref_features
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

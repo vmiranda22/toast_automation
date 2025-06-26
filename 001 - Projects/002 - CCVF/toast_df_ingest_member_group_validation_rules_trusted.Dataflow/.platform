@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "toast_df_ingest_member_group_validation_rules_trusted"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8c79cf31-7f38-b3dd-4324-326aca0bb3e0"
+  }
+}

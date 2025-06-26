@@ -1,0 +1,147 @@
+table salesforce_uat_200_silver_account_relationship
+	lineageTag: b0bc40ac-01bf-4bc9-8536-beac433bd4cf
+	sourceLineageTag: [dbo].[salesforce_uat_200_silver_account_relationship]
+
+	column id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3bf7552b-f28c-4b55-9011-7ba747eec9f7
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7c4fea99-c683-499d-b4b2-2185ebe12dc1
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column benefit_sponsor_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f1b311d6-1bb7-49ea-b3c8-90865548dccf
+		sourceLineageTag: benefit_sponsor_id
+		summarizeBy: none
+		sourceColumn: benefit_sponsor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column benefit_sponsor_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 59ea0f15-83e4-4768-b24d-1d85cea7b0f3
+		sourceLineageTag: benefit_sponsor_name
+		summarizeBy: none
+		sourceColumn: benefit_sponsor_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column servicing_account_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cbb92405-8bd7-4d97-89bf-924aa7406da9
+		sourceLineageTag: servicing_account_id
+		summarizeBy: none
+		sourceColumn: servicing_account_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column servicing_account_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e9b5b270-e72d-4b5f-b341-466c9680939a
+		sourceLineageTag: servicing_account_name
+		summarizeBy: none
+		sourceColumn: servicing_account_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column line_of_business
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8bcb0dd7-9a37-4e22-8b4f-90179e5c8ca2
+		sourceLineageTag: line_of_business
+		summarizeBy: none
+		sourceColumn: line_of_business
+
+		annotation SummarizationSetBy = Automatic
+
+	column relationship_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ace86c2e-4078-4974-a89d-e57352b92aaa
+		sourceLineageTag: relationship_type
+		summarizeBy: none
+		sourceColumn: relationship_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column contract_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d6474813-2739-437e-9f3c-03eba54ceb90
+		sourceLineageTag: contract_type
+		summarizeBy: none
+		sourceColumn: contract_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9b92d2c5-d339-4436-8eef-8cd883bf827c
+		sourceLineageTag: country
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_date
+		dataType: dateTime
+		formatString: Short Date
+		sourceProviderType: date
+		lineageTag: 1a136172-f916-4a4c-b046-1cb37311cf68
+		sourceLineageTag: start_date
+		summarizeBy: none
+		sourceColumn: start_date
+
+		changedProperty = DataType
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column end_date
+		dataType: dateTime
+		formatString: Short Date
+		sourceProviderType: date
+		lineageTag: 79cafcad-3d4d-4c7a-b6b5-57846f167059
+		sourceLineageTag: end_date
+		summarizeBy: none
+		sourceColumn: end_date
+
+		changedProperty = DataType
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition salesforce_uat_200_silver_account_relationship = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_200_silver_account_relationship
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

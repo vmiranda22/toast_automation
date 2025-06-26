@@ -1,0 +1,30 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "toast_workfront_hour_2",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Query": {
+      "queryId": "194364bd-6b09-4ecf-a33d-47fa9460571c",
+      "queryName": "Query"
+    }
+  },
+  "connections": [
+    {
+      "path": "https://teladochealth.my.workfront.com/attask/api/v19.0/hour/search",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"ea83e130-cadd-48b8-8a7b-660db2cc0601\"}"
+    },
+    {
+      "path": "https://teladochealth.my.workfront.com/attask/api/v19.0/teamt/search",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"2dbf9bbf-0c03-43d4-95d9-ec794af3f82c\"}"
+    },
+    {
+      "path": "https://teladochealth.my.workfront.com/attask/api/v19.0/team/search",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"57f16780-753f-4560-9d9b-168ea19b5a68\"}"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+table workfront_dim_calendar
+	lineageTag: 9f1917fc-88d3-4637-8cb2-ddf9e75eb7d1
+	sourceLineageTag: [dbo].[workfront_dim_calendar]
+
+	column date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: bda84f22-d916-4006-af59-7c59d61ea36f
+		sourceLineageTag: date
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+	column index
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1cd94a88-f2cb-4da0-9398-c76c33325595
+		sourceLineageTag: index
+		summarizeBy: sum
+		sourceColumn: index
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8ebed7bc-ef67-4fab-8825-b67ac4922a66
+		sourceLineageTag: day_nm
+		summarizeBy: none
+		sourceColumn: day_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2dc687df-75f2-4442-a53b-16bc1036b59c
+		sourceLineageTag: day
+		summarizeBy: sum
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a144f7e3-dcb8-4a8c-99c7-0947e3bbd883
+		sourceLineageTag: month
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_long
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2c073168-64e5-4b2e-b845-9c979559c06d
+		sourceLineageTag: month_long
+		summarizeBy: none
+		sourceColumn: month_long
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f91ee27c-1d15-4dfc-94f9-ad68b1b8ae83
+		sourceLineageTag: week
+		summarizeBy: sum
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: abb88541-5a83-4a73-a5ba-1b73c8205b99
+		sourceLineageTag: year
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_number
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bea3a10f-3ec0-4fa5-a9b8-439c2ac1febb
+		sourceLineageTag: day_number
+		summarizeBy: sum
+		sourceColumn: day_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_weekday
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f5d81422-72ce-4baa-b33f-9423fea20fec
+		sourceLineageTag: is_weekday
+		summarizeBy: sum
+		sourceColumn: is_weekday
+
+		annotation SummarizationSetBy = Automatic
+
+	partition workfront_dim_calendar = entity
+		mode: directLake
+		source
+			entityName: workfront_dim_calendar
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

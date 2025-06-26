@@ -1,0 +1,329 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "MySqlSource",
+            "datasetSettings": {
+              "type": "MySqlTable",
+              "typeProperties": {
+                "tableName": "`party_addresses`"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "8cfaf835-d76d-4547-a584-d491a33b3359"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "teladoc_eds_dev_100_bronze_party_addresses"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "fabrictest_lakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "22ac13b1-053f-b218-464e-64db4b9a8e2d",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "party_address_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "party_address_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "party_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "party_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "address_line1",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "address_line1",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "address_line2",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "address_line2",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "address_line3",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "address_line3",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "county",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "county",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "city",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "city",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "state_province",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "state_province",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "postal",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "postal",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "country_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "country_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "latitude",
+                  "type": "Single",
+                  "physicalType": "Float"
+                },
+                "sink": {
+                  "name": "latitude",
+                  "physicalType": "float"
+                }
+              },
+              {
+                "source": {
+                  "name": "longitude",
+                  "type": "Single",
+                  "physicalType": "Float"
+                },
+                "sink": {
+                  "name": "longitude",
+                  "physicalType": "float"
+                }
+              },
+              {
+                "source": {
+                  "name": "address_type_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "address_type_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "preferred_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "preferred_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "alert_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "alert_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "data_source_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "data_source_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "exclusion_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "exclusion_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "batch_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "batch_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "created_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_by",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "created_by",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "updated_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_by",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "updated_by",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "temporary",
+                  "type": "Boolean",
+                  "physicalType": "Bool"
+                },
+                "sink": {
+                  "name": "temporary",
+                  "physicalType": "boolean"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "party_addresses",
+        "dependsOn": []
+      }
+    ],
+    "variables": {
+      "Check": {
+        "type": "Integer",
+        "defaultValue": 0
+      }
+    }
+  }
+}

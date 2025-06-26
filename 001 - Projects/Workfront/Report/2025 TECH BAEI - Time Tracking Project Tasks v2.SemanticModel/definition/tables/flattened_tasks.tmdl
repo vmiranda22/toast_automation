@@ -1,0 +1,184 @@
+table flattened_tasks
+	lineageTag: bc453619-96eb-423c-8665-43dbc24b0ce8
+	sourceLineageTag: 2220ce94-1e73-4b25-a68a-d01351c6f82c
+
+	column timeType
+		dataType: string
+		lineageTag: d0982f70-b6f2-4c4c-bc16-30fbc77d68ac
+		sourceLineageTag: 705c0af1-3d0a-42bf-bb92-b317f4339f05
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: timeType
+
+		annotation SummarizationSetBy = User
+
+	column ID
+		dataType: string
+		isNullable: false
+		lineageTag: e1d4e43a-fe6f-40cd-835a-7823b8d02da1
+		sourceLineageTag: e177aab8-831e-4816-96f9-4b153118f51f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = User
+
+	column actualWorkRequired
+		dataType: int64
+		formatString: 0
+		lineageTag: 3951530c-7b9f-4cd8-88c8-3f491cc41662
+		sourceLineageTag: 5ed4fa53-11c6-4246-8343-f2139104bd24
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: actualWorkRequired
+
+		annotation SummarizationSetBy = User
+
+	column assignmentsListString
+		dataType: string
+		lineageTag: 605bf3fb-0116-4546-9a2f-a8c97f8bdc6c
+		sourceLineageTag: d082a65a-88d2-4600-b0b1-8c078d84928f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: assignmentsListString
+
+		annotation SummarizationSetBy = User
+
+	column description
+		dataType: string
+		lineageTag: 23c1d0d5-3322-45f0-9e41-86f252239ffa
+		sourceLineageTag: 83c8dc78-58a5-44c8-8a41-ebc98a604872
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = User
+
+	column duration
+		dataType: double
+		lineageTag: d643ac59-3915-4e43-8460-7408acf896ff
+		sourceLineageTag: 4ee2c97e-9608-4b9a-b68e-1b57bbb74d0b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: duration
+
+		annotation SummarizationSetBy = User
+
+	column lastUpdateDate
+		dataType: string
+		lineageTag: 032bb19d-3377-410d-87ae-73800b7fb4ad
+		sourceLineageTag: 0b92d077-ac0c-4b82-a498-bd602e453b6e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: lastUpdateDate
+
+		annotation SummarizationSetBy = User
+
+	column name
+		dataType: string
+		lineageTag: c1c437fc-98fb-4894-91eb-ba74a773ae8d
+		sourceLineageTag: a796985b-8cce-4ba0-adbc-40e2964b6800
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = User
+
+	column objCode
+		dataType: string
+		lineageTag: 5f47a8dc-9e3a-4206-9bb2-e4d402758045
+		sourceLineageTag: e147f8e3-023e-4ec5-ad35-ba76c25efecb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: objCode
+
+		annotation SummarizationSetBy = User
+
+	column plannedCompletionDate
+		dataType: string
+		lineageTag: b2acb20e-8e78-44f6-93a6-5a7b5dce09ac
+		sourceLineageTag: e5adb914-c1cd-41c0-8b3c-5e2fb81b3fb2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: plannedCompletionDate
+
+		annotation SummarizationSetBy = User
+
+	column plannedDuration
+		dataType: double
+		lineageTag: 905bd862-0466-418c-8724-a13233da923b
+		sourceLineageTag: 95bb0675-409e-49ba-9c73-e1f05448e419
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: plannedDuration
+
+		annotation SummarizationSetBy = User
+
+	column plannedDurationMinutes
+		dataType: int64
+		formatString: 0
+		lineageTag: 1946fd66-f40c-4ae2-8898-163c649b6c9f
+		sourceLineageTag: 928f2400-a5e8-4847-8ab6-c9ccefa5fb86
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: plannedDurationMinutes
+
+		annotation SummarizationSetBy = User
+
+	column plannedStartDate
+		dataType: string
+		lineageTag: 8ae0c808-d84d-44f0-b3e0-0ce5bac57455
+		sourceLineageTag: a57e05f0-676d-4a1c-832e-57d7a22ea8d8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: plannedStartDate
+
+		annotation SummarizationSetBy = User
+
+	column projectID
+		dataType: string
+		lineageTag: 4677f301-8f07-4ef9-bce6-b7e2fe955a50
+		sourceLineageTag: ef9b676e-6e69-4722-83d8-c8cb28c5be38
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: projectID
+
+		annotation SummarizationSetBy = User
+
+	column status
+		dataType: string
+		lineageTag: fed7f2f6-2956-460d-a556-5ebecd6a387b
+		sourceLineageTag: 12e2b9da-98cc-44ac-9a4f-4b8b92b7d2f9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = User
+
+	column templateTaskID
+		dataType: string
+		lineageTag: 30df27c4-21b9-4298-9513-0dea9f8df392
+		sourceLineageTag: 4a3ebd36-fc70-4fed-9e7e-878ebb3ec3c7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: templateTaskID
+
+		annotation SummarizationSetBy = User
+
+	column workRequired
+		dataType: int64
+		formatString: 0
+		lineageTag: 30d07b31-8f7d-48f9-b37b-5c9e6748b330
+		sourceLineageTag: 0b0390b0-b2c3-4ce3-a3c9-2e7d787f777b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: workRequired
+
+		annotation SummarizationSetBy = User
+
+	partition flattened_tasks = entity
+		mode: directQuery
+		source
+			entityName: flattened_tasks
+			expressionSource: 'DirectQuery to AS - SM_Hours'
+

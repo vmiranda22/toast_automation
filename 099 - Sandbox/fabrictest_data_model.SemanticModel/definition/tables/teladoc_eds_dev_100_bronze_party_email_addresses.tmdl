@@ -1,0 +1,161 @@
+table teladoc_eds_dev_100_bronze_party_email_addresses
+	lineageTag: c58ee4b9-379b-4298-b2a1-ec085f8b763e
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_party_email_addresses]
+
+	column party_email_address_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1c92d28f-8768-4ad8-9aae-9674d94e7424
+		sourceLineageTag: party_email_address_id
+		summarizeBy: sum
+		sourceColumn: party_email_address_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3c465542-693f-482b-925c-1d0d8b3cc79a
+		sourceLineageTag: party_id
+		summarizeBy: sum
+		sourceColumn: party_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column email_address
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 96618bf7-1f03-46cd-8312-daf3c9174399
+		sourceLineageTag: email_address
+		summarizeBy: none
+		sourceColumn: email_address
+
+		annotation SummarizationSetBy = Automatic
+
+	column email_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7afee80c-38d0-4213-8fb3-a5c8e50ba2b3
+		sourceLineageTag: email_type_cd
+		summarizeBy: none
+		sourceColumn: email_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column preferred_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a78a123e-5930-4e6d-a605-0e19a2c1173d
+		sourceLineageTag: preferred_flg
+		summarizeBy: none
+		sourceColumn: preferred_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column alert_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0bdde6cf-6dc1-41d3-b205-4e35e12ba376
+		sourceLineageTag: alert_flg
+		summarizeBy: none
+		sourceColumn: alert_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_source_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 61ce7499-c82f-4c27-bf5e-381b5403d644
+		sourceLineageTag: data_source_cd
+		summarizeBy: none
+		sourceColumn: data_source_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 26177ede-2e69-446f-908a-14dd7eb99db2
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column batch_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 61d2b719-2d2e-4ffb-bc66-57fdf88dcdab
+		sourceLineageTag: batch_id
+		summarizeBy: sum
+		sourceColumn: batch_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 5fa5bcd3-2a32-4644-ac7f-8ce58a27e58a
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b942126a-58cf-4662-b7c2-0491c3cfa00e
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: a87749b5-33dd-4ddc-8d9d-632ae88ad71a
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e0ad92d3-92af-4e71-998e-0a7c153dafb4
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column temporary
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 1570f9a7-dcec-4f0e-ad29-874c483a4d2c
+		sourceLineageTag: temporary
+		summarizeBy: none
+		sourceColumn: temporary
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_party_email_addresses = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_party_email_addresses
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

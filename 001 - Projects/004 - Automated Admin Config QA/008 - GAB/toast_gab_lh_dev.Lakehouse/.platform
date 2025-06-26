@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "toast_gab_lh_dev"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "573c958a-d666-bdd3-4f61-68175c03804a"
+  }
+}

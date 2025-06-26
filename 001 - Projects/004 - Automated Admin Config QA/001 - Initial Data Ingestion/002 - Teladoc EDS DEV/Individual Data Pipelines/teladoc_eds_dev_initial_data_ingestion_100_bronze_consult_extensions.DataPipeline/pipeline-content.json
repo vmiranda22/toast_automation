@@ -1,0 +1,351 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "MySqlSource",
+            "datasetSettings": {
+              "type": "MySqlTable",
+              "typeProperties": {
+                "tableName": "`consult_extensions`"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "8cfaf835-d76d-4547-a584-d491a33b3359"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "teladoc_eds_dev_100_bronze_consult_extensions"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "fabrictest_lakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "22ac13b1-053f-b218-464e-64db4b9a8e2d",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "consult_extension_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "consult_extension_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "consultation_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "consultation_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "consult_request_notes",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "consult_request_notes",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "provider_location_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "provider_location_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "other_provider_location",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "other_provider_location",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "provider_selection_preference_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "provider_selection_preference_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "visit_start_dt",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "visit_start_dt",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "visit_end_dt",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "visit_end_dt",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "visit_complete_type_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "visit_complete_type_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "visit_duration",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "visit_duration",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "prompt_display_cnt",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "prompt_display_cnt",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "in_home_rx_eligibility_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "in_home_rx_eligibility_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "iot_device_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "iot_device_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "source_consult_id",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "source_consult_id",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "source_consult_root",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "source_consult_root",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "source_service_line_code",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "source_service_line_code",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "couple_therapy_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "couple_therapy_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "claim_billing_method_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "claim_billing_method_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "survey_refused_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "survey_refused_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "metadata_json",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "metadata_json",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "exclusion_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "exclusion_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "created_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_by",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "created_by",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "updated_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_by",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "updated_by",
+                  "physicalType": "integer"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "consult_extensions",
+        "dependsOn": []
+      }
+    ],
+    "variables": {
+      "Check": {
+        "type": "Integer",
+        "defaultValue": 0
+      }
+    }
+  }
+}

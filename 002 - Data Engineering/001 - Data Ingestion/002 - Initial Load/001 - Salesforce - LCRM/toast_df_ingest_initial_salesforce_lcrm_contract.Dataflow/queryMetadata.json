@@ -1,0 +1,32 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "toast_df_ingest_initial_salesforce_lcrm_contract",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Contract": {
+      "queryId": "d31a8cad-b892-4aed-b3ab-be791a800e98",
+      "queryName": "Contract",
+      "loadEnabled": false
+    },
+    "Contract_DataDestination": {
+      "queryId": "554216b3-dd25-4b97-8d1f-0159fac0971a",
+      "queryName": "Contract_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://login.salesforce.com/",
+      "kind": "Salesforce",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"def27be7-6ddb-403f-adec-31f84cc1c99d\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"98a0c6ac-af65-4b8d-bce8-81b180f2ec76\"}"
+    }
+  ]
+}

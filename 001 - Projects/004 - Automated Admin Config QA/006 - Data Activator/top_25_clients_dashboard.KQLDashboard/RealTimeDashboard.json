@@ -1,0 +1,107 @@
+{
+  "schema_version": "60",
+  "tiles": [
+    {
+      "id": "af4d8397-84bd-4de9-a698-996a37b187cb",
+      "title": "Top 25 Client QA Score",
+      "visualType": "bar",
+      "pageId": "babc8b45-de8f-4ee8-9431-48c7f2e111f8",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "027a5937-5e2d-4838-903c-f1508b2dc9cf"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "QA Score",
+            "columns": [],
+            "yAxisMaximumValue": 100,
+            "yAxisMinimumValue": 0,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumnTitle": "Client",
+        "xColumn": null,
+        "yColumns": [
+          "QA_Score"
+        ],
+        "seriesColumns": [
+          "Client_Name"
+        ],
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "drillthrough": [],
+        "selectedDataOnLoad": {
+          "all": true,
+          "limit": 10
+        },
+        "dataPointsTooltip": {
+          "all": true,
+          "limit": 5
+        }
+      }
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "95163ac7-4a63-48c5-a1f3-acdeca6803ab",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "kind": "kusto-trident",
+      "scopeId": "kusto-trident",
+      "clusterUri": "",
+      "database": "fe0630e7-ff93-afca-4b20-db05da4819f9",
+      "name": "fabrictest_eventhouse",
+      "id": "0bc52fbf-df41-4ec0-b329-f2025db6da2a",
+      "workspace": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "babc8b45-de8f-4ee8-9431-48c7f2e111f8"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "0bc52fbf-df41-4ec0-b329-f2025db6da2a"
+      },
+      "text": "external_table('top_25_clients')",
+      "id": "027a5937-5e2d-4838-903c-f1508b2dc9cf",
+      "usedVariables": []
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+table salesforce_uat_200_silver_member_group_role
+	lineageTag: e04b3603-59f9-4003-8c46-1db0cf210025
+	sourceLineageTag: [dbo].[salesforce_uat_200_silver_member_group_role]
+
+	column id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a152f2da-eff7-4e15-b682-2322b56b53bb
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b37f9919-c3de-4594-8507-61c10779940f
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column role_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6b06cd65-3261-4ae3-9b3a-bf0693d8fc1d
+		sourceLineageTag: role_type
+		summarizeBy: none
+		sourceColumn: role_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column member_group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e826e071-d4e3-4159-918c-ac237a3450fa
+		sourceLineageTag: member_group_id
+		summarizeBy: none
+		sourceColumn: member_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column member_group_status
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7de5cc2b-174f-4588-83ae-8c54c62ff8a2
+		sourceLineageTag: member_group_status
+		summarizeBy: none
+		sourceColumn: member_group_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_account_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aee70d4b-54e0-4493-b08d-c0a930bd6ff1
+		sourceLineageTag: source_account_id
+		summarizeBy: none
+		sourceColumn: source_account_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_200_silver_member_group_role = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_200_silver_member_group_role
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

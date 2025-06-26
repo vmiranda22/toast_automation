@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "WIP - fabrictest_notebook_teladoc_eds_dev_gold_data_model_table_admin_organization_information",
+    "description": "New notebook"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ea73d64c-35ad-9dab-4f96-a30f0a8e6406"
+  }
+}

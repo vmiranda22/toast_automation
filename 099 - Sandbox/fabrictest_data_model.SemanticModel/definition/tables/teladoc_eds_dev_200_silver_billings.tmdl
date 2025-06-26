@@ -1,0 +1,178 @@
+table teladoc_eds_dev_200_silver_billings
+	lineageTag: b517e3f9-b56c-4778-96e7-309218a09c0f
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_billings]
+
+	column billing_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0f2d64ab-6ace-450a-9aaa-66eda576d869
+		sourceLineageTag: billing_id
+		summarizeBy: none
+		sourceColumn: billing_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 77cb88e8-cc21-488e-8111-78766d0a1212
+		sourceLineageTag: organization_id
+		summarizeBy: none
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column invoice_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1230d1b8-8f69-413e-9166-f236824bd4c6
+		sourceLineageTag: invoice_name
+		summarizeBy: none
+		sourceColumn: invoice_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column regards_to
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2bf04752-f629-433a-9948-9d4283375eaf
+		sourceLineageTag: regards_to
+		summarizeBy: none
+		sourceColumn: regards_to
+
+		annotation SummarizationSetBy = Automatic
+
+	column eligible_day_of_month
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: df66fe4f-69ff-47dd-b2e5-fc376b8f93ec
+		sourceLineageTag: eligible_day_of_month
+		summarizeBy: sum
+		sourceColumn: eligible_day_of_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column billing_accnt_uuid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 95c7d888-7c1d-4e05-bc4d-5cc792b9700c
+		sourceLineageTag: billing_accnt_uuid
+		summarizeBy: none
+		sourceColumn: billing_accnt_uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column finance_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 666adb9f-c383-4216-8df1-4ae8736d58f7
+		sourceLineageTag: finance_name
+		summarizeBy: none
+		sourceColumn: finance_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_subsegment_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d7d576a4-d7cd-4f6d-ad8f-b504c18fa8a5
+		sourceLineageTag: client_subsegment_cd
+		summarizeBy: none
+		sourceColumn: client_subsegment_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column self_remit
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: bc980b08-9ec9-4727-b83b-aa8739109908
+		sourceLineageTag: self_remit
+		summarizeBy: none
+		sourceColumn: self_remit
+
+		annotation SummarizationSetBy = Automatic
+
+	column member_pay_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4b0c51f0-56a6-4872-88b1-023053110fc4
+		sourceLineageTag: member_pay_cd
+		summarizeBy: none
+		sourceColumn: member_pay_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_term_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3a7c0905-0cd8-4a7a-bba6-0d284bacdb9f
+		sourceLineageTag: payment_term_cd
+		summarizeBy: none
+		sourceColumn: payment_term_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column invoice_delivery_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fec5a2ab-a2a2-46a9-b2ea-87097c9de630
+		sourceLineageTag: invoice_delivery_cd
+		summarizeBy: none
+		sourceColumn: invoice_delivery_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_contract
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 3fce75fb-4c9d-445d-a390-428bfa7b1e0c
+		sourceLineageTag: risk_contract
+		summarizeBy: none
+		sourceColumn: risk_contract
+
+		annotation SummarizationSetBy = Automatic
+
+	column split_billing
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 506bee96-0dc2-46c6-9757-f522e6a860de
+		sourceLineageTag: split_billing
+		summarizeBy: none
+		sourceColumn: split_billing
+
+		annotation SummarizationSetBy = Automatic
+
+	column send_expert_membership
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 37aee489-7b8d-49ac-bba1-f882c7421df4
+		sourceLineageTag: send_expert_membership
+		summarizeBy: none
+		sourceColumn: send_expert_membership
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e3ce618c-d3c9-4830-b6c4-be8f95a2f740
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_billings = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_billings
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

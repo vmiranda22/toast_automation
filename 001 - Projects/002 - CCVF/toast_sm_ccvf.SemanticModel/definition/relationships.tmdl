@@ -1,0 +1,4 @@
+relationship 33d4ca36-3ce4-bf9e-efe0-4f2c4df48db0
+	fromColumn: config_validation_results.rule_id
+	toColumn: validation_rules.rule_id
+

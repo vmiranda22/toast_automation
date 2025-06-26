@@ -1,0 +1,23 @@
+relationship 7725e25a-752e-4421-a925-d2872d25260c
+	fromColumn: flattened_hours.taskID
+	toColumn: flattened_tasks.ID
+
+relationship 56916ea2-8b93-4ff2-98b1-5a149362eb95
+	fromColumn: flattened_hours.ownerID
+	toColumn: flattened_users.ID
+
+relationship b2ec0bf6-d901-44d9-bf74-530224010bc7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: calendar.Date
+	toColumn: LocalDateTable_5512f17f-3252-4588-8736-c43f68b96a10.Date
+
+relationship 56f3e60c-489c-b329-e368-1668be78e7b6
+	securityFilteringBehavior: none
+	fromColumn: flattened_hours.entryDate
+	toColumn: calendar.Date
+
+relationship 8866be4a-c8e7-461b-8d0e-b86f8e0acfcf
+	toCardinality: many
+	fromColumn: flattened_hours.projectID
+	toColumn: flattened_projects.ID
+

@@ -1,0 +1,566 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "56c17f4a-a1a9-be93-47d5-c11ebd2b7d7c",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "PL - SF Initial Data Ingestion",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "5983aee3-eedd-8160-432d-96aca151bfd1",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "NB - SF Tables Transformations",
+        "dependsOn": [
+          {
+            "activity": "DF - SP Excel Admin Payers Data Ingestion",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "116ee5d1-f990-b2b8-47dc-69d85482c945",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "NB - Final CSV Tables Creation",
+        "dependsOn": [
+          {
+            "activity": "NB - SF Tables Transformations",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "RefreshDataflow",
+        "typeProperties": {
+          "dataflowId": "16c01941-bb72-4286-8bcb-c2bc61b00497",
+          "workspaceId": "b08d383a-b8cc-4b8e-b189-d9d696a01977",
+          "notifyOption": "NoNotification",
+          "dataflowType": "DataflowFabric"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DF - SP Excel Admin Payers Data Ingestion",
+        "dependsOn": [
+          {
+            "activity": "PL - SF Initial Data Ingestion",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "PBISemanticModelRefresh",
+        "typeProperties": {
+          "method": "post",
+          "groupId": "b08d383a-b8cc-4b8e-b189-d9d696a01977",
+          "datasetId": "3a1d8584-08bc-488b-9b93-2b36ffadb35d",
+          "commitMode": "Transactional",
+          "waitOnCompletion": true,
+          "operationType": "SemanticModelRefresh"
+        },
+        "externalReferences": {
+          "connection": "08b16961-6095-4683-bf15-1c67a4f4f4c6"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "SM - Refresh",
+        "dependsOn": [
+          {
+            "activity": "NB - Final CSV Tables Creation",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "c128bcb9-4ef1-b74b-4f06-caef875fda22",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "activityId": {
+              "value": "bd2b7d7c-c11e-47d5-be93-a1a956c17f4a",
+              "type": "string"
+            },
+            "activityName": {
+              "value": "toast_gab_pl_dev_sf_lcrm_uat_initial_data_ingestion",
+              "type": "string"
+            },
+            "activityType": {
+              "value": "Data Pipeline",
+              "type": "string"
+            },
+            "activityRunId": {
+              "value": {
+                "value": "@activity('PL - SF Initial Data Ingestion').output.pipelineRunId",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunStatus": {
+              "value": "Success",
+              "type": "string"
+            },
+            "activityRunStartTimestamp": {
+              "value": {
+                "value": "@pipeline().TriggerTime",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunEndTimestamp": {
+              "value": {
+                "value": "@utcNow()",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Log SUCCESS Run - SF Initial Data Ingestion",
+        "dependsOn": [
+          {
+            "activity": "PL - SF Initial Data Ingestion",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "c128bcb9-4ef1-b74b-4f06-caef875fda22",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "activityId": {
+              "value": "bd2b7d7c-c11e-47d5-be93-a1a956c17f4a",
+              "type": "string"
+            },
+            "activityName": {
+              "value": "toast_gab_pl_dev_sf_lcrm_uat_initial_data_ingestion",
+              "type": "string"
+            },
+            "activityType": {
+              "value": "Data Pipeline",
+              "type": "string"
+            },
+            "activityRunId": {
+              "value": {
+                "value": "@activity('PL - SF Initial Data Ingestion').output.pipelineRunId",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunStatus": {
+              "value": "Fail",
+              "type": "string"
+            },
+            "activityRunStartTimestamp": {
+              "value": {
+                "value": "@pipeline().TriggerTime",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunEndTimestamp": {
+              "value": {
+                "value": "@utcNow()",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Log FAIL Run - SF Initial Data Ingestion",
+        "dependsOn": [
+          {
+            "activity": "PL - SF Initial Data Ingestion",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "c128bcb9-4ef1-b74b-4f06-caef875fda22",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "activityId": {
+              "value": "16c01941-bb72-4286-8bcb-c2bc61b00497",
+              "type": "string"
+            },
+            "activityName": {
+              "value": "toast_gab_df_dev_sp_admin_payers_to_salesforce_initial_data_ingestion",
+              "type": "string"
+            },
+            "activityType": {
+              "value": "Dataflow Gen2",
+              "type": "string"
+            },
+            "activityRunId": {
+              "value": {
+                "value": "@activity('DF - SP Excel Admin Payers Data Ingestion').output.jobInstanceId",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunStatus": {
+              "value": "Success",
+              "type": "string"
+            },
+            "activityRunStartTimestamp": {
+              "value": {
+                "value": "@subtractFromTime(utcNow(), activity('DF - SP Excel Admin Payers Data Ingestion').output.executionDuration, 'Second')",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunEndTimestamp": {
+              "value": {
+                "value": "@utcNow()",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Log SUCCESS Run - SP Excel Admin Payers Data Ingestion",
+        "dependsOn": [
+          {
+            "activity": "DF - SP Excel Admin Payers Data Ingestion",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "c128bcb9-4ef1-b74b-4f06-caef875fda22",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "activityId": {
+              "value": "16c01941-bb72-4286-8bcb-c2bc61b00497",
+              "type": "string"
+            },
+            "activityName": {
+              "value": "toast_gab_df_dev_sp_admin_payers_to_salesforce_initial_data_ingestion",
+              "type": "string"
+            },
+            "activityType": {
+              "value": "Dataflow Gen2",
+              "type": "string"
+            },
+            "activityRunId": {
+              "value": {
+                "value": "@activity('DF - SP Excel Admin Payers Data Ingestion').output.jobInstanceId",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunStatus": {
+              "value": "Fail",
+              "type": "string"
+            },
+            "activityRunStartTimestamp": {
+              "value": {
+                "value": "@subtractFromTime(utcNow(), activity('DF - SP Excel Admin Payers Data Ingestion').output.executionDuration, 'Second')",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunEndTimestamp": {
+              "value": {
+                "value": "@utcNow()",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Log FAIL Run - SP Excel Admin Payers Data Ingestion",
+        "dependsOn": [
+          {
+            "activity": "DF - SP Excel Admin Payers Data Ingestion",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "c128bcb9-4ef1-b74b-4f06-caef875fda22",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "activityId": {
+              "value": "a151bfd1-96ac-432d-8160-eedd5983aee3",
+              "type": "string"
+            },
+            "activityName": {
+              "value": "toast_gab_nb_dev_sf_lcrm_uat_transformations",
+              "type": "string"
+            },
+            "activityType": {
+              "value": "Notebook",
+              "type": "string"
+            },
+            "activityRunId": {
+              "value": {
+                "value": "@activity('NB - SF Tables Transformations').output.result.runId",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunStatus": {
+              "value": {
+                "value": "@activity('NB - SF Tables Transformations').output.result.runStatus",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunStartTimestamp": {
+              "value": {
+                "value": "@activity('NB - SF Tables Transformations').output.result.metadata.runStartTime",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunEndTimestamp": {
+              "value": {
+                "value": "@activity('NB - SF Tables Transformations').output.result.metadata.runEndTime",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Log Run - SF Tables Transformations",
+        "dependsOn": [
+          {
+            "activity": "NB - SF Tables Transformations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "c128bcb9-4ef1-b74b-4f06-caef875fda22",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "activityId": {
+              "value": "5482c945-69d8-47dc-b2b8-f990116ee5d1",
+              "type": "string"
+            },
+            "activityName": {
+              "value": "toast_gab_nb_dev_sf_lcrm_uat_final_csv_tables_creation",
+              "type": "string"
+            },
+            "activityType": {
+              "value": "Notebook",
+              "type": "string"
+            },
+            "activityRunId": {
+              "value": {
+                "value": "@activity('NB - Final CSV Tables Creation').output.result.runId",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunStatus": {
+              "value": {
+                "value": "@activity('NB - Final CSV Tables Creation').output.result.runStatus",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunStartTimestamp": {
+              "value": {
+                "value": "@activity('NB - Final CSV Tables Creation').output.result.metadata.runStartTime",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunEndTimestamp": {
+              "value": {
+                "value": "@activity('NB - Final CSV Tables Creation').output.result.metadata.runEndTime",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Log Run - Final CSV Tables Creation",
+        "dependsOn": [
+          {
+            "activity": "NB - Final CSV Tables Creation",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "c128bcb9-4ef1-b74b-4f06-caef875fda22",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "activityId": {
+              "value": "3a1d8584-08bc-488b-9b93-2b36ffadb35d",
+              "type": "string"
+            },
+            "activityName": {
+              "value": "toast_gab_lh_dev",
+              "type": "string"
+            },
+            "activityType": {
+              "value": "Semantic Model",
+              "type": "string"
+            },
+            "activityRunId": {
+              "value": {
+                "value": "@activity('SM - Refresh').output.ResponseHeaders.RequestId",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunStatus": {
+              "value": {
+                "value": "@activity('SM - Refresh').output.status",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunStartTimestamp": {
+              "value": {
+                "value": "@activity('SM - Refresh').output.startTime",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "activityRunEndTimestamp": {
+              "value": {
+                "value": "@activity('SM - Refresh').output.endTime",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Log Run - Semantic Model Refresh",
+        "dependsOn": [
+          {
+            "activity": "SM - Refresh",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

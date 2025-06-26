@@ -1,0 +1,318 @@
+table teladoc_eds_dev_200_silver_groups
+	lineageTag: 95d7da4f-38ab-4619-9618-4ed12d2c5a23
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_groups]
+
+	column group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9038ff80-4511-4e7b-9bca-240df9ea1f96
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column legacy_group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d3b57e4d-b0a2-4ede-a500-9ea101d0dea0
+		sourceLineageTag: legacy_group_id
+		summarizeBy: none
+		sourceColumn: legacy_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 67d9dc47-e2fd-411a-9c29-19e779cb09a2
+		sourceLineageTag: group_nm
+		summarizeBy: none
+		sourceColumn: group_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0286d012-f5fc-42d5-a948-5c687cb29ea2
+		sourceLineageTag: group_type_cd
+		summarizeBy: none
+		sourceColumn: group_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column registration_group_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 36ea6935-162e-4fbd-818e-0901334079af
+		sourceLineageTag: registration_group_cd
+		summarizeBy: none
+		sourceColumn: registration_group_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column card_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8476c2f2-7dcf-4d67-87bb-a488f8ac7ff7
+		sourceLineageTag: card_nm
+		summarizeBy: none
+		sourceColumn: card_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 6586e87e-5635-40c9-870b-cedc6f960084
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: c366c9d1-10c1-4fb4-883e-2fa65ab8a52c
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_group_root
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 53f19e48-ac4c-47be-a2ca-49e74d8e0ed8
+		sourceLineageTag: source_group_root
+		summarizeBy: none
+		sourceColumn: source_group_root
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1a737945-f452-4f7f-84f6-6fe5b3e53e2c
+		sourceLineageTag: source_group_id
+		summarizeBy: none
+		sourceColumn: source_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column notes_internal
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c00c26ac-b950-4f35-a280-12df3cde22ba
+		sourceLineageTag: notes_internal
+		summarizeBy: none
+		sourceColumn: notes_internal
+
+		annotation SummarizationSetBy = Automatic
+
+	column notes_external
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 44881c40-aae8-47df-b918-f506f2019d10
+		sourceLineageTag: notes_external
+		summarizeBy: none
+		sourceColumn: notes_external
+
+		annotation SummarizationSetBy = Automatic
+
+	column template
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 2f89996a-e7e9-4564-9307-b41c03293f37
+		sourceLineageTag: template
+		summarizeBy: none
+		sourceColumn: template
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: ffbcf318-5072-42f5-a68b-31cb56a2cfb8
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: e19da5cb-f994-43d9-9948-4f56c0aceb0c
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_phone_organization_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bac8a5aa-b0e8-424c-8d50-d49aeba1d16a
+		sourceLineageTag: print_phone_organization_id
+		summarizeBy: none
+		sourceColumn: print_phone_organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_phone
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e2d41725-2c1f-40f0-a98c-093157beddff
+		sourceLineageTag: print_phone
+		summarizeBy: none
+		sourceColumn: print_phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_url_organization_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 82448164-1d12-4582-ab07-1014a6f78fb6
+		sourceLineageTag: print_url_organization_id
+		summarizeBy: none
+		sourceColumn: print_url_organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_url
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 58562050-9dcb-4f1e-9ee8-49423c3acd56
+		sourceLineageTag: print_url
+		summarizeBy: none
+		sourceColumn: print_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column web_url
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c887645f-0976-4e71-a58c-b4f6b65dc3c3
+		sourceLineageTag: web_url
+		summarizeBy: none
+		sourceColumn: web_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column direct_mail_organization_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bc551079-2be0-4056-a90c-636e9db21b0d
+		sourceLineageTag: direct_mail_organization_id
+		summarizeBy: none
+		sourceColumn: direct_mail_organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column direct_mail
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3e0b7a3a-900b-490f-ad32-d6f827c297a5
+		sourceLineageTag: direct_mail
+		summarizeBy: none
+		sourceColumn: direct_mail
+
+		annotation SummarizationSetBy = Automatic
+
+	column email_organization_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 63af5858-5bb9-453d-9f22-56139fd607d3
+		sourceLineageTag: email_organization_id
+		summarizeBy: none
+		sourceColumn: email_organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a852576d-56ac-4ee6-bae9-d4f2505774ef
+		sourceLineageTag: email
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column incentive_organization_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c4fb47cf-ed1c-473f-9f1d-c4dd2305e7ed
+		sourceLineageTag: incentive_organization_id
+		summarizeBy: none
+		sourceColumn: incentive_organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column incentive
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 565d612e-35eb-42bb-b328-3f06016e9210
+		sourceLineageTag: incentive
+		summarizeBy: none
+		sourceColumn: incentive
+
+		annotation SummarizationSetBy = Automatic
+
+	column outbound_calls_organization_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e1290f08-dff7-4e4a-94af-b7f8d2bccab4
+		sourceLineageTag: outbound_calls_organization_id
+		summarizeBy: none
+		sourceColumn: outbound_calls_organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column outbound_calls
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8885bf86-f239-45b0-8ee7-91cc1bbc2a84
+		sourceLineageTag: outbound_calls
+		summarizeBy: none
+		sourceColumn: outbound_calls
+
+		annotation SummarizationSetBy = Automatic
+
+	column sms_text_organization_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7b1d13f2-ddd6-4faa-b308-e5e2b04ca93e
+		sourceLineageTag: sms_text_organization_id
+		summarizeBy: none
+		sourceColumn: sms_text_organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sms_text
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6a29063d-6100-4421-85b1-149d0c3e6710
+		sourceLineageTag: sms_text
+		summarizeBy: none
+		sourceColumn: sms_text
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_groups = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_groups
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

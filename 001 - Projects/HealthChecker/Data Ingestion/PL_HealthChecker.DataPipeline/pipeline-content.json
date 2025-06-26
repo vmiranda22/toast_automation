@@ -1,0 +1,121 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Lookup",
+        "typeProperties": {
+          "source": {
+            "type": "MySqlSource",
+            "query": "SELECT TABLE_NAME as table_name, 'teladoc_eds' as schema_name\nFROM information_schema.TABLES \nWHERE TABLE_SCHEMA = 'teladoc_eds'\n    AND (\n    `TABLE_NAME` = 'allowed_group_settings' OR \n    `TABLE_NAME` = 'allowed_group_relations' OR\n    `TABLE_NAME` = 'groups' OR\n    `TABLE_NAME` = 'valid_group_sources' OR\n    `TABLE_NAME` = 'organizations' OR\n    `TABLE_NAME` = 'group_service_specialty_relations' OR\n    `TABLE_NAME` = 'alt_group_ids' OR\n    `TABLE_NAME` = 'group_service_specialty_feature_relations' OR\n    `TABLE_NAME` = 'ref_service_specialties' OR\n    `TABLE_NAME` = 'external_group_relations' OR\n    `TABLE_NAME` = 'payers'\n    );"
+          },
+          "datasetSettings": {
+            "type": "MySqlTable",
+            "schema": [],
+            "externalReferences": {
+              "connection": "8cfaf835-d76d-4547-a584-d491a33b3359"
+            },
+            "annotations": []
+          },
+          "firstRowOnly": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Lookup1",
+        "dependsOn": []
+      },
+      {
+        "type": "ForEach",
+        "typeProperties": {
+          "isSequential": true,
+          "items": {
+            "value": "@activity('Lookup1').output.value",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "type": "Copy",
+              "typeProperties": {
+                "source": {
+                  "type": "MySqlSource",
+                  "datasetSettings": {
+                    "type": "MySqlTable",
+                    "typeProperties": {
+                      "tableName": {
+                        "value": "@item().table_name",
+                        "type": "Expression"
+                      }
+                    },
+                    "schema": [],
+                    "externalReferences": {
+                      "connection": "8cfaf835-d76d-4547-a584-d491a33b3359"
+                    },
+                    "annotations": []
+                  }
+                },
+                "sink": {
+                  "type": "LakehouseTableSink",
+                  "tableActionOption": "Append",
+                  "datasetSettings": {
+                    "type": "LakehouseTable",
+                    "typeProperties": {
+                      "table": {
+                        "value": "@item().table_name",
+                        "type": "Expression"
+                      }
+                    },
+                    "schema": [],
+                    "linkedService": {
+                      "name": "LH_HealthChecker",
+                      "properties": {
+                        "type": "Lakehouse",
+                        "typeProperties": {
+                          "artifactId": "b3ef4b37-8213-af27-429b-7db22aaca13c",
+                          "workspaceId": "00000000-0000-0000-0000-000000000000",
+                          "rootFolder": "Tables"
+                        },
+                        "annotations": []
+                      }
+                    },
+                    "annotations": []
+                  }
+                },
+                "translator": {
+                  "type": "TabularTranslator",
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  }
+                },
+                "enableStaging": false
+              },
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureInput": false,
+                "secureOutput": false
+              },
+              "name": "Copy data1",
+              "dependsOn": []
+            }
+          ]
+        },
+        "name": "ForEach1",
+        "dependsOn": [
+          {
+            "activity": "Lookup1",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

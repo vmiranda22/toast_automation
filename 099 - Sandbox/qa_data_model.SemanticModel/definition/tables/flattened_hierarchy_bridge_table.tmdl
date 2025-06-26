@@ -1,0 +1,33 @@
+table flattened_hierarchy_bridge_table
+	lineageTag: 64e0b2ab-ee9d-43c5-86fc-14c071c7c4c8
+	sourceLineageTag: [dbo].[flattened_hierarchy_bridge_table]
+
+	column org_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 353d9b72-b2cf-48dd-8905-1d4350e4c4c6
+		sourceLineageTag: org_id
+		summarizeBy: none
+		sourceColumn: org_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d387be16-185a-4bb0-b531-c9f092d73455
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition flattened_hierarchy_bridge_table = entity
+		mode: directLake
+		source
+			entityName: flattened_hierarchy_bridge_table
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

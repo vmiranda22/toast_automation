@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "toast_lh_workfront_clean"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e56083dc-2d55-ad24-48d9-0ba519d0a156"
+  }
+}

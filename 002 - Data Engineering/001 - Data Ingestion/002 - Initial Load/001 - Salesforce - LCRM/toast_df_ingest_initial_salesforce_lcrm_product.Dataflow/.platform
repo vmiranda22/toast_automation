@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "toast_df_ingest_initial_salesforce_lcrm_product"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f5ae9b08-6556-9954-44f2-16a0ce4a81fe"
+  }
+}

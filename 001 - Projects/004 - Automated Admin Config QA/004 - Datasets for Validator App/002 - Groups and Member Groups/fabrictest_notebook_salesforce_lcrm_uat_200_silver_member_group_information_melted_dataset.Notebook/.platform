@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "fabrictest_notebook_salesforce_lcrm_uat_200_silver_member_group_information_melted_dataset",
+    "description": "New notebook"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c603bf16-47ed-903f-4816-d3231b031338"
+  }
+}

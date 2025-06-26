@@ -1,0 +1,53 @@
+table teladoc_eds_dev_200_silver_group_payer_relations
+	lineageTag: 7cbffc9f-9f4a-401f-822e-d9e10c033a2c
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_group_payer_relations]
+
+	column group_payer_relation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7c0d9eb9-7586-448a-ac19-7c892d839ff7
+		sourceLineageTag: group_payer_relation_id
+		summarizeBy: none
+		sourceColumn: group_payer_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 539e85e4-3183-414d-93b2-117ef77ad4e7
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payer_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b19b9a99-fcb3-49db-ba90-f8955f4499a3
+		sourceLineageTag: payer_id
+		summarizeBy: none
+		sourceColumn: payer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 945a499f-72c2-433a-8d7b-e6a3bd07d657
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_group_payer_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_group_payer_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

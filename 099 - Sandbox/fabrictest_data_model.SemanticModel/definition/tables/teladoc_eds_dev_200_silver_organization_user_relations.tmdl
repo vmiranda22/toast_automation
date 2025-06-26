@@ -1,0 +1,73 @@
+table teladoc_eds_dev_200_silver_organization_user_relations
+	lineageTag: 9c78bd88-d09d-45d7-9033-5f3cf6165595
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_organization_user_relations]
+
+	column organization_user_relation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f22f3203-5beb-4556-a5f6-2bff508f438e
+		sourceLineageTag: organization_user_relation_id
+		summarizeBy: none
+		sourceColumn: organization_user_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e0c15fad-edbb-4960-9843-46601638d941
+		sourceLineageTag: organization_id
+		summarizeBy: none
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1b6f98d5-60b7-4350-beb9-c386de1d712d
+		sourceLineageTag: user_id
+		summarizeBy: none
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a2ec3795-84c9-4b4f-bb93-30e3c51a7d6d
+		sourceLineageTag: user_type
+		summarizeBy: none
+		sourceColumn: user_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column purpose_relation_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 428b0743-19da-4079-a661-8d27ef4163df
+		sourceLineageTag: purpose_relation_type_cd
+		summarizeBy: none
+		sourceColumn: purpose_relation_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3743165a-90ae-408f-bab0-f40e2a50761a
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_organization_user_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_organization_user_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

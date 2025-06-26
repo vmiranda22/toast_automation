@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "toast_pl_orchestrate_incremental_update_workfront"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6c3944a7-00d6-9b01-4661-63f7badf1753"
+  }
+}

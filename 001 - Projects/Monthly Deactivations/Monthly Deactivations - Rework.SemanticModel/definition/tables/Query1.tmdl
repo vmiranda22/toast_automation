@@ -1,0 +1,149 @@
+table Query1
+	lineageTag: dac16e70-5521-4508-b7df-dc04d925524e
+
+	column File_Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c2e2b87b-3523-4389-938b-6e0faf3bea0e
+		summarizeBy: none
+		sourceColumn: File_Date
+
+		variation Variation
+			isDefault
+			relationship: a057d2b3-84ad-471f-8824-a1c634eed5f1
+			defaultHierarchy: LocalDateTable_44acb067-7a65-4d6c-968e-11a8d735e09d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column client_code
+		dataType: string
+		lineageTag: c6c4a3f0-6e5e-41e9-85ab-97858546e231
+		summarizeBy: none
+		sourceColumn: client_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Contract status'
+		dataType: string
+		lineageTag: 479a0ce6-f4d5-49e6-ac3e-682d9aea1472
+		summarizeBy: none
+		sourceColumn: Contract status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Eligibility Verification Method'
+		dataType: string
+		lineageTag: 03d6bc9a-d7b1-4f71-9742-4c94e141b1ec
+		summarizeBy: none
+		sourceColumn: Eligibility Verification Method
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Enrolled'
+		dataType: int64
+		formatString: 0
+		lineageTag: b0ad232f-631c-4b27-962a-d3210f09a0ac
+		summarizeBy: sum
+		sourceColumn: Total Enrolled
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Terminations'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c271000-3c4d-44bb-9c0d-65167b0e5b64
+		summarizeBy: sum
+		sourceColumn: Total Terminations
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Churn Rate'
+		dataType: string
+		lineageTag: d6a859a6-0791-4ac3-8636-cd2bbfa296fb
+		summarizeBy: none
+		sourceColumn: Churn Rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CIM
+		dataType: string
+		lineageTag: 9225cd03-3059-48a6-8bd2-a0c49613313c
+		summarizeBy: none
+		sourceColumn: CIM
+
+		annotation SummarizationSetBy = Automatic
+
+	column CSM
+		dataType: string
+		lineageTag: 7ffe175b-1bbd-4f0a-bfa1-acf61437f9c3
+		summarizeBy: none
+		sourceColumn: CSM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CS Sign Off'
+		dataType: string
+		lineageTag: 1be022af-1a71-4e56-a85a-9c6d1ce67bbd
+		summarizeBy: none
+		sourceColumn: CS Sign Off
+
+		annotation SummarizationSetBy = Automatic
+
+	column Notes
+		dataType: string
+		lineageTag: d0a57816-3587-4233-9fb6-0b875d8a3ac7
+		summarizeBy: none
+		sourceColumn: Notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column1
+		dataType: string
+		lineageTag: 6f08adec-cb5f-482a-8295-0ff828cf1b58
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Churn
+		dataType: double
+		lineageTag: 11145391-55b6-403a-ac07-1f2f0859aa34
+		summarizeBy: sum
+		sourceColumn: Churn
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Query1 = m
+		mode: import
+		source =
+				let
+				    Source = SharePoint.Files("https://teladocpa.sharepoint.com/sites/MonthlyDeactivations", [ApiVersion = 15]),
+				    #"Added Custom" = Table.AddColumn(Source, "Current_Year", each Date.Year(DateTime.LocalNow())),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Current_or_past_year", each Text.Contains([Folder Path],Number.ToText([Current_Year])) or Text.Contains([Folder Path],Number.ToText([Current_Year]-1))),
+				    #"Filtered Rows" = Table.SelectRows(#"Added Custom1", each ([Current_or_past_year] = true)),
+				    #"Filtered Rows1" = Table.SelectRows(#"Filtered Rows", each Text.Contains([Name], "CS - Review")),
+				    #"Added Custom2" = Table.AddColumn(#"Filtered Rows1", "File_Month", each List.First(Text.Split([Name]," "))),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom2",{{"File_Month", Int64.Type}}),
+				    #"Added Custom3" = Table.AddColumn(#"Changed Type", "File_Year", each Text.Split([Name]," "){2}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom3",{{"File_Year", Int64.Type}}),
+				    #"Added Custom4" = Table.AddColumn(#"Changed Type1", "File_Date", each #date([File_Year],[File_Month],1)),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom4",{{"File_Date", type date}}),
+				    #"Filtered Hidden Files1" = Table.SelectRows(#"Changed Type2", each [Attributes]?[Hidden]? <> true),
+				    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File", each #"Transform File"([Content])),
+				    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Invoke Custom Function1", "Transform File", Table.ColumnNames(#"Transform File"(#"Sample File"))),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"client_code", type text}, {"Contract status", type text}, {"Eligibility Verification Method", type text}, {"Total Enrolled", Int64.Type}, {"Total Terminations", Int64.Type}, {"Churn Rate", type text}, {"CIM", type text}, {"CSM", type text}, {"CS Sign Off", type text}, {"Notes", type text}, {"", type any}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type3",{"Content", "Extension", "Date accessed", "Date modified", "Date created", "Attributes", "Folder Path", "Current_or_past_year", "Name", "Current_Year", "File_Month", "File_Year"}),
+				    #"Sorted Rows" = Table.Sort(#"Removed Columns",{{"File_Date", Order.Descending}}),
+				    #"Added Custom5" = Table.AddColumn(#"Sorted Rows", "Churn", each if [Total Enrolled] = 0 then 0 else [Total Terminations]/[Total Enrolled]),
+				    #"Changed Type4" = Table.TransformColumnTypes(#"Added Custom5",{{"Churn", Percentage.Type}})
+				in
+				    #"Changed Type4"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

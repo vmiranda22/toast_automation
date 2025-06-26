@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "toast_dp_transform_raw_to_clean_salesforce_lcrm"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "060e75ee-0b44-a0c5-4e08-af8c8bb88f40"
+  }
+}

@@ -1,0 +1,105 @@
+table teladoc_eds_dev_200_silver_report_affiliation_relations
+	lineageTag: 6bf2a51d-f0df-4596-932e-0836e28be27f
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_report_affiliation_relations]
+
+	column report_affiliation_relation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d9d7619d-833f-4096-8052-68c54c88858b
+		sourceLineageTag: report_affiliation_relation_id
+		summarizeBy: none
+		sourceColumn: report_affiliation_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column affiliation_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ed0b05ad-f53a-4052-9d8d-f071bfd6b39a
+		sourceLineageTag: affiliation_type
+		summarizeBy: none
+		sourceColumn: affiliation_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column affiliation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6afa5564-eec6-4974-8f0a-b478604b4604
+		sourceLineageTag: affiliation_id
+		summarizeBy: none
+		sourceColumn: affiliation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bc01df7a-2833-40db-8579-50ceffb8e98d
+		sourceLineageTag: report_cd
+		summarizeBy: none
+		sourceColumn: report_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column email_flavor_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2617bf30-8878-4070-abaf-85e8d210e530
+		sourceLineageTag: email_flavor_cd
+		summarizeBy: none
+		sourceColumn: email_flavor_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column frequency_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a2b40c2c-55af-45fa-8c3e-843d18bd96ea
+		sourceLineageTag: frequency_cd
+		summarizeBy: none
+		sourceColumn: frequency_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: ee03b7f6-b083-4d35-833d-d6a4c0d6d173
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: d008da74-46e2-4fe1-bfc3-700f436b0328
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d00883fb-6788-4a7b-9375-514e0ac023ac
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_report_affiliation_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_report_affiliation_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,63 @@
+table teladoc_eds_dev_200_silver_group_service_level_relations
+	lineageTag: aee6340e-a69b-4a68-ae38-0b226f100e3d
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_group_service_level_relations]
+
+	column group_relation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 501b1e03-f7c0-4928-8616-8b2ebd40f917
+		sourceLineageTag: group_relation_id
+		summarizeBy: none
+		sourceColumn: group_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aeb2f04b-6d4a-4966-ab77-c0ef05f86cc6
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column standard_service_level_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b00ae5d0-565d-4e85-8076-988c25f64cd5
+		sourceLineageTag: standard_service_level_id
+		summarizeBy: none
+		sourceColumn: standard_service_level_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column vip_service_level_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3162282f-828c-4d94-94b4-daee9d458bf0
+		sourceLineageTag: vip_service_level_id
+		summarizeBy: none
+		sourceColumn: vip_service_level_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e56d59b6-8632-43ff-840e-19c5717795b1
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_group_service_level_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_group_service_level_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

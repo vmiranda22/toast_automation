@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "toast_sm_workfront:_raw"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a1571c01-79f7-ad44-4658-a5f0154c9ae4"
+  }
+}

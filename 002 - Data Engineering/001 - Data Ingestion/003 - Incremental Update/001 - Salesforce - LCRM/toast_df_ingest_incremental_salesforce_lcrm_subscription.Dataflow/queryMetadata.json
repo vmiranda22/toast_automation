@@ -1,0 +1,32 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "toast_df_ingest_incremental_salesforce_lcrm_subscription",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Subscription": {
+      "queryId": "d8901038-cde6-4306-bcd9-3c4bdb3d8c42",
+      "queryName": "Subscription",
+      "loadEnabled": false
+    },
+    "Subscription_DataDestination": {
+      "queryId": "20f1592c-7c2f-40da-a9d2-0248d1268792",
+      "queryName": "Subscription_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://login.salesforce.com/",
+      "kind": "Salesforce",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"def27be7-6ddb-403f-adec-31f84cc1c99d\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"98a0c6ac-af65-4b8d-bce8-81b180f2ec76\"}"
+    }
+  ]
+}

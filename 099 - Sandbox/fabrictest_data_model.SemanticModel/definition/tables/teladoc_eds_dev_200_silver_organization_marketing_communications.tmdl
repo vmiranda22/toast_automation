@@ -1,0 +1,73 @@
+table teladoc_eds_dev_200_silver_organization_marketing_communications
+	lineageTag: 7c31d84a-7b91-4d2c-8144-f0df5d6d1b05
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_organization_marketing_communications]
+
+	column organization_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 85d793ce-4727-450c-833f-76b771cc0d5f
+		sourceLineageTag: organization_id
+		summarizeBy: none
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column direct_mail
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b1390f34-7f0b-4964-96c0-e87dd82abcfd
+		sourceLineageTag: direct_mail
+		summarizeBy: none
+		sourceColumn: direct_mail
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bca66cf6-09ee-4f4a-a9aa-e94e5b8fa6ec
+		sourceLineageTag: email
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column incentive
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fe13a037-b959-4c6e-af73-391c2357af7f
+		sourceLineageTag: incentive
+		summarizeBy: none
+		sourceColumn: incentive
+
+		annotation SummarizationSetBy = Automatic
+
+	column outbound_calls
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 29739499-f4de-4b4a-b7a1-a1ae22f27da6
+		sourceLineageTag: outbound_calls
+		summarizeBy: none
+		sourceColumn: outbound_calls
+
+		annotation SummarizationSetBy = Automatic
+
+	column sms_text
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a68add91-e3ee-45ef-aecf-746d9f020c22
+		sourceLineageTag: sms_text
+		summarizeBy: none
+		sourceColumn: sms_text
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_organization_marketing_communications = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_organization_marketing_communications
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "Workfront_data_ingestion_lh"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "17c97822-417f-ab82-4d61-a191a15ff84e"
+  }
+}

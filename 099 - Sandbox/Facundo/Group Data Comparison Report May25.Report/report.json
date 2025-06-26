@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "92cc5090fe3431c4f401",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"10fc67820faa4f0078a5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.992193598750976,\"y\":0,\"z\":0,\"width\":1270.0078064012491,\"height\":720.4371584699454,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"comparison_dataset_melted_group_settings.group_id\"},{\"queryRef\":\"comparison_dataset_melted_group_settings.legacy_group_id\"},{\"queryRef\":\"comparison_dataset_melted_group_settings.MG_id\"},{\"queryRef\":\"comparison_dataset_melted_group_settings.admin_setting_name\"},{\"queryRef\":\"comparison_dataset_melted_group_settings.admin_setting_value\"},{\"queryRef\":\"comparison_dataset_melted_group_settings.salesforce_setting_name\"},{\"queryRef\":\"comparison_dataset_melted_group_settings.salesforce_setting_value\"},{\"queryRef\":\"comparison_dataset_melted_group_settings.does_value_match\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"comparison_dataset_melted_group_settings\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"group_id\"},\"Name\":\"comparison_dataset_melted_group_settings.group_id\",\"NativeReferenceName\":\"group_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"legacy_group_id\"},\"Name\":\"comparison_dataset_melted_group_settings.legacy_group_id\",\"NativeReferenceName\":\"legacy_group_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"MG_id\"},\"Name\":\"comparison_dataset_melted_group_settings.MG_id\",\"NativeReferenceName\":\"MG_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"admin_setting_name\"},\"Name\":\"comparison_dataset_melted_group_settings.admin_setting_name\",\"NativeReferenceName\":\"admin_setting_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"admin_setting_value\"},\"Name\":\"comparison_dataset_melted_group_settings.admin_setting_value\",\"NativeReferenceName\":\"admin_setting_value\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"salesforce_setting_name\"},\"Name\":\"comparison_dataset_melted_group_settings.salesforce_setting_name\",\"NativeReferenceName\":\"salesforce_setting_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"salesforce_setting_value\"},\"Name\":\"comparison_dataset_melted_group_settings.salesforce_setting_value\",\"NativeReferenceName\":\"salesforce_setting_value\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"does_value_match\"},\"Name\":\"comparison_dataset_melted_group_settings.does_value_match\",\"NativeReferenceName\":\"does_value_match\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"Conditional\":{\"Cases\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"comparison_dataset_melted_group_settings\"}},\"Property\":\"does_value_match\"}},\"Function\":3}},\"Right\":{\"Literal\":{\"Value\":\"'MATCH'\"}}},\"Annotations\":{\"PowerBI.SQExprEvaluationKind\":1,\"PowerBI.SQExprTextOperatorOption\":2}},\"Value\":{\"Literal\":{\"Value\":\"'#5AE3B3'\"}}}]}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"comparison_dataset_melted_group_settings.does_value_match\"}}]}}}",
+          "filters": "[]",
+          "height": 720.44,
+          "width": 1270.01,
+          "x": 9.99,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

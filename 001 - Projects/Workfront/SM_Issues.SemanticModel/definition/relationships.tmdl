@@ -1,0 +1,4 @@
+relationship 42cde810-c455-eb6b-e7bb-2b9d2433091e
+	fromColumn: flattened_issues.ID
+	toColumn: flattened_paramValues.ID
+

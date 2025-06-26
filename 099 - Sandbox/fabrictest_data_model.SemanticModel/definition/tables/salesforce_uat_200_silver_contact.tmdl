@@ -1,0 +1,103 @@
+table salesforce_uat_200_silver_contact
+	lineageTag: c8f4ce84-4fac-41b0-9bd1-f18716274e47
+	sourceLineageTag: [dbo].[salesforce_uat_200_silver_contact]
+
+	column id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 81ceaabc-420d-41ee-8956-ba302497b27b
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b12a001d-84e6-4ac1-ba81-e59eda25ec35
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2aaf3fcf-149e-493f-887d-afbd2ebb6b11
+		sourceLineageTag: title
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 81bf21f3-52b0-4ccd-9adf-78cccb1e70f3
+		sourceLineageTag: email
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 027f5c31-d961-4141-967c-10b8aa93f2c4
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8315aff7-14ec-4252-b900-d3328474ee70
+		sourceLineageTag: account_id
+		summarizeBy: none
+		sourceColumn: account_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_business_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1d122a9e-cf7c-4ec6-b649-541d4bd5a71f
+		sourceLineageTag: account_business_type
+		summarizeBy: none
+		sourceColumn: account_business_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_status
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 896f9e4b-8dec-468b-b69f-60a56065684e
+		sourceLineageTag: account_status
+		summarizeBy: none
+		sourceColumn: account_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_guid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 32ef0a63-c98d-4f96-a394-2ca1ca4f7cf6
+		sourceLineageTag: account_guid
+		summarizeBy: none
+		sourceColumn: account_guid
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_200_silver_contact = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_200_silver_contact
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

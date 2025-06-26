@@ -1,0 +1,1109 @@
+table USGH_QA_Feed
+	lineageTag: c4aa88f1-7469-41cd-9e10-c3758249ed12
+	sourceLineageTag: [dbo].[USGH_QA_Feed]
+
+	column Completion_time
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 535fb089-4d09-4d9a-84d8-edf12e912e3d
+		sourceLineageTag: Completion_time
+		summarizeBy: none
+		sourceColumn: Completion_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b04bc747-5d6d-467e-9b8c-d7e97b451ced
+		sourceLineageTag: Email
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a3ebe0c7-09c7-4312-9f0c-b5feffa1b04b
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CASE_ID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ef6f9ece-aee6-4c7f-a47c-10521bd96d82
+		sourceLineageTag: CASE_ID
+		summarizeBy: none
+		sourceColumn: CASE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client_Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b682aa1b-2966-45cc-83bb-c6808cf0ad0d
+		sourceLineageTag: Client_Name
+		summarizeBy: none
+		sourceColumn: Client_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Number_Columns
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 2d10ba24-bc86-45ff-ad69-ca188e372e89
+		sourceLineageTag: Total_Number_Columns
+		summarizeBy: sum
+		sourceColumn: Total_Number_Columns
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UMR_Flow_-_Mark__ADMIN_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 090f3079-b14a-46a6-a4c8-c71626129698
+		sourceLineageTag: UMR_Flow_-_Mark__ADMIN_items_missed:
+		summarizeBy: none
+		sourceColumn: UMR_Flow_-_Mark__ADMIN_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected_
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4c6134df-3a8e-4801-b3c1-aa9f9b143bdb
+		sourceLineageTag: Provide_additional_details_about_errors_detected_
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected_
+
+		annotation SummarizationSetBy = Automatic
+
+	column UMR_Flow_-_Mark_SALESFORCE_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 13386cd1-1803-429d-abba-359675e105b4
+		sourceLineageTag: UMR_Flow_-_Mark_SALESFORCE_items_missed:
+		summarizeBy: none
+		sourceColumn: UMR_Flow_-_Mark_SALESFORCE_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e84e8226-0229-48ba-b2d0-71b385681ee7
+		sourceLineageTag: Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column BCBS_NC_-_FLOW_Mark_ADMIN_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 16975ab2-bbfe-4f37-91ef-88bdfc9516e6
+		sourceLineageTag: BCBS_NC_-_FLOW_Mark_ADMIN_items_missed:
+		summarizeBy: none
+		sourceColumn: BCBS_NC_-_FLOW_Mark_ADMIN_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column BCBS_NC_-_ADMIN_-_Provide_additional_details_about_errors_detected_
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: dcf8acaa-0627-460d-9ad3-1e68a0f988c0
+		sourceLineageTag: BCBS_NC_-_ADMIN_-_Provide_additional_details_about_errors_detected_
+		summarizeBy: none
+		sourceColumn: BCBS_NC_-_ADMIN_-_Provide_additional_details_about_errors_detected_
+
+		annotation SummarizationSetBy = Automatic
+
+	column BCBS_NC_-_Mark_SALESFORCE_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fe34e377-7075-4be6-a184-33d9396b0041
+		sourceLineageTag: BCBS_NC_-_Mark_SALESFORCE_items_missed:
+		summarizeBy: none
+		sourceColumn: BCBS_NC_-_Mark_SALESFORCE_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column BCBS_NC_-__SFDC_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 963e002e-6d8f-4cbe-8ce9-8992695fac5d
+		sourceLineageTag: BCBS_NC_-__SFDC_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: BCBS_NC_-__SFDC_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column BCBS_Michigan_-_FLOW_-_Mark_ADMIN_items_missed
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 01bcda71-9e55-410b-8b6e-4b97d3086581
+		sourceLineageTag: BCBS_Michigan_-_FLOW_-_Mark_ADMIN_items_missed
+		summarizeBy: none
+		sourceColumn: BCBS_Michigan_-_FLOW_-_Mark_ADMIN_items_missed
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected_1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b955e2ac-97d6-4f63-b8d6-2c2d971b77ee
+		sourceLineageTag: Provide_additional_details_about_errors_detected_1
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column BCBS_Michigan_-_FLOW_-_Mark_SALESFORCE_items_missed
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 948df39a-ef95-427a-a8bd-0b37f27cfcae
+		sourceLineageTag: BCBS_Michigan_-_FLOW_-_Mark_SALESFORCE_items_missed
+		summarizeBy: none
+		sourceColumn: BCBS_Michigan_-_FLOW_-_Mark_SALESFORCE_items_missed
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e9fc0193-e371-4b0d-9366-5326f3b25226
+		sourceLineageTag: Provide_additional_details_about_errors_detected1
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Allied_Benefit_Systems__LLC_Flow_-_ADMIN_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2a403d30-4174-4bc9-a3a7-a2d8e32a056f
+		sourceLineageTag: Allied_Benefit_Systems__LLC_Flow_-_ADMIN_items_missed:
+		summarizeBy: none
+		sourceColumn: Allied_Benefit_Systems__LLC_Flow_-_ADMIN_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected_2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 88905006-d30d-4603-a7d9-4bb4762f43f0
+		sourceLineageTag: Provide_additional_details_about_errors_detected_2
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Allied_Benefit_Systems__LLC_Flow__-_Mark_SALESFORCE_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c44f0167-9660-476c-b8c4-ccadb421ec1c
+		sourceLineageTag: Allied_Benefit_Systems__LLC_Flow__-_Mark_SALESFORCE_items_missed:
+		summarizeBy: none
+		sourceColumn: Allied_Benefit_Systems__LLC_Flow__-_Mark_SALESFORCE_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected2
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1aa8199b-fb66-45e6-b8b6-4852bfff544e
+		sourceLineageTag: Provide_additional_details_about_errors_detected2
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gravie_-_ADMIN_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 33ff4faf-0455-4450-96d9-b1cc05871bf1
+		sourceLineageTag: Gravie_-_ADMIN_items_missed:
+		summarizeBy: none
+		sourceColumn: Gravie_-_ADMIN_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected_3
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 749f7622-600d-485f-94e3-b9dc21967661
+		sourceLineageTag: Provide_additional_details_about_errors_detected_3
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gravie__-_Mark_SALESFORCE_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bacabe9c-1c1d-49f7-8283-70f70ac98ef9
+		sourceLineageTag: Gravie__-_Mark_SALESFORCE_items_missed:
+		summarizeBy: none
+		sourceColumn: Gravie__-_Mark_SALESFORCE_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected3
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2d4e7a6f-23a5-4c0a-8ba2-6f8d59f7a6ea
+		sourceLineageTag: Provide_additional_details_about_errors_detected3
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Benefit_Intelligence_LLC_Flow_-_Mark_ADMIN_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e4ec0537-32dd-46d8-bdf2-e9df6577cb89
+		sourceLineageTag: Benefit_Intelligence_LLC_Flow_-_Mark_ADMIN_items_missed:
+		summarizeBy: none
+		sourceColumn: Benefit_Intelligence_LLC_Flow_-_Mark_ADMIN_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected_4
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aa0071df-05b5-4238-85ef-13407db388e4
+		sourceLineageTag: Provide_additional_details_about_errors_detected_4
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected_4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Benefit_Intelligence_LLC_Flow_-_Mark_SALESFORCE_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cecb88ac-b05b-413a-95ee-d9260ab28df5
+		sourceLineageTag: Benefit_Intelligence_LLC_Flow_-_Mark_SALESFORCE_items_missed:
+		summarizeBy: none
+		sourceColumn: Benefit_Intelligence_LLC_Flow_-_Mark_SALESFORCE_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected4
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d724b6f2-a5dc-4613-b2d4-5c2f43c0522f
+		sourceLineageTag: Provide_additional_details_about_errors_detected4
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected4
+
+		annotation SummarizationSetBy = Automatic
+
+	column G&A_Partners_-_FLOW_-_Mark_ADMIN_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e3930c14-e3f8-4b6f-8af9-ef84eeb82766
+		sourceLineageTag: G&A_Partners_-_FLOW_-_Mark_ADMIN_items_missed:
+		summarizeBy: none
+		sourceColumn: G&A_Partners_-_FLOW_-_Mark_ADMIN_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column G&A_Partners_-_FLOW_-__ADMIN_-_Provide_additional_details_about_errors_detected_
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5c4a05dd-9afc-422f-9727-01ba327f68f7
+		sourceLineageTag: G&A_Partners_-_FLOW_-__ADMIN_-_Provide_additional_details_about_errors_detected_
+		summarizeBy: none
+		sourceColumn: G&A_Partners_-_FLOW_-__ADMIN_-_Provide_additional_details_about_errors_detected_
+
+		annotation SummarizationSetBy = Automatic
+
+	column G&A_Partners_-_FLOW_-_Mark_SALESFORCE_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2b5e1b4d-8bf8-4aaa-9dde-2a0152941b06
+		sourceLineageTag: G&A_Partners_-_FLOW_-_Mark_SALESFORCE_items_missed:
+		summarizeBy: none
+		sourceColumn: G&A_Partners_-_FLOW_-_Mark_SALESFORCE_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column G&A_Partners_-_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1594ee59-2743-4645-89be-2a9e6d309e24
+		sourceLineageTag: G&A_Partners_-_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: G&A_Partners_-_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Benefit_Plan_Administrators_Inc.-_FLOW_-_Mark_ADMIN_items_missed:'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e173a90c-b71e-4bde-ab5d-f36f81e04450
+		sourceLineageTag: Benefit_Plan_Administrators_Inc.-_FLOW_-_Mark_ADMIN_items_missed:
+		summarizeBy: none
+		sourceColumn: Benefit_Plan_Administrators_Inc.-_FLOW_-_Mark_ADMIN_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Benefit_Plan_Administrators_Inc.-_FLOW_-__ADMIN_-_Provide_additional_details_about_errors_detected_'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4230e4f8-915d-4bcf-8016-38d169b2b1bf
+		sourceLineageTag: Benefit_Plan_Administrators_Inc.-_FLOW_-__ADMIN_-_Provide_additional_details_about_errors_detected_
+		summarizeBy: none
+		sourceColumn: Benefit_Plan_Administrators_Inc.-_FLOW_-__ADMIN_-_Provide_additional_details_about_errors_detected_
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Benefit_Plan_Administrators_Inc.-_FLOW_-_Mark_SALESFORCE_items_missed:'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ec07233d-07e1-46f4-8481-0570e71f2e1f
+		sourceLineageTag: Benefit_Plan_Administrators_Inc.-_FLOW_-_Mark_SALESFORCE_items_missed:
+		summarizeBy: none
+		sourceColumn: Benefit_Plan_Administrators_Inc.-_FLOW_-_Mark_SALESFORCE_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Benefit_Plan_Administrators_Inc.-_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ff9e3221-5cd5-42d0-8783-c0634cf689ce
+		sourceLineageTag: Benefit_Plan_Administrators_Inc.-_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Benefit_Plan_Administrators_Inc.-_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column North_America_Administrators_LP_-_Lucent_Health_-_Mark_ADMIN_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fb01f0ff-26f1-4bb1-aee3-0f69af66386f
+		sourceLineageTag: North_America_Administrators_LP_-_Lucent_Health_-_Mark_ADMIN_items_missed:
+		summarizeBy: none
+		sourceColumn: North_America_Administrators_LP_-_Lucent_Health_-_Mark_ADMIN_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column North_America_Administrators_LP_-_Lucent_Health_-_Provide_additional_details_about_errors_detected_
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 80fc81ca-bf09-441e-b050-ddc3c71ca66f
+		sourceLineageTag: North_America_Administrators_LP_-_Lucent_Health_-_Provide_additional_details_about_errors_detected_
+		summarizeBy: none
+		sourceColumn: North_America_Administrators_LP_-_Lucent_Health_-_Provide_additional_details_about_errors_detected_
+
+		annotation SummarizationSetBy = Automatic
+
+	column North_America_Administrators_LP_-_Lucent_Health_-_Mark_SALESFORCE_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b0269d50-8207-4a9a-b6c3-17315608d1ba
+		sourceLineageTag: North_America_Administrators_LP_-_Lucent_Health_-_Mark_SALESFORCE_items_missed:
+		summarizeBy: none
+		sourceColumn: North_America_Administrators_LP_-_Lucent_Health_-_Mark_SALESFORCE_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column North_America_Administrators_LP_-_Lucent_Health__-_SFDC_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9e112646-e1b7-4a7b-8796-f9fef3a07e99
+		sourceLineageTag: North_America_Administrators_LP_-_Lucent_Health__-_SFDC_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: North_America_Administrators_LP_-_Lucent_Health__-_SFDC_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cypress_Benefit_Administrators_-_Lucent_Health_-_Mark_ADMIN_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b2ffff32-6d4b-4403-aa55-0fed635ec168
+		sourceLineageTag: Cypress_Benefit_Administrators_-_Lucent_Health_-_Mark_ADMIN_items_missed:
+		summarizeBy: none
+		sourceColumn: Cypress_Benefit_Administrators_-_Lucent_Health_-_Mark_ADMIN_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cypress_Benefit_Administrators_-_Lucent_Health_-_Provide_additional_details_about_errors_detected_
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 386ba341-87f8-4ac9-9b82-6c4bb076c9b1
+		sourceLineageTag: Cypress_Benefit_Administrators_-_Lucent_Health_-_Provide_additional_details_about_errors_detected_
+		summarizeBy: none
+		sourceColumn: Cypress_Benefit_Administrators_-_Lucent_Health_-_Provide_additional_details_about_errors_detected_
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cypress_Benefit_Administrators_-_Lucent_Health_-_Mark_SALESFORCE_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b430c38b-1a5e-4420-a280-135a747248a2
+		sourceLineageTag: Cypress_Benefit_Administrators_-_Lucent_Health_-_Mark_SALESFORCE_items_missed:
+		summarizeBy: none
+		sourceColumn: Cypress_Benefit_Administrators_-_Lucent_Health_-_Mark_SALESFORCE_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cypress_Benefit_Administrators_-_Lucent_Health_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5ef60e8e-e852-46f7-a117-0682bbaf2603
+		sourceLineageTag: Cypress_Benefit_Administrators_-_Lucent_Health_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Cypress_Benefit_Administrators_-_Lucent_Health_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Capitol_Administrators__Inc.__a_Lucent_Health_Company_-_Mark_ADMIN_items_missed:'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d4967a39-65b8-44bd-aac1-55c175bdf4d8
+		sourceLineageTag: Capitol_Administrators__Inc.__a_Lucent_Health_Company_-_Mark_ADMIN_items_missed:
+		summarizeBy: none
+		sourceColumn: Capitol_Administrators__Inc.__a_Lucent_Health_Company_-_Mark_ADMIN_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Capitol_Administrators__Inc.__a_Lucent_Health_Company_-_Provide_additional_details_about_errors_detected_'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a0f689a6-6bf0-4a44-89a0-d045746403c6
+		sourceLineageTag: Capitol_Administrators__Inc.__a_Lucent_Health_Company_-_Provide_additional_details_about_errors_detected_
+		summarizeBy: none
+		sourceColumn: Capitol_Administrators__Inc.__a_Lucent_Health_Company_-_Provide_additional_details_about_errors_detected_
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Capitol_Administrators__Inc.__a_Lucent_Health_Company_-_Mark_SALESFORCE_items_missed:'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cd592f62-8ba4-4154-ab3a-00e1bdf15454
+		sourceLineageTag: Capitol_Administrators__Inc.__a_Lucent_Health_Company_-_Mark_SALESFORCE_items_missed:
+		summarizeBy: none
+		sourceColumn: Capitol_Administrators__Inc.__a_Lucent_Health_Company_-_Mark_SALESFORCE_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Capitol_Administrators__Inc.__a_Lucent_Health_Company_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4194462c-4c94-4e20-824c-d023ce44bdb8
+		sourceLineageTag: Capitol_Administrators__Inc.__a_Lucent_Health_Company_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Capitol_Administrators__Inc.__a_Lucent_Health_Company_FLOW_-_SFDC_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Empire_Life_of_Canada_Flow_-_Mark_ADMIN_items_missed:
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 26c97a22-5d1e-4b0c-8b6a-d9c51538ca2f
+		sourceLineageTag: Empire_Life_of_Canada_Flow_-_Mark_ADMIN_items_missed:
+		summarizeBy: none
+		sourceColumn: Empire_Life_of_Canada_Flow_-_Mark_ADMIN_items_missed:
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected_5
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 290a0c5d-0ab6-46ff-8df5-7960a25f2a3e
+		sourceLineageTag: Provide_additional_details_about_errors_detected_5
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected_5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Group_Management_Services__Inc._-_Admin_items_missed'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4859e5fb-1d10-4e34-af79-4a758efe4c56
+		sourceLineageTag: Group_Management_Services__Inc._-_Admin_items_missed
+		summarizeBy: none
+		sourceColumn: Group_Management_Services__Inc._-_Admin_items_missed
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected_6
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7c3ff388-259b-4f0d-aed1-0e781b901089
+		sourceLineageTag: Provide_additional_details_about_errors_detected_6
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected_6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Group_Management_Services__Inc._-_Salesforce_items_missed'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fad85414-1325-45c3-a010-6e7173ce3ae5
+		sourceLineageTag: Group_Management_Services__Inc._-_Salesforce_items_missed
+		summarizeBy: none
+		sourceColumn: Group_Management_Services__Inc._-_Salesforce_items_missed
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected5
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bcbbb472-ee1d-4105-9efc-cb67cd9df844
+		sourceLineageTag: Provide_additional_details_about_errors_detected5
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Detego_Health_-_Admin:_Mark_items_with_error_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 64644b30-2d41-4468-8a53-7d4c5fd051b6
+		sourceLineageTag: Detego_Health_-_Admin:_Mark_items_with_error_detected
+		summarizeBy: none
+		sourceColumn: Detego_Health_-_Admin:_Mark_items_with_error_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Detego_Health_-_ADMIN_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 39bc64db-0233-478d-aee4-11099ff27453
+		sourceLineageTag: Detego_Health_-_ADMIN_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Detego_Health_-_ADMIN_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Detego_Health_-_Salesforce:_Mark_items_with_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: da008bc8-7b0e-46ae-b6b6-8b7536ce2a5e
+		sourceLineageTag: Detego_Health_-_Salesforce:_Mark_items_with_errors_detected
+		summarizeBy: none
+		sourceColumn: Detego_Health_-_Salesforce:_Mark_items_with_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Detego_Health_-_Salesforce_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 130494da-1029-4de7-9cd4-85ec41515760
+		sourceLineageTag: Detego_Health_-_Salesforce_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Detego_Health_-_Salesforce_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nextep__Inc._Admin:_Mark_items_with_error_detected'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: edb0c3d3-4f04-44fb-9800-65c3ee2e9b10
+		sourceLineageTag: Nextep__Inc._Admin:_Mark_items_with_error_detected
+		summarizeBy: none
+		sourceColumn: Nextep__Inc._Admin:_Mark_items_with_error_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected6
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d2e6fa1d-ab9b-415b-8989-eb0c1c7eead2
+		sourceLineageTag: Provide_additional_details_about_errors_detected6
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected6
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nextep__Inc._Salesforce'
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 32f6ad75-23d3-4f7b-93f9-d8b5ddd56725
+		sourceLineageTag: Nextep__Inc._Salesforce
+		summarizeBy: none
+		sourceColumn: Nextep__Inc._Salesforce
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provide_additional_details_about_errors_detected7
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 68a824b9-71e9-4408-b154-a00ccb430d54
+		sourceLineageTag: Provide_additional_details_about_errors_detected7
+		summarizeBy: none
+		sourceColumn: Provide_additional_details_about_errors_detected7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Self_Insured_Services_Co__SISCO__Admin:_Mark_items_with_error_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c04cf668-e78b-49f3-89ad-7156209ca0ee
+		sourceLineageTag: Self_Insured_Services_Co__SISCO__Admin:_Mark_items_with_error_detected
+		summarizeBy: none
+		sourceColumn: Self_Insured_Services_Co__SISCO__Admin:_Mark_items_with_error_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column SISCO_Admin_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d4ff4aa2-7054-48e1-a515-255d783ddefd
+		sourceLineageTag: SISCO_Admin_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: SISCO_Admin_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column SISCO_-_Salesforce:_Mark_items_with_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3ec90df7-5045-48c0-83fc-8de4de82bf17
+		sourceLineageTag: SISCO_-_Salesforce:_Mark_items_with_errors_detected
+		summarizeBy: none
+		sourceColumn: SISCO_-_Salesforce:_Mark_items_with_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Self_Insured_Services_Co__SISCO__-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b8dad1af-d1b5-4d21-bedb-9db19b420a77
+		sourceLineageTag: Self_Insured_Services_Co__SISCO__-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Self_Insured_Services_Co__SISCO__-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Meritain_-_Direct_Admin:_Mark_items_with_error_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 703b54f1-1271-4462-826f-abd78dd791a0
+		sourceLineageTag: Meritain_-_Direct_Admin:_Mark_items_with_error_detected
+		summarizeBy: none
+		sourceColumn: Meritain_-_Direct_Admin:_Mark_items_with_error_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Meritain_-_Direct_-_ADMIN_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9a85be8a-b3a3-4e87-a859-9113017b8590
+		sourceLineageTag: Meritain_-_Direct_-_ADMIN_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Meritain_-_Direct_-_ADMIN_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Meritain_-_Direct_-_Salesforce:_Mark_items_with_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7930f368-e5dd-4b6f-8b60-00fadc5c3d56
+		sourceLineageTag: Meritain_-_Direct_-_Salesforce:_Mark_items_with_errors_detected
+		summarizeBy: none
+		sourceColumn: Meritain_-_Direct_-_Salesforce:_Mark_items_with_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Meritain_-_Direct_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0eb28865-5f0b-4fa9-bf6c-331f27d15bb4
+		sourceLineageTag: Meritain_-_Direct_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Meritain_-_Direct_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Luminare_Health_-_Nippon_-_Admin:_Mark_items_with_error_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4f9692f2-1ff8-434a-af78-f736015b08e1
+		sourceLineageTag: Luminare_Health_-_Nippon_-_Admin:_Mark_items_with_error_detected
+		summarizeBy: none
+		sourceColumn: Luminare_Health_-_Nippon_-_Admin:_Mark_items_with_error_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Luminare_Health_-_Nippon_-_ADMIN_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b49e0cc7-2691-4922-a80c-e7c6860a5b86
+		sourceLineageTag: Luminare_Health_-_Nippon_-_ADMIN_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Luminare_Health_-_Nippon_-_ADMIN_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Luminare_Health_-_Nippon_-_Salesforce:_Mark_items_with_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 695872da-50bc-4482-83a8-f783560f068d
+		sourceLineageTag: Luminare_Health_-_Nippon_-_Salesforce:_Mark_items_with_errors_detected
+		summarizeBy: none
+		sourceColumn: Luminare_Health_-_Nippon_-_Salesforce:_Mark_items_with_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Luminare_Health_-_Nippon_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c729ae86-b584-41d9-b169-18901ca88cd6
+		sourceLineageTag: Luminare_Health_-_Nippon_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Luminare_Health_-_Nippon_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column HealthJoy_LLC_-_Admin:_Mark_items_with_error_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f865423b-ea33-4879-acdd-b2f29d348056
+		sourceLineageTag: HealthJoy_LLC_-_Admin:_Mark_items_with_error_detected
+		summarizeBy: none
+		sourceColumn: HealthJoy_LLC_-_Admin:_Mark_items_with_error_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column HealthJoy_LLC_-_ADMIN_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 88b0ff3c-c808-4d5a-966c-5cd8a6d17b97
+		sourceLineageTag: HealthJoy_LLC_-_ADMIN_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: HealthJoy_LLC_-_ADMIN_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column HealthJoy_LLC_-_Salesforce:_Mark_items_with_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 83eea62a-a618-4656-8b40-ac2ec4939c7c
+		sourceLineageTag: HealthJoy_LLC_-_Salesforce:_Mark_items_with_errors_detected
+		summarizeBy: none
+		sourceColumn: HealthJoy_LLC_-_Salesforce:_Mark_items_with_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column HealthJoy_LLC_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 50e5f0d4-3876-42db-be01-361017925e3b
+		sourceLineageTag: HealthJoy_LLC_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: HealthJoy_LLC_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin:_Mark_items_with_error_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b21c77a4-4a77-4577-aeb5-16a7a1aec7ee
+		sourceLineageTag: Admin:_Mark_items_with_error_detected
+		summarizeBy: none
+		sourceColumn: Admin:_Mark_items_with_error_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column BRMS_-_ADMIN_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d4c17b2b-9dd8-40a9-a796-981b3a0be048
+		sourceLineageTag: BRMS_-_ADMIN_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: BRMS_-_ADMIN_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salesforce:_Mark_items_with_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 61f555ff-2b62-416c-8959-93d39f0c89b6
+		sourceLineageTag: Salesforce:_Mark_items_with_errors_detected
+		summarizeBy: none
+		sourceColumn: Salesforce:_Mark_items_with_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column BRMS_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1e0d7320-9c99-40ca-9990-2146b54ba7ba
+		sourceLineageTag: BRMS_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: BRMS_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column WellNet_Healthcare:_Mark_items_with_error_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 339d8690-5541-4b4f-b196-af9dfec2ac2a
+		sourceLineageTag: WellNet_Healthcare:_Mark_items_with_error_detected
+		summarizeBy: none
+		sourceColumn: WellNet_Healthcare:_Mark_items_with_error_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column WellNet_Healthcare_-_ADMIN_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8027906c-0b99-4cc5-851d-0014de84fe42
+		sourceLineageTag: WellNet_Healthcare_-_ADMIN_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: WellNet_Healthcare_-_ADMIN_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column WellNet_Healthcare_-_Salesforce:_Mark_items_with_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2c147e05-880e-479b-bed6-17b7c7352ed2
+		sourceLineageTag: WellNet_Healthcare_-_Salesforce:_Mark_items_with_errors_detected
+		summarizeBy: none
+		sourceColumn: WellNet_Healthcare_-_Salesforce:_Mark_items_with_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column WellNet_Healthcare_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 54c948c9-c70a-4681-bb02-ceab0b3eadef
+		sourceLineageTag: WellNet_Healthcare_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: WellNet_Healthcare_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column HealthEZ:_Mark_items_with_error_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c82e81e0-4c6d-4a39-8ee3-42a9f3d7e6d9
+		sourceLineageTag: HealthEZ:_Mark_items_with_error_detected
+		summarizeBy: none
+		sourceColumn: HealthEZ:_Mark_items_with_error_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column HealthEZ_Healthcare_-_ADMIN_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ff656c5b-a84a-463b-9ccb-71fe382345c4
+		sourceLineageTag: HealthEZ_Healthcare_-_ADMIN_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: HealthEZ_Healthcare_-_ADMIN_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column HealthEZ_-_Salesforce:_Mark_items_with_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 73a9910d-293d-4650-ac15-b847c256fd28
+		sourceLineageTag: HealthEZ_-_Salesforce:_Mark_items_with_errors_detected
+		summarizeBy: none
+		sourceColumn: HealthEZ_-_Salesforce:_Mark_items_with_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column HealthEZ_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5425fdac-47db-415d-8b9b-ccf7e945bc51
+		sourceLineageTag: HealthEZ_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: HealthEZ_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column CGS_Healthcare:_Mark_items_with_error_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 856c5cd8-3ebf-4a42-9db2-74b2b766e681
+		sourceLineageTag: CGS_Healthcare:_Mark_items_with_error_detected
+		summarizeBy: none
+		sourceColumn: CGS_Healthcare:_Mark_items_with_error_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column CGS_Healthcare_-_ADMIN_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3d2848ba-04d0-456f-86b4-789e9f7c69b1
+		sourceLineageTag: CGS_Healthcare_-_ADMIN_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: CGS_Healthcare_-_ADMIN_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column CGS_Healthcare_-_Salesforce:_Mark_items_with_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6402b593-bdcb-4b3e-ac87-43b68fe834bc
+		sourceLineageTag: CGS_Healthcare_-_Salesforce:_Mark_items_with_errors_detected
+		summarizeBy: none
+		sourceColumn: CGS_Healthcare_-_Salesforce:_Mark_items_with_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column CGS_Healthcare_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e94db8c1-d32f-48e1-a4bb-ad9b1ded73e5
+		sourceLineageTag: CGS_Healthcare_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: CGS_Healthcare_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column UGS:_Mark_items_with_error_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bffd1b8b-7f62-4023-a8ab-385c59fea144
+		sourceLineageTag: UGS:_Mark_items_with_error_detected
+		summarizeBy: none
+		sourceColumn: UGS:_Mark_items_with_error_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column UGS_-_ADMIN_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f411d643-b131-43da-bb75-36181c3162cb
+		sourceLineageTag: UGS_-_ADMIN_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: UGS_-_ADMIN_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column UGS_-_Salesforce:_Mark_items_with_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9dde45c1-b70c-4a79-97e0-eba1ba4afa18
+		sourceLineageTag: UGS_-_Salesforce:_Mark_items_with_errors_detected
+		summarizeBy: none
+		sourceColumn: UGS_-_Salesforce:_Mark_items_with_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column UGS_-_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 24e0a74e-6aea-4150-b36f-6828f2c21265
+		sourceLineageTag: UGS_-_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: UGS_-_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin:_Mark_items_with_error_detected1
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 66189d49-4add-4a3f-bb96-1521c0ddc7a2
+		sourceLineageTag: Admin:_Mark_items_with_error_detected1
+		summarizeBy: none
+		sourceColumn: Admin:_Mark_items_with_error_detected1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Humania_-_ADMIN_Provide_additional_details_about_errors_detected
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9f8dbb86-7120-4509-85cc-53a81f424b4a
+		sourceLineageTag: Humania_-_ADMIN_Provide_additional_details_about_errors_detected
+		summarizeBy: none
+		sourceColumn: Humania_-_ADMIN_Provide_additional_details_about_errors_detected
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color_Tag
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f5cb1434-2216-4458-9244-415bb7e6eea5
+		sourceLineageTag: Color_Tag
+		summarizeBy: none
+		sourceColumn: Color_Tag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Compliance_Asset_Id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 29b105ee-4e16-41ed-a035-1a6a33a4c657
+		sourceLineageTag: Compliance_Asset_Id
+		summarizeBy: none
+		sourceColumn: Compliance_Asset_Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 025b8525-4279-4d78-ab5c-2b8a7332d31c
+		sourceLineageTag: ID
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 87194416-5b98-4fac-b998-516ccb92fb20
+		sourceLineageTag: Modified
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 63cb2b21-5743-455a-affc-749905774d5d
+		sourceLineageTag: Created
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column Version
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6cc84c64-565e-4fce-990d-c93a545605e0
+		sourceLineageTag: Version
+		summarizeBy: none
+		sourceColumn: Version
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attachments
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b482e453-e04c-48b1-88b5-1bb166efd8bd
+		sourceLineageTag: Attachments
+		summarizeBy: none
+		sourceColumn: Attachments
+
+		annotation SummarizationSetBy = Automatic
+
+	partition USGH_QA_Feed = entity
+		mode: directLake
+		source
+			entityName: USGH_QA_Feed
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

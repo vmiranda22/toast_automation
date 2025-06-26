@@ -1,0 +1,63 @@
+table teladoc_eds_dev_200_silver_empi_namespace_org_relations
+	lineageTag: 86406bdb-2bde-4947-b3f9-52c5ce2aa467
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_empi_namespace_org_relations]
+
+	column empi_namespace_organization_relation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3bd76b32-269d-441f-ad00-16a3b92beaba
+		sourceLineageTag: empi_namespace_organization_relation_id
+		summarizeBy: none
+		sourceColumn: empi_namespace_organization_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column empi_namespace_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 74bf8c9e-fc5e-484c-896d-c9622a89b427
+		sourceLineageTag: empi_namespace_cd
+		summarizeBy: none
+		sourceColumn: empi_namespace_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column benefit_restriction_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 43718520-7b0d-4166-8a63-96f2b1fe63fd
+		sourceLineageTag: benefit_restriction_cd
+		summarizeBy: none
+		sourceColumn: benefit_restriction_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: af76dfa6-ebf1-4d0d-974c-7d5ba6c4470a
+		sourceLineageTag: organization_id
+		summarizeBy: none
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: edfe28d0-b655-4f7b-b54a-c02a3636340d
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_empi_namespace_org_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_empi_namespace_org_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

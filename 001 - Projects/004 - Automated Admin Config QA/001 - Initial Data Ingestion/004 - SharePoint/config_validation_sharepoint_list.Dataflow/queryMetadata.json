@@ -1,0 +1,17 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowFastCopy": false
+  },
+  "name": "config_validation_sharepoint_list",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "gatewayObjectId": "15c85ca7-8a2c-4f02-beb3-bd948e518ac6",
+  "connections": [
+    {
+      "path": "https://teladocpa.sharepoint.com/sites/ToolsAndAutomation/",
+      "kind": "SharePoint",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"c3208e1a-3d40-4f9a-bbd8-0aec349de91f\"}"
+    }
+  ]
+}

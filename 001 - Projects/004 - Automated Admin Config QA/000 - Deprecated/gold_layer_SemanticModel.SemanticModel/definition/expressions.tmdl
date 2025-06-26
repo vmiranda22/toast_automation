@@ -1,0 +1,11 @@
+expression DatabaseQuery =
+		let
+		    database = Sql.Database("QWSWFQPPJ66UJETR3FSATUFDJE-HI4I3MGMXCHEXMMJ3HLJNIAZO4.datawarehouse.fabric.microsoft.com", "12b50e09-82b8-46fc-a5bf-44c5f748c401")
+		in
+		    database
+	lineageTag: 3ac84d32-5b70-4719-a9dc-682c8f275d70
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[melted_comparison_dataset_200_silver_group_settings]"}},"objectType":"Table"}]
+

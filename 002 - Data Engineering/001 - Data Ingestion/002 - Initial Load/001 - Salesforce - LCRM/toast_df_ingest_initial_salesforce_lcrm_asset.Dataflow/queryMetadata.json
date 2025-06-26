@@ -1,0 +1,32 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "toast_df_ingest_initial_salesforce_lcrm_asset",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Asset": {
+      "queryId": "42d934b3-46d2-4fd8-9abb-1453d87c4283",
+      "queryName": "Asset",
+      "loadEnabled": false
+    },
+    "Asset_DataDestination": {
+      "queryId": "c4263537-f544-4e51-a67c-77cf4c90ed8a",
+      "queryName": "Asset_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://login.salesforce.com/",
+      "kind": "Salesforce",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"def27be7-6ddb-403f-adec-31f84cc1c99d\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"98a0c6ac-af65-4b8d-bce8-81b180f2ec76\"}"
+    }
+  ]
+}

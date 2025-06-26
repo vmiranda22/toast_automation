@@ -1,0 +1,180 @@
+table flattened_hours
+	lineageTag: e73b1373-77fd-428a-890e-df5b1a3d0d71
+	sourceLineageTag: [dbo].[flattened_hours]
+
+	column ID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9db9ba40-ace5-4cc0-b2cd-d3ae5a6f0a8a
+		sourceLineageTag: ID
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column entryDate
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: varchar(8000)
+		lineageTag: 7bcd8983-9082-4894-bfb9-63c9ec0f8db7
+		sourceLineageTag: entryDate
+		summarizeBy: none
+		sourceColumn: entryDate
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column hours
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 62e1bfec-7e0d-418d-9b09-01300a72995b
+		sourceLineageTag: hours
+		summarizeBy: sum
+		sourceColumn: hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lastUpdateDate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 03ea57f0-225c-475e-a505-2bd15552d437
+		sourceLineageTag: lastUpdateDate
+		summarizeBy: none
+		sourceColumn: lastUpdateDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column objCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 095ee59e-a9fc-4555-aec0-3bc2f433207a
+		sourceLineageTag: objCode
+		summarizeBy: none
+		sourceColumn: objCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1d7a5eb9-e889-4569-a070-85bd1aa45038
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d92f4486-e3e4-4291-9dd7-364a68258579
+		sourceLineageTag: ownerID
+		summarizeBy: none
+		sourceColumn: ownerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5edb3890-638b-4f43-b904-cf2a827aae1a
+		sourceLineageTag: ownerName
+		summarizeBy: none
+		sourceColumn: ownerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ownerObj
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fb00547c-a900-491a-9add-5b8a4a50624c
+		sourceLineageTag: ownerObj
+		summarizeBy: none
+		sourceColumn: ownerObj
+
+		annotation SummarizationSetBy = Automatic
+
+	column projectID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ba097348-5f6e-4f98-956c-ad4d0eb892bf
+		sourceLineageTag: projectID
+		summarizeBy: none
+		sourceColumn: projectID
+
+		annotation SummarizationSetBy = Automatic
+
+	column projectName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 18e589fc-9100-425e-9853-7e2acee2cfd5
+		sourceLineageTag: projectName
+		summarizeBy: none
+		sourceColumn: projectName
+
+		annotation SummarizationSetBy = Automatic
+
+	column projectObj
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a12a5ed3-442e-478d-8de4-3dd7009f511c
+		sourceLineageTag: projectObj
+		summarizeBy: none
+		sourceColumn: projectObj
+
+		annotation SummarizationSetBy = Automatic
+
+	column taskID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 594812c7-263d-466c-89a7-c447ec7654f9
+		sourceLineageTag: taskID
+		summarizeBy: none
+		sourceColumn: taskID
+
+		annotation SummarizationSetBy = Automatic
+
+	column taskName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3ce5a0ba-6cd5-4aef-b504-21521f9629fb
+		sourceLineageTag: taskName
+		summarizeBy: none
+		sourceColumn: taskName
+
+		annotation SummarizationSetBy = Automatic
+
+	column taskObj
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8dc3211f-fbbb-40c3-879c-11ab6c88f0bd
+		sourceLineageTag: taskObj
+		summarizeBy: none
+		sourceColumn: taskObj
+
+		annotation SummarizationSetBy = Automatic
+
+	column taskTimeType
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bab37d41-c8b6-4336-9129-46d5b2f1562a
+		sourceLineageTag: taskTimeType
+		summarizeBy: none
+		sourceColumn: taskTimeType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition flattened_hours = entity
+		mode: directLake
+		source
+			entityName: flattened_hours
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

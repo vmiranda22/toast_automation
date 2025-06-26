@@ -1,0 +1,14 @@
+[
+  {
+    "name": "USGH_QA_Feed",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/USGH_QA_Feed",
+        "itemId": "5c3f7bb6-417d-476b-a093-660cef93f76c",
+        "workspaceId": "b08d383a-b8cc-4b8e-b189-d9d696a01977"
+      }
+    }
+  }
+]

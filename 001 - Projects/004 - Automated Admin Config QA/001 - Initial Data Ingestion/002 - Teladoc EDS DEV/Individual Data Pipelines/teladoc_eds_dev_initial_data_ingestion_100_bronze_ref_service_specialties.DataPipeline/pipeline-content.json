@@ -1,0 +1,252 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "MySqlSource",
+            "datasetSettings": {
+              "type": "MySqlTable",
+              "typeProperties": {
+                "tableName": "`ref_service_specialties`"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "8cfaf835-d76d-4547-a584-d491a33b3359"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "teladoc_eds_dev_100_bronze_ref_service_specialties"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "fabrictest_lakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "22ac13b1-053f-b218-464e-64db4b9a8e2d",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "service_specialty_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "service_specialty_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "service_specialty_nm",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "service_specialty_nm",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "service_specialty_uft",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "service_specialty_uft",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "service_offering_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "service_offering_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "servicing_platform_cd",
+                  "type": "String",
+                  "physicalType": "VarChar"
+                },
+                "sink": {
+                  "name": "servicing_platform_cd",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "default_min_age",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "default_min_age",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "default_max_age",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "default_max_age",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "config_visible_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "config_visible_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "payer_visible_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "payer_visible_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "support_visible_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "support_visible_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "user_visible_flg",
+                  "type": "String",
+                  "physicalType": "String"
+                },
+                "sink": {
+                  "name": "user_visible_flg",
+                  "physicalType": "string"
+                }
+              },
+              {
+                "source": {
+                  "name": "ref_service_specialty_id",
+                  "type": "Int32",
+                  "physicalType": "Int32"
+                },
+                "sink": {
+                  "name": "ref_service_specialty_id",
+                  "physicalType": "integer"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "created_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "created_by",
+                  "type": "Decimal",
+                  "physicalType": "NewDecimal"
+                },
+                "sink": {
+                  "name": "created_by",
+                  "physicalType": "decimal"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_at",
+                  "type": "DateTime",
+                  "physicalType": "DateTime"
+                },
+                "sink": {
+                  "name": "updated_at",
+                  "physicalType": "timestamp"
+                }
+              },
+              {
+                "source": {
+                  "name": "updated_by",
+                  "type": "Decimal",
+                  "physicalType": "NewDecimal"
+                },
+                "sink": {
+                  "name": "updated_by",
+                  "physicalType": "decimal"
+                }
+              }
+            ],
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "ref_service_specialties",
+        "dependsOn": []
+      }
+    ],
+    "variables": {
+      "Check": {
+        "type": "Integer",
+        "defaultValue": 0
+      }
+    }
+  }
+}

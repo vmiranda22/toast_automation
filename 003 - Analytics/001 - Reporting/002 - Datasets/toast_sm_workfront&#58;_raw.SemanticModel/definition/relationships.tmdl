@@ -1,0 +1,12 @@
+relationship 3531dac7-217b-a7d7-7a30-e683aa912f4f
+	fromColumn: workfront_hour_raw.timesheetid
+	toColumn: workfront_timesheet_raw.id
+
+relationship b4cbfc1b-8cab-af03-cd0b-c0d82015b2c4
+	fromColumn: workfront_hour_raw.taskid
+	toColumn: workfront_task_raw.id
+
+relationship 5c430342-92a2-102b-d41f-7ca5f12acb3b
+	fromColumn: workfront_timesheet_raw.userid
+	toColumn: workfront_user_raw.id
+

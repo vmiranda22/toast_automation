@@ -1,0 +1,93 @@
+table melted_comparison_dataset_200_silver_group_settings
+	lineageTag: e3c5bf53-9ae8-42a5-97b8-15a7f1f70b72
+	sourceLineageTag: [dbo].[melted_comparison_dataset_200_silver_group_settings]
+
+	column MG_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a105c307-42fb-4468-9c2e-abe332adfdef
+		sourceLineageTag: MG_id
+		summarizeBy: none
+		sourceColumn: MG_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column g_group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 27f3aff0-5e75-4251-9ad4-1b91dce193ee
+		sourceLineageTag: g_group_id
+		summarizeBy: none
+		sourceColumn: g_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column g_legacy_group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 88dd2838-7822-45a0-9bd2-947a855abfb3
+		sourceLineageTag: g_legacy_group_id
+		summarizeBy: none
+		sourceColumn: g_legacy_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column salesforce_setting_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 13d1c03d-913f-4bf3-95fb-d00a1b0be87c
+		sourceLineageTag: salesforce_setting_name
+		summarizeBy: none
+		sourceColumn: salesforce_setting_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column salesforce_setting_value
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 76702426-ebff-4b2a-8325-c5a64ee940ae
+		sourceLineageTag: salesforce_setting_value
+		summarizeBy: none
+		sourceColumn: salesforce_setting_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column admin_setting_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b5a67574-8385-468a-958c-1551cbaf8a6c
+		sourceLineageTag: admin_setting_name
+		summarizeBy: none
+		sourceColumn: admin_setting_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column admin_setting_value
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e2d7ed45-06c0-46ea-b3a6-688f63e31063
+		sourceLineageTag: admin_setting_value
+		summarizeBy: none
+		sourceColumn: admin_setting_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column does_value_match
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 55a91e0d-e986-4609-a75d-a2b0544044bf
+		sourceLineageTag: does_value_match
+		summarizeBy: none
+		sourceColumn: does_value_match
+
+		annotation SummarizationSetBy = Automatic
+
+	partition melted_comparison_dataset_200_silver_group_settings = entity
+		mode: directLake
+		source
+			entityName: melted_comparison_dataset_200_silver_group_settings
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

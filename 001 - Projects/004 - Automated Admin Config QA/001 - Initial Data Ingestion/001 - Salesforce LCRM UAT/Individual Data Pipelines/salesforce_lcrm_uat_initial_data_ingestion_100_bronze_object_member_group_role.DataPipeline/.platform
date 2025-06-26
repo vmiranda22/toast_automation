@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "salesforce_lcrm_uat_initial_data_ingestion_100_bronze_object_member_group_role"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "eab1838a-9f39-9e77-4038-c57665991feb"
+  }
+}

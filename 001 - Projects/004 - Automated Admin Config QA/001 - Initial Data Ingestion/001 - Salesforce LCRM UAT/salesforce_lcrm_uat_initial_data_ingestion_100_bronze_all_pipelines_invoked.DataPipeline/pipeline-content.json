@@ -1,0 +1,335 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "8c3812b3-d4d9-a555-4749-8007cc238542",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "member_group",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Member Group 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "contract",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "a5168646-9d64-8a23-4b46-c50d7e374178",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "account",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Account 100 Bronze Table",
+        "dependsOn": []
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "8d771b7c-3ec5-b338-4cab-0cb47fdf3ec7",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "account_relationship",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Account Relationship 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "account",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "1c894d0a-4afa-8cf4-4096-296ef47256e6",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "asset",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Asset 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "account_relationship",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "58009eb1-c854-ac49-4144-aca16211cce6",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "case",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Case 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "asset",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "75c5e449-d894-b826-468e-920b2ae3208e",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "contact",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Contact 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "case",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "32764a84-17b2-8cf7-43b7-41d66b298290",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "contract",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Contract 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "contact",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "eab1838a-9f39-9e77-4038-c57665991feb",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "member_group_role",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Member Group Role 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "member_group",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ff209159-d94d-9c82-4668-73be7f84a0d4",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "opportunity",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Opportunity 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "member_group_role",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "433d0304-a291-b82b-474d-754c1752d8a2",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "opportunity_product",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Opportunity Product 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "opportunity",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ad791c6d-77c9-98cd-46cd-3e93ba5d2be5",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "plan_specific_fees",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Plan Specific Fees 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "opportunity_product",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "5d52dd97-d4d0-af1d-4e2d-9ee07267ba68",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "product",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Product 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "plan_specific_fees",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "9c66e5f2-c10e-9d51-416f-7032381ff3c8",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "subscription",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT Subscription 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "product",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "3055ce07-b516-97c8-44d6-c381913c6721",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "user",
+        "description": "Run Initial Data Ingestion Pipeline for Salesforce UAT User 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "subscription",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

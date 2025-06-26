@@ -1,0 +1,41 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "toast_gab_df_sp_admin_payer_to_salesforce_initial_data_ingestion",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Payers Admin Salesforce Match": {
+      "queryId": "ac85514d-0e2e-4a7c-a82d-101251c2d8aa",
+      "queryName": "Payers Admin Salesforce Match"
+    },
+    "Payers Admin Salesforce Match_DataDestination": {
+      "queryId": "f440ee40-4603-414f-8be2-d16f42156ece",
+      "queryName": "Payers Admin Salesforce Match_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://teladocpa.sharepoint.com/sites/TechnicalBenefitsAdministrationEligibilityImplementation/Shared%20Documents/Flow%201B/Payers%20-%20Admin%20Salesforce%20Match.xlsx",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"c4e3fdc2-bb7d-4f2b-87f2-02ea4b8c8dff\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"9ef40d31-0c9e-463b-a42b-76907c409704\"}"
+    },
+    {
+      "path": "https://teladocpa.sharepoint.com/sites/TechnicalImplementation/Shared%20Documents/Documents/Flow%201B/Payers%20-%20Admin%20Salesforce%20Match.xlsx",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"1baf5f58-a6e6-41ab-b9ab-56e2c30a8187\"}"
+    },
+    {
+      "path": "https://teladocpa.sharepoint.com/sites/TechnicalImplementation/Shared%20Documents/Documents/Flow%201B/GAB%20-%20Processing/Payers%20-%20Admin%20Salesforce%20Match.xlsx",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"6a4bf47e-a97b-47a7-8b6d-61f89dd4050b\"}"
+    }
+  ]
+}

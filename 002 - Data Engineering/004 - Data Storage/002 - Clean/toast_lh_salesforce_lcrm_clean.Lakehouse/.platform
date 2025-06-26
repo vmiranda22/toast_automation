@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "toast_lh_salesforce_lcrm_clean"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "217f2f99-78d9-aef1-46c5-d3e3efc50c32"
+  }
+}

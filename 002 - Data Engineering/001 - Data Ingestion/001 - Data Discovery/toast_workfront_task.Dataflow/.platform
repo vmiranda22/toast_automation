@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "toast_workfront_task"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d368f47f-5c70-b7c5-420b-993a927e3e35"
+  }
+}

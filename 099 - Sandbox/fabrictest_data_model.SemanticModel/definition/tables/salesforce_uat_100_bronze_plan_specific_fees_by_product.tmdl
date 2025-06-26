@@ -1,0 +1,314 @@
+table salesforce_uat_100_bronze_plan_specific_fees_by_product
+	lineageTag: 3d9a33d9-7101-4df6-8f59-22ac9d59fb15
+	sourceLineageTag: [dbo].[salesforce_uat_100_bronze_plan_specific_fees_by_product]
+
+	column Id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e43b4184-d80d-4f68-ae8d-b93b22c52982
+		sourceLineageTag: Id
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: aee08eed-4686-43c9-a1d9-b5a154071184
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 1eb44b8e-54f4-437b-b4a4-672331626f05
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f98e1754-fb91-44b6-9625-809cf5f4a921
+		sourceLineageTag: CreatedById
+		summarizeBy: none
+		sourceColumn: CreatedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 85991070-d293-47a6-a8c2-21c059f221a6
+		sourceLineageTag: LastModifiedDate
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedById
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a6927942-d189-4a01-8236-2e2df4f9319c
+		sourceLineageTag: LastModifiedById
+		summarizeBy: none
+		sourceColumn: LastModifiedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column SystemModstamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f9e0fb97-c329-4bcc-b77c-30eae058aa2b
+		sourceLineageTag: SystemModstamp
+		summarizeBy: none
+		sourceColumn: SystemModstamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Member_Group__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7c167d40-289d-4876-af0a-9b8e1a06557e
+		sourceLineageTag: Member_Group__c
+		summarizeBy: none
+		sourceColumn: Member_Group__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Actual_Copay_May_Be_Less__c
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 471db90c-c6e2-4c87-8764-5cd579d6e47f
+		sourceLineageTag: Actual_Copay_May_Be_Less__c
+		summarizeBy: none
+		sourceColumn: Actual_Copay_May_Be_Less__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Consult_Fee_Mbr_Pd__c
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: 9a2e440b-eda5-4cdd-aa4d-e285b3d8e732
+		sourceLineageTag: Consult_Fee_Mbr_Pd__c
+		summarizeBy: sum
+		sourceColumn: Consult_Fee_Mbr_Pd__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Consult_Fee_Plan_Pd__c
+		dataType: double
+		sourceProviderType: decimal(38, 18)
+		lineageTag: b2ad4e6c-caba-448e-b490-dc07f5670562
+		sourceLineageTag: Consult_Fee_Plan_Pd__c
+		summarizeBy: sum
+		sourceColumn: Consult_Fee_Plan_Pd__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Group_Number__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 24cc68fa-2fb5-4256-834f-988561f28dac
+		sourceLineageTag: Group_Number__c
+		summarizeBy: none
+		sourceColumn: Group_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Member_Group_Name__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f158970d-f4e4-4dc5-8ccc-d9e2552a1075
+		sourceLineageTag: Member_Group_Name__c
+		summarizeBy: none
+		sourceColumn: Member_Group_Name__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_End_Date__c
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: f8211272-8905-4d14-82e1-2381dc551e91
+		sourceLineageTag: Product_End_Date__c
+		summarizeBy: none
+		sourceColumn: Product_End_Date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Start_Date__c
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 446fa4be-6aee-4d39-8962-3ef10ec9db2d
+		sourceLineageTag: Product_Start_Date__c
+		summarizeBy: none
+		sourceColumn: Product_Start_Date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 033ceae9-d981-4d83-beee-caedf9a32aac
+		sourceLineageTag: Product__c
+		summarizeBy: none
+		sourceColumn: Product__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Source_Id__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ec4e2550-2c06-4b00-a34e-e5bb1764944b
+		sourceLineageTag: Source_Id__c
+		summarizeBy: none
+		sourceColumn: Source_Id__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subscription__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8716ede9-1984-4baa-a57f-d5cd80a4f26e
+		sourceLineageTag: Subscription__c
+		summarizeBy: none
+		sourceColumn: Subscription__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Asset_Name__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1ae7a3fa-a773-4f0a-bf93-cc75b9ee0995
+		sourceLineageTag: Asset_Name__c
+		summarizeBy: none
+		sourceColumn: Asset_Name__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Asset__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7e683c17-265f-4275-a994-96943b5d4887
+		sourceLineageTag: Asset__c
+		summarizeBy: none
+		sourceColumn: Asset__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column PSF_ProductCode__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c5e8c47b-376d-481a-9e4a-53898421a6c5
+		sourceLineageTag: PSF_ProductCode__c
+		summarizeBy: none
+		sourceColumn: PSF_ProductCode__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bill_to_Account__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 78bfa8ff-a800-4018-b2ac-ce8b731c4d5e
+		sourceLineageTag: Bill_to_Account__c
+		summarizeBy: none
+		sourceColumn: Bill_to_Account__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Payer_Account__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4378ae03-973a-4780-8284-90adf09c1cee
+		sourceLineageTag: Payer_Account__c
+		summarizeBy: none
+		sourceColumn: Payer_Account__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sold_to_Account__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5d4210d7-c15f-44dc-9ca1-704515048e9b
+		sourceLineageTag: Sold_to_Account__c
+		summarizeBy: none
+		sourceColumn: Sold_to_Account__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bill_To_Account_GUID__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a75c539c-bb3c-49ff-bc32-ace59eb98095
+		sourceLineageTag: Bill_To_Account_GUID__c
+		summarizeBy: none
+		sourceColumn: Bill_To_Account_GUID__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Payer_Account_GUID__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ce979961-3b37-473c-8e9a-10d2db9ccfa8
+		sourceLineageTag: Payer_Account_GUID__c
+		summarizeBy: none
+		sourceColumn: Payer_Account_GUID__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sold_To_Account_GUID__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c3a6a281-7233-4cf6-b174-57e02d5ba252
+		sourceLineageTag: Sold_To_Account_GUID__c
+		summarizeBy: none
+		sourceColumn: Sold_To_Account_GUID__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column USGH_APP_Opt_Out__c
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 1a32c660-f548-4ed4-a519-356e3c6ea71c
+		sourceLineageTag: USGH_APP_Opt_Out__c
+		summarizeBy: none
+		sourceColumn: USGH_APP_Opt_Out__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column GLP_1_Model__c
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cd669ad1-c784-44a4-ae7d-570e46089e9e
+		sourceLineageTag: GLP_1_Model__c
+		summarizeBy: none
+		sourceColumn: GLP_1_Model__c
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_100_bronze_plan_specific_fees_by_product = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_100_bronze_plan_specific_fees_by_product
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

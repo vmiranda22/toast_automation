@@ -1,0 +1,127 @@
+table teladoc_eds_dev_200_silver_external_group_relations
+	lineageTag: ebd8b5e4-adfb-4054-a75b-7b03bb4c8655
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_external_group_relations]
+
+	column external_group_relation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b66b4faf-a4a5-45b7-8a4c-defcddeb827f
+		sourceLineageTag: external_group_relation_id
+		summarizeBy: none
+		sourceColumn: external_group_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column external_group_relation_value
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b533fc58-8d63-425a-8bc4-16df4b114e63
+		sourceLineageTag: external_group_relation_value
+		summarizeBy: none
+		sourceColumn: external_group_relation_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column external_group_relation_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d26847b5-fa7a-437a-87ec-c9e5253af498
+		sourceLineageTag: external_group_relation_type
+		summarizeBy: none
+		sourceColumn: external_group_relation_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e04e9a60-743d-4c9f-b94d-15b2e503cb82
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payer_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f396ba2d-3ef6-47a0-8eaf-2f76b063b2f7
+		sourceLineageTag: payer_id
+		summarizeBy: none
+		sourceColumn: payer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: b3a92107-de6c-46d5-8201-25531dc0619b
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 3149abb7-5f30-4b91-b194-69c317c20e36
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 873e7008-bead-4fbe-85e4-756a96cca6b6
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 3dd61713-dccd-46ed-a355-0d6412951186
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 05ba070f-fe34-4409-a869-e90667275ea7
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column cc_real_time_exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f006d875-61fb-4d35-a67f-86798238a1f6
+		sourceLineageTag: cc_real_time_exclusion_cd
+		summarizeBy: none
+		sourceColumn: cc_real_time_exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_external_group_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_external_group_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

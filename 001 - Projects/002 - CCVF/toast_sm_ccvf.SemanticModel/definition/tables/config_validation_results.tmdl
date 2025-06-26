@@ -1,0 +1,103 @@
+table config_validation_results
+	lineageTag: f77ce784-073f-42c4-9ffd-354dfd140b89
+	sourceLineageTag: [dbo].[config_validation_results]
+
+	column client_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 47054753-f235-4959-8057-336c6c345b1d
+		sourceLineageTag: client_id
+		summarizeBy: none
+		sourceColumn: client_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5c4e20e6-53c1-49da-b621-b2f796d223b8
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fa922396-abbf-4c6a-9457-8c7cf6cf6cac
+		sourceLineageTag: field_name
+		summarizeBy: none
+		sourceColumn: field_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_value
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 91fe8e3a-fcfb-49a7-81d0-844025e8c684
+		sourceLineageTag: actual_value
+		summarizeBy: none
+		sourceColumn: actual_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column expected_value
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 976d355e-c318-4a97-b214-b7393a6fa6a5
+		sourceLineageTag: expected_value
+		summarizeBy: none
+		sourceColumn: expected_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column comparison_operator
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e2b5a65b-b132-4ed3-8e02-9a178f7e4a2e
+		sourceLineageTag: comparison_operator
+		summarizeBy: none
+		sourceColumn: comparison_operator
+
+		annotation SummarizationSetBy = Automatic
+
+	column pass_fail
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4ea63211-1e77-4483-85cc-b207902f7f17
+		sourceLineageTag: pass_fail
+		summarizeBy: none
+		sourceColumn: pass_fail
+
+		annotation SummarizationSetBy = Automatic
+
+	column rule_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8792db04-cc99-4ace-b373-a11479ca8140
+		sourceLineageTag: rule_id
+		summarizeBy: none
+		sourceColumn: rule_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column rule_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e2f5aa2d-8a92-4b6b-87a2-3d300702735b
+		sourceLineageTag: rule_name
+		summarizeBy: none
+		sourceColumn: rule_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition config_validation_results = entity
+		mode: directLake
+		source
+			entityName: config_validation_results
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

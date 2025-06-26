@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventhouse",
+    "displayName": "toast_eh_dev",
+    "description": "toast_eh_dev"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "64cf19c1-8443-90f4-48cc-c8aeed924817"
+  }
+}

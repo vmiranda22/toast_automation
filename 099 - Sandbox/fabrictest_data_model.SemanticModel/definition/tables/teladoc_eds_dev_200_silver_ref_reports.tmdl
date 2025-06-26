@@ -1,0 +1,73 @@
+table teladoc_eds_dev_200_silver_ref_reports
+	lineageTag: 9b4f36d5-e63d-4ab0-8651-0708914c98f2
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_ref_reports]
+
+	column ref_report_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9664d849-d010-4456-aae5-fbacb0d28f64
+		sourceLineageTag: ref_report_id
+		summarizeBy: none
+		sourceColumn: ref_report_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 81fe487b-743f-499c-9a35-db4c4d7f2e0f
+		sourceLineageTag: report_cd
+		summarizeBy: none
+		sourceColumn: report_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9fc0416d-3faf-4b2a-a620-cf4c8373b3cf
+		sourceLineageTag: report_nm
+		summarizeBy: none
+		sourceColumn: report_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c536b843-38c7-4eff-83e4-c91232cbe563
+		sourceLineageTag: report_type_cd
+		summarizeBy: none
+		sourceColumn: report_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column flavor_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 81d665cb-d356-4cb2-ba88-8e20a615456e
+		sourceLineageTag: flavor_cd
+		summarizeBy: none
+		sourceColumn: flavor_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4ade38b4-9d06-4429-8561-0abdd7bee2e1
+		sourceLineageTag: service_specialty_cd
+		summarizeBy: none
+		sourceColumn: service_specialty_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_ref_reports = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_ref_reports
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

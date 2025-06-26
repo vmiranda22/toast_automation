@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "fabrictest_dataflow_excel_sot_data_ingestion"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9df5aa28-2f90-b555-4ce6-67286d24da6c"
+  }
+}

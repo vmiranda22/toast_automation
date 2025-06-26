@@ -1,0 +1,87 @@
+table flattened_users
+	lineageTag: d47883d5-6326-44a0-bf3d-7db46748c815
+	sourceLineageTag: [dbo].[flattened_users]
+
+	column ID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 83f33003-80c1-4a86-89e5-46865033225e
+		sourceLineageTag: ID
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column isActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: d7a5b297-ec6d-45c2-ac2a-b7b4f4b0bc85
+		sourceLineageTag: isActive
+		summarizeBy: none
+		sourceColumn: isActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastUpdateDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: varchar(8000)
+		lineageTag: 5ad2b686-60d1-4ffe-b611-9c9aa2a30b9f
+		sourceLineageTag: lastUpdateDate
+		summarizeBy: none
+		sourceColumn: lastUpdateDate
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 731efc6e-ccc4-4ed0-93aa-9e579ebd6ef4
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column objCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a1b022af-75bf-4dd6-8b15-c7a042091cb8
+		sourceLineageTag: objCode
+		summarizeBy: none
+		sourceColumn: objCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column username
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f1bcdda8-b5e2-4939-a0c9-4528af601f33
+		sourceLineageTag: username
+		summarizeBy: none
+		sourceColumn: username
+
+		annotation SummarizationSetBy = Automatic
+
+	column managerName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9a196586-494d-4bba-84a1-42065918cd05
+		sourceLineageTag: managerName
+		summarizeBy: none
+		sourceColumn: managerName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition flattened_users = entity
+		mode: directLake
+		source
+			entityName: flattened_users
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

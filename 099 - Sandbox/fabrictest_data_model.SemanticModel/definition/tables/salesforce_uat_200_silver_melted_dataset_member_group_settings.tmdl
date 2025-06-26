@@ -1,0 +1,54 @@
+table salesforce_uat_200_silver_melted_dataset_member_group_settings
+	lineageTag: 67a935dd-17af-4607-8a95-8bc3641ef22c
+	sourceLineageTag: [dbo].[salesforce_uat_200_silver_melted_dataset_member_group_settings]
+
+	column MG_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1d90417e-21c7-4f06-aaea-05bde105720a
+		sourceLineageTag: MG_id
+		summarizeBy: none
+		sourceColumn: MG_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column MG_legacy_group_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f65ceb7c-9822-4061-a678-d1479769d599
+		sourceLineageTag: MG_legacy_group_id
+		summarizeBy: sum
+		sourceColumn: MG_legacy_group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column salesforce_setting_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 16a5fc40-0437-4a02-97cc-dc8b0c75e600
+		sourceLineageTag: salesforce_setting_name
+		summarizeBy: none
+		sourceColumn: salesforce_setting_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column salesforce_setting_value
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 31494eb4-c576-46ce-9dfe-b4036160f29b
+		sourceLineageTag: salesforce_setting_value
+		summarizeBy: none
+		sourceColumn: salesforce_setting_value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_200_silver_melted_dataset_member_group_settings = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_200_silver_melted_dataset_member_group_settings
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

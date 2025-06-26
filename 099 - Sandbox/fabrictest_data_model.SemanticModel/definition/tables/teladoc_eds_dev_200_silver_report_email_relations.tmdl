@@ -1,0 +1,63 @@
+table teladoc_eds_dev_200_silver_report_email_relations
+	lineageTag: 57efd868-6bff-49f2-91ad-4a87de6fa458
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_report_email_relations]
+
+	column report_email_relation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 37e7b10a-58e4-4598-8c5b-77a331cd61c5
+		sourceLineageTag: report_email_relation_id
+		summarizeBy: none
+		sourceColumn: report_email_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column party_email_address_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 08dbd1c5-0f6e-4f85-bef6-e8d64dc83caf
+		sourceLineageTag: party_email_address_id
+		summarizeBy: none
+		sourceColumn: party_email_address_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_affiliation_relation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 65eb1f71-3823-4254-94cd-4afa7fd89373
+		sourceLineageTag: report_affiliation_relation_id
+		summarizeBy: none
+		sourceColumn: report_affiliation_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column email_send_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6290db64-a0bb-4b8a-ad38-57e0a89670b3
+		sourceLineageTag: email_send_cd
+		summarizeBy: none
+		sourceColumn: email_send_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 15b2f39a-9518-41d9-af06-34a36a9afff7
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_report_email_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_report_email_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

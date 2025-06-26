@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "LH_HealthChecker"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b3ef4b37-8213-af27-429b-7db22aaca13c"
+  }
+}

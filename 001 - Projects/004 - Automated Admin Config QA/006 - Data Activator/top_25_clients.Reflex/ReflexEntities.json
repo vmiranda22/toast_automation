@@ -1,0 +1,154 @@
+[
+  {
+    "uniqueIdentifier": "0b1dd70a-cfde-4e21-bcdf-5e2dce78922e",
+    "payload": {
+      "name": "top_25_clients_dashboard",
+      "type": "kqlQueries"
+    },
+    "type": "container-v1"
+  },
+  {
+    "uniqueIdentifier": "d3d8c0d9-ab63-44c2-8b61-9482e82fba22",
+    "payload": {
+      "name": "fabrictest_eventhouse event",
+      "runSettings": {
+        "executionIntervalInSeconds": 300
+      },
+      "query": {
+        "queryString": "external_table('top_25_clients')"
+      },
+      "eventhouseItem": {
+        "itemId": "fe0630e7-ff93-afca-4b20-db05da4819f9",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemType": "KustoDatabase"
+      },
+      "queryParameters": [],
+      "metadata": {
+        "workspaceId": "b08d383a-b8cc-4b8e-b189-d9d696a01977",
+        "measureName": "QA_Score",
+        "dashboardId": "a4b83236-d494-4ee7-b24a-b053053855cf",
+        "visualId": "af4d8397-84bd-4de9-a698-996a37b187cb"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "0b1dd70a-cfde-4e21-bcdf-5e2dce78922e"
+      }
+    },
+    "type": "kqlSource-v1"
+  },
+  {
+    "uniqueIdentifier": "19df2876-5251-4877-9ac1-27897638aacd",
+    "payload": {
+      "name": "fabrictest_eventhouse event",
+      "parentContainer": {
+        "targetUniqueIdentifier": "0b1dd70a-cfde-4e21-bcdf-5e2dce78922e"
+      },
+      "definition": {
+        "type": "Event",
+        "instance": "{\"templateId\":\"SourceEvent\",\"templateVersion\":\"1.1\",\"steps\":[{\"name\":\"SourceEventStep\",\"id\":\"58d66b2c-2b56-4ce9-a5ca-16926a860a88\",\"rows\":[{\"name\":\"SourceSelector\",\"kind\":\"SourceReference\",\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"d3d8c0d9-ab63-44c2-8b61-9482e82fba22\"}]}]}]}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "6b047900-6dc6-40e3-aa3f-ad395a6f8667",
+    "payload": {
+      "name": "Client_Name",
+      "parentContainer": {
+        "targetUniqueIdentifier": "0b1dd70a-cfde-4e21-bcdf-5e2dce78922e"
+      },
+      "definition": {
+        "type": "Object"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "3080c8cd-f5f8-42b0-88ac-ef32a6e2ac9c",
+    "payload": {
+      "name": "Client_Name",
+      "parentObject": {
+        "targetUniqueIdentifier": "6b047900-6dc6-40e3-aa3f-ad395a6f8667"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "0b1dd70a-cfde-4e21-bcdf-5e2dce78922e"
+      },
+      "definition": {
+        "type": "Attribute",
+        "instance": "{\"templateId\":\"IdentityPartAttribute\",\"templateVersion\":\"1.1\",\"steps\":[{\"name\":\"IdPartStep\",\"id\":\"bf09837f-e070-4ec6-b5cf-8f15ef82758e\",\"rows\":[{\"name\":\"TypeAssertion\",\"kind\":\"TypeAssertion\",\"arguments\":[{\"name\":\"op\",\"type\":\"string\",\"value\":\"Text\"},{\"name\":\"format\",\"type\":\"string\",\"value\":\"\"}]}]}]}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "82732ddc-31d6-4344-b84c-7a42109b1764",
+    "payload": {
+      "name": "Client_Name tuple",
+      "parentObject": {
+        "targetUniqueIdentifier": "6b047900-6dc6-40e3-aa3f-ad395a6f8667"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "0b1dd70a-cfde-4e21-bcdf-5e2dce78922e"
+      },
+      "definition": {
+        "type": "Attribute",
+        "instance": "{\"templateId\":\"IdentityTupleAttribute\",\"templateVersion\":\"1.1\",\"steps\":[{\"name\":\"IdStructureStep\",\"id\":\"91218c79-b346-4e0b-a193-e5edbeac7554\",\"rows\":[{\"name\":\"IdPart\",\"kind\":\"IdPart\",\"arguments\":[{\"kind\":\"AttributeReference\",\"type\":\"complex\",\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"3080c8cd-f5f8-42b0-88ac-ef32a6e2ac9c\"}],\"name\":\"idPart\"}]}]}]}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "b1068fa2-1d33-4451-a1e3-befe1e0fe64e",
+    "payload": {
+      "name": "fabrictest_eventhouse event by Client_Name",
+      "parentObject": {
+        "targetUniqueIdentifier": "6b047900-6dc6-40e3-aa3f-ad395a6f8667"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "0b1dd70a-cfde-4e21-bcdf-5e2dce78922e"
+      },
+      "definition": {
+        "type": "Event",
+        "instance": "{\"templateId\":\"SplitEvent\",\"templateVersion\":\"1.1\",\"steps\":[{\"name\":\"SplitEventStep\",\"id\":\"a93553f6-2d19-4dd4-8a24-6ed8903ff550\",\"rows\":[{\"name\":\"EventSelector\",\"kind\":\"Event\",\"arguments\":[{\"kind\":\"EventReference\",\"type\":\"complex\",\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"19df2876-5251-4877-9ac1-27897638aacd\"}],\"name\":\"event\"}]},{\"name\":\"FieldIdMapping\",\"kind\":\"FieldIdMapping\",\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"Client_Name\"},{\"kind\":\"AttributeReference\",\"type\":\"complex\",\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"3080c8cd-f5f8-42b0-88ac-ef32a6e2ac9c\"}],\"name\":\"idPart\"}]},{\"name\":\"SplitEventOptions\",\"kind\":\"EventOptions\",\"arguments\":[{\"name\":\"isAuthoritative\",\"type\":\"boolean\",\"value\":true}]}]}]}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "4899dc03-32a7-46d3-8e58-de5d07e9e3f3",
+    "payload": {
+      "name": "QA_Score",
+      "parentObject": {
+        "targetUniqueIdentifier": "6b047900-6dc6-40e3-aa3f-ad395a6f8667"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "0b1dd70a-cfde-4e21-bcdf-5e2dce78922e"
+      },
+      "definition": {
+        "type": "Attribute",
+        "instance": "{\"templateId\":\"BasicEventAttribute\",\"templateVersion\":\"1.1\",\"steps\":[{\"name\":\"EventSelectStep\",\"id\":\"133c9ecb-b3c7-4a4d-a127-e853b021c37b\",\"rows\":[{\"name\":\"EventSelector\",\"kind\":\"Event\",\"arguments\":[{\"kind\":\"EventReference\",\"type\":\"complex\",\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"b1068fa2-1d33-4451-a1e3-befe1e0fe64e\"}],\"name\":\"event\"}]},{\"name\":\"EventFieldSelector\",\"kind\":\"EventField\",\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"QA_Score\"}]}]},{\"name\":\"EventComputeStep\",\"id\":\"fb801dbe-2d1f-4509-a966-ecba1764ad72\",\"rows\":[{\"name\":\"TypeAssertion\",\"kind\":\"TypeAssertion\",\"arguments\":[{\"name\":\"op\",\"type\":\"string\",\"value\":\"Text\"},{\"name\":\"format\",\"type\":\"string\",\"value\":\"\"}]}]}]}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "b47a118e-a552-4c09-b80d-840ddb13f981",
+    "payload": {
+      "name": "fabrictest_eventhouse alert",
+      "parentObject": {
+        "targetUniqueIdentifier": "6b047900-6dc6-40e3-aa3f-ad395a6f8667"
+      },
+      "parentContainer": {
+        "targetUniqueIdentifier": "0b1dd70a-cfde-4e21-bcdf-5e2dce78922e"
+      },
+      "definition": {
+        "type": "Rule",
+        "instance": "{\"templateId\":\"AttributeTrigger\",\"templateVersion\":\"1.1\",\"steps\":[{\"name\":\"ScalarSelectStep\",\"id\":\"4f2d5ed3-61ea-4732-99b0-6b315a38ec60\",\"rows\":[{\"name\":\"AttributeSelector\",\"kind\":\"Attribute\",\"arguments\":[{\"kind\":\"AttributeReference\",\"type\":\"complex\",\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"4899dc03-32a7-46d3-8e58-de5d07e9e3f3\"}],\"name\":\"attribute\"}]}]},{\"id\":\"e5a0b579-f66d-483d-a56c-96aad620ed9b\",\"name\":\"ScalarDetectStep\",\"rows\":[{\"arguments\":[{\"name\":\"op\",\"type\":\"string\",\"value\":\"BecomesGreaterThanOrEqualTo\"},{\"name\":\"value\",\"type\":\"number\",\"value\":99}],\"kind\":\"NumberBecomes\",\"name\":\"NumberBecomes\"}]},{\"name\":\"ActStep\",\"id\":\"5660ecdb-5cd6-4135-9879-899dcba69872\",\"rows\":[{\"arguments\":[{\"name\":\"messageLocale\",\"type\":\"string\",\"value\":\"en-us\"},{\"name\":\"sentTo\",\"type\":\"array\",\"values\":[{\"type\":\"string\",\"value\":\"RMontero@teladochealth.com\"}]},{\"name\":\"copyTo\",\"type\":\"array\",\"values\":[]},{\"name\":\"bCCTo\",\"type\":\"array\",\"values\":[]},{\"name\":\"subject\",\"type\":\"array\",\"values\":[{\"name\":\"string\",\"type\":\"string\",\"value\":\"Top 25 Client QA Score Alert\"}]},{\"name\":\"headline\",\"type\":\"array\",\"values\":[{\"name\":\"string\",\"type\":\"string\",\"value\":\"QA Score is now at: \"},{\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"4899dc03-32a7-46d3-8e58-de5d07e9e3f3\"}],\"kind\":\"AttributeReference\",\"type\":\"complex\"},{\"name\":\"string\",\"type\":\"string\",\"value\":\" \"}]},{\"name\":\"optionalMessage\",\"type\":\"array\",\"values\":[{\"name\":\"string\",\"type\":\"string\",\"value\":\"QA Score is now at: \"},{\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"4899dc03-32a7-46d3-8e58-de5d07e9e3f3\"}],\"kind\":\"AttributeReference\",\"type\":\"complex\"},{\"name\":\"string\",\"type\":\"string\",\"value\":\" \"}]},{\"name\":\"additionalInformation\",\"type\":\"array\",\"values\":[{\"arguments\":[{\"name\":\"name\",\"type\":\"string\",\"value\":\"QA_Score\"},{\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"4899dc03-32a7-46d3-8e58-de5d07e9e3f3\"}],\"kind\":\"AttributeReference\",\"name\":\"reference\",\"type\":\"complexReference\"}],\"kind\":\"NameReferencePair\",\"type\":\"complex\"}]}],\"kind\":\"EmailMessage\",\"name\":\"EmailBinding\"}]}]}",
+        "settings": {
+          "shouldRun": true,
+          "shouldApplyRuleOnUpdate": true
+        }
+      }
+    },
+    "type": "timeSeriesView-v1"
+  }
+]

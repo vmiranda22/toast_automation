@@ -1,0 +1,44 @@
+table teladoc_eds_dev_200_silver_melted_dataset_organizations_settings
+	lineageTag: 271af50c-7e78-4b47-9d70-678d12ac48c5
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_melted_dataset_organizations_settings]
+
+	column o_organization_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: aaeb50f8-d760-45e7-b6de-69c005ab4158
+		sourceLineageTag: o_organization_id
+		summarizeBy: sum
+		sourceColumn: o_organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column admin_setting_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: adb08646-425c-4868-9ca2-97d0a96ef6d9
+		sourceLineageTag: admin_setting_name
+		summarizeBy: none
+		sourceColumn: admin_setting_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column admin_setting_value
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 17958815-c1b2-427b-b83d-e42d8dd807bc
+		sourceLineageTag: admin_setting_value
+		summarizeBy: none
+		sourceColumn: admin_setting_value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_melted_dataset_organizations_settings = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_melted_dataset_organizations_settings
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

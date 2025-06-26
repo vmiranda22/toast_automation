@@ -1,0 +1,12 @@
+relationship db30f889-6cb8-887b-8cf5-bb1e386aadea
+	fromColumn: flattened_hierarchy_bridge_table.org_id
+	toColumn: teladoc_eds_dev_200_silver_organizations.organization_id
+
+relationship 69723056-4a53-72bc-c75a-d38bb9b858e4
+	fromColumn: flattened_hierarchy_bridge_table.group_id
+	toColumn: teladoc_eds_dev_300_gold_admin_group_information.group_id
+
+relationship 5b155ab9-3524-a531-72ea-80f1f9c1b511
+	fromColumn: melted_comparison_dataset_200_silver_group_settings.g_group_id
+	toColumn: teladoc_eds_dev_300_gold_admin_group_information.group_id
+

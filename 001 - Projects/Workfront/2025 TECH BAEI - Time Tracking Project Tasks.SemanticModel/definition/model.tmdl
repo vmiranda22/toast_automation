@@ -1,0 +1,23 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.144.7664.8 (Main)+69a73eef84ec776ff226f506a1fad2e170c47a85
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+ref table workfront_prod_hour
+ref table workfront_prod_project
+ref table workfront_prod_user
+ref table workfront_prod_task
+ref table workfront_dim_calendar
+
+ref cultureInfo en-US
+

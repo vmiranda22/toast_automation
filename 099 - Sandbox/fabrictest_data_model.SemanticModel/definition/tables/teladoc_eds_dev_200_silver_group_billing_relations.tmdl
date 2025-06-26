@@ -1,0 +1,63 @@
+table teladoc_eds_dev_200_silver_group_billing_relations
+	lineageTag: 604272a8-7655-4f26-8318-0f615fc25a72
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_group_billing_relations]
+
+	column group_billing_relation_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 16050f5b-4ed1-4faf-891f-7859c30b3c2b
+		sourceLineageTag: group_billing_relation_id
+		summarizeBy: none
+		sourceColumn: group_billing_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ae7b050b-b7d4-406a-a026-5169530a55cd
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column billing_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9dd81f1a-da98-4ae0-8b93-aa57e661b1e5
+		sourceLineageTag: billing_id
+		summarizeBy: none
+		sourceColumn: billing_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column billing_fee_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 08bd5aef-2165-4468-a52e-8b6ed0eee904
+		sourceLineageTag: billing_fee_type_cd
+		summarizeBy: none
+		sourceColumn: billing_fee_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d10efff5-0229-4bc2-af5f-ad11990e51bc
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_group_billing_relations = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_group_billing_relations
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

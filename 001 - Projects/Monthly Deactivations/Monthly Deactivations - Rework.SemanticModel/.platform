@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Monthly Deactivations - Rework"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7a8112d5-ce6c-b284-4333-770ef36858a5"
+  }
+}

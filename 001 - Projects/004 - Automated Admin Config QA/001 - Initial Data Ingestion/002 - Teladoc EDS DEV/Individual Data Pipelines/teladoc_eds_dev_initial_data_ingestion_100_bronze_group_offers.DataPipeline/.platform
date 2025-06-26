@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "teladoc_eds_dev_initial_data_ingestion_100_bronze_group_offers"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7a57935c-dc5b-ae85-4e94-2037ee7cc5c8"
+  }
+}

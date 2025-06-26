@@ -1,0 +1,43 @@
+table teladoc_eds_dev_200_silver_ref_geographic_regions
+	lineageTag: cdec3156-cd1e-4c80-aa8f-3f5e406584aa
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_ref_geographic_regions]
+
+	column ref_geographic_region_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b8b4758c-8fcf-41d0-8eb6-39b32a7a6d14
+		sourceLineageTag: ref_geographic_region_id
+		summarizeBy: none
+		sourceColumn: ref_geographic_region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column geographic_region_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3875342c-b726-44b0-a137-a0cd6787363f
+		sourceLineageTag: geographic_region_cd
+		summarizeBy: none
+		sourceColumn: geographic_region_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column geographic_region_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4428b098-4c15-4efd-b363-93dade53a9f2
+		sourceLineageTag: geographic_region_nm
+		summarizeBy: none
+		sourceColumn: geographic_region_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_ref_geographic_regions = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_ref_geographic_regions
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

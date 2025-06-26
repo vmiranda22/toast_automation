@@ -1,0 +1,115 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "filters": "[{\"name\":\"69d69ed08c9c94338b0e\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Query1\"}},\"Property\":\"client_code\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"client_code\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"''\"}}],[{\"Literal\":{\"Value\":\"' sent escalation to Maddy Otto 3/17/2025\\\"'\"}}],[{\"Literal\":{\"Value\":\"'0'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Client Code View",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "594e666aa75e68d5783b",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1c136884fad83f521b13\",\"layouts\":[{\"id\":0,\"position\":{\"x\":514.5288753799392,\"y\":0,\"z\":1,\"width\":367.6595744680851,\"height\":68.08510638297872,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Query1.client_code\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"client_code\"},\"Name\":\"Query1.client_code\",\"NativeReferenceName\":\"client_code\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"client_code\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'3M'\"}}]]}}}]}},\"selfFilter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Contains\":{\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"client_code\"}},\"Right\":{\"Literal\":{\"Value\":\"'Airborn'\"}}}},\"Annotations\":{\"PowerBI.MParameterBehavior\":1}}]}}}}]}}}",
+          "filters": "[{\"name\":\"f761eded9bd633a52cdc\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Query1\"}},\"Property\":\"client_code\"}},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 68.09,
+          "width": 367.66,
+          "x": 514.53,
+          "y": 0.00,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"43d456ed6de2022bedff\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":5,\"width\":514.5288753799392,\"height\":90.45592705167174,\"tabOrder\":5}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Query1.File_Date\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"File_Date\"},\"Name\":\"Query1.File_Date\",\"NativeReferenceName\":\"File_Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"File_Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2025-05-01T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"File_Date\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2025-05-02T00:00:00'\"}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 90.46,
+          "width": 514.53,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 5.00
+        },
+        {
+          "config": "{\"name\":\"4cafc3bb11e1f45d8d17\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":90.45592705167174,\"z\":3,\"width\":788.8145896656536,\"height\":296.65653495440733,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Query1.File_Date.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"Query1.File_Date.Variation.Date Hierarchy.Month\",\"active\":true},{\"queryRef\":\"Query1.File_Date.Variation.Date Hierarchy.Day\"}],\"Y\":[{\"queryRef\":\"Sum(Query1.Total Terminations)\"}],\"Series\":[{\"queryRef\":\"Query1.client_code\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Name\":\"Variation\",\"Property\":\"File_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Query1.File_Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"File_Date Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Name\":\"Variation\",\"Property\":\"File_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"Query1.File_Date.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"File_Date Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Name\":\"Variation\",\"Property\":\"File_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"Query1.File_Date.Variation.Date Hierarchy.Day\",\"NativeReferenceName\":\"File_Date Day\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Terminations\"}},\"Function\":0},\"Name\":\"Sum(Query1.Total Terminations)\",\"NativeReferenceName\":\"Sum of Total Terminations\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"client_code\"},\"Name\":\"Query1.client_code\",\"NativeReferenceName\":\"client_code\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 296.66,
+          "width": 788.81,
+          "x": 0.00,
+          "y": 90.46,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"518fa3d6d0c64d16a081\",\"layouts\":[{\"id\":0,\"position\":{\"x\":788.8145896656534,\"y\":249.9696048632222,\"z\":8,\"width\":491.1854103343465,\"height\":79.75683890577508,\"tabOrder\":8}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"Avg(Query1.Churn)\"},{\"queryRef\":\"Max(Query1.Churn)\"},{\"queryRef\":\"Sum(Query1.Churn)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Churn\"}},\"Function\":3},\"Name\":\"Sum(Query1.Churn)\",\"NativeReferenceName\":\"Min\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Churn\"}},\"Function\":1},\"Name\":\"Avg(Query1.Churn)\",\"NativeReferenceName\":\"Average\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Churn\"}},\"Function\":4},\"Name\":\"Max(Query1.Churn)\",\"NativeReferenceName\":\"Max\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Churn\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(Query1.Total Enrolled)\":{\"displayName\":\"Average\"},\"Max(Query1.Total Enrolled)\":{\"displayName\":\"Max\"},\"Sum(Query1.Total Enrolled)1\":{\"displayName\":\"Min\"},\"Avg(Query1.Churn)\":{\"displayName\":\"Average\",\"formatString\":\"0.00%;-0.00%;0.00%\"},\"Max(Query1.Churn)\":{\"displayName\":\"Max\",\"formatString\":\"0.00%;-0.00%;0.00%\"},\"Sum(Query1.Churn)\":{\"displayName\":\"Min\",\"formatString\":\"0.00%;-0.00%;0.00%\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Churn'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 79.76,
+          "width": 491.19,
+          "x": 788.81,
+          "y": 249.97,
+          "z": 8.00
+        },
+        {
+          "config": "{\"name\":\"630336100df1cba60531\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":387.11246200607906,\"z\":9,\"width\":788.8145896656536,\"height\":332.64437689969606,\"tabOrder\":9}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Query1.File_Date.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"Query1.File_Date.Variation.Date Hierarchy.Month\",\"active\":true},{\"queryRef\":\"Query1.File_Date.Variation.Date Hierarchy.Day\"}],\"Series\":[{\"queryRef\":\"Query1.client_code\"}],\"Y\":[{\"queryRef\":\"Sum(Query1.Total Enrolled)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Name\":\"Variation\",\"Property\":\"File_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Query1.File_Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"File_Date Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Name\":\"Variation\",\"Property\":\"File_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"Query1.File_Date.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"File_Date Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Name\":\"Variation\",\"Property\":\"File_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"Query1.File_Date.Variation.Date Hierarchy.Day\",\"NativeReferenceName\":\"File_Date Day\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"client_code\"},\"Name\":\"Query1.client_code\",\"NativeReferenceName\":\"client_code\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Enrolled\"}},\"Function\":0},\"Name\":\"Sum(Query1.Total Enrolled)\",\"NativeReferenceName\":\"Sum of Total Enrolled\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 332.64,
+          "width": 788.81,
+          "x": 0.00,
+          "y": 387.11,
+          "z": 9.00
+        },
+        {
+          "config": "{\"name\":\"88cf444250bb73805e09\",\"layouts\":[{\"id\":0,\"position\":{\"x\":788.8145896656534,\"y\":170.21276595744672,\"z\":7,\"width\":491.1854103343465,\"height\":79.75683890577508,\"tabOrder\":7}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"Avg(Query1.Total Terminations)\"},{\"queryRef\":\"Max(Query1.Total Terminations)\"},{\"queryRef\":\"Sum(Query1.Total Terminations)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Terminations\"}},\"Function\":3},\"Name\":\"Sum(Query1.Total Terminations)\",\"NativeReferenceName\":\"Min\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Terminations\"}},\"Function\":1},\"Name\":\"Avg(Query1.Total Terminations)\",\"NativeReferenceName\":\"Average\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Terminations\"}},\"Function\":4},\"Name\":\"Max(Query1.Total Terminations)\",\"NativeReferenceName\":\"Max\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Terminations\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(Query1.Total Enrolled)\":{\"displayName\":\"Average\"},\"Max(Query1.Total Enrolled)\":{\"displayName\":\"Max\"},\"Sum(Query1.Total Enrolled)1\":{\"displayName\":\"Min\"},\"Avg(Query1.Total Terminations)\":{\"displayName\":\"Average\"},\"Max(Query1.Total Terminations)\":{\"displayName\":\"Max\"},\"Sum(Query1.Total Terminations)\":{\"displayName\":\"Min\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Terminations'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 79.76,
+          "width": 491.19,
+          "x": 788.81,
+          "y": 170.21,
+          "z": 7.00
+        },
+        {
+          "config": "{\"name\":\"a326c774ddcaf4b0c57e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":788.8145896656536,\"y\":330.69908814589667,\"z\":2,\"width\":491.1854103343465,\"height\":389.05775075987845,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Query1.client_code\"},{\"queryRef\":\"Query1.File_Date.Variation.Date Hierarchy.Year\"},{\"queryRef\":\"Query1.File_Date.Variation.Date Hierarchy.Month\"},{\"queryRef\":\"Sum(Query1.Total Enrolled)\"},{\"queryRef\":\"Sum(Query1.Total Terminations)\"},{\"queryRef\":\"Sum(Query1.Churn)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"client_code\"},\"Name\":\"Query1.client_code\",\"NativeReferenceName\":\"client_code\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Enrolled\"},\"Name\":\"Sum(Query1.Total Enrolled)\",\"NativeReferenceName\":\"Total Enrolled\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Terminations\"},\"Name\":\"Sum(Query1.Total Terminations)\",\"NativeReferenceName\":\"Total Terminations\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Name\":\"Variation\",\"Property\":\"File_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"Query1.File_Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"File_Date Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Name\":\"Variation\",\"Property\":\"File_Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"Query1.File_Date.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"File_Date Month\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Churn\"},\"Name\":\"Sum(Query1.Churn)\",\"NativeReferenceName\":\"Churn\"}]},\"columnProperties\":{\"Sum(Query1.Churn)\":{\"formatString\":\"0.00%;-0.00%;0.00%\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 389.06,
+          "width": 491.19,
+          "x": 788.81,
+          "y": 330.70,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"abdc4dd081e70792e8b8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":882.1884498480243,\"y\":0,\"z\":4,\"width\":397.8115501519757,\"height\":68.08510638297872,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Query1.CSM\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"CSM\"},\"Name\":\"Query1.CSM\",\"NativeReferenceName\":\"CSM\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}},\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[{\"name\":\"a8ade9d2c301fce6b3e9\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Query1\"}},\"Property\":\"CSM\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"CSM\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"''\"}}],[{\"Literal\":{\"Value\":\"'0'\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 68.09,
+          "width": 397.81,
+          "x": 882.19,
+          "y": 0.00,
+          "z": 4.00
+        },
+        {
+          "config": "{\"name\":\"ce554d0c599a6fe329c6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":788.8145896656534,\"y\":90.45592705167167,\"z\":6,\"width\":491.1854103343465,\"height\":79.75683890577508,\"tabOrder\":6}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Query1.Total Enrolled)\"},{\"queryRef\":\"Max(Query1.Total Enrolled)\"},{\"queryRef\":\"Sum(Query1.Total Enrolled)1\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"Query1\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Enrolled\"}},\"Function\":1},\"Name\":\"Sum(Query1.Total Enrolled)\",\"NativeReferenceName\":\"Average\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Enrolled\"}},\"Function\":4},\"Name\":\"Max(Query1.Total Enrolled)\",\"NativeReferenceName\":\"Max\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Enrolled\"}},\"Function\":3},\"Name\":\"Sum(Query1.Total Enrolled)1\",\"NativeReferenceName\":\"Min\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Total Enrolled\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(Query1.Total Enrolled)\":{\"displayName\":\"Average\"},\"Max(Query1.Total Enrolled)\":{\"displayName\":\"Max\"},\"Sum(Query1.Total Enrolled)1\":{\"displayName\":\"Min\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Enrolled'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 79.76,
+          "width": 491.19,
+          "x": 788.81,
+          "y": 90.46,
+          "z": 6.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

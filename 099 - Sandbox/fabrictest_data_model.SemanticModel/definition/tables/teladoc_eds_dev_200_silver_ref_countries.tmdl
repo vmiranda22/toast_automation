@@ -1,0 +1,53 @@
+table teladoc_eds_dev_200_silver_ref_countries
+	lineageTag: 86e0cc93-c796-47c5-b303-776dbfe083b9
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_ref_countries]
+
+	column ref_country_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 41b9038e-3c30-46e3-9385-c1b793d1613f
+		sourceLineageTag: ref_country_id
+		summarizeBy: none
+		sourceColumn: ref_country_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a5eda5d2-7d9b-4ce8-bcda-2a7753dbf3a4
+		sourceLineageTag: country_cd
+		summarizeBy: none
+		sourceColumn: country_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: baa0db03-b2bd-4689-b88d-6283c8c39073
+		sourceLineageTag: country_nm
+		summarizeBy: none
+		sourceColumn: country_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ccc8f519-c5d7-4805-862c-dca18942893a
+		sourceLineageTag: currency_cd
+		summarizeBy: none
+		sourceColumn: currency_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_ref_countries = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_ref_countries
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

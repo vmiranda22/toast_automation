@@ -1,0 +1,18 @@
+relationship 564aec47-834d-142a-7779-9b6a67d4134a
+	toCardinality: many
+	fromColumn: flattened_hours.projectID
+	toColumn: flattened_projects.ID
+
+relationship ac1df1ce-fa04-07ac-5fc7-a287bdd6e023
+	toCardinality: many
+	fromColumn: flattened_hours.entryDate
+	toColumn: calendar.Date
+
+relationship 83bc51ee-3a61-258e-dbbc-7e16fbda6e83
+	fromColumn: flattened_hours.ownerID
+	toColumn: flattened_users.ID
+
+relationship 1f199d2e-6566-287b-ae20-6ceef18b2723
+	fromColumn: flattened_hours.taskID
+	toColumn: flattened_tasks.ID
+

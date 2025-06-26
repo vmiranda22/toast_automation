@@ -1,0 +1,55 @@
+expression 'Sample File' =
+		let
+		    Source = SharePoint.Files("https://teladocpa.sharepoint.com/sites/MonthlyDeactivations", [ApiVersion = 15]),
+		    #"Added Custom" = Table.AddColumn(Source, "Current_Year", each Date.Year(DateTime.LocalNow())),
+		    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Current_or_past_year", each Text.Contains([Folder Path],Number.ToText([Current_Year])) or Text.Contains([Folder Path],Number.ToText([Current_Year]-1))),
+		    #"Filtered Rows" = Table.SelectRows(#"Added Custom1", each ([Current_or_past_year] = true)),
+		    #"Filtered Rows1" = Table.SelectRows(#"Filtered Rows", each Text.Contains([Name], "CS - Review")),
+		    #"Added Custom2" = Table.AddColumn(#"Filtered Rows1", "File_Month", each List.First(Text.Split([Name]," "))),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom2",{{"File_Month", Int64.Type}}),
+		    #"Added Custom3" = Table.AddColumn(#"Changed Type", "File_Year", each Text.Split([Name]," "){2}),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom3",{{"File_Year", Int64.Type}}),
+		    #"Added Custom4" = Table.AddColumn(#"Changed Type1", "File_Date", each #date([File_Year],[File_Month],1)),
+		    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom4",{{"File_Date", type date}}),
+		    Navigation1 = #"Changed Type2"{0}[Content]
+		in
+		    Navigation1
+	lineageTag: 571d3089-7819-4f2a-b510-9dc399d9abc7
+	queryGroup: 'Transform File from Query1\Helper Queries'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Binary
+
+expression Parameter1 = #"Sample File" meta [IsParameterQuery=true, BinaryIdentifier=#"Sample File", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: b891d3b4-1206-4827-9f7e-a9d6d364e3d1
+	queryGroup: 'Transform File from Query1\Helper Queries'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transform Sample File' =
+		let
+		    Source = Csv.Document(Parameter1,[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		in
+		    #"Promoted Headers"
+	lineageTag: 25f6425c-98aa-42d6-a99c-c9790d525a36
+	queryGroup: 'Transform File from Query1'
+
+	annotation PBI_ResultType = Table
+
+expression 'Transform File' =
+		let
+		    Source = (Parameter1) => let
+		        Source = Csv.Document(Parameter1,[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		        #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		    in
+		        #"Promoted Headers"
+		in
+		    Source
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transform Sample File""}" ]
+	lineageTag: 7b24a5a4-b782-4529-8100-155b115feead
+	queryGroup: 'Transform File from Query1\Helper Queries'
+
+	annotation PBI_ResultType = Function
+

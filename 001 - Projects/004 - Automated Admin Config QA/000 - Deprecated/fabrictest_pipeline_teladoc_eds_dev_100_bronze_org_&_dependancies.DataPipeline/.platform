@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "fabrictest_pipeline_teladoc_eds_dev_100_bronze_org_&_dependancies"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "39dd8268-904a-8139-41fe-6f8a5c08d86a"
+  }
+}

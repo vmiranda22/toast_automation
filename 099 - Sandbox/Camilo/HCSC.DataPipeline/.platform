@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "HCSC"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a7e06d13-1f40-af26-4334-3e8d1b179c1b"
+  }
+}

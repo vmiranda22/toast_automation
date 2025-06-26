@@ -1,0 +1,56 @@
+expression 'DirectQuery to AS - SM_Hours' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/USGH%20Operations%20Automation%20%26%20Tooling%20Team%20-%20DEV", "SM_Hours"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: eccae958-fc1e-44e5-892b-d9416b1a5ee6
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"b951473b-e1fe-47d8-b234-193f40e1f224"}},"objectType":"Table"}]
+
+expression calendar2 =
+		let
+		    // Step 1: Reference your dataset (replace "dataset" with your actual table name)
+		    Source = dataset,
+		
+		    // Step 2: Get min and max dates from 'Entry Date' column
+		    // Replace with fixed dates if no dataset is used
+		    MinDate = #date(2025,01,01),
+		    MaxDate = #date(2026, 12, 31),
+		    // Alternatively, use this if you have a dataset:
+		    // MinDate = List.Min(Source[Entry Date]),
+		    // MaxDate = List.Max(Source[Entry Date]),
+		
+		    // Step 3: Create date range
+		    DateRange = List.Dates(MinDate, Duration.Days(MaxDate - MinDate) + 1, #duration(1, 0, 0, 0)),
+		
+		    // Step 4: Convert to table
+		    Calendar = Table.FromList(DateRange, Splitter.SplitByNothing(), {"Date"}, null, ExtraValues.Error),
+		
+		    // Step 5: Set Date type
+		    #"Changed Type" = Table.TransformColumnTypes(Calendar, {{"Date", type date}}),
+		
+		    // Step 6: Add calculated columns
+		    #"Added Index" = Table.AddColumn(#"Changed Type", "index", each Date.Month([Date]), Int64.Type),
+		    #"Added Day Name" = Table.AddColumn(#"Added Index", "day_nm", each Date.ToText([Date], "ddd"), type text),
+		    #"Added Day" = Table.AddColumn(#"Added Day Name", "day", each Number.ToText(Date.Day([Date])), type text),
+		    #"Added Month" = Table.AddColumn(#"Added Day", "month", each Date.ToText([Date], "mmm"), type text),
+		    #"Added Month Long" = Table.AddColumn(#"Added Month", "month_long", each Date.ToText([Date], "mmmm"), type text),
+		    #"Added Week" = Table.AddColumn(#"Added Month Long", "week", each Date.WeekOfYear([Date]), Int64.Type),
+		    #"Added Year" = Table.AddColumn(#"Added Week", "year", each Number.ToText(Date.Year([Date])), type text),
+		    #"Added Day Number" = Table.AddColumn(#"Added Year", "day_number", each Date.DayOfWeek([Date], Day.Monday) + 1, Int64.Type),
+		    #"Added Is Weekday" = Table.AddColumn(#"Added Day Number", "is_weekday", each if [day_number] = 6 or [day_number] = 7 then 0 else 1, Int64.Type),
+		
+		    // Step 7: Reorder columns
+		    #"Reordered Columns" = Table.ReorderColumns(#"Added Is Weekday", {"Date", "index", "day_nm", "day", "month", "month_long", "week", "year", "day_number", "is_weekday"})
+		in
+		    #"Reordered Columns"
+	lineageTag: 8e6801fb-826e-4b8b-a4a2-d9b55393ec55
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

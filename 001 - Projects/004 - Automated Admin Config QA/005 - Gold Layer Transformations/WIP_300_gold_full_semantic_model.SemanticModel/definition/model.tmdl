@@ -1,0 +1,32 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.142.7630.1 (Main)+a54ea922f68eddcbfc3ce93bd6c4b691ff471d19
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
+ref table salesforce_uat_200_silver_member_group
+ref table teladoc_eds_dev_300_gold_admin_group_information
+ref table teladoc_eds_dev_300_gold_admin_products_settings_information
+ref table salesforce_uat_200_silver_member_group_role
+ref table salesforce_uat_200_silver_subscription
+ref table salesforce_uat_200_silver_account
+ref table salesforce_uat_200_silver_product
+ref table salesforce_uat_200_silver_plan_specific_fees_by_product
+ref table salesforce_uat_200_silver_opportunity
+ref table salesforce_uat_200_silver_account_relationship
+ref table teladoc_eds_dev_300_gold_admin_products_fees_information
+ref table teladoc_eds_dev_300_gold_admin_products_all_information
+
+ref cultureInfo en-US
+

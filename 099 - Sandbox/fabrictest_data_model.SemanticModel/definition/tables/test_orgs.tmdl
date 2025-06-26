@@ -1,0 +1,181 @@
+table test_orgs
+	lineageTag: 3016eb65-17de-4253-8b2b-2029bba28ab1
+	sourceLineageTag: [dbo].[test_orgs]
+
+	column organization_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: adcb4d25-f963-4653-bc4b-61f282474b02
+		sourceLineageTag: organization_id
+		summarizeBy: sum
+		sourceColumn: organization_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_user_relation_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 109f1588-218d-4258-9158-c6c711fcb6bd
+		sourceLineageTag: organization_user_relation_id
+		summarizeBy: sum
+		sourceColumn: organization_user_relation_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2083a0ee-3e66-4e8c-a56f-41c757fc9c47
+		sourceLineageTag: user_id
+		summarizeBy: sum
+		sourceColumn: user_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4b6bc05a-dcd4-4b50-a6b3-63a2fc30fc1d
+		sourceLineageTag: user_type
+		summarizeBy: none
+		sourceColumn: user_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column purpose_relation_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3e8de248-501c-4b7e-b95f-e6217362bbc3
+		sourceLineageTag: purpose_relation_type_cd
+		summarizeBy: none
+		sourceColumn: purpose_relation_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_marketing_communication_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c17fc52b-35a7-481c-b526-fa0e111007db
+		sourceLineageTag: organization_marketing_communication_id
+		summarizeBy: sum
+		sourceColumn: organization_marketing_communication_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column marketing_comm_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 116aa7cc-6c1f-48e2-9a28-303d509ec695
+		sourceLineageTag: marketing_comm_type_cd
+		summarizeBy: none
+		sourceColumn: marketing_comm_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column optout_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 41f74f1f-d3d0-4255-99e2-9b7ff3b09713
+		sourceLineageTag: optout_cd
+		summarizeBy: none
+		sourceColumn: optout_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column approval_start_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 44f11e90-394c-4517-a40b-67bd2098a6f3
+		sourceLineageTag: approval_start_date
+		summarizeBy: none
+		sourceColumn: approval_start_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column approval_end_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 66e2f5bc-1523-4980-8496-68062ecd5360
+		sourceLineageTag: approval_end_date
+		summarizeBy: none
+		sourceColumn: approval_end_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column organization_extension_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d2490f25-097d-4c5b-a4b2-ced0c4529ae5
+		sourceLineageTag: organization_extension_id
+		summarizeBy: sum
+		sourceColumn: organization_extension_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column employer_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 91989c17-85bb-446d-94ad-3aa3eceae9d4
+		sourceLineageTag: employer_flg
+		summarizeBy: none
+		sourceColumn: employer_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_url
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 648f397d-d38a-4c8c-8854-cfee49ba1ba7
+		sourceLineageTag: print_url
+		summarizeBy: none
+		sourceColumn: print_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column print_phone
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bb47ff10-1985-46ad-af3c-dcebdf606371
+		sourceLineageTag: print_phone
+		summarizeBy: none
+		sourceColumn: print_phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column additional_url
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a639e48f-e686-4858-8d38-b74bf2bdd3e7
+		sourceLineageTag: additional_url
+		summarizeBy: none
+		sourceColumn: additional_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column snippet_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6502e670-3b5f-4684-aa4d-4ec15d0a1d80
+		sourceLineageTag: snippet_id
+		summarizeBy: sum
+		sourceColumn: snippet_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition test_orgs = entity
+		mode: directLake
+		source
+			entityName: test_orgs
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

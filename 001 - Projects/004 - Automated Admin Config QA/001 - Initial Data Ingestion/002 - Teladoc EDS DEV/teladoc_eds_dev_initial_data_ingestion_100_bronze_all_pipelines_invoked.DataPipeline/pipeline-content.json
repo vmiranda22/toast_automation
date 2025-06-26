@@ -1,0 +1,1079 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "f618fd7c-396c-ba63-4b74-64461fefa049",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "external_group_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev External Group Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "empi_namespace_org_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "f6868a9c-4ba3-928c-418f-728a9e428705",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "allowed_group_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Allowed Group Relations 100 Bronze Table",
+        "dependsOn": []
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "bc608824-c69e-88f0-4837-849de08fcf57",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "allowed_group_settings",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Allowed Group Settings 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "allowed_group_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "05e2d64c-2c34-b52a-4889-4d4ab79a9545",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "alt_group_ids",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Alt Group IDs 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "allowed_group_settings",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "adeb8450-7264-a2c0-4c75-0d804771dcf4",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "billings",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Billings 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "alt_group_ids",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "f2f6062a-c020-b027-4e71-e49c01780215",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "consult_extensions",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Consult Extensions 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "billings",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "31773868-311b-8f22-4f6f-341ecae9b836",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "empi_namespace_org_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Empi Namespace Org Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "consult_extensions",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "03de7eb8-f0c7-8c37-48f1-beeaa1c23466",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_billing_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Billing Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "external_group_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "07b414bf-5d4e-8f4e-4233-5a6f931fb778",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_empi_namespace_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Empi Namespace Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_billing_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "f0d408ec-438c-af43-4b1f-96e0f591cf7a",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_fee_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Fee Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_empi_namespace_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "7a57935c-dc5b-ae85-4e94-2037ee7cc5c8",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_offers",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Offers 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_fee_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "66c1648b-f9c4-9e56-4c6f-24a8ce5dcc91",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_payer_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Payer Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_offers",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "efbf4212-c4df-9834-4952-e860501af73d",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_payer_service_specialty_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Payer Service Specialty Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_payer_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "1d3e92a5-52dd-8eae-4b93-cf6f54edbe08",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_relation_pricings",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Relation Pricings 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_payer_service_specialty_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "4dba6f81-667a-aba3-4c9b-a874c352fc08",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_relation_pricings",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "217ab2a4-385d-bb96-4355-48fa94a9f645",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_service_level_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Service Level Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "f5fd1458-f5e6-a56a-4812-3d13ed44d4bd",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_service_specialty_feature_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Service Specialty Feature Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_service_level_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "744c9f8a-7793-9ab5-4bf1-68b6567d527f",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_service_specialty_feature_settings",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Service Specialty Feature Settings 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_service_specialty_feature_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "f1442cfa-5c4e-bf28-4376-735632ea018b",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_service_specialty_relation_details",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Service Specialty Relation Details 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_service_specialty_feature_settings",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "3bd05e42-4d34-b8b0-42aa-3d272968c9c9",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_service_specialty_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Service Specialty Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_service_specialty_relation_details",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "291f5e25-3a96-a765-4a5c-c2a0c7442e33",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "group_settings",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Group Settings 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_service_specialty_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ab99e3fc-b1a6-9658-4f8c-457a3a7abf11",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "groups",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Groups 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "group_settings",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "f53bc753-ce8f-a052-42b3-7f3838fdd089",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "offer_service_specialty_feature_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Offer Service Specialty Feature Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "groups",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "ebad6970-0d6b-873a-4028-badd5a0fea13",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "organization_extensions",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Organization Extensions 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "offer_service_specialty_feature_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "3cd17272-a5e1-a0f5-461c-28b8ea9a9166",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "organization_marketing_communications",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Organization Marketing Communications 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "organization_extensions",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "639b9690-6b53-b74d-43b1-4df90a6db3e0",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "organization_user_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Organization User Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "organization_marketing_communications",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "6064b9f6-1e9c-bdc3-4d17-4473882bdeac",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "organizations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Organizations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "organization_user_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "0352c670-2d44-81ef-4df0-8cfc0a35ad82",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "parties",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Parties 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "organizations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "bf66be1e-0f5d-9a62-4744-c2f1cd3abd52",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "party_addresses",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Party Addresses 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "parties",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "cfaa2dc3-5257-98de-4ec2-7d2a1fb38f22",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "party_email_addresses",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Party Email Addresses 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "party_addresses",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "2fee58d5-8500-b612-45c8-82654cc2dcbd",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "payers",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Payers 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "party_email_addresses",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "9645b529-31b9-8847-4f7a-3a84646b31b8",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "persons",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Persons 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "payers",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "4b73e223-5e4b-92db-4e4f-40f210685372",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "ref_countries",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Ref Countries 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "persons",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "900f2f1f-c49b-acd9-4f02-2a84f16c4b77",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "ref_empi_namespaces",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Ref Empi Namespaces 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "ref_countries",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "d3a2c827-a55b-b294-44c8-334d54d5962b",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "ref_features",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Ref Features 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "ref_empi_namespaces",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "c845e824-c504-9bc7-427b-7630db9910b3",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "ref_fees",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Ref Fees 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "ref_features",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "f97395ba-09d9-9787-4dc9-15be3bec5503",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "ref_geographic_regions",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Ref Geographic Regions 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "ref_fees",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "54b18b75-bc84-b992-4f49-8ee18397fcb7",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "ref_reports",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Ref Reports 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "ref_geographic_regions",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "90b58e28-d066-a881-4c98-cd08fd61458f",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "ref_service_levels",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Ref Service Levels 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "ref_reports",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "6f6a81e9-42dd-8f66-49a3-e1cd49a7f759",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "ref_service_specialties",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Ref Service Specialties 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "ref_service_levels",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "3bcc8a9b-76db-9404-4d73-fb523fd47d58",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "ref_service_specialty_features",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Ref Service Specialty Features 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "ref_service_specialties",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "977b58f7-a362-84a1-489c-f7966e601320",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "report_affiliation_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Report Affiliation Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "ref_service_specialty_features",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "cd63aa5a-e851-88f9-4ee2-85015c71864e",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "report_email_relations",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Report Email Relations 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "report_affiliation_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "a7a81b5c-d5e3-8c48-4bd9-516503363b9b",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "valid_group_sources",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Valid Group Sources 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "sales_reps",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ExecutePipeline",
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "eb12757c-c9cc-8a2d-420c-8765f1d8d903",
+            "type": "PipelineReference"
+          },
+          "parameters": {},
+          "waitOnCompletion": true
+        },
+        "policy": {
+          "secureInput": false
+        },
+        "name": "sales_reps",
+        "description": "Run Initial Data Ingestion Pipeline for Teladoc EDS Dev Sales Reps 100 Bronze Table",
+        "dependsOn": [
+          {
+            "activity": "report_email_relations",
+            "dependencyConditions": [
+              "Completed"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

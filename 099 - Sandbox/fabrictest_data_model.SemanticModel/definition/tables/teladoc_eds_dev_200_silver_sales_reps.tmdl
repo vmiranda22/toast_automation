@@ -1,0 +1,75 @@
+table teladoc_eds_dev_200_silver_sales_reps
+	lineageTag: 092892bc-4442-4a92-bc57-33df649f8708
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_sales_reps]
+
+	column sales_rep_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 37377c11-4503-4d6b-bcfb-aaad357a647a
+		sourceLineageTag: sales_rep_id
+		summarizeBy: none
+		sourceColumn: sales_rep_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column person_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 09caf46c-2225-48e4-a575-a8beee82aeb5
+		sourceLineageTag: person_id
+		summarizeBy: none
+		sourceColumn: person_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_rep_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f008a4db-bfa7-4841-867b-1502e145f486
+		sourceLineageTag: sales_rep_type_cd
+		summarizeBy: none
+		sourceColumn: sales_rep_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 2b7948c9-0781-429b-9629-84f05664667e
+		sourceLineageTag: effective_start_dt
+		summarizeBy: none
+		sourceColumn: effective_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 8cd37249-255c-43e8-a44a-ae358ad4dab7
+		sourceLineageTag: effective_end_dt
+		summarizeBy: none
+		sourceColumn: effective_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9b2c96d1-c6c2-4833-91ac-9e2016d99c73
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_sales_reps = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_sales_reps
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,9 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "redshift",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {},
+  "connections": []
+}

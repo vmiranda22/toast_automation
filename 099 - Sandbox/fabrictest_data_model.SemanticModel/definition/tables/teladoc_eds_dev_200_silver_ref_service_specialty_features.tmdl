@@ -1,0 +1,85 @@
+table teladoc_eds_dev_200_silver_ref_service_specialty_features
+	lineageTag: 977bfa83-dfa5-49ff-a147-cbcf8677ffec
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_ref_service_specialty_features]
+
+	column ref_service_specialty_feature_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0f7fde27-8b59-4a48-acee-bc098fadac7b
+		sourceLineageTag: ref_service_specialty_feature_id
+		summarizeBy: none
+		sourceColumn: ref_service_specialty_feature_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_feature_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8f7699af-c778-47f0-9a3a-5b770f442c9f
+		sourceLineageTag: service_specialty_feature_cd
+		summarizeBy: none
+		sourceColumn: service_specialty_feature_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_feature_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 26180740-8cb8-4ad6-9341-0fec8a12a690
+		sourceLineageTag: service_specialty_feature_nm
+		summarizeBy: none
+		sourceColumn: service_specialty_feature_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_specialty_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cc0f4d17-b5bd-4c3d-bcd8-4d8a715cc3f4
+		sourceLineageTag: service_specialty_cd
+		summarizeBy: none
+		sourceColumn: service_specialty_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column feature_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 75beb860-9cf0-4e6e-b1c3-d2f348384dee
+		sourceLineageTag: feature_cd
+		summarizeBy: none
+		sourceColumn: feature_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column rte_eligible
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: ff46b9b9-ea06-4f63-8328-1c67f46ad747
+		sourceLineageTag: rte_eligible
+		summarizeBy: none
+		sourceColumn: rte_eligible
+
+		annotation SummarizationSetBy = Automatic
+
+	column visible
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 2553aa78-9e68-4b59-ab37-96f3a9770dc7
+		sourceLineageTag: visible
+		summarizeBy: none
+		sourceColumn: visible
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_ref_service_specialty_features = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_ref_service_specialty_features
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

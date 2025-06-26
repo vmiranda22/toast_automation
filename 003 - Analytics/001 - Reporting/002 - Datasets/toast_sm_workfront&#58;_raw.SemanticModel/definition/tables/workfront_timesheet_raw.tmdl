@@ -1,0 +1,243 @@
+table workfront_timesheet_raw
+	lineageTag: 9f9d73e9-433a-45db-bcf7-965f7dc0d562
+	sourceLineageTag: [dbo].[workfront_timesheet_raw]
+
+	column id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2eafc821-0415-4203-98bf-0bde23fd5154
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column approvercanedithours
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c2e1e764-995a-477c-9387-0a3f872f3e54
+		sourceLineageTag: approvercanedithours
+		summarizeBy: none
+		sourceColumn: approvercanedithours
+
+		annotation SummarizationSetBy = Automatic
+
+	column approverid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a61b97bb-818f-45ad-8cfd-0f8656ae358b
+		sourceLineageTag: approverid
+		summarizeBy: none
+		sourceColumn: approverid
+
+		annotation SummarizationSetBy = Automatic
+
+	column customerid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 07c61d52-3ccf-4503-a786-0116b43064fc
+		sourceLineageTag: customerid
+		summarizeBy: none
+		sourceColumn: customerid
+
+		annotation SummarizationSetBy = Automatic
+
+	column displayname
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9e0835c9-3e7f-49e9-9119-511972577a9b
+		sourceLineageTag: displayname
+		summarizeBy: none
+		sourceColumn: displayname
+
+		annotation SummarizationSetBy = Automatic
+
+	column enddate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 67d575ee-118d-4eef-9698-9c32457f66d5
+		sourceLineageTag: enddate
+		summarizeBy: none
+		sourceColumn: enddate
+
+		annotation SummarizationSetBy = Automatic
+
+	column extrefid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e006fb46-53ae-4e25-bd21-d5c5189270cd
+		sourceLineageTag: extrefid
+		summarizeBy: none
+		sourceColumn: extrefid
+
+		annotation SummarizationSetBy = Automatic
+
+	column hasnotes
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bffc3e30-e07a-4590-a8ba-ada32d3daf8c
+		sourceLineageTag: hasnotes
+		summarizeBy: none
+		sourceColumn: hasnotes
+
+		annotation SummarizationSetBy = Automatic
+
+	column hoursduration
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 39d8e6f3-a4bb-4b41-9abf-875a1a65a7ae
+		sourceLineageTag: hoursduration
+		summarizeBy: none
+		sourceColumn: hoursduration
+
+		annotation SummarizationSetBy = Automatic
+
+	column isovertimedisabled
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ca225594-7594-4ad0-a044-74909144feab
+		sourceLineageTag: isovertimedisabled
+		summarizeBy: none
+		sourceColumn: isovertimedisabled
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastnoteid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a83172ee-93f2-4f1a-8ad8-0ecdced1c388
+		sourceLineageTag: lastnoteid
+		summarizeBy: none
+		sourceColumn: lastnoteid
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastupdatedate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 80c002ff-2cb6-4853-b69e-233111ef173b
+		sourceLineageTag: lastupdatedate
+		summarizeBy: none
+		sourceColumn: lastupdatedate
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastupdatedbyid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ba79072a-0969-4085-b168-8d2ad2cb57f3
+		sourceLineageTag: lastupdatedbyid
+		summarizeBy: none
+		sourceColumn: lastupdatedbyid
+
+		annotation SummarizationSetBy = Automatic
+
+	column objcode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 59bd94c6-2bfb-4497-a2d4-3f1b4672bb28
+		sourceLineageTag: objcode
+		summarizeBy: none
+		sourceColumn: objcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column overtimehours
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fe96381a-e8ab-4ab0-9676-430b7885b306
+		sourceLineageTag: overtimehours
+		summarizeBy: none
+		sourceColumn: overtimehours
+
+		annotation SummarizationSetBy = Automatic
+
+	column regularhours
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 10d75984-d9cd-4fd1-8d99-f883851408c0
+		sourceLineageTag: regularhours
+		summarizeBy: none
+		sourceColumn: regularhours
+
+		annotation SummarizationSetBy = Automatic
+
+	column startdate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f46f8dce-3687-4a12-a329-0d8fb4a17661
+		sourceLineageTag: startdate
+		summarizeBy: none
+		sourceColumn: startdate
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2af88370-19bd-4cd2-bd76-7fdd0b448850
+		sourceLineageTag: status
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column timesheetprofileid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 215d512f-07fb-42e3-8c57-57d69faa83ab
+		sourceLineageTag: timesheetprofileid
+		summarizeBy: none
+		sourceColumn: timesheetprofileid
+
+		annotation SummarizationSetBy = Automatic
+
+	column totaldays
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 70a1f7db-4e57-4c2b-aedc-f8da74ef6ca8
+		sourceLineageTag: totaldays
+		summarizeBy: none
+		sourceColumn: totaldays
+
+		annotation SummarizationSetBy = Automatic
+
+	column totalhours
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e93ead44-4ea9-45eb-9c8c-9a015c322527
+		sourceLineageTag: totalhours
+		summarizeBy: none
+		sourceColumn: totalhours
+
+		annotation SummarizationSetBy = Automatic
+
+	column userid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ff659e85-4767-4a74-b282-1af09b1313fe
+		sourceLineageTag: userid
+		summarizeBy: none
+		sourceColumn: userid
+
+		annotation SummarizationSetBy = Automatic
+
+	column row_hash
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 856bcaf8-d05a-4b66-aca5-51e670346992
+		sourceLineageTag: row_hash
+		summarizeBy: none
+		sourceColumn: row_hash
+
+		annotation SummarizationSetBy = Automatic
+
+	partition workfront_timesheet_raw = entity
+		mode: directLake
+		source
+			entityName: workfront_timesheet_raw
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

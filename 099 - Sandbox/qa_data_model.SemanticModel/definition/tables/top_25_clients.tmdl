@@ -1,0 +1,46 @@
+table top_25_clients
+	lineageTag: 5fe16de6-cb2d-42f2-8115-bd657a9ba5bd
+	sourceLineageTag: [dbo].[top_25_clients]
+
+	column Client_Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e0031c7e-5740-438d-88ae-ad31e483f5e9
+		sourceLineageTag: Client_Name
+		summarizeBy: none
+		sourceColumn: Client_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Org_Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 22a1d8d9-0d20-45d5-86ad-18c08ff7aa20
+		sourceLineageTag: Org_Name
+		summarizeBy: none
+		sourceColumn: Org_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Org_ID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 960a8455-5bdb-4340-8153-69cc4cfba9d1
+		sourceLineageTag: Org_ID
+		summarizeBy: none
+		sourceColumn: Org_ID
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	partition top_25_clients = entity
+		mode: directLake
+		source
+			entityName: top_25_clients
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

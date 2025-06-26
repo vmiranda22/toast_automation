@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "toast_pl_transform_raw_to_clean_workfront"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f117729d-8a9d-a023-460c-dcc41d002bcd"
+  }
+}

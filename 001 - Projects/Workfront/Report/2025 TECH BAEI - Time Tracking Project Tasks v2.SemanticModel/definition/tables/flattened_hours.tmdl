@@ -1,0 +1,404 @@
+table flattened_hours
+	lineageTag: 29e6b83e-e304-413e-8fdc-dee1cbade7fb
+	sourceLineageTag: e73b1373-77fd-428a-890e-df5b1a3d0d71
+
+	measure %_BAU_task =
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUM(flattened_hours[hours]),
+			        flattened_tasks[timeType] = "BAU"
+			    ),
+			    CALCULATE(
+			        SUM(flattened_hours[hours]),
+			        flattened_tasks[timeType] IN { "BAU", "Non BAU","Non Working Time" }
+			    ),
+			    0
+			)
+		lineageTag: 3d66277e-80bb-4029-9194-bfee0cef1534
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure %_non_BAU_task =
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUM(flattened_hours[hours]),
+			        flattened_tasks[timeType] = "Non BAU"
+			    ),
+			    CALCULATE(
+			        SUM(flattened_hours[hours]),
+			        flattened_tasks[timeType] IN { "BAU", "Non BAU","Non Working Time" }
+			    ),
+			    0
+			)
+		lineageTag: 0399b57f-0a35-47dc-8131-db0c74d3a92c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure %_Utilization_user = ```
+			
+			VAR SelectedYear = 
+			    MAXX(
+			        'flattened_hours',
+			        YEAR('flattened_hours'[entryDate])
+			    )
+			
+			VAR WorkingDays =
+			    COUNTROWS(
+			        FILTER(
+			            'calendar',
+			            'calendar'[is_weekday] = 1 &&
+			            'calendar'[year] = SelectedYear
+			        )
+			    )
+			
+			RETURN
+			DIVIDE(
+			    CALCULATE(
+			        SUM(flattened_hours[hours]),
+			        flattened_hours[taskTimeType] = "BAU"
+			    ),
+			    (
+			        CALCULATE(
+			            DISTINCTCOUNT(flattened_hours[ownerID])
+			        ) * 
+			        WorkingDays * 8
+			    ) - 
+			    CALCULATE(
+			        SUM(flattened_hours[hours]),
+			        flattened_hours[taskTimeType] = "Non Working Time"
+			    ),
+			    0
+			)
+			
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: e20fc50f-edd5-4487-be30-ba6200551289
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure effective_labour_hours = ```
+			
+			VAR dias_habiles = 
+			    CALCULATE(
+			        COUNTROWS('calendar'),
+			        'calendar'[is_weekday] = 1
+			    )
+			
+			VAR cantidad_personas = 
+			    CALCULATE(
+			        DISTINCTCOUNT(flattened_hours[ownerID])
+			    )
+			
+			VAR total_horas_laborales = cantidad_personas * dias_habiles * 8
+			
+			VAR horas_no_laborales = 
+			    CALCULATE(
+			        SUM(flattened_hours[hours]),
+			        flattened_hours[taskTimeType] = "Non Working Time"
+			    )
+			
+			RETURN total_horas_laborales - horas_no_laborales
+			```
+		formatString: 0
+		lineageTag: 79c12664-8277-41a9-a890-6a6c2f23735a
+
+		changedProperty = Name
+
+	measure hs_BAU = CALCULATE(SUM(flattened_hours[hours]), flattened_hours[taskTimeType]="BAU")
+		lineageTag: cd2d24df-bf7b-44fd-b57b-78d2f95f8ba0
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Utilization' =
+			
+			VAR Util = CALCULATE(
+			    DIVIDE([hs_BAU], [effective_labour_hours])
+			)
+			RETURN IF(ISBLANK(Util), 0, Util)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 0e8a31c9-e025-47c4-a676-23529ae72631
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure labour_hours_ = ```
+			
+			VAR dias_habiles = 
+			    CALCULATE(
+			        COUNTROWS('calendar'),
+			        'calendar'[is_weekday] = 1
+			    )
+			
+			VAR cantidad_personas = 
+			    CALCULATE(
+			        DISTINCTCOUNT(flattened_hours[ownerID])
+			    )
+			
+			VAR total_horas_laborales = cantidad_personas * dias_habiles * 8
+			
+			VAR horas_no_laborales = 
+			    CALCULATE(
+			        SUM(flattened_hours[hours]),
+			        flattened_hours[taskTimeType] = "Non Working Time"
+			    )
+			
+			RETURN total_horas_laborales - horas_no_laborales
+			
+			
+			```
+		formatString: 0
+		lineageTag: 3dc73f14-ec4f-46e2-9653-bf90985d6c13
+
+		changedProperty = Name
+
+	measure dias_habiles = ```
+			
+			VAR dias_habiles = 
+			    CALCULATE(
+			        COUNTROWS('calendar'),
+			        'calendar'[is_weekday] = 1
+			    )
+			    RETURN dias_habiles
+			```
+		formatString: 0
+		lineageTag: 8b11b640-8a34-47a0-9782-0846f4bd7c16
+
+		changedProperty = Name
+
+	measure hs_loaded =
+			
+			VAR TotalHours = SUM(flattened_hours[hours])
+			RETURN
+			IF(
+			    ISBLANK(TotalHours),
+			    "0 hs",
+			    "Hs: " & TotalHours
+			)
+		lineageTag: c34baa99-117a-443e-95c5-ddba0977eb7b
+
+		changedProperty = Name
+
+	measure test_measure =
+			
+			VAR TotalHours = SUM(flattened_hours[hours])
+			RETURN
+			IF(
+			    ISBLANK(TotalHours),
+			    "0 hs",
+			    "Hs: " & TotalHours
+			)
+		lineageTag: 3d7a153d-88a7-4e6f-9901-c2dae8a30201
+
+		changedProperty = Name
+
+	column ID
+		dataType: string
+		lineageTag: 7241129e-5397-4723-98af-63d5bbf3072b
+		sourceLineageTag: 9db9ba40-ace5-4cc0-b2cd-d3ae5a6f0a8a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = User
+
+	column entryDate
+		dataType: dateTime
+		formatString: mm/dd/yyyy
+		lineageTag: 44adc3d9-eb17-4b14-be27-dfabf48988fa
+		sourceLineageTag: 7bcd8983-9082-4894-bfb9-63c9ec0f8db7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: entryDate
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column hours
+		dataType: double
+		lineageTag: fd8acc91-a24a-48b5-bdeb-aff890057802
+		sourceLineageTag: 62e1bfec-7e0d-418d-9b09-01300a72995b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: hours
+
+		annotation SummarizationSetBy = User
+
+	column lastUpdateDate
+		dataType: string
+		lineageTag: 1e1e7917-a9dd-43a0-a350-250e2aa3b43a
+		sourceLineageTag: 03ea57f0-225c-475e-a505-2bd15552d437
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: lastUpdateDate
+
+		annotation SummarizationSetBy = User
+
+	column objCode
+		dataType: string
+		lineageTag: b043b51e-8e80-41dc-b7fc-07d431692f6e
+		sourceLineageTag: 095ee59e-a9fc-4555-aec0-3bc2f433207a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: objCode
+
+		annotation SummarizationSetBy = User
+
+	column status
+		dataType: string
+		lineageTag: e76a54a1-31ec-4fc1-89b4-271e1a7e67f4
+		sourceLineageTag: 1d7a5eb9-e889-4569-a070-85bd1aa45038
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = User
+
+	column ownerID
+		dataType: string
+		lineageTag: 5807db0e-a9c7-4080-9f8f-36500723dc17
+		sourceLineageTag: d92f4486-e3e4-4291-9dd7-364a68258579
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ownerID
+
+		annotation SummarizationSetBy = User
+
+	column ownerName
+		dataType: string
+		lineageTag: a05cbf62-e5ba-4f6b-af3f-9df8692a5aba
+		sourceLineageTag: 5edb3890-638b-4f43-b904-cf2a827aae1a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ownerName
+
+		annotation SummarizationSetBy = User
+
+	column ownerObj
+		dataType: string
+		lineageTag: 4ff92acc-db04-40c8-b317-40c96f02c464
+		sourceLineageTag: fb00547c-a900-491a-9add-5b8a4a50624c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ownerObj
+
+		annotation SummarizationSetBy = User
+
+	column projectID
+		dataType: string
+		lineageTag: 8995a9e7-05a7-41bf-883b-c62085b33f7a
+		sourceLineageTag: ba097348-5f6e-4f98-956c-ad4d0eb892bf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: projectID
+
+		annotation SummarizationSetBy = User
+
+	column projectName
+		dataType: string
+		lineageTag: bf12ed59-a22f-4454-8afd-499eaf0f84b8
+		sourceLineageTag: 18e589fc-9100-425e-9853-7e2acee2cfd5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: projectName
+
+		annotation SummarizationSetBy = User
+
+	column projectObj
+		dataType: string
+		lineageTag: 515c9275-01e1-45d5-a752-116341cfbf72
+		sourceLineageTag: a12a5ed3-442e-478d-8de4-3dd7009f511c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: projectObj
+
+		annotation SummarizationSetBy = User
+
+	column taskID
+		dataType: string
+		lineageTag: e6e4481e-2fd6-4c94-8c6c-c01b3ac4a68a
+		sourceLineageTag: 594812c7-263d-466c-89a7-c447ec7654f9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: taskID
+
+		annotation SummarizationSetBy = User
+
+	column taskName
+		dataType: string
+		lineageTag: e5acae3a-c45b-4b91-a3b4-66451d578cb0
+		sourceLineageTag: 3ce5a0ba-6cd5-4aef-b504-21521f9629fb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: taskName
+
+		annotation SummarizationSetBy = User
+
+	column taskObj
+		dataType: string
+		lineageTag: 52dee2e7-6e20-4997-86a7-b196b14aec79
+		sourceLineageTag: 8dc3211f-fbbb-40c3-879c-11ab6c88f0bd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: taskObj
+
+		annotation SummarizationSetBy = User
+
+	column taskTimeType
+		dataType: string
+		lineageTag: 8a71f0e2-0ecb-43ab-8312-4056cbcacf19
+		sourceLineageTag: bab37d41-c8b6-4336-9129-46d5b2f1562a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: taskTimeType
+
+		annotation SummarizationSetBy = User
+
+	column manager_nm = RELATED(flattened_users[managerName])
+		lineageTag: c137abe5-10fd-426e-9467-7710db068fa9
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_flag = ```
+			
+			VAR manager = RELATED(flattened_users[managerName])
+			RETURN IF(manager IN {"Cortney Turner", "Jessica Jones", "Liza Jaitman Labaton", "Micaela Muzi", "Ray Montero", "Vince Miranda", "William Uhrlaub"}, TRUE, FALSE)
+			
+			```
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 09e861b8-af9d-4a2f-a97a-15bace13f4c4
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column before_rows = IF(flattened_hours[entryDate]< TODAY(),1,0)
+		formatString: 0
+		lineageTag: 2e9c148c-88df-4581-a7c1-6e3c00abd806
+		summarizeBy: sum
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition flattened_hours = entity
+		mode: directQuery
+		source
+			entityName: flattened_hours
+			expressionSource: 'DirectQuery to AS - SM_Hours'
+

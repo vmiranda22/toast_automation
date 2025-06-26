@@ -1,0 +1,193 @@
+table calendar
+	lineageTag: a7c7426f-705d-445d-b52a-0ca716e61973
+
+	measure calendar_measure =
+			
+			VAR TotalHours = SUM(flattened_hours[hours])
+			RETURN
+			IF(
+			    ISBLANK(TotalHours),
+			    "0 hs",
+			    "Hs: " & TotalHours
+			)
+		lineageTag: 095063c6-9f3d-402f-818f-8c15ae5e8008
+
+	measure LastRefreshedDate = FORMAT(UTCNOW(), "mm/dd/yyyy hh:mm AM/PM")
+		lineageTag: cdb89f1d-c7fb-49f4-8041-2302fc484c4a
+
+	measure 'Selected Month (Long)' = ```
+			
+			VAR SelectedShort = SELECTEDVALUE('calendar'[month])  -- short month (e.g. "Apr")
+			VAR MonthMapping = 
+			    SWITCH(
+			        SelectedShort,
+			        "Jan", "January",
+			        "Feb", "February",
+			        "Mar", "March",
+			        "Apr", "April",
+			        "May", "May",
+			        "Jun", "June",
+			        "Jul", "July",
+			        "Aug", "August",
+			        "Sep", "September",
+			        "Oct", "October",
+			        "Nov", "November",
+			        "Dec", "December",
+			        BLANK()
+			    )
+			RETURN
+			    IF(
+			        ISBLANK(MonthMapping),
+			        "Select a month",
+			        MonthMapping
+			    )
+			```
+		lineageTag: ccfad31f-5bd9-4014-a082-e2cde74035c4
+
+	column Date
+		dataType: dateTime
+		formatString: mm/dd/yyyy
+		lineageTag: ed4e3e6d-8d39-4959-96b4-1076143c64c3
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: b2ec0bf6-d901-44d9-bf74-530224010bc7
+			defaultHierarchy: LocalDateTable_5512f17f-3252-4588-8736-c43f68b96a10.'Date Hierarchy'
+
+		changedProperty = SortByColumn
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column month_index
+		dataType: int64
+		formatString: 0
+		lineageTag: 36bdc043-3bee-4e3c-acf9-0e88341e1804
+		summarizeBy: sum
+		sourceColumn: month_index
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_name
+		dataType: string
+		lineageTag: 73a516c5-b38b-4e07-a5c5-c0ad40819b29
+		summarizeBy: none
+		sourceColumn: day_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: int64
+		formatString: 0
+		lineageTag: ad9924f2-1d7b-4657-99ac-3ad65c0b3003
+		summarizeBy: sum
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: string
+		lineageTag: fdd5142a-df4f-455c-995e-8ca6f5c5e331
+		summarizeBy: none
+		sourceColumn: month
+		sortByColumn: month_index
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_long
+		dataType: string
+		lineageTag: de259b40-da81-4fa8-9d34-e307472109cc
+		summarizeBy: none
+		sourceColumn: month_long
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: int64
+		formatString: 0
+		lineageTag: a2da552f-97a0-4e44-925b-07ed009b4f1f
+		summarizeBy: sum
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 210508f2-1f07-41bb-9bf3-3db0aa156a57
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a25747b-009d-4266-b9ec-365daa33ec38
+		summarizeBy: sum
+		sourceColumn: day_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_weekday
+		dataType: int64
+		formatString: 0
+		lineageTag: 37afe849-3869-4747-8f1c-ac21c4598d11
+		summarizeBy: sum
+		sourceColumn: is_weekday
+
+		annotation SummarizationSetBy = Automatic
+
+	column before_today =
+			
+			IF([Date]<TODAY(),1,0)
+		formatString: 0
+		lineageTag: 56997adf-7449-4f08-9419-9d3b6a522d21
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition calendar = m
+		mode: import
+		source = ```
+				let
+				    // Define start and end dates
+				    StartDate = #date(2025, 1, 1),
+				    EndDate = #date(2026, 12, 31),
+				    
+				    // Generate list of dates
+				    DateList = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)),
+				    DateTable = Table.FromList(DateList, Splitter.SplitByNothing(), {"Date"}),
+				
+				    // Add calculated columns
+				    AddMonthIndex = Table.AddColumn(DateTable, "month_index", each Date.Month([Date])),
+				    AddDayName = Table.AddColumn(AddMonthIndex, "day_name", each Date.ToText([Date], "ddd", "en-US")),
+				    AddDay = Table.AddColumn(AddDayName, "day", each Text.From(Date.Day([Date]))),
+				    AddMonth = Table.AddColumn(AddDay, "month", each Date.ToText([Date], "MMM", "en-US")),
+				    AddMonthLong = Table.AddColumn(AddMonth, "month_long", each Date.ToText([Date], "MMMM", "en-US")),
+				    AddWeek = Table.AddColumn(AddMonthLong, "week", each Date.WeekOfYear([Date])),
+				    AddYear = Table.AddColumn(AddWeek, "year", each Text.From(Date.Year([Date]))),
+				    AddDayNumber = Table.AddColumn(AddYear, "day_number", each Date.DayOfWeek([Date], Day.Monday) + 1),
+				    AddIsWeekday = Table.AddColumn(AddDayNumber, "is_weekday", each if [day_number] >= 6 then 0 else 1),
+				
+				    // Reorder columns
+				    ReorderColumns = Table.SelectColumns(AddIsWeekday, {"Date", "month_index", "day_name", "day", "month", "month_long", "week", "year", "day_number", "is_weekday"}),
+				    #"Filtered Rows" = Table.SelectRows(ReorderColumns, each true),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Filtered Rows",{{"day", Int64.Type}, {"week", Int64.Type}, {"year", Int64.Type}, {"month_index", Int64.Type}, {"day_number", Int64.Type}, {"is_weekday", Int64.Type}})
+				in
+				    #"Changed Type"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

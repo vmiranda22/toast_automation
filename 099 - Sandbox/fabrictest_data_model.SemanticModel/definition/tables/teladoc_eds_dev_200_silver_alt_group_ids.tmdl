@@ -1,0 +1,53 @@
+table teladoc_eds_dev_200_silver_alt_group_ids
+	lineageTag: 86327269-8127-41db-86f4-11c19b535280
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_alt_group_ids]
+
+	column group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b9158bae-fa5b-4247-b157-95f9b4f49e90
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column livongo_client_code
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 74b66a02-86c7-4abf-bf73-4cba297ec5d8
+		sourceLineageTag: livongo_client_code
+		summarizeBy: none
+		sourceColumn: livongo_client_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column livongo_registration_code
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 71f91d21-bdfb-4528-ab71-5403afc0e3b0
+		sourceLineageTag: livongo_registration_code
+		summarizeBy: none
+		sourceColumn: livongo_registration_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column mystrength_global_access_code
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8e3472cf-ec17-488c-b60d-215b0f6e1a07
+		sourceLineageTag: mystrength_global_access_code
+		summarizeBy: none
+		sourceColumn: mystrength_global_access_code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_alt_group_ids = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_alt_group_ids
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

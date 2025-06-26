@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "fabrictest_notebook_teladoc_eds_dev_bronze_to_silver_layer_transformations",
+    "description": "New notebook"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ce44aab6-34aa-9e70-41fb-a44c56be65f7"
+  }
+}

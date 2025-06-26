@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "workfront_test1"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7f3e7f01-3c53-9de4-457d-61fce1342a93"
+  }
+}

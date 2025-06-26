@@ -1,0 +1,202 @@
+table teladoc_eds_dev_200_silver_group_offers
+	lineageTag: 597d86f2-5f7b-4244-a683-b84fc1887822
+	sourceLineageTag: [dbo].[teladoc_eds_dev_200_silver_group_offers]
+
+	column group_offer_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 44a81d1b-921b-418d-8bb2-b1f2409edcc0
+		sourceLineageTag: group_offer_id
+		summarizeBy: none
+		sourceColumn: group_offer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column group_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 757faf62-c2cf-4d0a-be30-dc0068b89ab2
+		sourceLineageTag: group_id
+		summarizeBy: none
+		sourceColumn: group_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column promotion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 26ff56d7-6dc1-4e0b-b34b-53a9f5c51bd4
+		sourceLineageTag: promotion_cd
+		summarizeBy: none
+		sourceColumn: promotion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column dependent_promotion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 95096f01-9134-44fd-a40d-294509c15eb1
+		sourceLineageTag: dependent_promotion_cd
+		summarizeBy: none
+		sourceColumn: dependent_promotion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column promotion_type_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0776298b-eb40-4b38-8c37-1fa525527c75
+		sourceLineageTag: promotion_type_cd
+		summarizeBy: none
+		sourceColumn: promotion_type_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column promotion_start_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: a1ea5943-f987-4bdd-88e2-bcdfe954819b
+		sourceLineageTag: promotion_start_dt
+		summarizeBy: none
+		sourceColumn: promotion_start_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column promotion_end_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: ae06e7e9-c57f-4cea-b55f-08375900037f
+		sourceLineageTag: promotion_end_dt
+		summarizeBy: none
+		sourceColumn: promotion_end_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column clock_start_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 164fb44c-9967-4198-aae7-81dcc8b0e900
+		sourceLineageTag: clock_start_cd
+		summarizeBy: none
+		sourceColumn: clock_start_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column clock_end_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ec4b8913-28da-4e8e-a5b6-35374491944f
+		sourceLineageTag: clock_end_cd
+		summarizeBy: none
+		sourceColumn: clock_end_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column discount_amount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 1bc285ec-55f8-4b4a-9d00-d9e24e9b509b
+		sourceLineageTag: discount_amount
+		summarizeBy: sum
+		sourceColumn: discount_amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column discount_percent
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0f231dd2-4aa8-49fb-bd48-77f01e35b737
+		sourceLineageTag: discount_percent
+		summarizeBy: sum
+		sourceColumn: discount_percent
+
+		annotation SummarizationSetBy = Automatic
+
+	column interval_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a14a7c33-7774-4661-9457-e7578c7a4626
+		sourceLineageTag: interval_cd
+		summarizeBy: none
+		sourceColumn: interval_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_of_intervals
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 7ddfe196-09a2-443a-998f-33b24f5dd4b5
+		sourceLineageTag: num_of_intervals
+		summarizeBy: sum
+		sourceColumn: num_of_intervals
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_per_interval
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2b190bbe-5314-4b4a-93ee-aac15c5fe01f
+		sourceLineageTag: num_per_interval
+		summarizeBy: sum
+		sourceColumn: num_per_interval
+
+		annotation SummarizationSetBy = Automatic
+
+	column family
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 87913723-1d67-4668-b8b0-4f0f62a25fa2
+		sourceLineageTag: family
+		summarizeBy: none
+		sourceColumn: family
+
+		annotation SummarizationSetBy = Automatic
+
+	column additional
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: a25e6e04-ff3f-49ad-98c7-e5fd7f06c424
+		sourceLineageTag: additional
+		summarizeBy: none
+		sourceColumn: additional
+
+		annotation SummarizationSetBy = Automatic
+
+	column premium
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: ba7efa93-a044-4fc6-9263-bce77f9dc961
+		sourceLineageTag: premium
+		summarizeBy: none
+		sourceColumn: premium
+
+		annotation SummarizationSetBy = Automatic
+
+	column exclusion_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 639e5fcd-7f95-41dc-92f0-d0e765cd47cb
+		sourceLineageTag: exclusion_cd
+		summarizeBy: none
+		sourceColumn: exclusion_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_200_silver_group_offers = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_200_silver_group_offers
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

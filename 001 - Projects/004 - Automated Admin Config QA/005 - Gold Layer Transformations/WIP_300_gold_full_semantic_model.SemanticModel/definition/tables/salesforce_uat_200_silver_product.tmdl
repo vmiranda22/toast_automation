@@ -1,0 +1,84 @@
+table salesforce_uat_200_silver_product
+	lineageTag: 52b6f43d-fa00-4a79-8bee-34243be3e61a
+	sourceLineageTag: [dbo].[salesforce_uat_200_silver_product]
+
+	column id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9de896c2-d1a0-4c45-b2e8-2bddfdbe0ac6
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ac9cc997-c1b9-4752-aaf8-f04b32ed2532
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_code
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 82377d18-fcb9-43b5-8285-dddc9902cc70
+		sourceLineageTag: product_code
+		summarizeBy: none
+		sourceColumn: product_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column family
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 53df151f-f344-464a-bc4e-ef6335fe9c08
+		sourceLineageTag: family
+		summarizeBy: none
+		sourceColumn: family
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_portfolio
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d59a9f5f-28e8-40b3-a897-475ebaa6b584
+		sourceLineageTag: product_portfolio
+		summarizeBy: none
+		sourceColumn: product_portfolio
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 20c1f95a-704e-4caa-b7af-427a268bb01c
+		sourceLineageTag: description
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_active
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 8c9e9b21-7c15-45cf-ac64-904f8dac973e
+		sourceLineageTag: is_active
+		summarizeBy: none
+		sourceColumn: is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salesforce_uat_200_silver_product = entity
+		mode: directLake
+		source
+			entityName: salesforce_uat_200_silver_product
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

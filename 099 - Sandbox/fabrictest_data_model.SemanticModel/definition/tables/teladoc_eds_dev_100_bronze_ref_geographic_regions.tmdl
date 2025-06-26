@@ -1,0 +1,88 @@
+table teladoc_eds_dev_100_bronze_ref_geographic_regions
+	lineageTag: e3ed2991-f212-4cdd-966f-756c9ff3dd65
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_ref_geographic_regions]
+
+	column geographic_region_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7fefa18b-5e44-4ec9-ae3a-9d4a73e0f200
+		sourceLineageTag: geographic_region_cd
+		summarizeBy: none
+		sourceColumn: geographic_region_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column geographic_region_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 56d6f1cf-8f1e-43de-8869-5b7fbccb74c3
+		sourceLineageTag: geographic_region_nm
+		summarizeBy: none
+		sourceColumn: geographic_region_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref_geographic_region_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: af9a8489-b6d3-442b-96be-10e20624b20e
+		sourceLineageTag: ref_geographic_region_id
+		summarizeBy: sum
+		sourceColumn: ref_geographic_region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 8fc6e3fd-a783-4252-95a3-4e3b1761e31f
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 10eaa02d-ea98-47af-b7dc-bb5219bffa04
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 207e618c-de10-4aa6-9817-b6d0de1f66fa
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 744a9ea1-c75d-4e70-a3ac-fe55506c2203
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_ref_geographic_regions = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_ref_geographic_regions
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

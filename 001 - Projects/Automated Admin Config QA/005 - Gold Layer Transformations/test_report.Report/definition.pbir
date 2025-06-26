@@ -1,8 +1,0 @@
-{
-  "version": "4.0",
-  "datasetReference": {
-    "byPath": {
-      "path": "../WIP_300_gold_full_semantic_model.SemanticModel"
-    }
-  }
-}

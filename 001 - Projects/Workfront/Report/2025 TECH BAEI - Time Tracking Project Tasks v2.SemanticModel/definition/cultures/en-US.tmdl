@@ -1,0 +1,293 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "hour.user_manager": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "hour",
+			          "ConceptualProperty": "user_manager"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "hour.user_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "hour",
+			          "ConceptualProperty": "user.name"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "hour.task_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "hour",
+			          "ConceptualProperty": "task.name"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "hour.task_detime_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "hour",
+			          "ConceptualProperty": "task.DE:Time Type"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "hour.project_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "hour",
+			          "ConceptualProperty": "project.name"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "task.description": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "task",
+			          "ConceptualProperty": "description"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "flattened_tasks.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "flattened_tasks",
+			          "ConceptualProperty": "name"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "flattened_tasks.timetype": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "flattened_tasks",
+			          "ConceptualProperty": "timeType"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "flattened_tasks.description": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "flattened_tasks",
+			          "ConceptualProperty": "description"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Description": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "flattened_users.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "flattened_users",
+			          "ConceptualProperty": "name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "User Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "flattened_hours.entrydate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "flattened_hours",
+			          "ConceptualProperty": "entryDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Entry Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "flattened_projects.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "flattened_projects",
+			          "ConceptualProperty": "name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Project Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "flattened_users.managername": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "flattened_users",
+			          "ConceptualProperty": "managerName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Manager": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "calendar.calendar_measure": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "calendar",
+			          "ConceptualProperty": "calendar_measure"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Loaded": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "flattened_hours.taskname": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "flattened_hours",
+			          "ConceptualProperty": "taskName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Task Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "flattened_hours.tasktimetype": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "flattened_hours",
+			          "ConceptualProperty": "taskTimeType"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "flattened_hours.ownername": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "flattened_hours",
+			          "ConceptualProperty": "ownerName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "User Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "flattened_hours.manager_nm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "flattened_hours",
+			          "ConceptualProperty": "manager_nm"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Manager": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

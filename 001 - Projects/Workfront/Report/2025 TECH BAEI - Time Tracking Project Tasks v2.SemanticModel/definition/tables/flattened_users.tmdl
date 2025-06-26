@@ -1,0 +1,82 @@
+table flattened_users
+	lineageTag: 93b00664-7a90-47af-bbcc-eb96a5f438ba
+	sourceLineageTag: d47883d5-6326-44a0-bf3d-7db46748c815
+
+	column ID
+		dataType: string
+		isNullable: false
+		lineageTag: 98081730-643d-4a0c-a553-bb2c3a3c1da6
+		sourceLineageTag: 83f33003-80c1-4a86-89e5-46865033225e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = User
+
+	column isActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2c6b8fb4-451f-4cb0-964e-3084241fb399
+		sourceLineageTag: d7a5b297-ec6d-45c2-ac2a-b7b4f4b0bc85
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: isActive
+
+		annotation SummarizationSetBy = User
+
+	column lastUpdateDate
+		dataType: string
+		lineageTag: 1eccb461-1045-46db-9988-8523d0491b03
+		sourceLineageTag: 5ad2b686-60d1-4ffe-b611-9c9aa2a30b9f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: lastUpdateDate
+
+		annotation SummarizationSetBy = User
+
+	column name
+		dataType: string
+		lineageTag: 7b3ed627-50cb-41b8-9904-903d3398229e
+		sourceLineageTag: 731efc6e-ccc4-4ed0-93aa-9e579ebd6ef4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = User
+
+	column objCode
+		dataType: string
+		lineageTag: a5d24bcf-adf2-4a59-a168-330069c76cf0
+		sourceLineageTag: a1b022af-75bf-4dd6-8b15-c7a042091cb8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: objCode
+
+		annotation SummarizationSetBy = User
+
+	column username
+		dataType: string
+		lineageTag: 0bd25be5-1fa6-4fb1-bd01-29224d686278
+		sourceLineageTag: f1bcdda8-b5e2-4939-a0c9-4528af601f33
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: username
+
+		annotation SummarizationSetBy = User
+
+	column managerName
+		dataType: string
+		lineageTag: 433eef71-589c-45ce-97b2-d83770ab0676
+		sourceLineageTag: 9a196586-494d-4bba-84a1-42065918cd05
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: managerName
+
+		annotation SummarizationSetBy = User
+
+	partition flattened_users = entity
+		mode: directQuery
+		source
+			entityName: flattened_users
+			expressionSource: 'DirectQuery to AS - SM_Hours'
+

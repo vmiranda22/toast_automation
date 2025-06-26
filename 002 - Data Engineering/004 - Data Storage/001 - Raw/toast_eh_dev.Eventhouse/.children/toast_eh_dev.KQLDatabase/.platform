@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDatabase",
+    "displayName": "toast_eh_dev",
+    "description": "toast_eh_dev"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "648af4a5-b79a-b9f2-409b-2b908b1a45ca"
+  }
+}

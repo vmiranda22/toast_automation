@@ -1,0 +1,32 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "toast_df_ingest_validation_rules_lh",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Table1": {
+      "queryId": "c6c41379-7e44-48d0-a286-92ce9ca8d881",
+      "queryName": "Table1",
+      "loadEnabled": false
+    },
+    "Table1_DataDestination": {
+      "queryId": "6ed997a8-a74f-438f-93c5-7e515109f618",
+      "queryName": "Table1_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://teladocpa-my.sharepoint.com/personal/rmontero_teladochealth_com/",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"940bf424-f79a-4d80-9e3e-9729eb87fd80\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"15a1a7c0-eb16-4339-8e2a-c9652f94c7d4\",\"DatasourceId\":\"98a0c6ac-af65-4b8d-bce8-81b180f2ec76\"}"
+    }
+  ]
+}

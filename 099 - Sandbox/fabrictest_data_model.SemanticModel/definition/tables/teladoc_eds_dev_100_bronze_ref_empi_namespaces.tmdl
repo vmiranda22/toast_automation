@@ -1,0 +1,108 @@
+table teladoc_eds_dev_100_bronze_ref_empi_namespaces
+	lineageTag: fa9b7a21-d6db-4b1d-819c-49726dedefaf
+	sourceLineageTag: [dbo].[teladoc_eds_dev_100_bronze_ref_empi_namespaces]
+
+	column empi_namespace_cd
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 54708f7d-fffe-4f0f-83e1-8a783950d016
+		sourceLineageTag: empi_namespace_cd
+		summarizeBy: none
+		sourceColumn: empi_namespace_cd
+
+		annotation SummarizationSetBy = Automatic
+
+	column namespace_nm
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 120c5a15-9f52-4e54-934a-f194b5d6d4cb
+		sourceLineageTag: namespace_nm
+		summarizeBy: none
+		sourceColumn: namespace_nm
+
+		annotation SummarizationSetBy = Automatic
+
+	column use_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2eb5e355-88d9-443a-b828-6a18df4b18b4
+		sourceLineageTag: use_flg
+		summarizeBy: none
+		sourceColumn: use_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column active_flg
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 68fe1fd9-351b-42f9-8a7b-aeb30d308372
+		sourceLineageTag: active_flg
+		summarizeBy: none
+		sourceColumn: active_flg
+
+		annotation SummarizationSetBy = Automatic
+
+	column ref_empi_namespace_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: be0948c1-7465-486e-9446-cdb227ba283f
+		sourceLineageTag: ref_empi_namespace_id
+		summarizeBy: sum
+		sourceColumn: ref_empi_namespace_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 28029ed9-d1bf-43dd-95f0-b7ccfdd773ab
+		sourceLineageTag: created_at
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8832b28f-c3cc-4bca-ab8e-b9a35ba0c83e
+		sourceLineageTag: created_by
+		summarizeBy: sum
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f6fed6f8-5a9c-4d13-b28a-4c03aefa25a7
+		sourceLineageTag: updated_at
+		summarizeBy: none
+		sourceColumn: updated_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 3b4296b0-97ae-4841-ad24-acabef0e0b8f
+		sourceLineageTag: updated_by
+		summarizeBy: sum
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teladoc_eds_dev_100_bronze_ref_empi_namespaces = entity
+		mode: directLake
+		source
+			entityName: teladoc_eds_dev_100_bronze_ref_empi_namespaces
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "calendarTable"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5a3cebb8-b045-bab0-4eff-767d07e7c385"
+  }
+}

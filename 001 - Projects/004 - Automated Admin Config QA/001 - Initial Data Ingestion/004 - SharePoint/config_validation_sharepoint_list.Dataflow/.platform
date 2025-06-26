@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "config_validation_sharepoint_list"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "89be26c8-fd16-8f9c-47d1-78894733c2c2"
+  }
+}

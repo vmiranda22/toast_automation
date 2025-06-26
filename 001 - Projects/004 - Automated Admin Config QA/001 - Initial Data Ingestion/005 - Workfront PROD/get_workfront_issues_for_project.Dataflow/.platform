@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "get_workfront_issues_for_project",
+    "description": ""
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "14741082-7dcc-8221-4079-34f6880016c1"
+  }
+}

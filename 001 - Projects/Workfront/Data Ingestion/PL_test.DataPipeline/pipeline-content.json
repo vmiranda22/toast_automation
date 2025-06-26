@@ -1,0 +1,385 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Until1",
+        "type": "Until",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [],
+        "typeProperties": {
+          "expression": {
+            "value": "@equals(variables('flag_until'), 1)",
+            "type": "Expression"
+          },
+          "activities": [
+            {
+              "name": "Test1",
+              "type": "SetVariable",
+              "dependsOn": [],
+              "policy": {
+                "secureOutput": false,
+                "secureInput": false
+              },
+              "typeProperties": {
+                "variableName": "temp_j",
+                "value": {
+                  "value": "@add(variables('counter_i'),2000)",
+                  "type": "Expression"
+                }
+              }
+            },
+            {
+              "name": "Test",
+              "type": "SetVariable",
+              "dependsOn": [
+                {
+                  "activity": "Test1",
+                  "dependencyConditions": [
+                    "Succeeded"
+                  ]
+                }
+              ],
+              "policy": {
+                "secureOutput": false,
+                "secureInput": false
+              },
+              "typeProperties": {
+                "variableName": "counter_i",
+                "value": {
+                  "value": "@variables('temp_j')",
+                  "type": "Expression"
+                }
+              }
+            },
+            {
+              "name": "Copy data1",
+              "type": "Copy",
+              "dependsOn": [
+                {
+                  "activity": "Test",
+                  "dependencyConditions": [
+                    "Succeeded"
+                  ]
+                }
+              ],
+              "policy": {
+                "timeout": "0.12:00:00",
+                "retry": 0,
+                "retryIntervalInSeconds": 30,
+                "secureOutput": false,
+                "secureInput": false
+              },
+              "typeProperties": {
+                "source": {
+                  "type": "RestSource",
+                  "httpRequestTimeout": "00:01:40",
+                  "requestInterval": "00.00:00:00.010",
+                  "requestMethod": "GET",
+                  "paginationRules": {
+                    "supportRFC5988": "true"
+                  },
+                  "datasetSettings": {
+                    "annotations": [],
+                    "type": "RestResource",
+                    "typeProperties": {
+                      "relativeUrl": {
+                        "value": "@concat('/attask/api/v19.0/HOUR/search?apiKey=al7s4u94ggluu08vnh7atni3p5sagebm&method=GET&projectID=6631759700359935229b219fe6871de6&fields=hours,task:name,project:name,entryDate,owner:name,status&$$FIRST=', string(variables('counter_i')), '&$$LIMIT=2000')\r\n",
+                        "type": "Expression"
+                      }
+                    },
+                    "schema": [],
+                    "externalReferences": {
+                      "connection": "6e37e5a0-e6b2-48cc-854f-174dcb4f39f0"
+                    }
+                  }
+                },
+                "sink": {
+                  "type": "LakehouseTableSink",
+                  "tableActionOption": "Append",
+                  "partitionOption": "None",
+                  "datasetSettings": {
+                    "annotations": [],
+                    "linkedService": {
+                      "name": "LH_Workfront",
+                      "properties": {
+                        "annotations": [],
+                        "type": "Lakehouse",
+                        "typeProperties": {
+                          "workspaceId": "b08d383a-b8cc-4b8e-b189-d9d696a01977",
+                          "artifactId": "fd91a974-12de-4aed-9135-cd6bfb991855",
+                          "rootFolder": "Tables"
+                        }
+                      }
+                    },
+                    "type": "LakehouseTable",
+                    "schema": [],
+                    "typeProperties": {
+                      "table": "Hours"
+                    }
+                  }
+                },
+                "enableStaging": false,
+                "translator": {
+                  "type": "TabularTranslator",
+                  "mappings": [
+                    {
+                      "source": {
+                        "name": "data.ID",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.ID",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.objCode",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.objCode",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.hours",
+                        "type": "Double"
+                      },
+                      "sink": {
+                        "name": "data.hours",
+                        "physicalType": "double"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.task.ID",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.task.ID",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.task.name",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.task.name",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.task.objCode",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.task.objCode",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.project.ID",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.project.ID",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.project.name",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.project.name",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.project.objCode",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.project.objCode",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.entryDate",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.entryDate",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.owner.ID",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.owner.ID",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.owner.name",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.owner.name",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.owner.objCode",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.owner.objCode",
+                        "physicalType": "string"
+                      }
+                    },
+                    {
+                      "source": {
+                        "name": "data.status",
+                        "type": "String"
+                      },
+                      "sink": {
+                        "name": "data.status",
+                        "physicalType": "string"
+                      }
+                    }
+                  ],
+                  "typeConversion": true,
+                  "typeConversionSettings": {
+                    "allowDataTruncation": true,
+                    "treatBooleanAsNumber": false
+                  },
+                  "columnFlattenSettings": {
+                    "treatArrayAsString": false,
+                    "treatStructAsString": false,
+                    "flattenColumnDelimiter": "."
+                  }
+                }
+              }
+            },
+            {
+              "name": "Set variable1",
+              "type": "SetVariable",
+              "dependsOn": [
+                {
+                  "activity": "Copy data1",
+                  "dependencyConditions": [
+                    "Succeeded"
+                  ]
+                }
+              ],
+              "policy": {
+                "secureOutput": false,
+                "secureInput": false
+              },
+              "typeProperties": {
+                "variableName": "flag_until",
+                "value": {
+                  "value": "@if(greater(activity('Copy data1').output.rowsCopied, 1), 0, 1)\n",
+                  "type": "Expression"
+                }
+              }
+            }
+          ],
+          "timeout": "0.12:00:00"
+        }
+      },
+      {
+        "name": "Delete data1",
+        "type": "Delete",
+        "state": "Inactive",
+        "onInactiveMarkAs": "Succeeded",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "datasetSettings": {
+            "annotations": [],
+            "linkedService": {
+              "name": "LH_Workfront",
+              "properties": {
+                "annotations": [],
+                "type": "Lakehouse",
+                "typeProperties": {
+                  "workspaceId": "b08d383a-b8cc-4b8e-b189-d9d696a01977",
+                  "artifactId": "fd91a974-12de-4aed-9135-cd6bfb991855",
+                  "rootFolder": "Files"
+                }
+              }
+            },
+            "type": "Binary",
+            "typeProperties": {
+              "location": {
+                "type": "LakehouseLocation",
+                "fileName": "*",
+                "folderPath": "JSON"
+              }
+            }
+          },
+          "enableLogging": true,
+          "storeSettings": {
+            "type": "LakehouseReadSettings",
+            "recursive": true,
+            "enablePartitionDiscovery": false
+          }
+        }
+      },
+      {
+        "name": "Dataflow1",
+        "type": "RefreshDataflow",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "dataflowId": "5ebf584a-6e60-4619-b4a7-ed78d0d0afad",
+          "workspaceId": "b08d383a-b8cc-4b8e-b189-d9d696a01977",
+          "notifyOption": "NoNotification",
+          "dataflowType": "DataflowFabric"
+        }
+      }
+    ],
+    "variables": {
+      "counter_i": {
+        "type": "Integer",
+        "defaultValue": 0
+      },
+      "temp_j": {
+        "type": "Integer",
+        "defaultValue": 0
+      },
+      "flag_until": {
+        "type": "Integer"
+      }
+    }
+  }
+}
